@@ -34,9 +34,9 @@ Pick one. **Grok is recommended:** it works in Hong Kong without a VPN.
 Claude and ChatGPT are not available in Hong Kong, so you need a VPN for them.
 
 **Grok (recommended)** — [grok.com](https://grok.com)
-1. Open **Projects** ▸ create a new project, e.g. "DSE Economics Diagrams".
-2. Copy the **instructions text** (below) into the project's **Instructions**.
-3. Upload `dse-econ-graph.zip` to the project's files.
+1. In the sidebar, click **Plugins**, then open the **Skills** tab.
+2. Click **Add skill ▸ Upload skill file** and choose `dse-econ-graph.zip`.
+3. That's all. No instructions text is needed: every new chat can draw.
 
 **Claude (needs a VPN in Hong Kong)** — [claude.ai](https://claude.ai), web or app
 1. Open **Settings ▸ Capabilities** and turn on **Code execution and file creation**.
@@ -51,7 +51,7 @@ Claude and ChatGPT are not available in Hong Kong, so you need a VPN for them.
    paste the **instructions text** (below) into **Instructions**.
 
 <details>
-<summary><b>Instructions text</b> (for Grok and ChatGPT; also inside the zip as <code>instructions.txt</code>)</summary>
+<summary><b>Instructions text</b> (for ChatGPT; also inside the zip as <code>instructions.txt</code>)</summary>
 
 <!-- BEGIN INSTRUCTIONS -->
 
@@ -89,8 +89,8 @@ If the AI ever gives you code instead of a picture: open
 [colab.new](https://colab.new), paste the code, and press ▶. The picture
 appears and downloads.
 
-**New version?** Download the zip again and replace the old one: in your
-Grok project's files, in Claude's Settings ▸ Capabilities ▸ Skills, or with
+**New version?** Download the zip again and replace the old one: in Grok's
+Plugins ▸ Skills, in Claude's Settings ▸ Capabilities ▸ Skills, or with
 ChatGPT's Plugins ▸ Upload plugin.
 
 ---
@@ -109,9 +109,9 @@ ChatGPT's Plugins ▸ Upload plugin.
 三選一。**建議使用 Grok**：香港可直接使用，不用 VPN。Claude 和 ChatGPT 在香港需使用 VPN。
 
 **Grok（建議）** — [grok.com](https://grok.com)
-1. 打開 **Projects（專案）** ▸ 建立新專案，例如「DSE 經濟圖」。
-2. 把上面的**指示文字**（Instructions text）複製到專案的 **Instructions（指示）**。
-3. 把 `dse-econ-graph.zip` 上載到專案的檔案。
+1. 在側邊欄按 **插件（Plugins）**，再打開 **技能（Skills）** 分頁。
+2. 按 **新增技能 ▸ 上傳技能檔案**，選擇 `dse-econ-graph.zip`。
+3. 完成。不用指示文字，之後每個新對話都能畫圖。
 
 **Claude（在香港需使用 VPN）** — [claude.ai](https://claude.ai)，網頁版或 App 皆可
 1. 打開 **Settings ▸ Capabilities**，開啟 **Code execution and file creation**。
@@ -133,7 +133,7 @@ ChatGPT's Plugins ▸ Upload plugin.
 
 如果 AI 給你程式碼而不是圖片：打開 [colab.new](https://colab.new)，貼上程式碼，按 ▶，圖片會顯示並自動下載。
 
-**有新版本？** 重新下載 zip，取代舊的：Grok 在專案檔案中替換，Claude 在 Settings ▸ Capabilities ▸ Skills 替換，ChatGPT 在 Plugins ▸ Upload plugin 重新上載。
+**有新版本？** 重新下載 zip，取代舊的：Grok 在「插件」▸「技能」替換，Claude 在 Settings ▸ Capabilities ▸ Skills 替換，ChatGPT 在 Plugins ▸ Upload plugin 重新上載。
 
 ---
 

@@ -17,17 +17,15 @@
       "steps": {
         "en": [
           "Download {zip}. Do not unzip it.",
-          "Go to grok.com and sign in. Open Projects and create a new project, e.g. \"DSE Economics Diagrams\".",
-          "Copy the instructions text (below, or {instructions} inside the zip) into the project's Instructions.",
-          "Upload {zip} to the project's files.",
-          "To draw: open the project and start a new chat."
+          "Go to grok.com and sign in. In the sidebar, click Plugins, then open the Skills tab.",
+          "Click Add skill ▸ Upload skill file, and choose {zip}. That's all: no instructions text is needed.",
+          "To draw: start any new chat and paste the question. If Grok does not use the skill by itself, begin with \"Use the dse-econ-graph skill.\""
         ],
         "zh": [
           "下載 {zip}，不用解壓。",
-          "前往 grok.com 並登入。打開 Projects（專案），建立新專案，例如「DSE 經濟圖」。",
-          "把指示文字（見下方，或 zip 內的 {instructions}）複製到專案的 Instructions（指示）。",
-          "把 {zip} 上載到專案的檔案。",
-          "要畫圖時：打開該專案，開始新對話。"
+          "前往 grok.com 並登入。在側邊欄按「插件」，再打開「技能」分頁。",
+          "按「新增技能」▸「上傳技能檔案」，選擇 {zip}。完成，不用另外輸入指示文字。",
+          "要畫圖時：開始任何新對話，貼上題目。如 Grok 沒有自動使用這個技能，在訊息開頭加上「使用 dse-econ-graph 技能。」"
         ]
       }
     },
@@ -136,12 +134,12 @@
     "steps": {
       "en": [
         "Download the zip again ({zip}, or {chatgpt_zip} for ChatGPT).",
-        "Grok: in your project's files, remove the old {zip} and upload the new one. ChatGPT: upload the new {chatgpt_zip} with Plugins ▸ Upload plugin. If the instructions text changed, paste the new text into the project's Instructions.",
+        "Grok: in Plugins ▸ Skills, remove the old dse-econ-graph skill and upload the new {zip}. ChatGPT: upload the new {chatgpt_zip} with Plugins ▸ Upload plugin. If the instructions text changed, paste the new text into the ChatGPT project's Instructions.",
         "Claude: in Settings ▸ Capabilities ▸ Skills, remove the old skill and upload the new {zip}."
       ],
       "zh": [
         "重新下載 zip（{zip}；ChatGPT 用 {chatgpt_zip}）。",
-        "Grok：在專案檔案中刪除舊的 {zip}，上載新的。ChatGPT：在 Plugins ▸ Upload plugin 上載新的 {chatgpt_zip}。如指示文字有更新，把新文字貼到專案的 Instructions（指示）。",
+        "Grok：在「插件」▸「技能」刪除舊的 dse-econ-graph 技能，上載新的 {zip}。ChatGPT：在 Plugins ▸ Upload plugin 上載新的 {chatgpt_zip}。如指示文字有更新，把新文字貼到 ChatGPT 專案的 Instructions（指示）。",
         "Claude：在 Settings ▸ Capabilities ▸ Skills 刪除舊技能，上載新的 {zip}。"
       ]
     }

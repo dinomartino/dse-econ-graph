@@ -4,14 +4,14 @@
     "en": "Paste a DSE Economics question and its marking scheme into Grok, Claude or ChatGPT and get the diagram in the HKEAA marking-scheme style, in English or Chinese.",
     "zh": "把 DSE 經濟題目和評卷參考貼到 Grok、Claude 或 ChatGPT，即可得到 HKEAA 評卷參考風格的圖，中英文皆可。"
   },
-  "version": "1.5.1",
-  "released": "2026-10-02",
+  "version": "1.5.2",
+  "released": "2026-10-03",
   "whats_new": {
     "en": [
-      "ChatGPT now has its own download, dse-econ-graph-chatgpt.zip: upload it with Plugins ▸ Upload plugin (the normal zip was rejected)."
+      "Grok setup is now one step: upload dse-econ-graph.zip as a skill (Plugins ▸ Skills ▸ Add skill ▸ Upload skill file). No project or instructions text needed."
     ],
     "zh": [
-      "ChatGPT 新增專用下載 dse-econ-graph-chatgpt.zip，在 Plugins ▸ Upload plugin 上載（普通版本會被拒絕）。"
+      "Grok 設定只需一步：把 dse-econ-graph.zip 上載為技能（插件 ▸ 技能 ▸ 新增技能 ▸ 上傳技能檔案），不用建立專案或輸入指示文字。"
     ]
   },
   "files": [
@@ -40,8 +40,8 @@
         "en": "The ChatGPT version: upload it with Plugins ▸ Upload plugin. Do not unzip it.",
         "zh": "ChatGPT 專用版本：在 Plugins ▸ Upload plugin 上載，不用解壓。"
       },
-      "bytes": 92735,
-      "sha256": "d1057e5f8eb0870b173af3c3832443d5a9b79e9930dd38953c2fd2a52c39eefc",
+      "bytes": 92736,
+      "sha256": "5a27bbe3397ef75c52778a710f4c18bbf5141d5a611f644fc207684f280d5c5c",
       "url": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/download/dse-econ-graph-chatgpt.zip",
       "download_url": "https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph-chatgpt.zip"
     },
@@ -109,17 +109,15 @@
       "steps": {
         "en": [
           "Download dse-econ-graph.zip. Do not unzip it.",
-          "Go to grok.com and sign in. Open Projects and create a new project, e.g. \"DSE Economics Diagrams\".",
-          "Copy the instructions text (below, or instructions.txt inside the zip) into the project's Instructions.",
-          "Upload dse-econ-graph.zip to the project's files.",
-          "To draw: open the project and start a new chat."
+          "Go to grok.com and sign in. In the sidebar, click Plugins, then open the Skills tab.",
+          "Click Add skill ▸ Upload skill file, and choose dse-econ-graph.zip. That's all: no instructions text is needed.",
+          "To draw: start any new chat and paste the question. If Grok does not use the skill by itself, begin with \"Use the dse-econ-graph skill.\""
         ],
         "zh": [
           "下載 dse-econ-graph.zip，不用解壓。",
-          "前往 grok.com 並登入。打開 Projects（專案），建立新專案，例如「DSE 經濟圖」。",
-          "把指示文字（見下方，或 zip 內的 instructions.txt）複製到專案的 Instructions（指示）。",
-          "把 dse-econ-graph.zip 上載到專案的檔案。",
-          "要畫圖時：打開該專案，開始新對話。"
+          "前往 grok.com 並登入。在側邊欄按「插件」，再打開「技能」分頁。",
+          "按「新增技能」▸「上傳技能檔案」，選擇 dse-econ-graph.zip。完成，不用另外輸入指示文字。",
+          "要畫圖時：開始任何新對話，貼上題目。如 Grok 沒有自動使用這個技能，在訊息開頭加上「使用 dse-econ-graph 技能。」"
         ]
       }
     },
@@ -228,12 +226,12 @@
     "steps": {
       "en": [
         "Download the zip again (dse-econ-graph.zip, or dse-econ-graph-chatgpt.zip for ChatGPT).",
-        "Grok: in your project's files, remove the old dse-econ-graph.zip and upload the new one. ChatGPT: upload the new dse-econ-graph-chatgpt.zip with Plugins ▸ Upload plugin. If the instructions text changed, paste the new text into the project's Instructions.",
+        "Grok: in Plugins ▸ Skills, remove the old dse-econ-graph skill and upload the new dse-econ-graph.zip. ChatGPT: upload the new dse-econ-graph-chatgpt.zip with Plugins ▸ Upload plugin. If the instructions text changed, paste the new text into the ChatGPT project's Instructions.",
         "Claude: in Settings ▸ Capabilities ▸ Skills, remove the old skill and upload the new dse-econ-graph.zip."
       ],
       "zh": [
         "重新下載 zip（dse-econ-graph.zip；ChatGPT 用 dse-econ-graph-chatgpt.zip）。",
-        "Grok：在專案檔案中刪除舊的 dse-econ-graph.zip，上載新的。ChatGPT：在 Plugins ▸ Upload plugin 上載新的 dse-econ-graph-chatgpt.zip。如指示文字有更新，把新文字貼到專案的 Instructions（指示）。",
+        "Grok：在「插件」▸「技能」刪除舊的 dse-econ-graph 技能，上載新的 dse-econ-graph.zip。ChatGPT：在 Plugins ▸ Upload plugin 上載新的 dse-econ-graph-chatgpt.zip。如指示文字有更新，把新文字貼到 ChatGPT 專案的 Instructions（指示）。",
         "Claude：在 Settings ▸ Capabilities ▸ Skills 刪除舊技能，上載新的 dse-econ-graph.zip。"
       ]
     }

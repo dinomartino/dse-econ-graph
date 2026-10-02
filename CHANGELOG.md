@@ -5,6 +5,10 @@ its number, date and `en:` / `zh:` lines into `download/manifest.json`, and
 the website shows them as "What's new". Write them for teachers, in plain
 words.
 
+## 1.5.2 — 2026-10-03
+- en: Grok setup is now one step: upload dse-econ-graph.zip as a skill (Plugins ▸ Skills ▸ Add skill ▸ Upload skill file). No project or instructions text needed.
+- zh: Grok 設定只需一步：把 dse-econ-graph.zip 上載為技能（插件 ▸ 技能 ▸ 新增技能 ▸ 上傳技能檔案），不用建立專案或輸入指示文字。
+
 ## 1.5.1 — 2026-10-02
 - en: ChatGPT now has its own download, dse-econ-graph-chatgpt.zip: upload it with Plugins ▸ Upload plugin (the normal zip was rejected).
 - zh: ChatGPT 新增專用下載 dse-econ-graph-chatgpt.zip，在 Plugins ▸ Upload plugin 上載（普通版本會被拒絕）。

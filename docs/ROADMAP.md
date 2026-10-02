@@ -11,9 +11,12 @@ made.
       error names it; fix `plugin_json()` in `tools/build.py`. Does the
       plugin's skill trigger inside a project chat?
 
-- [ ] **Does Grok accept `dse-econ-graph.zip` in project files, and can its
-      code tool unzip it?** If not, tell teachers to upload SKILL.md
-      instead (it's in every release) and change `teacher/setup.json`.
+- [x] **Grok setup (2026-10-03, v1.5.2):** grok.com now takes the zip as a
+      Skill: sidebar Plugins (插件) ▸ Skills (技能) ▸ Add skill (新增技能) ▸
+      Upload skill file (上傳技能檔案); accepts .zip / .skill / .md. Seen in
+      the 中文 UI; the English button names are inferred, so confirm them
+      in the English UI. Open question: does a new chat use the skill by
+      itself, or does the teacher need to say "Use the dse-econ-graph skill"?
 
 Nobody has run v1.5.0 on grok.com yet. These unknowns decide the next steps.
 Run the test in [`grok-test.md`](grok-test.md) and record the answers here.

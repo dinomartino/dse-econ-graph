@@ -18,8 +18,9 @@ session, update both.
   in `teacher/setup.json` (`providers`).
 - **One download: `dse-econ-graph.zip`.** It holds SKILL.md,
   instructions.txt, dsegraph.py and every template (the claude.ai skill
-  layout). Teachers upload it as-is: a Skill in Claude, project files in
-  Grok/ChatGPT plus the instructions text. The AI unzips it and imports the
+  layout). Teachers upload it as-is: a Skill in Grok (Plugins ▸ Skills ▸ Add
+  skill ▸ Upload skill file, checked on grok.com 2026-10-03) and in Claude;
+  ChatGPT takes its own zip plus the instructions text in a project. The AI unzips it and imports the
   library from the folder (pasting the library is the fallback).
   **ChatGPT needs its own zip**, `dse-econ-graph-chatgpt.zip`: its Upload
   plugin rejects the claude.ai layout and wants `.codex-plugin/plugin.json`
@@ -41,8 +42,8 @@ the colab.new fallback, when the AI can't show pictures or Chinese.
 ## How it works
 
 ```
-teacher ──► Grok / ChatGPT Project (instructions text + dse-econ-graph.zip)
-            · Claude Skill (dse-econ-graph.zip)  · any chat (attach the zip)
+teacher ──► Grok Skill / Claude Skill (dse-econ-graph.zip)
+            · ChatGPT plugin + Project (instructions text)  · any chat (attach the zip)
               │  the AI writes ONE script = whole dsegraph library + diagram
               ▼  runs it in its offline sandbox ▸ picture shown in chat
            fallback: script for colab.new (no picture / no Chinese font)
