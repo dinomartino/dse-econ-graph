@@ -1,5 +1,9 @@
 """Per-unit tax: incidence and tax revenue.
 
+Topic: Tax, subsidy and quota
+Use for: per-unit tax: who pays it and the tax revenue; for burden labels and the
+  deadweight-loss triangle use 31 (CE1993 Q4(c), DSE2016 Q10(c))
+
 Marking-scheme points it shows:
   - S shifts up (vertically) by the tax t to S+t
   - consumers pay Pc, producers receive Pp = Pc - t, quantity falls Q0 -> Q1

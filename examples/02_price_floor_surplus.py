@@ -1,5 +1,9 @@
 """Minimum wage ABOVE equilibrium in a labour market -> unemployment.
 
+Topic: Labour market
+Use for: a minimum wage ABOVE the equilibrium wage causes unemployment (excess supply
+  of labour); for its deadweight loss use template 25 (CE1990 Q1(b), DSE2018 Q10(c))
+
 Marking-scheme points it shows:
   - minimum wage (W_min) above the equilibrium wage (W_e)
   - correct position of the excess supply of labour / unemployment (Qd to Qs at W_min)

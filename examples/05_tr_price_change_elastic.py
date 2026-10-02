@@ -1,5 +1,9 @@
 """Price falls on ELASTIC (flat) demand -> total revenue rises.
 
+Topic: Total revenue and elasticity
+Use for: a price fall along one ELASTIC demand curve raises total revenue / expenditure;
+  for a price rise on inelastic demand use 18 (CE1993 Q1(a), CE2003 Q9(a))
+
 Marking-scheme points it shows:
   - flat (elastic) demand curve D
   - price falls from P1 to P2, quantity demanded rises from Q1 to Q2

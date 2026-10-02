@@ -1,5 +1,9 @@
 """Perfectly inelastic (vertical) supply, price set BELOW equilibrium -> shortage.
 
+Topic: Price fixed away from equilibrium
+Use for: a fixed stock (tickets, seats, licences, flats, university places) sold at a
+  price below equilibrium (DSE2020 Q11(b), DSEPP Q12(a)(i), DSE2023 Q11(a))
+
 Marking-scheme points it shows:
   - vertical supply at fixed quantity Q0
   - controlled price (P) below the equilibrium price (Pe)

@@ -1,5 +1,8 @@
 """Production possibilities curve (PPC) and economic growth.
 
+Topic: Other
+Use for: production possibilities curve: efficiency, unemployment and growth
+
 Marking-scheme points it shows:
   - PPC concave to the origin (increasing opportunity cost)
   - point on the curve (B): efficient; inside (A): unemployment / inefficiency;

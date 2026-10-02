@@ -1,5 +1,10 @@
 """Supply decreases on INELASTIC (steep) demand -> total revenue rises.
 
+Topic: Total revenue and elasticity
+Use for: a supply shift (cost up, bad harvest; or reversed: subsidy, cost down) with
+  inelastic or elastic demand changes total revenue (CE1994 Q11(b), CE1997 Q11(c),
+  CE2009 Q9(b), DSEPP Q3, DSE2021 Q10(c), CE2000 Q11(b) wage bill)
+
 Marking-scheme points it shows:
   - steep (inelastic) demand curve D
   - supply decreases: S1 shifts left to S2 (shift arrow)

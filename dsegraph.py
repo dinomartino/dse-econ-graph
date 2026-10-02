@@ -52,10 +52,13 @@ CJK = ["PMingLiU", "MingLiU", "新細明體", "Songti TC", "LiSong Pro",
 
 # Free Chinese serif (SIL Open Font Licence), fetched once when no Chinese
 # font is installed — e.g. inside ChatGPT's or Claude's code sandbox.
+# Grok's sandbox has no internet: there it relies on an installed font.
 CJK_URL = ("https://raw.githubusercontent.com/google/fonts/main/ofl/"
            "notoseriftc/NotoSerifTC%5Bwght%5D.ttf")
 CACHE = os.path.join(os.path.expanduser("~"), ".cache", "dsegraph")
-FONT_DIRS = [".", "/mnt/data", "/mnt/user-data/uploads", CACHE]   # cwd, chat uploads, cache
+# cwd, then where chat assistants put uploaded files, then the download cache
+FONT_DIRS = [".", "/mnt/data", "/mnt/user-data/uploads", "/mnt/user-data", "/home/user",
+             "/workspace", "/tmp", os.path.expanduser("~"), CACHE]
 
 
 def _add_font(path):
@@ -67,12 +70,33 @@ def _add_font(path):
         return None
 
 
+def _has_chinese(path):
+    """True if the font file can draw Chinese (checks the glyph for 數)."""
+    try:
+        from matplotlib.ft2font import FT2Font
+        return FT2Font(path).get_char_index(ord("數")) > 0
+    except Exception:
+        return False
+
+
 def _cjk_from_files():
     for d in FONT_DIRS:
         for f in sorted(glob.glob(os.path.join(d, "*.[tToO][tT][fFcC]"))):
-            name = _add_font(f)
-            if name and any(k in name for k in ("CJK", "TC", "SC", "Ming", "Song", "Hei", "Kai", "宋", "明")):
-                return name
+            if _has_chinese(f):
+                name = _add_font(f)
+                if name:
+                    return name
+    return None
+
+
+def _cjk_installed_any():
+    """Any installed font that can draw Chinese, even one not in CJK —
+    serif first.  For unknown sandboxes (e.g. Grok's) with odd font names."""
+    fonts = sorted(font_manager.fontManager.ttflist,
+                   key=lambda f: not any(k in f.name for k in ("Serif", "Ming", "Song", "宋", "明")))
+    for f in fonts:
+        if _has_chinese(f.fname):
+            return f.name
     return None
 
 
@@ -83,7 +107,8 @@ def _cjk_download():
             import urllib.request
             os.makedirs(CACHE, exist_ok=True)
             print("dsegraph: downloading a Chinese font (Noto Serif TC, ~17 MB) - once only ...")
-            urllib.request.urlretrieve(CJK_URL, path + ".part")
+            with urllib.request.urlopen(CJK_URL, timeout=20) as r, open(path + ".part", "wb") as f:
+                f.write(r.read())                  # timeout: offline sandboxes fail fast
             os.replace(path + ".part", path)
         except Exception:
             return None
@@ -102,21 +127,23 @@ def setup(lang: str = "en", size: float = SIZE, font: str | None = None):
     letters and numbers in the same label stay in the Times-style serif.
     Chinese font, in order: `font=` (path to a .ttf/.otf file) -> an
     installed one (PMingLiU, Songti TC, Noto Serif CJK TC ...) -> a font file
-    uploaded next to the script / into the chat -> Noto Serif TC, downloaded
-    once.  Works in Colab, ChatGPT and Claude sandboxes without setup."""
+    uploaded next to the script / into the chat -> any installed font that
+    has Chinese -> Noto Serif TC, downloaded once.  Works in Colab, ChatGPT
+    and Claude sandboxes without setup; Grok's (offline) needs an installed
+    or uploaded font."""
     global LANG, SIZE, _READY
     LANG, SIZE, _READY = lang, size, True
     latin = (_have(LATIN) or ["STIXGeneral"])[0]
     family = [latin]
     if lang == "zh":
         cjk = (_add_font(font) if font else None) or (_have(CJK) or [None])[0] \
-            or _cjk_from_files() or _cjk_download()
+            or _cjk_from_files() or _cjk_installed_any() or _cjk_download()
         if cjk:
             family.append(cjk)
         else:
-            warnings.warn("No Chinese font found and none could be downloaded; Chinese "
-                          "labels will show as boxes. Upload a Chinese .ttf/.otf font "
-                          "(e.g. Noto Serif TC from fonts.google.com) and run again.")
+            print("dsegraph: NO CHINESE FONT - Chinese labels will show as boxes. "
+                  "Show the English picture and give the Chinese version as a Colab script "
+                  "(see 'Chinese' in the guide).")
     plt.rcParams.update({
         "font.family": family,                 # per-glyph fallback: Latin first, then CJK
         "font.size": size,

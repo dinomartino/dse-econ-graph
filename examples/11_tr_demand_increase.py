@@ -1,5 +1,9 @@
 """Demand increases -> price and quantity both rise -> total revenue increases (shade the change only).
 
+Topic: Total revenue and elasticity
+Use for: demand increases, so P and Q both rise: shade only the increase in total revenue
+  / expenditure (DSE2017 Q10(c), CE2010 Q1)
+
 Marking-scheme points it shows:
   - rightward shift of the demand curve (D0 -> D1)
   - higher price and quantity (P0 -> P1, Q0 -> Q1)

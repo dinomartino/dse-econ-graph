@@ -1,6 +1,10 @@
 """A quota (Qq) set BELOW the equilibrium quantity (Qe): consumer surplus,
 producer surplus and deadweight loss.
 
+Topic: Tax, subsidy and quota
+Use for: a quota below the equilibrium quantity: consumer surplus, producer surplus and
+  deadweight loss (CE1997 Q10(b), CE1998 Q2)
+
 Marking-scheme points it shows:
   - quota line at Qq < Qe; price rises to Pq (on D at Qq)
   - consumer surplus: above Pq, under D, up to Qq

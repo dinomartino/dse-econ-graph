@@ -1,0 +1,496 @@
+{
+  "name": "dse-econ-graph",
+  "about": {
+    "en": "Paste a DSE Economics question and its marking scheme into Grok, Claude or ChatGPT and get the diagram in the HKEAA marking-scheme style, in English or Chinese.",
+    "zh": "把 DSE 經濟題目和評卷參考貼到 Grok、Claude 或 ChatGPT，即可得到 HKEAA 評卷參考風格的圖，中英文皆可。"
+  },
+  "version": "1.5.0",
+  "released": "2026-10-02",
+  "whats_new": {
+    "en": [
+      "One download for everything: dse-econ-graph.zip. Upload it to Grok, Claude or ChatGPT (web versions too). Grok is recommended; Claude and ChatGPT need a VPN in Hong Kong.",
+      "Mirrors every supply-and-demand and AD-AS diagram in the KP_ECON marking schemes: 32 new templates (43 in all), each listed with the past-paper questions it matches.",
+      "Just paste the question and its marking scheme: the AI replies with the finished diagram only, in the question's language.",
+      "Made for Grok: set it up once in a Grok Project and every chat there can draw diagrams.",
+      "If the AI cannot draw Chinese text, it shows the English diagram and gives a one-paste Colab version for 中文."
+    ],
+    "zh": [
+      "只需下載一個檔案 dse-econ-graph.zip，上載到 Grok、Claude 或 ChatGPT（網頁版亦可）。建議使用 Grok；Claude 和 ChatGPT 在香港需使用 VPN。",
+      "涵蓋 KP_ECON 評卷參考中所有供求圖及 AD-AS 圖：新增 32 個範本（共 43 個），並列出對應的歷屆試題。",
+      "只需貼上題目和評卷參考：AI 直接回覆畫好的圖，語言跟題目一樣。",
+      "為 Grok 而設：在 Grok 專案設定一次，之後每個對話都能畫圖。",
+      "如 AI 未能顯示中文字，會先給英文圖，並提供可在 Colab 一按即畫的中文版。"
+    ]
+  },
+  "files": [
+    {
+      "name": "dse-econ-graph.zip",
+      "title": {
+        "en": "dse-econ-graph (everything, .zip)",
+        "zh": "dse-econ-graph（全部檔案，.zip）"
+      },
+      "description": {
+        "en": "The one file to download: upload it to Grok, Claude or ChatGPT. Do not unzip it.",
+        "zh": "只需下載這一個檔案，上載到 Grok、Claude 或 ChatGPT 即可，不用解壓。"
+      },
+      "bytes": 91397,
+      "sha256": "884951f1e70947a76f0bbb91eca73dd57bfaa9ceb3e7045c023c24f33b8568a8",
+      "url": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/download/dse-econ-graph.zip",
+      "download_url": "https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph.zip"
+    },
+    {
+      "name": "SKILL.md",
+      "title": {
+        "en": "Diagram guide",
+        "zh": "畫圖指南"
+      },
+      "description": {
+        "en": "Only if your AI cannot open the .zip: the guide on its own (also inside the zip).",
+        "zh": "只在 AI 打不開 .zip 時使用：單獨的指南（.zip 內已包含）。"
+      },
+      "bytes": 123927,
+      "sha256": "4f4cdc5fe4d157ad9abd9190fa3c03dac3e4bfcb5334c5e2cac770b261886518",
+      "url": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/download/SKILL.md",
+      "download_url": "https://github.com/dinomartino/dse-econ-graph/releases/latest/download/SKILL.md"
+    },
+    {
+      "name": "instructions.txt",
+      "title": {
+        "en": "Instructions",
+        "zh": "指示"
+      },
+      "description": {
+        "en": "The text to paste into your Grok or ChatGPT project's Instructions (also inside the zip).",
+        "zh": "貼到 Grok 或 ChatGPT 專案 Instructions（指示）的文字（.zip 內已包含）。"
+      },
+      "bytes": 1555,
+      "sha256": "86bf23c29b316cd6f2767472e78c4985f5591ec0f89af5c5afd7e5577a745076",
+      "url": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/download/instructions.txt",
+      "download_url": "https://github.com/dinomartino/dse-econ-graph/releases/latest/download/instructions.txt"
+    },
+    {
+      "name": "SKILL.txt",
+      "title": {
+        "en": "Diagram guide (.txt)",
+        "zh": "畫圖指南（.txt）"
+      },
+      "description": {
+        "en": "The same guide as a .txt file, for chats that do not accept .md.",
+        "zh": "同一份指南的 .txt 版本，供不接受 .md 的對話使用。"
+      },
+      "bytes": 123927,
+      "sha256": "4f4cdc5fe4d157ad9abd9190fa3c03dac3e4bfcb5334c5e2cac770b261886518",
+      "url": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/download/SKILL.txt",
+      "download_url": "https://github.com/dinomartino/dse-econ-graph/releases/latest/download/SKILL.txt"
+    }
+  ],
+  "instructions_text": "You draw HKDSE Economics diagrams in the black-and-white HKEAA marking-scheme style. Your guide is SKILL.md (dse-econ-graph). It is inside dse-econ-graph.zip in this project's files: unzip it with your code tool and read SKILL.md in full before your first diagram. Always follow it exactly.\n\nThe teacher only pastes a question and its marking scheme. That always means: draw the diagram(s) for it and reply with the picture(s) ONLY.\n\n1. Never ask questions. Decide the diagram yourself from the question and the marking scheme. Every \"indicate / illustrate in the diagram\" point must be visible and labelled.\n2. Language = the language of the pasted question (Chinese -> 中文 labels, English -> English). Both only if asked.\n3. One picture per part that needs a diagram ((b)(i), (b)(ii) ...).\n4. Write ONE Python script: first the library (from the unzipped folder: import sys; sys.path.insert(0, \"dse-econ-graph\"); from dsegraph import *), then the diagram, starting from the matching template in SKILL.md. Do not pip install or download anything.\n5. Run it with your code tool. Check the picture against the guide's checklist; fix and run again silently.\n6. Reply with the picture(s) only: no code, no explanation, no questions. With several pictures, only the part label above each.\n7. If the output says \"NO CHINESE FONT\", or the picture does not appear, or you cannot run code: follow the guide (one short line + the script as one code block for colab.new).\n8. If the teacher asks for a change in words, redraw and reply with the new picture only.\n",
+  "providers": [
+    {
+      "id": "grok",
+      "name": "Grok",
+      "url": "https://grok.com",
+      "recommended": true,
+      "needs_vpn_in_hk": false,
+      "files": [
+        "dse-econ-graph.zip"
+      ],
+      "title": {
+        "en": "Grok (recommended, works in Hong Kong)",
+        "zh": "Grok（建議使用，香港可直接使用）"
+      },
+      "steps": {
+        "en": [
+          "Download dse-econ-graph.zip. Do not unzip it.",
+          "Go to grok.com and sign in. Open Projects and create a new project, e.g. \"DSE Economics Diagrams\".",
+          "Copy the instructions text (below, or instructions.txt inside the zip) into the project's Instructions.",
+          "Upload dse-econ-graph.zip to the project's files.",
+          "To draw: open the project and start a new chat."
+        ],
+        "zh": [
+          "下載 dse-econ-graph.zip，不用解壓。",
+          "前往 grok.com 並登入。打開 Projects（專案），建立新專案，例如「DSE 經濟圖」。",
+          "把指示文字（見下方，或 zip 內的 instructions.txt）複製到專案的 Instructions（指示）。",
+          "把 dse-econ-graph.zip 上載到專案的檔案。",
+          "要畫圖時：打開該專案，開始新對話。"
+        ]
+      }
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "recommended": false,
+      "needs_vpn_in_hk": true,
+      "files": [
+        "dse-econ-graph.zip"
+      ],
+      "title": {
+        "en": "Claude (needs a VPN in Hong Kong)",
+        "zh": "Claude（在香港需使用 VPN）"
+      },
+      "steps": {
+        "en": [
+          "Download dse-econ-graph.zip. Do not unzip it.",
+          "Go to claude.ai (web or app) and sign in. Open Settings ▸ Capabilities and turn on \"Code execution and file creation\".",
+          "On the same page, under Skills, click Upload skill and choose dse-econ-graph.zip.",
+          "To draw: start any new chat. Claude uses the skill by itself, with no instructions needed."
+        ],
+        "zh": [
+          "下載 dse-econ-graph.zip，不用解壓。",
+          "前往 claude.ai（網頁版或 App）並登入。打開 Settings ▸ Capabilities，開啟「Code execution and file creation」。",
+          "在同一頁的 Skills 下按 Upload skill，選擇 dse-econ-graph.zip。",
+          "要畫圖時：開始任何新對話，Claude 會自動使用這個技能，不用另外輸入指示。"
+        ]
+      }
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com",
+      "recommended": false,
+      "needs_vpn_in_hk": true,
+      "files": [
+        "dse-econ-graph.zip"
+      ],
+      "title": {
+        "en": "ChatGPT (needs a VPN in Hong Kong)",
+        "zh": "ChatGPT（在香港需使用 VPN）"
+      },
+      "steps": {
+        "en": [
+          "Download dse-econ-graph.zip. Do not unzip it.",
+          "Go to chatgpt.com and sign in. In the sidebar, click New project, e.g. \"DSE Economics Diagrams\".",
+          "In the project's settings, paste the instructions text (below, or instructions.txt inside the zip) into Instructions.",
+          "Upload dse-econ-graph.zip to the project's files.",
+          "To draw: start a new chat inside the project."
+        ],
+        "zh": [
+          "下載 dse-econ-graph.zip，不用解壓。",
+          "前往 chatgpt.com 並登入。在側邊欄按 New project（新專案），例如「DSE 經濟圖」。",
+          "在專案設定中，把指示文字（見下方，或 zip 內的 instructions.txt）貼到 Instructions（指示）。",
+          "把 dse-econ-graph.zip 上載到專案的檔案。",
+          "要畫圖時：在該專案內開始新對話。"
+        ]
+      }
+    }
+  ],
+  "use": {
+    "title": {
+      "en": "Drawing a diagram (any AI)",
+      "zh": "畫圖（任何 AI 都一樣）"
+    },
+    "steps": {
+      "en": [
+        "Paste the question and its marking scheme. Nothing else is needed.",
+        "The AI replies with the finished diagram: in Chinese for a Chinese question, in English for an English one, one picture per part.",
+        "Right-click the picture ▸ Save image as… and put it in your worksheet.",
+        "Want a change? Say it in words, e.g. \"make demand steeper\", \"move 'shortage' lower\" or \"English too\", and it draws it again.",
+        "If the AI gives you code instead of a picture: open colab.new, paste the code, and press ▶. The picture appears and downloads."
+      ],
+      "zh": [
+        "貼上題目和評卷參考即可，不用再寫其他指示。",
+        "AI 會直接回覆畫好的圖：中文題目畫中文圖，英文題目畫英文圖，每一分題一張。",
+        "在圖片上按右鍵 ▸「另存圖片」，即可放進工作紙。",
+        "要修改？直接用文字說，例如「需求曲線畫斜一點」、「把『短缺』移低一點」或「也要英文版」，它會重畫。",
+        "如果 AI 給你程式碼而不是圖片：打開 colab.new，貼上程式碼，按 ▶，圖片會顯示並自動下載。"
+      ]
+    }
+  },
+  "quick": {
+    "title": {
+      "en": "Quick way, without a project",
+      "zh": "快速方法（不用建立專案）"
+    },
+    "steps": {
+      "en": [
+        "Start a new chat in your AI and attach dse-econ-graph.zip.",
+        "Type: \"Use the attached dse-econ-graph skill.\" Then paste the question and its marking scheme.",
+        "Next time, attach dse-econ-graph.zip again in the new chat."
+      ],
+      "zh": [
+        "在 AI 開始新對話，附加 dse-econ-graph.zip。",
+        "輸入：「使用附件的 dse-econ-graph 技能。」然後貼上題目和評卷參考。",
+        "下次開新對話時，再附加一次 dse-econ-graph.zip。"
+      ]
+    }
+  },
+  "updating": {
+    "title": {
+      "en": "When there is a new version",
+      "zh": "有新版本時"
+    },
+    "steps": {
+      "en": [
+        "Download dse-econ-graph.zip again.",
+        "Grok / ChatGPT: in your project's files, remove the old dse-econ-graph.zip and upload the new one. If the instructions text changed, paste the new text into Instructions.",
+        "Claude: in Settings ▸ Capabilities ▸ Skills, remove the old skill and upload the new dse-econ-graph.zip."
+      ],
+      "zh": [
+        "重新下載 dse-econ-graph.zip。",
+        "Grok / ChatGPT：在專案檔案中刪除舊的 dse-econ-graph.zip，上載新的。如指示文字有更新，把新文字貼到 Instructions（指示）。",
+        "Claude：在 Settings ▸ Capabilities ▸ Skills 刪除舊技能，上載新的 dse-econ-graph.zip。"
+      ]
+    }
+  },
+  "gallery": [
+    {
+      "id": "01_price_ceiling_shortage",
+      "title": "Price set BELOW equilibrium (price ceiling / fixed low price) -> shortage.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/01_price_ceiling_shortage_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/01_price_ceiling_shortage_zh.png"
+    },
+    {
+      "id": "02_price_floor_surplus",
+      "title": "Minimum wage ABOVE equilibrium in a labour market -> unemployment.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/02_price_floor_surplus_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/02_price_floor_surplus_zh.png"
+    },
+    {
+      "id": "03_demand_increase_fixed_price",
+      "title": "Price fixed BELOW equilibrium; demand increases -> shortage grows.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/03_demand_increase_fixed_price_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/03_demand_increase_fixed_price_zh.png"
+    },
+    {
+      "id": "04_vertical_supply_shortage",
+      "title": "Perfectly inelastic (vertical) supply, price set BELOW equilibrium -> shortage.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/04_vertical_supply_shortage_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/04_vertical_supply_shortage_zh.png"
+    },
+    {
+      "id": "05_tr_price_change_elastic",
+      "title": "Price falls on ELASTIC (flat) demand -> total revenue rises.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/05_tr_price_change_elastic_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/05_tr_price_change_elastic_zh.png"
+    },
+    {
+      "id": "06_tr_supply_decrease_inelastic",
+      "title": "Supply decreases on INELASTIC (steep) demand -> total revenue rises.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/06_tr_supply_decrease_inelastic_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/06_tr_supply_decrease_inelastic_zh.png"
+    },
+    {
+      "id": "07_unit_tax_incidence",
+      "title": "Per-unit tax: incidence and tax revenue.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/07_unit_tax_incidence_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/07_unit_tax_incidence_zh.png"
+    },
+    {
+      "id": "08_surplus_deadweight_quota",
+      "title": "A quota (Qq) set BELOW the equilibrium quantity (Qe): consumer surplus, producer surplus and deadweight loss.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/08_surplus_deadweight_quota_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/08_surplus_deadweight_quota_zh.png"
+    },
+    {
+      "id": "09_externality_overproduction",
+      "title": "Negative externality in production: overproduction and deadweight loss.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/09_externality_overproduction_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/09_externality_overproduction_zh.png"
+    },
+    {
+      "id": "10_ppc",
+      "title": "Production possibilities curve (PPC) and economic growth.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/10_ppc_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/10_ppc_zh.png"
+    },
+    {
+      "id": "11_tr_demand_increase",
+      "title": "Demand increases -> price and quantity both rise -> total revenue increases (shade the change only).",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/11_tr_demand_increase_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/11_tr_demand_increase_zh.png"
+    },
+    {
+      "id": "12_demand_decrease",
+      "title": "Demand decreases -> price and quantity fall.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/12_demand_decrease_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/12_demand_decrease_zh.png"
+    },
+    {
+      "id": "13_supply_decrease",
+      "title": "Supply decreases -> price rises, quantity falls.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/13_supply_decrease_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/13_supply_decrease_zh.png"
+    },
+    {
+      "id": "14_simultaneous_shifts",
+      "title": "Demand and supply both increase, demand by MORE -> price rises.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/14_simultaneous_shifts_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/14_simultaneous_shifts_zh.png"
+    },
+    {
+      "id": "15_vertical_supply_demand_shift",
+      "title": "Fixed stock (vertical supply): supply rises a little, demand rises a lot -> price rises.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/15_vertical_supply_demand_shift_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/15_vertical_supply_demand_shift_zh.png"
+    },
+    {
+      "id": "16_labour_imported_workers",
+      "title": "Imported workers: labour supply rises -> wage falls, LOCAL employment falls.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/16_labour_imported_workers_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/16_labour_imported_workers_zh.png"
+    },
+    {
+      "id": "17_tr_demand_decrease",
+      "title": "Demand decreases -> price and quantity both fall -> total revenue falls (shade the change only).",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/17_tr_demand_decrease_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/17_tr_demand_decrease_zh.png"
+    },
+    {
+      "id": "18_tr_price_rise_inelastic",
+      "title": "Price rises on INELASTIC (steep) demand -> total revenue rises.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/18_tr_price_rise_inelastic_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/18_tr_price_rise_inelastic_zh.png"
+    },
+    {
+      "id": "19_tr_vertical_supply_increase",
+      "title": "Fixed stock (vertical supply) increases on ELASTIC (flat) demand -> total value rises.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/19_tr_vertical_supply_increase_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/19_tr_vertical_supply_increase_zh.png"
+    },
+    {
+      "id": "20_fixed_wage_supply_increase",
+      "title": "Wage fixed BELOW equilibrium; labour supply increases -> excess demand for labour shrinks.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/20_fixed_wage_supply_increase_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/20_fixed_wage_supply_increase_zh.png"
+    },
+    {
+      "id": "21_vertical_supply_price_raised",
+      "title": "Vertical supply; the fixed price is raised but stays below equilibrium -> shortage shrinks.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/21_vertical_supply_price_raised_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/21_vertical_supply_price_raised_zh.png"
+    },
+    {
+      "id": "22_fixed_price_surplus_revenue_fall",
+      "title": "Price fixed ABOVE equilibrium; demand falls -> quantity sold and sales revenue fall.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/22_fixed_price_surplus_revenue_fall_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/22_fixed_price_surplus_revenue_fall_zh.png"
+    },
+    {
+      "id": "23_fixed_price_rent_increase",
+      "title": "Vertical supply; the controlled rent is raised but stays below equilibrium -> total rental payment rises.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/23_fixed_price_rent_increase_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/23_fixed_price_rent_increase_zh.png"
+    },
+    {
+      "id": "24_price_ceiling_deadweight_loss",
+      "title": "Price ceiling BELOW equilibrium -> shortage and deadweight loss.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/24_price_ceiling_deadweight_loss_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/24_price_ceiling_deadweight_loss_zh.png"
+    },
+    {
+      "id": "25_price_floor_deadweight_loss",
+      "title": "Price (fare / price floor) set ABOVE equilibrium -> excess supply and deadweight loss.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/25_price_floor_deadweight_loss_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/25_price_floor_deadweight_loss_zh.png"
+    },
+    {
+      "id": "26_price_ceiling_consumer_surplus_change",
+      "title": "Price ceiling BELOW equilibrium -> change in consumer surplus (gain \"+\" and loss \"−\").",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/26_price_ceiling_consumer_surplus_change_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/26_price_ceiling_consumer_surplus_change_zh.png"
+    },
+    {
+      "id": "27_price_ceiling_lowered_dwl_increase",
+      "title": "A price ceiling is lowered further below equilibrium -> deadweight loss increases.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/27_price_ceiling_lowered_dwl_increase_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/27_price_ceiling_lowered_dwl_increase_zh.png"
+    },
+    {
+      "id": "28_unit_subsidy",
+      "title": "Per-unit subsidy: S shifts down, buyers pay less, sellers receive more, MC > MB.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/28_unit_subsidy_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/28_unit_subsidy_zh.png"
+    },
+    {
+      "id": "29_quota_increase",
+      "title": "A quota is raised -> price falls, quantity rises, deadweight loss shrinks.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/29_quota_increase_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/29_quota_increase_zh.png"
+    },
+    {
+      "id": "30_quota_demand_increase",
+      "title": "Demand rises under a quota -> quantity stays at the quota, deadweight loss grows.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/30_quota_demand_increase_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/30_quota_demand_increase_zh.png"
+    },
+    {
+      "id": "31_unit_tax_burden_dwl",
+      "title": "Unit tax on a good with inelastic (steep) demand: buyers bear more, deadweight loss \"a\".",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/31_unit_tax_burden_dwl_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/31_unit_tax_burden_dwl_zh.png"
+    },
+    {
+      "id": "32_consumer_producer_surplus",
+      "title": "Consumer surplus and producer surplus at the market equilibrium.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/32_consumer_producer_surplus_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/32_consumer_producer_surplus_zh.png"
+    },
+    {
+      "id": "33_mc_rise_social_surplus",
+      "title": "Marginal cost rises -> supply shifts up -> total social surplus falls by area abE1E0.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/33_mc_rise_social_surplus_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/33_mc_rise_social_surplus_zh.png"
+    },
+    {
+      "id": "34_ad_increase",
+      "title": "Aggregate demand increases -> price level and real output both rise.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/34_ad_increase_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/34_ad_increase_zh.png"
+    },
+    {
+      "id": "35_sras_decrease",
+      "title": "Short-run aggregate supply decreases -> price level rises, real output falls.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/35_sras_decrease_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/35_sras_decrease_zh.png"
+    },
+    {
+      "id": "36_ad_sras_both_decrease",
+      "title": "AD and SRAS both decrease -> real output falls; the price level is indeterminate.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/36_ad_sras_both_decrease_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/36_ad_sras_both_decrease_zh.png"
+    },
+    {
+      "id": "37_lras_ad_increase",
+      "title": "Long run: AD increases on a vertical LRAS -> price level rises, real output stays at Yf.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/37_lras_ad_increase_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/37_lras_ad_increase_zh.png"
+    },
+    {
+      "id": "38_economic_growth",
+      "title": "Economic growth: LRAS and AD both increase -> real output rises; P rises if AD grows more.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/38_economic_growth_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/38_economic_growth_zh.png"
+    },
+    {
+      "id": "39_deflationary_gap",
+      "title": "Deflationary gap narrows: AD increases -> real output rises towards Yf.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/39_deflationary_gap_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/39_deflationary_gap_zh.png"
+    },
+    {
+      "id": "40_inflationary_gap",
+      "title": "Inflationary gap closed by a fall in AD -> real output falls back to Yf.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/40_inflationary_gap_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/40_inflationary_gap_zh.png"
+    },
+    {
+      "id": "41_self_adjust_deflationary",
+      "title": "Deflationary gap closed by market forces: SRAS increases -> price level falls, output rises to Yf.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/41_self_adjust_deflationary_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/41_self_adjust_deflationary_zh.png"
+    },
+    {
+      "id": "42_self_adjust_inflationary",
+      "title": "Inflationary gap closed by market forces: SRAS decreases -> price level rises, output falls to Yf.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/42_self_adjust_inflationary_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/42_self_adjust_inflationary_zh.png"
+    },
+    {
+      "id": "43_supply_shock_recovery",
+      "title": "Temporary supply shock: SRAS falls (1), then recovers (2) -> P and Y return to P0 and Yf.",
+      "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/43_supply_shock_recovery_en.png",
+      "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/43_supply_shock_recovery_zh.png"
+    }
+  ]
+}

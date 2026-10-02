@@ -1,5 +1,9 @@
 """Price set BELOW equilibrium (price ceiling / fixed low price) -> shortage.
 
+Topic: Price fixed away from equilibrium
+Use for: a price ceiling / fixed price BELOW equilibrium causes a shortage
+  (CE1991 Q4(c)(i))
+
 Marking-scheme points it shows:
   - price (P) below the equilibrium price (Pe)
   - correct position of the shortage / excess demand (Qs to Qd at P)

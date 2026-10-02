@@ -1,0 +1,151 @@
+{
+  "_comment": "Teacher-facing setup steps, copied into download/manifest.json by tools/build.py. Plain words only: the reader is an economics teacher, not a programmer. {zip}, {skill}, {skill_txt} and {instructions} are replaced with the file names. Providers are listed in the order we recommend them. Button names must match each AI's screen (docs/ROADMAP.md).",
+  "providers": [
+    {
+      "id": "grok",
+      "name": "Grok",
+      "url": "https://grok.com",
+      "recommended": true,
+      "needs_vpn_in_hk": false,
+      "files": [
+        "{zip}"
+      ],
+      "title": {
+        "en": "Grok (recommended, works in Hong Kong)",
+        "zh": "Grok（建議使用，香港可直接使用）"
+      },
+      "steps": {
+        "en": [
+          "Download {zip}. Do not unzip it.",
+          "Go to grok.com and sign in. Open Projects and create a new project, e.g. \"DSE Economics Diagrams\".",
+          "Copy the instructions text (below, or {instructions} inside the zip) into the project's Instructions.",
+          "Upload {zip} to the project's files.",
+          "To draw: open the project and start a new chat."
+        ],
+        "zh": [
+          "下載 {zip}，不用解壓。",
+          "前往 grok.com 並登入。打開 Projects（專案），建立新專案，例如「DSE 經濟圖」。",
+          "把指示文字（見下方，或 zip 內的 {instructions}）複製到專案的 Instructions（指示）。",
+          "把 {zip} 上載到專案的檔案。",
+          "要畫圖時：打開該專案，開始新對話。"
+        ]
+      }
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "recommended": false,
+      "needs_vpn_in_hk": true,
+      "files": [
+        "{zip}"
+      ],
+      "title": {
+        "en": "Claude (needs a VPN in Hong Kong)",
+        "zh": "Claude（在香港需使用 VPN）"
+      },
+      "steps": {
+        "en": [
+          "Download {zip}. Do not unzip it.",
+          "Go to claude.ai (web or app) and sign in. Open Settings ▸ Capabilities and turn on \"Code execution and file creation\".",
+          "On the same page, under Skills, click Upload skill and choose {zip}.",
+          "To draw: start any new chat. Claude uses the skill by itself, with no instructions needed."
+        ],
+        "zh": [
+          "下載 {zip}，不用解壓。",
+          "前往 claude.ai（網頁版或 App）並登入。打開 Settings ▸ Capabilities，開啟「Code execution and file creation」。",
+          "在同一頁的 Skills 下按 Upload skill，選擇 {zip}。",
+          "要畫圖時：開始任何新對話，Claude 會自動使用這個技能，不用另外輸入指示。"
+        ]
+      }
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com",
+      "recommended": false,
+      "needs_vpn_in_hk": true,
+      "files": [
+        "{zip}"
+      ],
+      "title": {
+        "en": "ChatGPT (needs a VPN in Hong Kong)",
+        "zh": "ChatGPT（在香港需使用 VPN）"
+      },
+      "steps": {
+        "en": [
+          "Download {zip}. Do not unzip it.",
+          "Go to chatgpt.com and sign in. In the sidebar, click New project, e.g. \"DSE Economics Diagrams\".",
+          "In the project's settings, paste the instructions text (below, or {instructions} inside the zip) into Instructions.",
+          "Upload {zip} to the project's files.",
+          "To draw: start a new chat inside the project."
+        ],
+        "zh": [
+          "下載 {zip}，不用解壓。",
+          "前往 chatgpt.com 並登入。在側邊欄按 New project（新專案），例如「DSE 經濟圖」。",
+          "在專案設定中，把指示文字（見下方，或 zip 內的 {instructions}）貼到 Instructions（指示）。",
+          "把 {zip} 上載到專案的檔案。",
+          "要畫圖時：在該專案內開始新對話。"
+        ]
+      }
+    }
+  ],
+  "use": {
+    "title": {
+      "en": "Drawing a diagram (any AI)",
+      "zh": "畫圖（任何 AI 都一樣）"
+    },
+    "steps": {
+      "en": [
+        "Paste the question and its marking scheme. Nothing else is needed.",
+        "The AI replies with the finished diagram: in Chinese for a Chinese question, in English for an English one, one picture per part.",
+        "Right-click the picture ▸ Save image as… and put it in your worksheet.",
+        "Want a change? Say it in words, e.g. \"make demand steeper\", \"move 'shortage' lower\" or \"English too\", and it draws it again.",
+        "If the AI gives you code instead of a picture: open colab.new, paste the code, and press ▶. The picture appears and downloads."
+      ],
+      "zh": [
+        "貼上題目和評卷參考即可，不用再寫其他指示。",
+        "AI 會直接回覆畫好的圖：中文題目畫中文圖，英文題目畫英文圖，每一分題一張。",
+        "在圖片上按右鍵 ▸「另存圖片」，即可放進工作紙。",
+        "要修改？直接用文字說，例如「需求曲線畫斜一點」、「把『短缺』移低一點」或「也要英文版」，它會重畫。",
+        "如果 AI 給你程式碼而不是圖片：打開 colab.new，貼上程式碼，按 ▶，圖片會顯示並自動下載。"
+      ]
+    }
+  },
+  "quick": {
+    "title": {
+      "en": "Quick way, without a project",
+      "zh": "快速方法（不用建立專案）"
+    },
+    "steps": {
+      "en": [
+        "Start a new chat in your AI and attach {zip}.",
+        "Type: \"Use the attached dse-econ-graph skill.\" Then paste the question and its marking scheme.",
+        "Next time, attach {zip} again in the new chat."
+      ],
+      "zh": [
+        "在 AI 開始新對話，附加 {zip}。",
+        "輸入：「使用附件的 dse-econ-graph 技能。」然後貼上題目和評卷參考。",
+        "下次開新對話時，再附加一次 {zip}。"
+      ]
+    }
+  },
+  "updating": {
+    "title": {
+      "en": "When there is a new version",
+      "zh": "有新版本時"
+    },
+    "steps": {
+      "en": [
+        "Download {zip} again.",
+        "Grok / ChatGPT: in your project's files, remove the old {zip} and upload the new one. If the instructions text changed, paste the new text into Instructions.",
+        "Claude: in Settings ▸ Capabilities ▸ Skills, remove the old skill and upload the new {zip}."
+      ],
+      "zh": [
+        "重新下載 {zip}。",
+        "Grok / ChatGPT：在專案檔案中刪除舊的 {zip}，上載新的。如指示文字有更新，把新文字貼到 Instructions（指示）。",
+        "Claude：在 Settings ▸ Capabilities ▸ Skills 刪除舊技能，上載新的 {zip}。"
+      ]
+    }
+  }
+}

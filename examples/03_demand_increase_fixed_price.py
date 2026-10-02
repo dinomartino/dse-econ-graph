@@ -1,5 +1,9 @@
 """Price fixed BELOW equilibrium; demand increases -> shortage grows.
 
+Topic: Price fixed away from equilibrium
+Use for: price stays fixed below equilibrium while demand rises (or supply falls), so
+  the shortage grows from a to b (DSE2022 Q10(e), CE2003 Q1(a))
+
 Marking-scheme points it shows:
   - fixed price (P) below the equilibrium price
   - rightward shift of demand D0 to D1 (arrow)

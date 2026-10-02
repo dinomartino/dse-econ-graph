@@ -1,5 +1,8 @@
 """Negative externality in production: overproduction and deadweight loss.
 
+Topic: Other
+Use for: negative externality: overproduction and deadweight loss (MSC above MPC)
+
 Marking-scheme points it shows:
   - MSC above MPC (external cost); D = MPB = MSB
   - market output Qm where D = MPC; efficient output Q* where D = MSC
