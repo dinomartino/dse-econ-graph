@@ -90,12 +90,18 @@ that).
   price: brace the old gap (a) and the new gap (b) on the same price line.
 - Fixed stock (land, taxi licences, public housing units, tickets,
   seats) → **vertical** supply.
-- Total revenue / expenditure diagrams: the price-change rectangle is
-  |ΔP| × (the quantity that stays), the quantity-change rectangle is
-  |ΔQ| × (the price that stays). Elastic demand → draw D **flat**, so the
-  quantity rectangle is clearly bigger; inelastic → **steep**, so the price
-  rectangle is clearly bigger. Make the stated inequality obvious (at least
-  ~1.5×), and mark the areas "+" and "−" (or "gain" / "loss").
+- Total revenue / expenditure diagrams show **only the CHANGE in TR** —
+  never shade or label the whole old TR (P₁ × Q₁) or new TR rectangles.
+  - P and Q move in opposite directions (a movement along D, or a supply
+    shift): shade the gain and the loss. The price-change rectangle is
+    |ΔP| × (the quantity that stays), the quantity-change rectangle is
+    |ΔQ| × (the price that stays); mark them "+" and "−" (or "gain" /
+    "loss"). Elastic demand → draw D **flat**, so the quantity rectangle is
+    clearly bigger; inelastic → **steep**, so the price rectangle is
+    clearly bigger. Make the stated inequality obvious (at least ~1.5×).
+  - P and Q move the same way (a demand shift): shade the single L-shaped
+    strip between the old and new P × Q corners and label it "increase in
+    TR" / "decrease in TR" (a `key()` legend works well).
 - Unit tax: supply shifts **up by t** (vertical distance), consumers pay
   Pc, producers receive Pc − t; tax revenue = t × new quantity.
 - Labour market: y-axis wage rate, x-axis number of workers / quantity of
@@ -165,6 +171,8 @@ that).
 - [ ] Every "indicate in the diagram" point from the marking scheme is there.
 - [ ] Every labelled point is computed, and sits exactly on its curves.
 - [ ] Shifts go the right way, the arrow says so, old and new are labelled.
+- [ ] TR diagrams shade only the change in TR (gain / loss, or the
+      L-shaped increase), not the old or new TR rectangles.
 - [ ] Elastic = flat, inelastic = steep; the bigger area really is bigger.
 - [ ] No label touches a line or another label; no dashed guide runs
       through text; nothing is cut off. Check the Chinese version
@@ -189,6 +197,7 @@ makes an English and a Chinese version.
 - `08_surplus_deadweight_quota.py` — A quota (Qq) set BELOW the equilibrium quantity (Qe): consumer surplus,
 - `09_externality_overproduction.py` — Negative externality in production: overproduction and deadweight loss.
 - `10_ppc.py` — Production possibilities curve (PPC) and economic growth.
+- `11_tr_demand_increase.py` — Demand increases -> price and quantity both rise -> total revenue increases (shade the change only).
 <!-- END TEMPLATE LIST -->
 
 A complete template, to show the pattern (the library goes where the
