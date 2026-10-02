@@ -31,9 +31,8 @@ def diagram(lang="en"):
 
     guide(ax, (Qm, Pm), O, r"$P_m$", r"$Q_m$")
     guide(ax, (Qs, Ps), O, r"$P^*$", r"$Q^*$")
-    label(ax, 70, 38, T("Deadweight\nloss", "無謂損失"), ha="left")
     cx, cy = (Qs + 2 * Qm) / 3, (Ps + MSC.y(Qm) + Pm) / 3     # centroid
-    arrow(ax, (69, 40), (cx + 1, cy - 1), lw=0.6, head=0.8)
+    leader(ax, (44, 84), (cx, cy + 1), T("Deadweight\nloss", "無謂損失"))
     return fig
 
 

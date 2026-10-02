@@ -20,57 +20,32 @@ More in [`gallery/`](gallery/).
 
 ## For teachers — no coding needed
 
-### With Gemini (gemini.google.com)
+### 👉 Start here: **[dinomartino.github.io/dse-econ-graph](https://dinomartino.github.io/dse-econ-graph/)**
 
-**Once:** download **[`SKILL.md`](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/SKILL.md)**
-— it teaches Gemini how to draw DSE diagrams. (Your department can also
-make a shared Gem so nobody needs the file: see
-[`gemini/GEM_SETUP.md`](gemini/GEM_SETUP.md).)
+One page, in 中文 and English, with a big **Copy** button. Nothing to
+download, no GitHub.
 
-**Each diagram:**
-1. Open Gemini, attach `SKILL.md` with **＋**, and ask — paste the question
-   and the marking scheme, say English and/or Chinese.
-2. Gemini replies with a block of code. Click **Export to Colab** under it
-   (in the code box's share / ⋮ menu).
-3. Colab opens: press **▶**. Sign in with Google if asked, and click
-   **Run anyway** if asked.
-4. The picture appears and downloads to your computer. (First run: about
-   a minute.)
+**With Gemini (recommended):**
+1. On the start page click **Copy the instructions**.
+2. gemini.google.com ▸ **Explore Gems** ▸ **New Gem** ▸ name it
+   `DSE Econ Graph 經濟圖表` ▸ paste into **Instructions** ▸ **Save**.
+   (Once only. Share the Gem's link and colleagues skip this step.)
+3. Open the Gem, paste a question and its marking scheme, say English
+   and/or Chinese.
+4. Under Gemini's code click **Export to Colab**, press **▶** — the
+   picture appears and downloads.
 
-No *Export to Colab* button? Copy the code, click
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dinomartino/dse-econ-graph/blob/main/DSE_Graph_Maker.ipynb),
-paste it into *Step 2*, then **Runtime ▸ Run all**.
+Not quite right? Tell Gemini in words ("make demand steeper", "Chinese
+only") and do step 4 again.
 
-**What to type:**
+### 老師使用說明
 
-> Draw the diagram for this DSE question in English and Chinese.
-> Question: … Marking scheme: "Indicate in the diagram: price below
-> equilibrium (1), rightward shift of demand (1), shortage increases from
-> a to b (1)."
+👉 **由這裏開始：[dinomartino.github.io/dse-econ-graph](https://dinomartino.github.io/dse-econ-graph/)**（中英對照，有「複製」按鈕，不用下載，不用 GitHub）
 
-Not quite right? Tell Gemini in words — *"put 'shortage' lower"*, *"make
-demand steeper"*, *"Chinese only"* — and export the new code again. Got
-a red error in Colab? Copy it to Gemini: *"I got this error, please give me
-the whole corrected code."*
-
-### 老師使用說明（Gemini，不需識寫程式）
-
-**只需一次：** 下載 **[`SKILL.md`](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/SKILL.md)**，這個檔案教 Gemini 如何畫 DSE 經濟圖。（科組亦可建立一個共用 Gem，大家打開連結即可用，不用附加檔案，見 [`gemini/GEM_SETUP.md`](gemini/GEM_SETUP.md)。）
-
-**每次畫圖：**
-1. 打開 Gemini，用 **＋** 附加 `SKILL.md`，貼上題目和評卷參考，註明要中文、英文或兩者。
-2. Gemini 會給你一段程式碼。按程式碼下方的 **Export to Colab（匯出至 Colab）**（在程式碼框的分享／⋮ 選單）。
-3. Colab 打開後按 **▶**。如要求登入 Google 請登入；見到「仍要執行」請按 **仍要執行**。
-4. 圖片會出現並自動下載到你的電腦（第一次約需一分鐘）。
-
-找不到 *Export to Colab*？複製程式碼，按上面的 **Open in Colab**，貼到 *Step 2*，再按 **執行階段 ▸ 全部執行**。
-
-**可以這樣問：**
-
-> 請按這題 DSE 題目及評卷參考，畫中英文版本的圖。
-> 題目：…… 評卷參考：「在圖中標示：價格低於均衡價格 (1)、需求曲線右移 (1)、短缺由 a 增至 b (1)。」
-
-不滿意？直接用文字告訴 Gemini，例如「把『短缺』移低一點」、「需求曲線畫斜一點」、「只要中文版」，再匯出新的程式碼。Colab 出現紅色錯誤？複製給 Gemini：「出現這個錯誤，請給我完整修正後的程式碼。」
+1. 在網頁按 **複製指示**。
+2. 到 gemini.google.com ▸ **探索 Gem** ▸ **新增 Gem**，名稱 `DSE Econ Graph 經濟圖表`，把指示貼到 **指示** 欄，按 **儲存**（只需一次；把 Gem 連結分享給同事，他們連這步也不用做）。
+3. 打開 Gem，貼上題目和評卷參考，註明要中文／英文。
+4. 按 Gemini 程式碼下方的 **Export to Colab**，再按 **▶**，圖片會出現並自動下載。
 
 ### With Claude or ChatGPT
 
@@ -80,8 +55,9 @@ These can run the code themselves and hand you the picture directly.
   and file creation*; under *Skills* upload
   [`dse-econ-graph.zip`](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph.zip)
   (once). Then just ask.
-- **ChatGPT:** attach `SKILL.md`, ask, and add *"Run the code and give me
-  the PNG files."*
+- **ChatGPT / any chat:** paste the instructions from the start page as
+  the first message (or make a GPT with them). ChatGPT can usually run the
+  code itself — add *"Run the code and give me the PNG files."*
 
 ## For other AI tools and developers
 

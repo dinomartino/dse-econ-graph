@@ -311,9 +311,12 @@ def key(ax, x, y, text, pattern="////", w=8, h=4):
 
 def leader(ax, text_xy, target_xy, text, ha="center", va="center"):
     """A label away from a crowded spot with a thin arrow to what it names
-    ("deadweight loss" -> its triangle, "smaller shortage" -> a brace)."""
-    label(ax, *text_xy, text, ha=ha, va=va)
-    arrow(ax, text_xy, target_xy, lw=GUIDE_LW, head=0.8)
+    ("deadweight loss" -> its triangle, "smaller shortage" -> a brace).
+    The arrow starts at the edge of the text."""
+    ax.annotate(text, xy=target_xy, xytext=text_xy, ha=ha, va=va, fontsize=SIZE, zorder=6,
+                arrowprops=dict(arrowstyle="-|>,head_length=0.36,head_width=0.14",
+                                mutation_scale=10, lw=GUIDE_LW, color="black",
+                                shrinkA=2, shrinkB=0))
 
 
 # --------------------------------------------------------------------------
@@ -356,6 +359,68 @@ def vbrace(ax, y0, y1, x, text="", side="left", depth=2.5, gap=1.0):
 # output
 # --------------------------------------------------------------------------
 
+def _declutter(fig, ax, step=2.0, max_pts=14.0):
+    """Move any label that touches a line, arrow, brace, dot or another label
+    to the nearest clear spot (at most `max_pts` away).  The assistant that
+    wrote the script usually cannot see the picture, so the library checks
+    for it.  Returns the labels that could not be freed."""
+    import math
+    from matplotlib.text import Text
+    from matplotlib.transforms import Bbox
+    fig.canvas.draw()
+    r = fig.canvas.get_renderer()
+    px = fig.dpi / 72.0                                 # pixels per point
+    paths, boxes = [], []
+    for ln in ax.lines:
+        xy = ln.get_xydata()
+        if len(xy) == 1:                                # a dot
+            x, y = ax.transData.transform(xy[0])
+            d = ln.get_markersize() * px / 2 + 1
+            boxes.append(Bbox([[x - d, y - d], [x + d, y + d]]))
+        else:
+            paths.append(ln.get_transform().transform_path(ln.get_path()))
+    for p in ax.patches:
+        if isinstance(p, (PathPatch, FancyArrowPatch)):
+            paths.append(p.get_transform().transform_path(p.get_path()))
+    # plain polylines: closed shapes (arrow heads) confuse intersects_bbox
+    paths = [Path(poly) for q in paths for poly in q.to_polygons(closed_only=False)
+             if len(poly) > 1]
+
+    def clash(bb):
+        inner = bb.padded(-2.0 * px)       # text vs text: only a real overlap counts
+        return any(q.intersects_bbox(bb, filled=False) for q in paths) or \
+            any(inner.overlaps(o) for o in boxes)
+
+    stuck, moved = [], []
+    for t in ax.texts:
+        ext = lambda: Text.get_window_extent(t, r)     # text only (a leader's arrow excluded)
+        bb = ext().padded(0.5 * px)
+        if clash(bb):
+            home = ax.transData.transform(t.get_position())
+            best = None
+            rad = step
+            while best is None and rad <= max_pts:
+                for k in range(16):
+                    a = 2 * math.pi * k / 16
+                    off = (rad * px * math.cos(a), rad * px * math.sin(a))
+                    t.set_position(ax.transData.inverted().transform(home + off))
+                    nb = ext().padded(0.5 * px)
+                    if not clash(nb):
+                        best, bb = off, nb
+                        break
+                rad += step
+            if best is None:
+                t.set_position(ax.transData.inverted().transform(home))
+                bb = ext().padded(0.5 * px)
+                stuck.append(t.get_text())
+            else:
+                moved.append(t.get_text())
+        boxes.append(bb)
+    if os.environ.get("DSEGRAPH_DEBUG") and moved:
+        print("dsegraph: moved labels", moved)
+    return stuck
+
+
 def _notebook(path):
     """In Colab / Jupyter: show the picture under the cell, and in Colab also
     download it — so "Export to Colab -> Run" is all a teacher has to do."""
@@ -375,12 +440,18 @@ def _notebook(path):
         pass
 
 
-def save(fig, path="diagram.png", aspect: float | None = None):
+def save(fig, path="diagram.png", aspect: float | None = None, tidy: bool = True):
     """PNG (greyscale, 300 dpi) or .svg / .pdf by extension.  The canvas grows
     to fit every label, so nothing is ever clipped.  `aspect` (w/h) pads the
     PNG with white to an exact ratio, e.g. to replace a picture in Word
     without moving the layout.  In a notebook the picture is also shown
-    (and downloaded, in Colab)."""
+    (and downloaded, in Colab).  tidy=True first nudges any label that
+    touches a line or another label into a clear spot."""
+    if tidy and fig.axes:
+        stuck = _declutter(fig, fig.axes[0])
+        if stuck:
+            print(f"dsegraph note ({path}): these labels are crowded — ask the AI to move them: "
+                  + ", ".join(repr(s) for s in stuck))
     if not path.lower().endswith(".png"):
         fig.savefig(path, facecolor="white", bbox_inches="tight", pad_inches=0.04)
         plt.close(fig)

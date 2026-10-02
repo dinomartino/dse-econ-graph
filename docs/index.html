@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSE 經濟圖表 · DSE Econ Graph</title>
+<meta name="description" content="用 Gemini 畫出 DSE 評卷參考風格的經濟圖，不需識寫程式。Exam-style DSE Economics diagrams from Gemini — no coding.">
+<style>
+:root{--bg:#fbfaf7;--card:#fff;--ink:#1d1d1b;--mute:#5d5b55;--line:#e3e0d8;--accent:#1f4e79;--accent-ink:#fff;--ok:#2e7d32;--code:#f3f1ec}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161615;--card:#1f1f1d;--ink:#ecebe6;--mute:#a9a69e;--line:#34332f;--accent:#8db8e0;--accent-ink:#111;--ok:#7bc47f;--code:#262624}}
+:root[data-theme="dark"]{--bg:#161615;--card:#1f1f1d;--ink:#ecebe6;--mute:#a9a69e;--line:#34332f;--accent:#8db8e0;--accent-ink:#111;--ok:#7bc47f;--code:#262624}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 -apple-system,"Segoe UI","PingFang TC","Microsoft JhengHei",sans-serif}
+main{max-width:780px;margin:0 auto;padding:24px 16px 64px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+h1{font:600 30px/1.25 "Songti TC","PMingLiU","Noto Serif TC",Georgia,serif;margin:8px 0 4px}
+h2{font-size:21px;margin:0 0 10px}
+.sub{color:var(--mute);margin:0 0 20px}
+.lang button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:6px 12px;border-radius:999px;font-size:15px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0 24px}
+.pics img{width:100%;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:16px 0}
+.tag{display:inline-block;font-size:13px;font-weight:600;color:var(--ok);border:1px solid currentColor;border-radius:999px;padding:1px 9px;margin-left:6px;vertical-align:middle}
+ol{padding-left:1.4em;margin:8px 0}li{margin:6px 0}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:12px 20px;font-size:18px;font-weight:600;cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:12px 0}
+.done{color:var(--ok);font-weight:600;min-width:6em}
+textarea{width:100%;height:150px;font:13px/1.45 ui-monospace,Menlo,Consolas,monospace;background:var(--code);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px;resize:vertical}
+.ex{background:var(--code);border-radius:8px;padding:12px 14px;white-space:pre-wrap;font-size:15px}
+kbd{font:inherit;font-weight:600;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:0 6px;background:var(--bg)}
+table{border-collapse:collapse;width:100%;font-size:15px}td{border-top:1px solid var(--line);padding:8px 6px;vertical-align:top}td:first-child{font-weight:600;width:38%}
+footer{color:var(--mute);font-size:14px;text-align:center;margin-top:28px}
+a{color:var(--accent)}
+[data-l="en"]{display:none}
+html[lang="en"] [data-l="zh"]{display:none}html[lang="en"] [data-l="en"]{display:revert}
+@media (max-width:560px){.pics{grid-template-columns:1fr}h1{font-size:25px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div>
+    <h1>DSE 經濟圖表 <span style="font-weight:400">· DSE Econ Graph</span></h1>
+  </div>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-set="zh" aria-pressed="true">中文</button>
+    <button type="button" data-set="en" aria-pressed="false">English</button>
+  </div>
+</header>
+<p class="sub" data-l="zh">貼上題目和評卷參考，Gemini 就會給你像 DSE 評卷參考一樣的黑白經濟圖，中英文都可以。<b>不需要識寫程式。</b></p>
+<p class="sub" data-l="en">Paste a question and its marking scheme, and Gemini gives you a black-and-white diagram just like the DSE marking schemes — in English or Chinese. <b>No coding needed.</b></p>
+
+<div class="pics">
+  <img src="img/example_en.png" alt="Example diagram in English: price ceiling causing a shortage">
+  <img src="img/example_zh.png" alt="中文示範圖：價格上限導致短缺">
+</div>
+
+<section>
+  <h2><span data-l="zh">第一步：建立你的 Gemini Gem</span><span data-l="en">Step 1: Make your Gemini Gem</span><span class="tag" data-l="zh">只需一次</span><span class="tag" data-l="en">once only</span></h2>
+  <p data-l="zh">Gem 是一個「記住了指示」的 Gemini。建立一次之後，以後打開它直接問就可以。</p>
+  <p data-l="en">A Gem is a Gemini that remembers instructions. Make it once; afterwards just open it and ask.</p>
+  <div class="row">
+    <button class="btn" type="button" data-copy="prompt"><span data-l="zh">📋 複製指示</span><span data-l="en">📋 Copy the instructions</span></button>
+    <span class="done" aria-live="polite" data-done="prompt"></span>
+  </div>
+  <ol data-l="zh">
+    <li>按上面的 <b>複製指示</b>。</li>
+    <li>打開 <a href="https://gemini.google.com/" target="_blank" rel="noopener">gemini.google.com</a>，登入 Google。</li>
+    <li>左邊欄按 <b>探索 Gem</b>（Explore Gems）▸ <b>新增 Gem</b>（New Gem）。</li>
+    <li><b>名稱</b>：<code>DSE Econ Graph 經濟圖表</code></li>
+    <li>按一下 <b>指示</b>（Instructions）格，按 <kbd>Ctrl</kbd>+<kbd>V</kbd>（Mac：<kbd>⌘</kbd>+<kbd>V</kbd>）貼上。</li>
+    <li>按 <b>儲存</b>（Save）。完成！</li>
+  </ol>
+  <ol data-l="en">
+    <li>Click <b>Copy the instructions</b> above.</li>
+    <li>Open <a href="https://gemini.google.com/" target="_blank" rel="noopener">gemini.google.com</a> and sign in to Google.</li>
+    <li>Left sidebar ▸ <b>Explore Gems</b> ▸ <b>New Gem</b>.</li>
+    <li><b>Name</b>: <code>DSE Econ Graph 經濟圖表</code></li>
+    <li>Click the <b>Instructions</b> box and press <kbd>Ctrl</kbd>+<kbd>V</kbd> (Mac: <kbd>⌘</kbd>+<kbd>V</kbd>).</li>
+    <li>Click <b>Save</b>. Done!</li>
+  </ol>
+  <p data-l="zh"><b>分享給同事：</b>在 Gem 旁按 <b>分享</b> ▸「知道連結的任何人」▸ 複製連結，傳給同事。他們按連結就可以用，連這一步都不用做。</p>
+  <p data-l="en"><b>Share with colleagues:</b> next to the Gem click <b>Share</b> ▸ <i>Anyone with the link</i> ▸ copy the link and send it. They just click it — they skip this step entirely.</p>
+  <details>
+    <summary data-l="zh">想看看指示內容？</summary><summary data-l="en">See the instructions</summary>
+    <textarea id="prompt" readonly aria-label="Instructions"># DSE Econ Graph 經濟圖表 — instructions for the AI
+
+You help Hong Kong DSE Economics teachers and students get exam-style economics diagrams in the black-and-white HKEAA marking-scheme look: Times / Ming serif, thin black lines, arrow axes, dashed guides, //// hatching, curly braces; no colour, no grid, no title. You do it by writing a short Python script that uses the free dsegraph library. The users do not code: they want the picture.
+
+## First reply
+If the user has not asked for a diagram yet, greet them in one or two lines in their language: &quot;Paste a DSE question and its marking scheme, and say English, Chinese or both — I&#x27;ll give you the diagram.&quot; Only if the user pasted these instructions into the chat themselves, add: &quot;Tip: save them as a Gem so you never paste them again — ask me how.&quot;
+Reply in the user&#x27;s language and style (English, written Chinese or Cantonese), but diagram labels are always formal written Chinese (書面語) or English.
+
+## For each diagram
+1. Work out the economics first from the question and marking scheme. Every &quot;indicate in the diagram&quot; point must appear, labelled as the scheme names it.
+2. Reply with ONE complete Python script in ONE code block: these lines first, unchanged —
+```python
+# DSE graph library — downloads automatically, do not edit
+import os, urllib.request
+if not os.path.exists(&quot;dsegraph.py&quot;):
+    urllib.request.urlretrieve(&quot;https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/dsegraph.py&quot;, &quot;dsegraph.py&quot;)
+from dsegraph import *
+```
+then the diagram, following the pattern below. It saves diagram_en.png and diagram_zh.png (only one if the user wants one language).
+3. Usually you cannot run code (Gemini, most chats): after the code block give these steps in the user&#x27;s language. (Only if you can run Python yourself with internet: run it and give the user the PNG files instead.)
+   How to get the picture:
+   1. Click &quot;Export to Colab&quot; under the code (Gemini: the share or ⋮ menu of the code box). No such button? Copy the code, open https://colab.research.google.com/github/dinomartino/dse-econ-graph/blob/main/DSE_Graph_Maker.ipynb and paste it into Step 2.
+   2. Press ▶ (or Runtime ▸ Run all). Sign in to Google if asked; click &quot;Run anyway&quot; if asked.
+   3. The picture appears and downloads to your computer. The first run takes about a minute.
+4. Then at most 2–4 short lines on the economics the diagram shows.
+5. When the user asks for a change in words, or pastes red error text, reply with the WHOLE corrected script and the same steps. Never ask them to edit code.
+
+## Economics checklist
+- Increase = shift right, decrease = shift left. Label old and new (D₀ → D₁) and put a short arrow between them.
+- Price below equilibrium → shortage (excess demand) = Qd − Qs on the price line; above → surplus (excess supply). Quantity transacted = the smaller of Qd and Qs.
+- Fixed price with a shift: the price stays; brace the old gap (a) and the new gap (b) on the same price line.
+- Fixed stock (land, licences, public housing flats, seats, university places) → vertical supply.
+- Total revenue / expenditure: price rectangle = |ΔP| × the quantity that stays; quantity rectangle = |ΔQ| × the price that stays. Elastic → flat D; inelastic → steep D. Make the bigger area clearly bigger (about 1.5× or more) and mark the areas &quot;+&quot; and &quot;−&quot;.
+- Unit tax: S shifts UP by t; consumers pay Pc, producers receive Pc − t; tax revenue = t × new quantity.
+- Labour market: y-axis wage rate, x-axis number of workers.
+- Negative externality: MSC above MPC; market output Qm &gt; efficient Q*; deadweight loss = triangle between MSC and D from Q* to Qm.
+- PPC is concave; inside = unemployment, outside = unattainable; growth = outward shift.
+- Diagrams are schematic: numbers from the question ($40, $42.1) are labels on the axis, not to scale; keep the order right.
+
+## dsegraph functions (use only these)
+The canvas is 0–100 by 0–100.
+- setup(&quot;en&quot; or &quot;zh&quot;) picks the fonts; T(&quot;English&quot;, &quot;中文&quot;) picks the label for the current language.
+- fig, ax = new(3.2, 2.6) — printed size in inches.
+- axes(ax, origin, x_end, y_end, xlabel, ylabel) — arrow axes, y title above, x title to the right (&quot;\n&quot; splits a long one).
+- Line((x1, y1), (x2, y2)), Line(p, m=slope), Line.vertical(x); L.y(x), L.x(y), L.shift(dx=…, dy=…).
+- meet(L1, L2) → the (x, y) intersection.
+- draw(ax, L, x0, x1, name, end=&quot;right&quot;|&quot;left&quot;|&quot;top&quot;|&quot;bottom&quot;, ls=&quot;-&quot;, dx=…, dy=…); a vertical line: draw(ax, L, y0=…, y1=…, name=…, end=&quot;top&quot;).
+- line(ax, p, q, ls=…), dashed(ax, p, q), curve(ax, xs, ys, ls=…).
+- guide(ax, point, origin, ylab, xlab, to_y=True, to_x=True) — dashed lines to both axes with their labels.
+- label(ax, x, y, text, ha=…, va=…) — subscripts as r&quot;$P_1$&quot;; never put Chinese inside $…$; write a prime as &quot;S’&quot;.
+- arrow(ax, p, q), dot(ax, x, y).
+- hatch(ax, x0, y0, x1, y1, &quot;////&quot;), dots(ax, x0, y0, x1, y1), region(ax, [points], &quot;xxxx&quot;). Patterns: &quot;////&quot;, &quot;....&quot;, &quot;xxxx&quot;.
+- sign(ax, x, y, &quot;+&quot;) or sign(ax, x, y, &quot;−&quot;) — a label on a white patch; key(ax, x, y, text, &quot;////&quot;) — one legend row.
+- brace(ax, x0, x1, y, text, side=&quot;below&quot;|&quot;above&quot;), vbrace(ax, y0, y1, x, text, side=&quot;left&quot;|&quot;right&quot;).
+- leader(ax, text_xy, target_xy, text) — a label with a thin arrow to what it names.
+- save(fig, &quot;diagram_en.png&quot;) — also shows and downloads the picture in Colab.
+
+## Pattern (a shortage diagram)
+```python
+def diagram(lang=&quot;en&quot;):
+    setup(lang)
+    fig, ax = new(3.2, 2.6)
+    O = (12, 12)
+    axes(ax, O, (88, 12), (12, 90), T(&quot;Quantity&quot;, &quot;數量&quot;), T(&quot;Price&quot;, &quot;價格&quot;))
+
+    D = Line((20, 82), (78, 22))
+    S = Line((20, 22), (78, 82))
+    draw(ax, D, 20, 78, &quot;D&quot;, dy=-1.5)
+    draw(ax, S, 20, 78, &quot;S&quot;, dy=1.5)
+
+    E = meet(D, S)
+    guide(ax, E, O, r&quot;$P_e$&quot;, to_x=False)
+
+    P = 34                                     # the fixed price, below Pe
+    qs, qd = S.x(P), D.x(P)
+    line(ax, (O[0], P), (84, P))
+    label(ax, O[0] - 1.5, P, &quot;P&quot;, ha=&quot;right&quot;)
+    dashed(ax, (qs, O[1]), (qs, P)); label(ax, qs, O[1] - 1.8, r&quot;$Q_s$&quot;, va=&quot;top&quot;)
+    dashed(ax, (qd, O[1]), (qd, P)); label(ax, qd, O[1] - 1.8, r&quot;$Q_d$&quot;, va=&quot;top&quot;)
+    brace(ax, qs, qd, P - 1, T(&quot;shortage&quot;, &quot;短缺&quot;), side=&quot;below&quot;)
+    return fig
+
+
+for lang in (&quot;en&quot;, &quot;zh&quot;):
+    save(diagram(lang), f&quot;diagram_{lang}.png&quot;)
+```
+
+## Style
+Compute every point with meet / .x() / .y(); never guess one. Move things rather than shrink text. Name each curve at one end. Use a different fill for each area. No label may touch a line or another label, and no dashed guide may run through text; Chinese labels are wider. Black and white only. In Chinese diagrams the curve letters and symbols (D, S, MPC, P₁, E) stay English.
+
+## Chinese terms (EDB glossary)
+price 價格 · unit price 單位價格 · quantity 數量 · quantity transacted 交易量 · wage rate 工資率 · number of workers 工人數目 · demand 需求 · supply 供應 · equilibrium price 均衡價格 · shortage 短缺 · surplus 盈餘 · excess demand 超額需求 · excess supply 超額供應 · total revenue 總收入 · total expenditure 總開支 · price ceiling 價格上限 · price floor 價格下限 · minimum wage 最低工資 · quota 配額 · unit tax 從量稅 · tax revenue 政府稅收 · consumers&#x27; burden 消費者負擔 · producers&#x27; burden 生產者負擔 · consumer surplus 消費者盈餘 · producer surplus 生產者盈餘 · deadweight loss 無謂損失 · subsidy 津貼 · MPC 邊際私人成本 · MSC 邊際社會成本 · MPB 邊際私人利益 · MSB 邊際社會利益 · PPC 生產可能曲線 · capital goods 資本品 · consumer goods 消費品
+
+## Setup help
+If the user asks how to keep this, share it, or set it up for colleagues, explain in their language:
+- Gemini (recommended): open gemini.google.com ▸ Explore Gems ▸ New Gem. Name it &quot;DSE Econ Graph 經濟圖表&quot;. In Instructions, paste these instructions (copy them from https://dinomartino.github.io/dse-econ-graph/ with the Copy button). Save. Then Share ▸ Anyone with the link ▸ Copy link, and send the link to colleagues — they just click it and ask.
+- ChatGPT: a GPT with these instructions. Claude: a Project. Any other chat: paste them as the first message.
+Step-by-step guide with pictures and the Copy button: https://dinomartino.github.io/dse-econ-graph/
+</textarea>
+  </details>
+</section>
+
+<section>
+  <h2><span data-l="zh">第二步：請它畫圖</span><span data-l="en">Step 2: Ask for a diagram</span></h2>
+  <p data-l="zh">打開你的 Gem，貼上題目和評卷參考，註明要中文、英文或兩者。例如：</p>
+  <p data-l="en">Open your Gem, paste the question and the marking scheme, and say English, Chinese or both. For example:</p>
+  <div class="ex" id="ex-zh" data-l="zh">請按這題畫圖，中英文各一。
+題目：本港大學學費維持不變，並開始取錄內地學生。試以圖解釋大學學額短缺的變化。
+評卷參考 — 在圖中標示：
+- 學費低於均衡價格 (1)
+- a 為原本的短缺 (1)
+- 需求曲線右移 (1)
+- b 為新的短缺 (1)</div>
+  <div class="ex" id="ex-en" data-l="en">Draw the diagram for this question, in English and Chinese.
+Question: The universities in Hong Kong keep the tuition fee unchanged. They now also admit Mainland students. With the aid of a diagram, explain the effect on the shortage of university places.
+Marking scheme – indicate in the diagram:
+- tuition fee is below the equilibrium price (1)
+- a is the original shortage (1)
+- rightward shift of the demand curve (1)
+- b is the new shortage (1)</div>
+  <div class="row">
+    <button class="btn ghost" type="button" data-copy="example"><span data-l="zh">📋 複製這個例子試試</span><span data-l="en">📋 Copy this example to try</span></button>
+    <span class="done" aria-live="polite" data-done="example"></span>
+  </div>
+</section>
+
+<section>
+  <h2><span data-l="zh">第三步：取得圖片</span><span data-l="en">Step 3: Get the picture</span></h2>
+  <ol data-l="zh">
+    <li>Gemini 會給你一段程式碼（不用看懂）。按程式碼框的 <b>分享 / ⋮</b> ▸ <b>Export to Colab（匯出至 Colab）</b>。</li>
+    <li>Colab 會在新分頁打開。按程式碼左邊的圓形 <b>▶</b>。</li>
+    <li>如要求登入 Google，請登入；見到「仍要執行」（Run anyway），請按它。</li>
+    <li>約一分鐘後，圖片會出現並<b>自動下載</b>到你的電腦，可直接放入 Word 或 PowerPoint。</li>
+  </ol>
+  <ol data-l="en">
+    <li>Gemini replies with some code (you don't need to read it). In the code box click <b>Share / ⋮</b> ▸ <b>Export to Colab</b>.</li>
+    <li>Colab opens in a new tab. Press the round <b>▶</b> left of the code.</li>
+    <li>Sign in to Google if asked; click <b>Run anyway</b> if asked.</li>
+    <li>After about a minute the picture appears and <b>downloads automatically</b> — drop it into Word or PowerPoint.</li>
+  </ol>
+  <p data-l="zh">找不到 <b>Export to Colab</b>？複製程式碼，打開 <a href="https://colab.research.google.com/github/dinomartino/dse-econ-graph/blob/main/DSE_Graph_Maker.ipynb" target="_blank" rel="noopener">圖表製作器（Colab）</a>，貼到 Step 2，再按 <b>執行階段 ▸ 全部執行</b>。</p>
+  <p data-l="en">No <b>Export to Colab</b>? Copy the code, open the <a href="https://colab.research.google.com/github/dinomartino/dse-econ-graph/blob/main/DSE_Graph_Maker.ipynb" target="_blank" rel="noopener">Diagram Maker (Colab)</a>, paste into Step 2 and click <b>Runtime ▸ Run all</b>.</p>
+</section>
+
+<section>
+  <h2><span data-l="zh">常見問題</span><span data-l="en">If something goes wrong</span></h2>
+  <table data-l="zh">
+    <tr><td>圖要修改</td><td>直接用文字告訴 Gemini，例如「需求曲線畫斜一點」、「把『短缺』移低一點」、「只要中文版」，然後再做第三步。</td></tr>
+    <tr><td>Colab 出現紅色字</td><td>複製紅色字貼給 Gemini，並說：「出現這個錯誤，請給我完整修正後的程式碼。」然後再做第三步。</td></tr>
+    <tr><td>中文變成方格 □□</td><td>再按一次 ▶（第一次執行時會下載中文字型）。</td></tr>
+    <tr><td>沒有自動下載</td><td>瀏覽器可能問是否允許下載多個檔案，按「允許」；或在圖片上按右鍵 ▸「另存圖片」。</td></tr>
+    <tr><td>學校帳戶找不到 Gem</td><td>學校可能關閉了 Gem。用個人 Gmail 帳戶，或改用下面「不用 Gem」的方法。</td></tr>
+  </table>
+  <table data-l="en">
+    <tr><td>The diagram needs changes</td><td>Tell Gemini in words — "make demand steeper", "move 'shortage' lower", "Chinese only" — then do Step 3 again.</td></tr>
+    <tr><td>Red text in Colab</td><td>Copy the red text to Gemini: "I got this error, please give me the whole corrected code." Then Step 3 again.</td></tr>
+    <tr><td>Chinese shows as □□</td><td>Press ▶ once more (the Chinese font downloads on the first run).</td></tr>
+    <tr><td>Nothing downloaded</td><td>Your browser may ask to allow multiple downloads — click Allow. Or right-click the picture ▸ Save image as.</td></tr>
+    <tr><td>No Gems on a school account</td><td>Your school may have switched Gems off. Use a personal Gmail account, or the "without a Gem" way below.</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2><span data-l="zh">不用 Gem，或用其他 AI</span><span data-l="en">Without a Gem, or with another AI</span></h2>
+  <ul data-l="zh">
+    <li><b>任何 AI 對話</b>（Gemini、ChatGPT、DeepSeek、Copilot、Poe…）：按第一步的 <b>複製指示</b>，在新對話第一句貼上並送出，然後照常請它畫圖。</li>
+    <li><b>ChatGPT</b>：可建立一個 GPT，把指示貼到 Instructions；ChatGPT 通常能自己執行程式碼，直接給你圖片。</li>
+    <li><b>Claude</b>：建立 Project 並貼上指示，或在 Skills 上載 <a href="https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph.zip">dse-econ-graph.zip</a>；開啟程式碼執行後會直接給你圖片。</li>
+  </ul>
+  <ul data-l="en">
+    <li><b>Any AI chat</b> (Gemini, ChatGPT, DeepSeek, Copilot, Poe…): click <b>Copy the instructions</b> in Step 1, paste them as the first message of a new chat, send, then ask for your diagram.</li>
+    <li><b>ChatGPT</b>: make a GPT with these as its Instructions. ChatGPT can usually run the code itself and hand you the picture.</li>
+    <li><b>Claude</b>: a Project with these instructions, or upload <a href="https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph.zip">dse-econ-graph.zip</a> under Skills; with code execution on it gives you the picture directly.</li>
+  </ul>
+</section>
+
+<footer>
+  <p data-l="zh">開源免費 · <a href="https://github.com/dinomartino/dse-econ-graph">GitHub</a> · MIT · 風格參考 HKEAA 評卷參考，與考評局無關 · 中文用詞依教育局經濟科詞彙表。</p>
+  <p data-l="en">Free and open source · <a href="https://github.com/dinomartino/dse-econ-graph">GitHub</a> · MIT · Style imitates HKEAA marking schemes; not affiliated with the HKEAA · Chinese terms follow the EDB Economics glossary.</p>
+</footer>
+</main>
+<script>
+(function(){
+  var root=document.documentElement;
+  function setLang(l){
+    root.lang = l==="en" ? "en" : "zh-Hant-HK";
+    document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed", String(b.dataset.set===l));});
+    try{localStorage.setItem("lang",l);}catch(e){}
+  }
+  document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.set);});});
+  var saved=null; try{saved=localStorage.getItem("lang");}catch(e){}
+  setLang(saved || ((navigator.language||"").toLowerCase().indexOf("zh")===0 ? "zh" : "zh"));
+
+  function text(kind){
+    if(kind==="prompt") return document.getElementById("prompt").value;
+    return document.getElementById(root.lang==="en" ? "ex-en" : "ex-zh").textContent;
+  }
+  function copy(t, done){
+    var ok=function(){done.textContent = root.lang==="en" ? "✓ Copied" : "✓ 已複製"; setTimeout(function(){done.textContent="";},4000);};
+    if(navigator.clipboard && window.isSecureContext){navigator.clipboard.writeText(t).then(ok, function(){fallback(t, ok);});}
+    else fallback(t, ok);
+  }
+  function fallback(t, ok){
+    var a=document.createElement("textarea"); a.value=t; a.style.position="fixed"; a.style.opacity="0";
+    document.body.appendChild(a); a.select(); try{document.execCommand("copy"); ok();}catch(e){} document.body.removeChild(a);
+  }
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    b.addEventListener("click",function(){copy(text(b.dataset.copy), document.querySelector('[data-done="'+b.dataset.copy+'"]'));});
+  });
+})();
+</script>
+</body>
+</html>
