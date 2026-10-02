@@ -6,6 +6,11 @@ made.
 
 ## Now: confirm Grok actually works (blocking)
 
+- [ ] **ChatGPT:** does Plugins ▸ Upload plugin accept
+      `dse-econ-graph-chatgpt.zip`? If it rejects a plugin.json field, the
+      error names it; fix `plugin_json()` in `tools/build.py`. Does the
+      plugin's skill trigger inside a project chat?
+
 - [ ] **Does Grok accept `dse-econ-graph.zip` in project files, and can its
       code tool unzip it?** If not, tell teachers to upload SKILL.md
       instead (it's in every release) and change `teacher/setup.json`.

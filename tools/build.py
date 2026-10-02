@@ -35,8 +35,11 @@ LATEST = f"https://github.com/{REPO}/releases/latest/download"    # for download
 # Teacher downloads: published name -> (title en, title zh, what it is en, zh)
 FILES = {
     "dse-econ-graph.zip": ("dse-econ-graph (everything, .zip)", "dse-econ-graph（全部檔案，.zip）",
-                           "The one file to download: upload it to Grok, Claude or ChatGPT. Do not unzip it.",
-                           "只需下載這一個檔案，上載到 Grok、Claude 或 ChatGPT 即可，不用解壓。"),
+                           "The file to download for Grok or Claude (ChatGPT has its own version below). Do not unzip it.",
+                           "Grok 或 Claude 用的下載檔案（ChatGPT 另有專用版本）。不用解壓。"),
+    "dse-econ-graph-chatgpt.zip": ("dse-econ-graph for ChatGPT (.zip)", "dse-econ-graph（ChatGPT 版，.zip）",
+                                   "The ChatGPT version: upload it with Plugins ▸ Upload plugin. Do not unzip it.",
+                                   "ChatGPT 專用版本：在 Plugins ▸ Upload plugin 上載，不用解壓。"),
     "SKILL.md": ("Diagram guide", "畫圖指南",
                  "Only if your AI cannot open the .zip: the guide on its own (also inside the zip).",
                  "只在 AI 打不開 .zip 時使用：單獨的指南（.zip 內已包含）。"),
@@ -174,6 +177,54 @@ def zipped(skill: str) -> bytes:
     return buf.getvalue()
 
 
+def plugin_json() -> dict:
+    """ChatGPT's "Upload plugin" wants a plugin archive (.codex-plugin/plugin.json
+    + skills/<name>/SKILL.md), not a claude.ai skill folder."""
+    log = changelog()
+    return {
+        "name": "dse-econ-graph",
+        "version": log["version"],
+        "description": "Draw HKDSE Economics diagrams (supply and demand, AD-AS) in the HKEAA "
+                       "marking-scheme style, in English or Traditional Chinese, from a pasted "
+                       "question and marking scheme.",
+        "author": {"name": "dinomartino", "url": f"https://github.com/{REPO}"},
+        "homepage": f"https://github.com/{REPO}",
+        "repository": f"https://github.com/{REPO}",
+        "license": "MIT",
+        "keywords": ["economics", "hkdse", "diagrams", "education", "supply-and-demand"],
+        "skills": "./skills/",
+        "interface": {
+            "displayName": "DSE Economics Diagrams",
+            "shortDescription": "Paste a DSE Economics question, get the marking-scheme diagram",
+            "longDescription": "Paste an HKDSE Economics question and its marking scheme; the diagram "
+                               "comes back as a black-and-white picture in the HKEAA marking-scheme "
+                               "style, in English or Chinese. Covers every supply-and-demand and "
+                               "AD-AS diagram type in the marking schemes.",
+            "developerName": "dinomartino",
+            "category": "Education",
+            "capabilities": ["Interactive", "Write"],
+            "websiteURL": f"https://github.com/{REPO}",
+            "defaultPrompt": ["Draw the diagram for this DSE Economics question and marking scheme"],
+        },
+    }
+
+
+def plugin_zip(skill: str) -> bytes:
+    """The ChatGPT version of the download: the same files as the main zip,
+    laid out as a plugin."""
+    buf = io.BytesIO()
+    stamp = (2026, 1, 1, 0, 0, 0)
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
+        def put(name, data):
+            info = zipfile.ZipInfo(name, stamp); info.compress_type = zipfile.ZIP_DEFLATED
+            z.writestr(info, data)
+        put(".codex-plugin/plugin.json", json.dumps(plugin_json(), ensure_ascii=False, indent=2) + "\n")
+        for f in [SKILL, TEACHER / "instructions.txt", ROOT / "dsegraph.py", *EXAMPLES]:
+            rel = Path(f.name) if f.parent == TEACHER else f.relative_to(ROOT)
+            put(str(Path("skills/dse-econ-graph") / rel), skill.encode("utf-8") if f == SKILL else f.read_bytes())
+    return buf.getvalue()
+
+
 def downloads(skill: str) -> dict[str, bytes]:
     """Every file in download/, by name."""
     out = {
@@ -181,9 +232,10 @@ def downloads(skill: str) -> dict[str, bytes]:
         "SKILL.txt": skill.encode("utf-8"),
         "instructions.txt": (TEACHER / "instructions.txt").read_bytes(),
         "dse-econ-graph.zip": zipped(skill),
+        "dse-econ-graph-chatgpt.zip": plugin_zip(skill),
     }
-    names = {"skill": "SKILL.md", "skill_txt": "SKILL.txt",
-             "instructions": "instructions.txt", "zip": "dse-econ-graph.zip"}
+    names = {"skill": "SKILL.md", "skill_txt": "SKILL.txt", "instructions": "instructions.txt",
+             "zip": "dse-econ-graph.zip", "chatgpt_zip": "dse-econ-graph-chatgpt.zip"}
 
     def fill(x):                                   # "{skill}" -> "SKILL.md", everywhere
         if isinstance(x, str):

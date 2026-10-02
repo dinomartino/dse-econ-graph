@@ -4,22 +4,14 @@
     "en": "Paste a DSE Economics question and its marking scheme into Grok, Claude or ChatGPT and get the diagram in the HKEAA marking-scheme style, in English or Chinese.",
     "zh": "把 DSE 經濟題目和評卷參考貼到 Grok、Claude 或 ChatGPT，即可得到 HKEAA 評卷參考風格的圖，中英文皆可。"
   },
-  "version": "1.5.0",
+  "version": "1.5.1",
   "released": "2026-10-02",
   "whats_new": {
     "en": [
-      "One download for everything: dse-econ-graph.zip. Upload it to Grok, Claude or ChatGPT (web versions too). Grok is recommended; Claude and ChatGPT need a VPN in Hong Kong.",
-      "Mirrors every supply-and-demand and AD-AS diagram in the KP_ECON marking schemes: 32 new templates (43 in all), each listed with the past-paper questions it matches.",
-      "Just paste the question and its marking scheme: the AI replies with the finished diagram only, in the question's language.",
-      "Made for Grok: set it up once in a Grok Project and every chat there can draw diagrams.",
-      "If the AI cannot draw Chinese text, it shows the English diagram and gives a one-paste Colab version for 中文."
+      "ChatGPT now has its own download, dse-econ-graph-chatgpt.zip: upload it with Plugins ▸ Upload plugin (the normal zip was rejected)."
     ],
     "zh": [
-      "只需下載一個檔案 dse-econ-graph.zip，上載到 Grok、Claude 或 ChatGPT（網頁版亦可）。建議使用 Grok；Claude 和 ChatGPT 在香港需使用 VPN。",
-      "涵蓋 KP_ECON 評卷參考中所有供求圖及 AD-AS 圖：新增 32 個範本（共 43 個），並列出對應的歷屆試題。",
-      "只需貼上題目和評卷參考：AI 直接回覆畫好的圖，語言跟題目一樣。",
-      "為 Grok 而設：在 Grok 專案設定一次，之後每個對話都能畫圖。",
-      "如 AI 未能顯示中文字，會先給英文圖，並提供可在 Colab 一按即畫的中文版。"
+      "ChatGPT 新增專用下載 dse-econ-graph-chatgpt.zip，在 Plugins ▸ Upload plugin 上載（普通版本會被拒絕）。"
     ]
   },
   "files": [
@@ -30,13 +22,28 @@
         "zh": "dse-econ-graph（全部檔案，.zip）"
       },
       "description": {
-        "en": "The one file to download: upload it to Grok, Claude or ChatGPT. Do not unzip it.",
-        "zh": "只需下載這一個檔案，上載到 Grok、Claude 或 ChatGPT 即可，不用解壓。"
+        "en": "The file to download for Grok or Claude (ChatGPT has its own version below). Do not unzip it.",
+        "zh": "Grok 或 Claude 用的下載檔案（ChatGPT 另有專用版本）。不用解壓。"
       },
-      "bytes": 91397,
-      "sha256": "884951f1e70947a76f0bbb91eca73dd57bfaa9ceb3e7045c023c24f33b8568a8",
+      "bytes": 91421,
+      "sha256": "d249a50a60274685c9d8c2f34f3c941cedcf38aca8752953d83d280121df4769",
       "url": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/download/dse-econ-graph.zip",
       "download_url": "https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph.zip"
+    },
+    {
+      "name": "dse-econ-graph-chatgpt.zip",
+      "title": {
+        "en": "dse-econ-graph for ChatGPT (.zip)",
+        "zh": "dse-econ-graph（ChatGPT 版，.zip）"
+      },
+      "description": {
+        "en": "The ChatGPT version: upload it with Plugins ▸ Upload plugin. Do not unzip it.",
+        "zh": "ChatGPT 專用版本：在 Plugins ▸ Upload plugin 上載，不用解壓。"
+      },
+      "bytes": 92735,
+      "sha256": "d1057e5f8eb0870b173af3c3832443d5a9b79e9930dd38953c2fd2a52c39eefc",
+      "url": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/download/dse-econ-graph-chatgpt.zip",
+      "download_url": "https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph-chatgpt.zip"
     },
     {
       "name": "SKILL.md",
@@ -63,8 +70,8 @@
         "en": "The text to paste into your Grok or ChatGPT project's Instructions (also inside the zip).",
         "zh": "貼到 Grok 或 ChatGPT 專案 Instructions（指示）的文字（.zip 內已包含）。"
       },
-      "bytes": 1555,
-      "sha256": "86bf23c29b316cd6f2767472e78c4985f5591ec0f89af5c5afd7e5577a745076",
+      "bytes": 1613,
+      "sha256": "1f96a18ec7d6d29c82e4b1a6b76e2f72052cef009d3952575ec1756f3525ab60",
       "url": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/download/instructions.txt",
       "download_url": "https://github.com/dinomartino/dse-econ-graph/releases/latest/download/instructions.txt"
     },
@@ -84,7 +91,7 @@
       "download_url": "https://github.com/dinomartino/dse-econ-graph/releases/latest/download/SKILL.txt"
     }
   ],
-  "instructions_text": "You draw HKDSE Economics diagrams in the black-and-white HKEAA marking-scheme style. Your guide is SKILL.md (dse-econ-graph). It is inside dse-econ-graph.zip in this project's files: unzip it with your code tool and read SKILL.md in full before your first diagram. Always follow it exactly.\n\nThe teacher only pastes a question and its marking scheme. That always means: draw the diagram(s) for it and reply with the picture(s) ONLY.\n\n1. Never ask questions. Decide the diagram yourself from the question and the marking scheme. Every \"indicate / illustrate in the diagram\" point must be visible and labelled.\n2. Language = the language of the pasted question (Chinese -> 中文 labels, English -> English). Both only if asked.\n3. One picture per part that needs a diagram ((b)(i), (b)(ii) ...).\n4. Write ONE Python script: first the library (from the unzipped folder: import sys; sys.path.insert(0, \"dse-econ-graph\"); from dsegraph import *), then the diagram, starting from the matching template in SKILL.md. Do not pip install or download anything.\n5. Run it with your code tool. Check the picture against the guide's checklist; fix and run again silently.\n6. Reply with the picture(s) only: no code, no explanation, no questions. With several pictures, only the part label above each.\n7. If the output says \"NO CHINESE FONT\", or the picture does not appear, or you cannot run code: follow the guide (one short line + the script as one code block for colab.new).\n8. If the teacher asks for a change in words, redraw and reply with the new picture only.\n",
+  "instructions_text": "You draw HKDSE Economics diagrams in the black-and-white HKEAA marking-scheme style. Your guide is SKILL.md of the dse-econ-graph skill: the installed skill or plugin, or inside dse-econ-graph.zip in this project's files (unzip it with your code tool). Read SKILL.md in full before your first diagram and always follow it exactly.\n\nThe teacher only pastes a question and its marking scheme. That always means: draw the diagram(s) for it and reply with the picture(s) ONLY.\n\n1. Never ask questions. Decide the diagram yourself from the question and the marking scheme. Every \"indicate / illustrate in the diagram\" point must be visible and labelled.\n2. Language = the language of the pasted question (Chinese -> 中文 labels, English -> English). Both only if asked.\n3. One picture per part that needs a diagram ((b)(i), (b)(ii) ...).\n4. Write ONE Python script: first the library (import it from the skill folder: import sys; sys.path.insert(0, \"<folder with dsegraph.py>\"); from dsegraph import *), then the diagram, starting from the matching template in SKILL.md. Do not pip install or download anything.\n5. Run it with your code tool. Check the picture against the guide's checklist; fix and run again silently.\n6. Reply with the picture(s) only: no code, no explanation, no questions. With several pictures, only the part label above each.\n7. If the output says \"NO CHINESE FONT\", or the picture does not appear, or you cannot run code: follow the guide (one short line + the script as one code block for colab.new).\n8. If the teacher asks for a change in words, redraw and reply with the new picture only.\n",
   "providers": [
     {
       "id": "grok",
@@ -151,7 +158,7 @@
       "recommended": false,
       "needs_vpn_in_hk": true,
       "files": [
-        "dse-econ-graph.zip"
+        "dse-econ-graph-chatgpt.zip"
       ],
       "title": {
         "en": "ChatGPT (needs a VPN in Hong Kong)",
@@ -159,17 +166,15 @@
       },
       "steps": {
         "en": [
-          "Download dse-econ-graph.zip. Do not unzip it.",
-          "Go to chatgpt.com and sign in. In the sidebar, click New project, e.g. \"DSE Economics Diagrams\".",
-          "In the project's settings, paste the instructions text (below, or instructions.txt inside the zip) into Instructions.",
-          "Upload dse-econ-graph.zip to the project's files.",
+          "Download dse-econ-graph-chatgpt.zip (the ChatGPT version). Do not unzip it.",
+          "Go to chatgpt.com and sign in. In the sidebar, open Plugins ▸ Upload plugin, and choose dse-econ-graph-chatgpt.zip.",
+          "In the sidebar, click New project, e.g. \"DSE Economics Diagrams\". In its settings, paste the instructions text (below) into Instructions.",
           "To draw: start a new chat inside the project."
         ],
         "zh": [
-          "下載 dse-econ-graph.zip，不用解壓。",
-          "前往 chatgpt.com 並登入。在側邊欄按 New project（新專案），例如「DSE 經濟圖」。",
-          "在專案設定中，把指示文字（見下方，或 zip 內的 instructions.txt）貼到 Instructions（指示）。",
-          "把 dse-econ-graph.zip 上載到專案的檔案。",
+          "下載 dse-econ-graph-chatgpt.zip（ChatGPT 專用版本），不用解壓。",
+          "前往 chatgpt.com 並登入。在側邊欄打開 Plugins ▸ Upload plugin，選擇 dse-econ-graph-chatgpt.zip。",
+          "在側邊欄按 New project（新專案），例如「DSE 經濟圖」。在專案設定中，把指示文字（見下方）貼到 Instructions（指示）。",
           "要畫圖時：在該專案內開始新對話。"
         ]
       }
@@ -222,13 +227,13 @@
     },
     "steps": {
       "en": [
-        "Download dse-econ-graph.zip again.",
-        "Grok / ChatGPT: in your project's files, remove the old dse-econ-graph.zip and upload the new one. If the instructions text changed, paste the new text into Instructions.",
+        "Download the zip again (dse-econ-graph.zip, or dse-econ-graph-chatgpt.zip for ChatGPT).",
+        "Grok: in your project's files, remove the old dse-econ-graph.zip and upload the new one. ChatGPT: upload the new dse-econ-graph-chatgpt.zip with Plugins ▸ Upload plugin. If the instructions text changed, paste the new text into the project's Instructions.",
         "Claude: in Settings ▸ Capabilities ▸ Skills, remove the old skill and upload the new dse-econ-graph.zip."
       ],
       "zh": [
-        "重新下載 dse-econ-graph.zip。",
-        "Grok / ChatGPT：在專案檔案中刪除舊的 dse-econ-graph.zip，上載新的。如指示文字有更新，把新文字貼到 Instructions（指示）。",
+        "重新下載 zip（dse-econ-graph.zip；ChatGPT 用 dse-econ-graph-chatgpt.zip）。",
+        "Grok：在專案檔案中刪除舊的 dse-econ-graph.zip，上載新的。ChatGPT：在 Plugins ▸ Upload plugin 上載新的 dse-econ-graph-chatgpt.zip。如指示文字有更新，把新文字貼到專案的 Instructions（指示）。",
         "Claude：在 Settings ▸ Capabilities ▸ Skills 刪除舊技能，上載新的 dse-econ-graph.zip。"
       ]
     }

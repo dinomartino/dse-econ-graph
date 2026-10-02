@@ -21,6 +21,10 @@ session, update both.
   layout). Teachers upload it as-is: a Skill in Claude, project files in
   Grok/ChatGPT plus the instructions text. The AI unzips it and imports the
   library from the folder (pasting the library is the fallback).
+  **ChatGPT needs its own zip**, `dse-econ-graph-chatgpt.zip`: its Upload
+  plugin rejects the claude.ai layout and wants `.codex-plugin/plugin.json`
+  + `skills/dse-econ-graph/`. Claude needs `dse-econ-graph/SKILL.md` at the
+  zip's top, so one zip can't serve both. The build makes both.
 - **The maintainer** (repo owner) uses voice typing: "Germany" = Gemini,
   "grog" = Grok, "ship" = skill. They want short answers and few questions.
   They already have the website, so don't propose another one or a hosted
@@ -76,8 +80,8 @@ before unzipping.
 
 1. **Download filenames are a public contract.** The website and old links
    use `releases/latest/download/<name>` and `raw…/main/download/<name>`
-   for `SKILL.md`, `SKILL.txt`, `instructions.txt`,
-   `dse-econ-graph.zip` and `manifest.json`. Never rename or remove one.
+   for `SKILL.md`, `SKILL.txt`, `instructions.txt`, `dse-econ-graph.zip`,
+   `dse-econ-graph-chatgpt.zip` and `manifest.json`. Never rename or remove one.
    Adding files or manifest fields is fine.
 2. **Everything a teacher reads is bilingual** (English + Traditional
    Chinese, HK wording, EDB glossary terms), short, and free of code words.

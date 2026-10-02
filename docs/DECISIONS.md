@@ -3,6 +3,15 @@
 Why things are the way they are. Newest first. One entry per decision:
 what was decided, why, and what we rejected.
 
+## 2026-10-02 — A second zip for ChatGPT (v1.5.1)
+
+- ChatGPT's Upload plugin rejected the main zip: "Plugin archive must
+  contain .codex-plugin/plugin.json, … or skills/*/SKILL.md". Claude needs
+  `dse-econ-graph/SKILL.md` at the top instead, so the build now also makes
+  `dse-econ-graph-chatgpt.zip` (`.codex-plugin/plugin.json` modelled on
+  expo/skills, plus `skills/dse-econ-graph/`). Unverified: whether ChatGPT
+  accepts our plugin.json fields (e.g. category "Education").
+
 ## 2026-10-02 — One zip; Grok, then Claude, then ChatGPT
 
 - **Decided:** teachers download only `dse-econ-graph.zip` (guide,

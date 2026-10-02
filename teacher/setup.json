@@ -66,7 +66,7 @@
       "recommended": false,
       "needs_vpn_in_hk": true,
       "files": [
-        "{zip}"
+        "{chatgpt_zip}"
       ],
       "title": {
         "en": "ChatGPT (needs a VPN in Hong Kong)",
@@ -74,17 +74,15 @@
       },
       "steps": {
         "en": [
-          "Download {zip}. Do not unzip it.",
-          "Go to chatgpt.com and sign in. In the sidebar, click New project, e.g. \"DSE Economics Diagrams\".",
-          "In the project's settings, paste the instructions text (below, or {instructions} inside the zip) into Instructions.",
-          "Upload {zip} to the project's files.",
+          "Download {chatgpt_zip} (the ChatGPT version). Do not unzip it.",
+          "Go to chatgpt.com and sign in. In the sidebar, open Plugins ▸ Upload plugin, and choose {chatgpt_zip}.",
+          "In the sidebar, click New project, e.g. \"DSE Economics Diagrams\". In its settings, paste the instructions text (below) into Instructions.",
           "To draw: start a new chat inside the project."
         ],
         "zh": [
-          "下載 {zip}，不用解壓。",
-          "前往 chatgpt.com 並登入。在側邊欄按 New project（新專案），例如「DSE 經濟圖」。",
-          "在專案設定中，把指示文字（見下方，或 zip 內的 {instructions}）貼到 Instructions（指示）。",
-          "把 {zip} 上載到專案的檔案。",
+          "下載 {chatgpt_zip}（ChatGPT 專用版本），不用解壓。",
+          "前往 chatgpt.com 並登入。在側邊欄打開 Plugins ▸ Upload plugin，選擇 {chatgpt_zip}。",
+          "在側邊欄按 New project（新專案），例如「DSE 經濟圖」。在專案設定中，把指示文字（見下方）貼到 Instructions（指示）。",
           "要畫圖時：在該專案內開始新對話。"
         ]
       }
@@ -137,13 +135,13 @@
     },
     "steps": {
       "en": [
-        "Download {zip} again.",
-        "Grok / ChatGPT: in your project's files, remove the old {zip} and upload the new one. If the instructions text changed, paste the new text into Instructions.",
+        "Download the zip again ({zip}, or {chatgpt_zip} for ChatGPT).",
+        "Grok: in your project's files, remove the old {zip} and upload the new one. ChatGPT: upload the new {chatgpt_zip} with Plugins ▸ Upload plugin. If the instructions text changed, paste the new text into the project's Instructions.",
         "Claude: in Settings ▸ Capabilities ▸ Skills, remove the old skill and upload the new {zip}."
       ],
       "zh": [
-        "重新下載 {zip}。",
-        "Grok / ChatGPT：在專案檔案中刪除舊的 {zip}，上載新的。如指示文字有更新，把新文字貼到 Instructions（指示）。",
+        "重新下載 zip（{zip}；ChatGPT 用 {chatgpt_zip}）。",
+        "Grok：在專案檔案中刪除舊的 {zip}，上載新的。ChatGPT：在 Plugins ▸ Upload plugin 上載新的 {chatgpt_zip}。如指示文字有更新，把新文字貼到專案的 Instructions（指示）。",
         "Claude：在 Settings ▸ Capabilities ▸ Skills 刪除舊技能，上載新的 {zip}。"
       ]
     }

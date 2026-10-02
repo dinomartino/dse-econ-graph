@@ -7,6 +7,7 @@ change, so links to them keep working.
 | File | What the teacher does with it |
 |---|---|
 | `dse-econ-graph.zip` | **The one download.** Uploads it to Grok / ChatGPT project files, or as a Skill in Claude. Holds everything below plus the library and templates. |
+| `dse-econ-graph-chatgpt.zip` | The ChatGPT version (plugin layout): uploaded with ChatGPT's Plugins ▸ Upload plugin |
 | `instructions.txt` | Text pasted into the Grok / ChatGPT project's Instructions (also in the manifest as `instructions_text`, to show in a copy box) |
 | `SKILL.md`, `SKILL.txt` | The guide alone, only for an AI that can't open the zip |
 | `manifest.json` | (for the website) version, what's new, setup steps, links, gallery |

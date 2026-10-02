@@ -25,6 +25,8 @@ It knows every supply-and-demand and AD-AS diagram in the marking schemes
 **[⬇ dse-econ-graph.zip](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph.zip)**
 
 Don't unzip it. It already holds everything the AI needs.
+For **ChatGPT**, download the ChatGPT version instead:
+**[⬇ dse-econ-graph-chatgpt.zip](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph-chatgpt.zip)**
 
 ### 2. Set it up once in your AI
 
@@ -42,9 +44,11 @@ Claude and ChatGPT are not available in Hong Kong, so you need a VPN for them.
 3. That's all. No instructions text is needed: every new chat can draw.
 
 **ChatGPT (needs a VPN in Hong Kong)** — [chatgpt.com](https://chatgpt.com)
-1. In the sidebar, click **New project**, e.g. "DSE Economics Diagrams".
-2. In the project's settings, paste the **instructions text** (below) into **Instructions**.
-3. Upload `dse-econ-graph.zip` to the project's files.
+1. In the sidebar, open **Plugins ▸ Upload plugin** and choose
+   `dse-econ-graph-chatgpt.zip`. ChatGPT only accepts this version; the
+   normal zip gives the error "Plugin archive must contain …".
+2. Click **New project**, e.g. "DSE Economics Diagrams". In its settings,
+   paste the **instructions text** (below) into **Instructions**.
 
 <details>
 <summary><b>Instructions text</b> (for Grok and ChatGPT; also inside the zip as <code>instructions.txt</code>)</summary>
@@ -52,14 +56,14 @@ Claude and ChatGPT are not available in Hong Kong, so you need a VPN for them.
 <!-- BEGIN INSTRUCTIONS -->
 
 ```text
-You draw HKDSE Economics diagrams in the black-and-white HKEAA marking-scheme style. Your guide is SKILL.md (dse-econ-graph). It is inside dse-econ-graph.zip in this project's files: unzip it with your code tool and read SKILL.md in full before your first diagram. Always follow it exactly.
+You draw HKDSE Economics diagrams in the black-and-white HKEAA marking-scheme style. Your guide is SKILL.md of the dse-econ-graph skill: the installed skill or plugin, or inside dse-econ-graph.zip in this project's files (unzip it with your code tool). Read SKILL.md in full before your first diagram and always follow it exactly.
 
 The teacher only pastes a question and its marking scheme. That always means: draw the diagram(s) for it and reply with the picture(s) ONLY.
 
 1. Never ask questions. Decide the diagram yourself from the question and the marking scheme. Every "indicate / illustrate in the diagram" point must be visible and labelled.
 2. Language = the language of the pasted question (Chinese -> 中文 labels, English -> English). Both only if asked.
 3. One picture per part that needs a diagram ((b)(i), (b)(ii) ...).
-4. Write ONE Python script: first the library (from the unzipped folder: import sys; sys.path.insert(0, "dse-econ-graph"); from dsegraph import *), then the diagram, starting from the matching template in SKILL.md. Do not pip install or download anything.
+4. Write ONE Python script: first the library (import it from the skill folder: import sys; sys.path.insert(0, "<folder with dsegraph.py>"); from dsegraph import *), then the diagram, starting from the matching template in SKILL.md. Do not pip install or download anything.
 5. Run it with your code tool. Check the picture against the guide's checklist; fix and run again silently.
 6. Reply with the picture(s) only: no code, no explanation, no questions. With several pictures, only the part label above each.
 7. If the output says "NO CHINESE FONT", or the picture does not appear, or you cannot run code: follow the guide (one short line + the script as one code block for colab.new).
@@ -86,7 +90,8 @@ If the AI ever gives you code instead of a picture: open
 appears and downloads.
 
 **New version?** Download the zip again and replace the old one: in your
-Grok or ChatGPT project's files, or in Claude's Settings ▸ Capabilities ▸ Skills.
+Grok project's files, in Claude's Settings ▸ Capabilities ▸ Skills, or with
+ChatGPT's Plugins ▸ Upload plugin.
 
 ---
 
@@ -96,7 +101,8 @@ Grok or ChatGPT project's files, or in Claude's Settings ▸ Capabilities ▸ Sk
 
 **[⬇ dse-econ-graph.zip](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph.zip)**
 
-不用解壓，所需的一切都已在裏面。
+不用解壓，所需的一切都已在裏面。**ChatGPT** 請改為下載 ChatGPT 專用版本：
+**[⬇ dse-econ-graph-chatgpt.zip](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph-chatgpt.zip)**
 
 ### 2. 在 AI 設定一次
 
@@ -113,9 +119,8 @@ Grok or ChatGPT project's files, or in Claude's Settings ▸ Capabilities ▸ Sk
 3. 完成。不用指示文字，之後每個新對話都能畫圖。
 
 **ChatGPT（在香港需使用 VPN）** — [chatgpt.com](https://chatgpt.com)
-1. 在側邊欄按 **New project（新專案）**，例如「DSE 經濟圖」。
-2. 在專案設定中，把**指示文字**貼到 **Instructions（指示）**。
-3. 把 `dse-econ-graph.zip` 上載到專案的檔案。
+1. 在側邊欄打開 **Plugins ▸ Upload plugin**，選擇 `dse-econ-graph-chatgpt.zip`。ChatGPT 只接受這個版本；普通版本會出現「Plugin archive must contain …」錯誤。
+2. 按 **New project（新專案）**，例如「DSE 經濟圖」。在專案設定中，把**指示文字**貼到 **Instructions（指示）**。
 
 ### 3. 每次使用：貼上，就有圖
 
@@ -128,7 +133,7 @@ Grok or ChatGPT project's files, or in Claude's Settings ▸ Capabilities ▸ Sk
 
 如果 AI 給你程式碼而不是圖片：打開 [colab.new](https://colab.new)，貼上程式碼，按 ▶，圖片會顯示並自動下載。
 
-**有新版本？** 重新下載 zip，取代舊的：Grok 或 ChatGPT 在專案檔案中替換，Claude 在 Settings ▸ Capabilities ▸ Skills 替換。
+**有新版本？** 重新下載 zip，取代舊的：Grok 在專案檔案中替換，Claude 在 Settings ▸ Capabilities ▸ Skills 替換，ChatGPT 在 Plugins ▸ Upload plugin 重新上載。
 
 ---
 
