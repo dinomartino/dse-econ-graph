@@ -17,44 +17,66 @@ can paste it into the script it writes.
 
 ## What you give the user
 
-Assume the user is a teacher or student who **does not code**. They want
-the picture, not the program.
+Assume the user is a teacher or student who **does not code** — most of
+them use **Gemini** in the browser. They want the picture, not the program.
 
-**If you can run Python** (Claude with code execution, ChatGPT, a notebook
-agent, Claude Code): write the script, RUN it, look at the PNG, fix every
-problem from the checklist, then give the user **the PNG files** to
-download (both `diagram_en.png` and `diagram_zh.png` if they want both).
-Offer the code only as an extra ("the code is below if you want to edit it
-later"). Chinese fonts are handled for you: `setup("zh")` uses an
-installed Chinese serif, else a font file the user uploaded, else
-downloads Noto Serif TC once. If the sandbox has no internet and no
-Chinese font, ask the user to upload any Chinese `.ttf` / `.otf` (e.g.
-Noto Serif TC from fonts.google.com) and run again.
+### A. You cannot run code yourself (Gemini, most web chats)
 
-**If you cannot run code** (plain web chat): give **one complete Python
-script in one code block** — the full library from "The library" below
-pasted at the top, then the diagram — and these steps, in the user's
-language, word for word:
+Give **one short Python script in one code block**: the 5-line loader
+below, then the diagram code. Do NOT paste the whole library — the loader
+fetches it, and a short script is easier to copy and has nothing to mistype.
 
-> 1. Open the free Diagram Maker:
+```python
+# DSE graph library — downloads automatically, do not edit
+import os, urllib.request
+if not os.path.exists("dsegraph.py"):
+    urllib.request.urlretrieve("https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/dsegraph.py", "dsegraph.py")
+from dsegraph import *
+```
+
+After the code block, give these steps in the user's language, exactly:
+
+> **How to get the picture (no coding needed)**
+> 1. Click **Export to Colab** under the code (Gemini: the share / ⋮ menu
+>    of the code box). No such button? Copy the code, open
 >    https://colab.research.google.com/github/dinomartino/dse-econ-graph/blob/main/DSE_Graph_Maker.ipynb
-> 2. In **Step 2**, delete the example code and paste the code above.
-> 3. Click **Runtime ▸ Run all** (Ctrl+F9). If Google asks "Run anyway?",
->    click **Run anyway**.
-> 4. The pictures appear in **Step 3** and download automatically.
->
-> 1. 打開免費的圖表製作器：（同上連結）
-> 2. 在 **Step 2** 刪除示範程式碼，貼上上面的程式碼。
-> 3. 按 **執行階段 ▸ 全部執行**（Ctrl+F9）。如見到「仍要執行」，請按 **仍要執行**。
-> 4. 圖片會在 **Step 3** 顯示，並自動下載。
+>    and paste it into **Step 2**.
+> 2. Press **▶** (or **Runtime ▸ Run all**). Sign in with Google if asked;
+>    if it says *"Run anyway?"*, click **Run anyway**.
+> 3. The picture appears under the code and downloads to your computer.
+>    The first run takes about a minute.
 
-The script saves `diagram_en.png` and/or `diagram_zh.png` (300 dpi); add
-`.svg` only if asked. It also runs locally (`pip install matplotlib
-pillow`, then `python diagram.py`) for users who prefer that.
+> **如何取得圖片（不需識寫程式）**
+> 1. 按程式碼下方的 **Export to Colab（匯出至 Colab）**（Gemini：程式碼框的分享／⋮ 選單）。沒有這個按鈕？複製程式碼，打開
+>    https://colab.research.google.com/github/dinomartino/dse-econ-graph/blob/main/DSE_Graph_Maker.ipynb
+>    貼到 **Step 2**。
+> 2. 按 **▶**（或 **執行階段 ▸ 全部執行**）。如要求登入 Google 請登入；見到「仍要執行」請按 **仍要執行**。
+> 3. 圖片會在程式碼下方出現，並自動下載到你的電腦。第一次執行約需一分鐘。
 
-When the user asks for a change in words ("move 'shortage' lower", "make
-demand steeper", "Chinese only"), change the code and deliver again the
-same way — never ask them to edit code themselves.
+If the user reports an error, ask them to copy the red error text to you,
+fix the code, and give the whole corrected script again (never a partial
+patch — they cannot merge code).
+
+### B. You can run Python yourself (Claude with code execution, ChatGPT)
+
+Write the script, RUN it, look at the PNG, fix every problem from the
+checklist, then give the user **the PNG files** to download. Offer the code
+only as an extra. Use the loader above if the sandbox has internet;
+otherwise paste the full library from "The library" at the top of the
+script. Chinese fonts are handled by `setup("zh")`: an installed Chinese
+serif, else a font file the user uploaded, else Noto Serif TC downloaded
+once. If there is no internet and no Chinese font, ask the user to upload
+any Chinese `.ttf` / `.otf` and run again.
+
+### Either way
+
+- Both languages unless the user says otherwise: the script saves
+  `diagram_en.png` and `diagram_zh.png` (300 dpi); `.svg` only if asked.
+- When the user asks for a change in words ("move 'shortage' lower", "make
+  demand steeper", "Chinese only"), change the code and deliver again the
+  same way. Never ask them to edit code.
+- "The library" section below is the reference for every function you
+  may call — read it; don't invent functions that are not there.
 
 ## Workflow
 
@@ -186,7 +208,8 @@ makes an English and a Chinese version.
 - `10_ppc.py` — Production possibilities curve (PPC) and economic growth.
 <!-- END TEMPLATE LIST -->
 
-A complete template, to show the pattern (the library must be above it):
+A complete template, to show the pattern (for a web chat, this is the
+whole script you hand over):
 
 <!-- BEGIN EXAMPLE 01 -->
 ```python
@@ -196,7 +219,11 @@ Marking-scheme points it shows:
   - price (P) below the equilibrium price (Pe)
   - correct position of the shortage / excess demand (Qs to Qd at P)
 """
-# (the dsegraph library goes here, or: from dsegraph import *)
+# DSE graph library — downloads automatically, do not edit
+import os, urllib.request
+if not os.path.exists("dsegraph.py"):
+    urllib.request.urlretrieve("https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/dsegraph.py", "dsegraph.py")
+from dsegraph import *
 
 
 def diagram(lang="en"):
@@ -602,20 +629,35 @@ def vbrace(ax, y0, y1, x, text="", side="left", depth=2.5, gap=1.0):
 # output
 # --------------------------------------------------------------------------
 
-def save(fig, path="diagram.png", aspect: float | None = None, show=False):
+def _notebook(path):
+    """In Colab / Jupyter: show the picture under the cell, and in Colab also
+    download it — so "Export to Colab -> Run" is all a teacher has to do."""
+    try:
+        from IPython import get_ipython
+        if get_ipython() is None:
+            return
+        from IPython.display import SVG, Image, display
+        print(path)
+        display(Image(path, width=420) if path.lower().endswith(".png") else SVG(path))
+    except Exception:
+        return
+    try:
+        from google.colab import files
+        files.download(path)
+    except Exception:
+        pass
+
+
+def save(fig, path="diagram.png", aspect: float | None = None):
     """PNG (greyscale, 300 dpi) or .svg / .pdf by extension.  The canvas grows
-    to fit every label, so nothing is ever clipped.  `aspect` (w/h)
-    pads the PNG with white to an exact ratio, e.g. to replace a picture in
-    Word without moving the layout.  show=True also displays it (notebooks)."""
-    if show:
-        try:
-            from IPython.display import display
-            display(fig)
-        except ImportError:
-            pass
+    to fit every label, so nothing is ever clipped.  `aspect` (w/h) pads the
+    PNG with white to an exact ratio, e.g. to replace a picture in Word
+    without moving the layout.  In a notebook the picture is also shown
+    (and downloaded, in Colab)."""
     if not path.lower().endswith(".png"):
         fig.savefig(path, facecolor="white", bbox_inches="tight", pad_inches=0.04)
         plt.close(fig)
+        _notebook(path)
         return path
     from PIL import Image
     buf = io.BytesIO()
@@ -630,6 +672,7 @@ def save(fig, path="diagram.png", aspect: float | None = None, show=False):
             c.paste(im, ((W - w) // 2, (H - h) // 2))
             im = c
     im.save(path, optimize=True)
+    _notebook(path)
     return path
 ```
 <!-- END dsegraph.py -->

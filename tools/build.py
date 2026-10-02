@@ -34,12 +34,20 @@ def doc_first_line(path: Path) -> str:
     return doc.strip().splitlines()[0] if doc else ""
 
 
+LOADER = (
+    "# DSE graph library — downloads automatically, do not edit\n"
+    "import os, urllib.request\n"
+    "if not os.path.exists(\"dsegraph.py\"):\n"
+    "    urllib.request.urlretrieve(\"https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/dsegraph.py\", \"dsegraph.py\")\n"
+    "from dsegraph import *\n")
+
+
 def standalone(path: Path) -> str:
     """An example as it would be pasted under the library: no sys.path dance,
     a plain __main__ that saves beside the script."""
     src = path.read_text(encoding="utf-8")
     src = re.sub(r"import os, sys\nsys\.path\.insert\(0, .*?\)\nfrom dsegraph import \*\n",
-                 "# (the dsegraph library goes here, or: from dsegraph import *)\n", src)
+                 LOADER, src)
     src = re.sub(r'if __name__ == "__main__":\n.*', (
         'if __name__ == "__main__":\n'
         '    for lang in ("en", "zh"):\n'

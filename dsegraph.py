@@ -356,20 +356,35 @@ def vbrace(ax, y0, y1, x, text="", side="left", depth=2.5, gap=1.0):
 # output
 # --------------------------------------------------------------------------
 
-def save(fig, path="diagram.png", aspect: float | None = None, show=False):
+def _notebook(path):
+    """In Colab / Jupyter: show the picture under the cell, and in Colab also
+    download it — so "Export to Colab -> Run" is all a teacher has to do."""
+    try:
+        from IPython import get_ipython
+        if get_ipython() is None:
+            return
+        from IPython.display import SVG, Image, display
+        print(path)
+        display(Image(path, width=420) if path.lower().endswith(".png") else SVG(path))
+    except Exception:
+        return
+    try:
+        from google.colab import files
+        files.download(path)
+    except Exception:
+        pass
+
+
+def save(fig, path="diagram.png", aspect: float | None = None):
     """PNG (greyscale, 300 dpi) or .svg / .pdf by extension.  The canvas grows
-    to fit every label, so nothing is ever clipped.  `aspect` (w/h)
-    pads the PNG with white to an exact ratio, e.g. to replace a picture in
-    Word without moving the layout.  show=True also displays it (notebooks)."""
-    if show:
-        try:
-            from IPython.display import display
-            display(fig)
-        except ImportError:
-            pass
+    to fit every label, so nothing is ever clipped.  `aspect` (w/h) pads the
+    PNG with white to an exact ratio, e.g. to replace a picture in Word
+    without moving the layout.  In a notebook the picture is also shown
+    (and downloaded, in Colab)."""
     if not path.lower().endswith(".png"):
         fig.savefig(path, facecolor="white", bbox_inches="tight", pad_inches=0.04)
         plt.close(fig)
+        _notebook(path)
         return path
     from PIL import Image
     buf = io.BytesIO()
@@ -384,4 +399,5 @@ def save(fig, path="diagram.png", aspect: float | None = None, show=False):
             c.paste(im, ((W - w) // 2, (H - h) // 2))
             im = c
     im.save(path, optimize=True)
+    _notebook(path)
     return path

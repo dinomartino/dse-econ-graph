@@ -4,7 +4,7 @@
 marking-scheme style, in English and Traditional Chinese.**
 
 An AI skill plus a tiny Python library. Give it to any AI assistant
-(Claude, ChatGPT, Gemini, …), describe a question or paste a marking scheme,
+(Gemini, ChatGPT, Claude, …), describe a question or paste a marking scheme,
 and you get back one Python script that draws the diagram exactly like the
 official papers: Times-style serif (Chinese: Ming/Song serif), thin lines,
 arrow axes, dashed guides, `////` hatching, curly braces. No colour, no
@@ -20,62 +20,68 @@ More in [`gallery/`](gallery/).
 
 ## For teachers — no coding needed
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dinomartino/dse-econ-graph/blob/main/DSE_Graph_Maker.ipynb)
+### With Gemini (gemini.google.com)
 
-First download **[`SKILL.md`](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/SKILL.md)**
-(one click). That file teaches the AI how to draw DSE diagrams. Then pick
-the AI you already use:
+**Once:** download **[`SKILL.md`](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/SKILL.md)**
+— it teaches Gemini how to draw DSE diagrams. (Your department can also
+make a shared Gem so nobody needs the file: see
+[`gemini/GEM_SETUP.md`](gemini/GEM_SETUP.md).)
 
-**A. Claude (claude.ai)** — easiest
-1. Settings ▸ Capabilities: turn on *Code execution and file creation*.
-   Under *Skills*, upload [`dse-econ-graph.zip`](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph.zip). (Once only.)
-2. In any chat, ask for the diagram. Claude draws it and gives you the
-   picture to download.
+**Each diagram:**
+1. Open Gemini, attach `SKILL.md` with **＋**, and ask — paste the question
+   and the marking scheme, say English and/or Chinese.
+2. Gemini replies with a block of code. Click **Export to Colab** under it
+   (in the code box's share / ⋮ menu).
+3. Colab opens: press **▶**. Sign in with Google if asked, and click
+   **Run anyway** if asked.
+4. The picture appears and downloads to your computer. (First run: about
+   a minute.)
 
-**B. ChatGPT**
-1. Start a chat, attach `SKILL.md` (📎).
-2. Ask for the diagram and add: *"Run the code and give me the PNG files."*
-3. Download the pictures it returns.
+No *Export to Colab* button? Copy the code, click
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dinomartino/dse-econ-graph/blob/main/DSE_Graph_Maker.ipynb),
+paste it into *Step 2*, then **Runtime ▸ Run all**.
 
-**C. Any other AI** (Gemini, DeepSeek, Poe, Copilot …)
-1. Attach or paste `SKILL.md`, ask for the diagram. It replies with code.
-2. Click **Open in Colab** above, paste the code into *Step 2*, then
-   **Runtime ▸ Run all**. The pictures download by themselves.
-
-**What to type** — paste the question and the marking scheme, say which
-language:
+**What to type:**
 
 > Draw the diagram for this DSE question in English and Chinese.
 > Question: … Marking scheme: "Indicate in the diagram: price below
 > equilibrium (1), rightward shift of demand (1), shortage increases from
 > a to b (1)."
 
-Not quite right? Just say so in words — *"put 'shortage' lower"*, *"make
-demand steeper"*, *"Chinese only"* — and ask for the picture again.
+Not quite right? Tell Gemini in words — *"put 'shortage' lower"*, *"make
+demand steeper"*, *"Chinese only"* — and export the new code again. Got
+a red error in Colab? Copy it to Gemini: *"I got this error, please give me
+the whole corrected code."*
 
-### 老師使用說明（不需識寫程式）
+### 老師使用說明（Gemini，不需識寫程式）
 
-先下載 **[`SKILL.md`](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/SKILL.md)**（按一下即可）。這個檔案教 AI 如何畫 DSE 經濟圖。然後選擇你平日用的 AI：
+**只需一次：** 下載 **[`SKILL.md`](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/SKILL.md)**，這個檔案教 Gemini 如何畫 DSE 經濟圖。（科組亦可建立一個共用 Gem，大家打開連結即可用，不用附加檔案，見 [`gemini/GEM_SETUP.md`](gemini/GEM_SETUP.md)。）
 
-**A. Claude（claude.ai）** — 最簡單
-1. 設定 ▸ Capabilities：開啟 *Code execution and file creation*；在 *Skills* 上載 [`dse-econ-graph.zip`](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph.zip)（只需做一次）。
-2. 在任何對話中請它畫圖，Claude 會直接給你圖片下載。
+**每次畫圖：**
+1. 打開 Gemini，用 **＋** 附加 `SKILL.md`，貼上題目和評卷參考，註明要中文、英文或兩者。
+2. Gemini 會給你一段程式碼。按程式碼下方的 **Export to Colab（匯出至 Colab）**（在程式碼框的分享／⋮ 選單）。
+3. Colab 打開後按 **▶**。如要求登入 Google 請登入；見到「仍要執行」請按 **仍要執行**。
+4. 圖片會出現並自動下載到你的電腦（第一次約需一分鐘）。
 
-**B. ChatGPT**
-1. 開新對話，用 📎 附加 `SKILL.md`。
-2. 請它畫圖，並加一句：「請執行程式碼，把 PNG 圖片給我。」
-3. 下載它給你的圖片。
+找不到 *Export to Colab*？複製程式碼，按上面的 **Open in Colab**，貼到 *Step 2*，再按 **執行階段 ▸ 全部執行**。
 
-**C. 其他 AI**（Gemini、DeepSeek、Poe、Copilot 等）
-1. 附加或貼上 `SKILL.md`，請它畫圖，它會給你一段程式碼。
-2. 按上面的 **Open in Colab**，把程式碼貼到 *Step 2*，再按 **執行階段 ▸ 全部執行**，圖片會自動下載。
-
-**可以這樣問：** 貼上題目和評卷參考，並註明語言：
+**可以這樣問：**
 
 > 請按這題 DSE 題目及評卷參考，畫中英文版本的圖。
 > 題目：…… 評卷參考：「在圖中標示：價格低於均衡價格 (1)、需求曲線右移 (1)、短缺由 a 增至 b (1)。」
 
-不滿意？直接用文字告訴它，例如「把『短缺』移低一點」、「需求曲線畫斜一點」、「只要中文版」，再請它重新給你圖片。
+不滿意？直接用文字告訴 Gemini，例如「把『短缺』移低一點」、「需求曲線畫斜一點」、「只要中文版」，再匯出新的程式碼。Colab 出現紅色錯誤？複製給 Gemini：「出現這個錯誤，請給我完整修正後的程式碼。」
+
+### With Claude or ChatGPT
+
+These can run the code themselves and hand you the picture directly.
+
+- **Claude (claude.ai):** Settings ▸ Capabilities — turn on *Code execution
+  and file creation*; under *Skills* upload
+  [`dse-econ-graph.zip`](https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph.zip)
+  (once). Then just ask.
+- **ChatGPT:** attach `SKILL.md`, ask, and add *"Run the code and give me
+  the PNG files."*
 
 ## For other AI tools and developers
 
