@@ -19,7 +19,9 @@ canvas; the economic axes go wherever you put them with `axes()`.
 """
 from __future__ import annotations
 
+import glob
 import io
+import os
 import warnings
 
 import matplotlib
@@ -49,29 +51,73 @@ CJK = ["PMingLiU", "MingLiU", "新細明體", "Songti TC", "LiSong Pro",
        "Microsoft JhengHei", "PingFang TC", "Heiti TC", "Noto Sans CJK TC"]
 
 
+# Free Chinese serif (SIL Open Font Licence), fetched once when no Chinese
+# font is installed — e.g. inside ChatGPT's or Claude's code sandbox.
+CJK_URL = ("https://raw.githubusercontent.com/google/fonts/main/ofl/"
+           "notoseriftc/NotoSerifTC%5Bwght%5D.ttf")
+CACHE = os.path.join(os.path.expanduser("~"), ".cache", "dsegraph")
+FONT_DIRS = [".", "/mnt/data", "/mnt/user-data/uploads", CACHE]   # cwd, chat uploads, cache
+
+
+def _add_font(path):
+    """Register a font file; return its family name (None if unusable)."""
+    try:
+        font_manager.fontManager.addfont(path)
+        return font_manager.FontProperties(fname=path).get_name()
+    except Exception:
+        return None
+
+
+def _cjk_from_files():
+    for d in FONT_DIRS:
+        for f in sorted(glob.glob(os.path.join(d, "*.[tToO][tT][fFcC]"))):
+            name = _add_font(f)
+            if name and any(k in name for k in ("CJK", "TC", "SC", "Ming", "Song", "Hei", "Kai", "宋", "明")):
+                return name
+    return None
+
+
+def _cjk_download():
+    path = os.path.join(CACHE, "NotoSerifTC.ttf")
+    if not os.path.exists(path):
+        try:
+            import urllib.request
+            os.makedirs(CACHE, exist_ok=True)
+            print("dsegraph: downloading a Chinese font (Noto Serif TC, ~17 MB) - once only ...")
+            urllib.request.urlretrieve(CJK_URL, path + ".part")
+            os.replace(path + ".part", path)
+        except Exception:
+            return None
+    return _add_font(path)
+
+
 def _have(names):
     found = {f.name for f in font_manager.fontManager.ttflist}
     return [n for n in names if n in found]
 
 
-def setup(lang: str = "en", size: float = SIZE):
+def setup(lang: str = "en", size: float = SIZE, font: str | None = None):
     """Pick fonts for English ("en") or Traditional Chinese ("zh").
 
     Chinese text uses a Ming/Song serif like the HKEAA Chinese papers; the
     letters and numbers in the same label stay in the Times-style serif.
-    No CJK font installed (e.g. Google Colab)?  Run
-        !apt-get -qq install fonts-noto-cjk
-    and restart the runtime."""
+    Chinese font, in order: `font=` (path to a .ttf/.otf file) -> an
+    installed one (PMingLiU, Songti TC, Noto Serif CJK TC ...) -> a font file
+    uploaded next to the script / into the chat -> Noto Serif TC, downloaded
+    once.  Works in Colab, ChatGPT and Claude sandboxes without setup."""
     global LANG, SIZE, _READY
     LANG, SIZE, _READY = lang, size, True
     latin = (_have(LATIN) or ["STIXGeneral"])[0]
     family = [latin]
     if lang == "zh":
-        cjk = _have(CJK)
-        if not cjk:
-            warnings.warn("No Chinese font found; Chinese labels will show as boxes. "
-                          "Install one, e.g. Colab/Ubuntu: apt-get install fonts-noto-cjk")
-        family += cjk[:1]
+        cjk = (_add_font(font) if font else None) or (_have(CJK) or [None])[0] \
+            or _cjk_from_files() or _cjk_download()
+        if cjk:
+            family.append(cjk)
+        else:
+            warnings.warn("No Chinese font found and none could be downloaded; Chinese "
+                          "labels will show as boxes. Upload a Chinese .ttf/.otf font "
+                          "(e.g. Noto Serif TC from fonts.google.com) and run again.")
     plt.rcParams.update({
         "font.family": family,                 # per-glyph fallback: Latin first, then CJK
         "font.size": size,

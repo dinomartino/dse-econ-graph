@@ -17,24 +17,44 @@ can paste it into the script it writes.
 
 ## What you give the user
 
-**One complete Python script in one code block**, ready to copy and run:
+Assume the user is a teacher or student who **does not code**. They want
+the picture, not the program.
 
-1. The full library from "The library" below, pasted at the top.
-   (Skip it only if the user says they already have `dsegraph.py` beside
-   the script — then start with `from dsegraph import *`.)
-2. Then the diagram: a `diagram(lang)` function and a `__main__` that saves
-   `diagram_en.png` and/or `diagram_zh.png` (300 dpi). Add `.svg` if the
-   user wants a vector file.
+**If you can run Python** (Claude with code execution, ChatGPT, a notebook
+agent, Claude Code): write the script, RUN it, look at the PNG, fix every
+problem from the checklist, then give the user **the PNG files** to
+download (both `diagram_en.png` and `diagram_zh.png` if they want both).
+Offer the code only as an extra ("the code is below if you want to edit it
+later"). Chinese fonts are handled for you: `setup("zh")` uses an
+installed Chinese serif, else a font file the user uploaded, else
+downloads Noto Serif TC once. If the sandbox has no internet and no
+Chinese font, ask the user to upload any Chinese `.ttf` / `.otf` (e.g.
+Noto Serif TC from fonts.google.com) and run again.
 
-Then two lines on how to run it: **Google Colab** (paste into a cell, run;
-for Chinese first run `!apt-get -qq install fonts-noto-cjk` and restart the
-runtime), or locally with `pip install matplotlib pillow` and
-`python diagram.py`.
+**If you cannot run code** (plain web chat): give **one complete Python
+script in one code block** — the full library from "The library" below
+pasted at the top, then the diagram — and these steps, in the user's
+language, word for word:
 
-If you CAN run code (Claude Code, a code interpreter, a notebook agent):
-run it, look at the PNG, fix every problem from the checklist, and only
-then hand it over. If you cannot run code, check the coordinates by
-arithmetic: every point you label must come from `meet()` / `.x()` / `.y()`.
+> 1. Open the free Diagram Maker:
+>    https://colab.research.google.com/github/dinomartino/dse-econ-graph/blob/main/DSE_Graph_Maker.ipynb
+> 2. In **Step 2**, delete the example code and paste the code above.
+> 3. Click **Runtime ▸ Run all** (Ctrl+F9). If Google asks "Run anyway?",
+>    click **Run anyway**.
+> 4. The pictures appear in **Step 3** and download automatically.
+>
+> 1. 打開免費的圖表製作器：（同上連結）
+> 2. 在 **Step 2** 刪除示範程式碼，貼上上面的程式碼。
+> 3. 按 **執行階段 ▸ 全部執行**（Ctrl+F9）。如見到「仍要執行」，請按 **仍要執行**。
+> 4. 圖片會在 **Step 3** 顯示，並自動下載。
+
+The script saves `diagram_en.png` and/or `diagram_zh.png` (300 dpi); add
+`.svg` only if asked. It also runs locally (`pip install matplotlib
+pillow`, then `python diagram.py`) for users who prefer that.
+
+When the user asks for a change in words ("move 'shortage' lower", "make
+demand steeper", "Chinese only"), change the code and deliver again the
+same way — never ask them to edit code themselves.
 
 ## Workflow
 
@@ -113,8 +133,7 @@ arithmetic: every point you label must come from `meet()` / `.x()` / `.y()`.
 - Fonts are picked automatically: Times New Roman (fallback: the STIX
   font that ships with matplotlib) + the first Chinese serif found
   (PMingLiU / MingLiU on Windows, Songti TC on macOS, Noto Serif CJK TC on
-  Linux / Colab). If Chinese shows as boxes, install a font:
-  Colab / Ubuntu `apt-get install fonts-noto-cjk`, then restart.
+  Linux), else an uploaded font file, else Noto Serif TC downloaded once.
 - Use the HKEAA / EDB wording:
 
 | English | 中文 | English | 中文 |
@@ -246,7 +265,9 @@ canvas; the economic axes go wherever you put them with `axes()`.
 """
 from __future__ import annotations
 
+import glob
 import io
+import os
 import warnings
 
 import matplotlib
@@ -276,29 +297,73 @@ CJK = ["PMingLiU", "MingLiU", "新細明體", "Songti TC", "LiSong Pro",
        "Microsoft JhengHei", "PingFang TC", "Heiti TC", "Noto Sans CJK TC"]
 
 
+# Free Chinese serif (SIL Open Font Licence), fetched once when no Chinese
+# font is installed — e.g. inside ChatGPT's or Claude's code sandbox.
+CJK_URL = ("https://raw.githubusercontent.com/google/fonts/main/ofl/"
+           "notoseriftc/NotoSerifTC%5Bwght%5D.ttf")
+CACHE = os.path.join(os.path.expanduser("~"), ".cache", "dsegraph")
+FONT_DIRS = [".", "/mnt/data", "/mnt/user-data/uploads", CACHE]   # cwd, chat uploads, cache
+
+
+def _add_font(path):
+    """Register a font file; return its family name (None if unusable)."""
+    try:
+        font_manager.fontManager.addfont(path)
+        return font_manager.FontProperties(fname=path).get_name()
+    except Exception:
+        return None
+
+
+def _cjk_from_files():
+    for d in FONT_DIRS:
+        for f in sorted(glob.glob(os.path.join(d, "*.[tToO][tT][fFcC]"))):
+            name = _add_font(f)
+            if name and any(k in name for k in ("CJK", "TC", "SC", "Ming", "Song", "Hei", "Kai", "宋", "明")):
+                return name
+    return None
+
+
+def _cjk_download():
+    path = os.path.join(CACHE, "NotoSerifTC.ttf")
+    if not os.path.exists(path):
+        try:
+            import urllib.request
+            os.makedirs(CACHE, exist_ok=True)
+            print("dsegraph: downloading a Chinese font (Noto Serif TC, ~17 MB) - once only ...")
+            urllib.request.urlretrieve(CJK_URL, path + ".part")
+            os.replace(path + ".part", path)
+        except Exception:
+            return None
+    return _add_font(path)
+
+
 def _have(names):
     found = {f.name for f in font_manager.fontManager.ttflist}
     return [n for n in names if n in found]
 
 
-def setup(lang: str = "en", size: float = SIZE):
+def setup(lang: str = "en", size: float = SIZE, font: str | None = None):
     """Pick fonts for English ("en") or Traditional Chinese ("zh").
 
     Chinese text uses a Ming/Song serif like the HKEAA Chinese papers; the
     letters and numbers in the same label stay in the Times-style serif.
-    No CJK font installed (e.g. Google Colab)?  Run
-        !apt-get -qq install fonts-noto-cjk
-    and restart the runtime."""
+    Chinese font, in order: `font=` (path to a .ttf/.otf file) -> an
+    installed one (PMingLiU, Songti TC, Noto Serif CJK TC ...) -> a font file
+    uploaded next to the script / into the chat -> Noto Serif TC, downloaded
+    once.  Works in Colab, ChatGPT and Claude sandboxes without setup."""
     global LANG, SIZE, _READY
     LANG, SIZE, _READY = lang, size, True
     latin = (_have(LATIN) or ["STIXGeneral"])[0]
     family = [latin]
     if lang == "zh":
-        cjk = _have(CJK)
-        if not cjk:
-            warnings.warn("No Chinese font found; Chinese labels will show as boxes. "
-                          "Install one, e.g. Colab/Ubuntu: apt-get install fonts-noto-cjk")
-        family += cjk[:1]
+        cjk = (_add_font(font) if font else None) or (_have(CJK) or [None])[0] \
+            or _cjk_from_files() or _cjk_download()
+        if cjk:
+            family.append(cjk)
+        else:
+            warnings.warn("No Chinese font found and none could be downloaded; Chinese "
+                          "labels will show as boxes. Upload a Chinese .ttf/.otf font "
+                          "(e.g. Noto Serif TC from fonts.google.com) and run again.")
     plt.rcParams.update({
         "font.family": family,                 # per-glyph fallback: Latin first, then CJK
         "font.size": size,
