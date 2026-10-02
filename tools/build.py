@@ -34,60 +34,17 @@ def doc_first_line(path: Path) -> str:
     return doc.strip().splitlines()[0] if doc else ""
 
 
-LOADER = (
-    "# DSE graph library — downloads automatically, do not edit\n"
-    "import os, urllib.request\n"
-    "if not os.path.exists(\"dsegraph.py\"):\n"
-    "    urllib.request.urlretrieve(\"https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/dsegraph.py\", \"dsegraph.py\")\n"
-    "from dsegraph import *\n")
-
-
 def standalone(path: Path) -> str:
     """An example as it would be pasted under the library: no sys.path dance,
     a plain __main__ that saves beside the script."""
     src = path.read_text(encoding="utf-8")
     src = re.sub(r"import os, sys\nsys\.path\.insert\(0, .*?\)\nfrom dsegraph import \*\n",
-                 LOADER, src)
+                 "# (paste the whole dsegraph library from \"The library\" here)\n", src)
     src = re.sub(r'if __name__ == "__main__":\n.*', (
         'if __name__ == "__main__":\n'
         '    for lang in ("en", "zh"):\n'
         '        save(diagram(lang), f"diagram_{lang}.png")\n'), src, flags=re.S)
     return src
-
-
-PAGE = "https://dinomartino.github.io/dse-econ-graph/"
-COLAB = ("https://colab.research.google.com/github/dinomartino/dse-econ-graph/"
-         "blob/main/DSE_Graph_Maker.ipynb")
-PROMPT_LIMIT = 8000          # ChatGPT custom-GPT instructions limit; Gems take more
-
-
-def prompt() -> str:
-    """The compact universal prompt (Gem / GPT / Project instructions, or the
-    first message of any chat): tools/prompt_template.md with the loader,
-    example 01 and the links filled in."""
-    src = (ROOT / "examples" / "01_price_ceiling_shortage.py").read_text(encoding="utf-8")
-    body = src[src.index("def diagram"):src.index('if __name__ == "__main__":')].rstrip()
-    pattern = body + '\n\n\nfor lang in ("en", "zh"):\n    save(diagram(lang), f"diagram_{lang}.png")\n'
-    t = (ROOT / "tools" / "prompt_template.md").read_text(encoding="utf-8")
-    return (t.replace("{LOADER}", LOADER).replace("{PATTERN}", pattern)
-             .replace("{COLAB}", COLAB).replace("{PAGE}", PAGE))
-
-
-def page(p: str) -> None:
-    """docs/index.html (GitHub Pages): the teacher's start page with a Copy
-    button for the prompt, plus two example pictures."""
-    import html
-    import shutil
-    docs = ROOT / "docs"
-    (docs / "img").mkdir(parents=True, exist_ok=True)
-    for lang in ("en", "zh"):
-        src = ROOT / "gallery" / f"01_price_ceiling_shortage_{lang}.png"
-        if src.exists():
-            shutil.copy(src, docs / "img" / f"example_{lang}.png")
-    t = (ROOT / "tools" / "page_template.html").read_text(encoding="utf-8")
-    (docs / "index.html").write_text(
-        t.replace("{PROMPT}", html.escape(p)).replace("{COLAB}", COLAB), encoding="utf-8")
-    print("wrote docs/index.html")
 
 
 def sync() -> str:
@@ -111,13 +68,6 @@ def main() -> int:
         return 0
     SKILL.write_text(new, encoding="utf-8")
     print(f"synced {SKILL.name}: library + {len(EXAMPLES)} templates")
-    p = prompt()
-    (ROOT / "PROMPT.txt").write_text(p, encoding="utf-8")
-    page(p)
-    print(f"wrote PROMPT.txt: {len(p)} characters (limit {PROMPT_LIMIT})")
-    if len(p) > PROMPT_LIMIT:
-        print("FAIL  PROMPT.txt is too long for a custom GPT — shorten tools/prompt_template.md")
-        return 1
 
     failed = []
     for p in EXAMPLES:
@@ -130,7 +80,7 @@ def main() -> int:
     dist = ROOT / "dist"
     dist.mkdir(exist_ok=True)
     with zipfile.ZipFile(dist / "dse-econ-graph.zip", "w", zipfile.ZIP_DEFLATED) as z:
-        for f in [SKILL, ROOT / "dsegraph.py", ROOT / "PROMPT.txt", *EXAMPLES]:
+        for f in [SKILL, ROOT / "dsegraph.py", *EXAMPLES]:
             z.write(f, Path("dse-econ-graph") / f.relative_to(ROOT))
     print(f"packed dist/dse-econ-graph.zip")
     return 1 if failed else 0

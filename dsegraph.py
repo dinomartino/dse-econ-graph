@@ -25,7 +25,6 @@ import os
 import warnings
 
 import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
 from matplotlib.patches import FancyArrowPatch, PathPatch, Polygon, Rectangle
@@ -421,31 +420,48 @@ def _declutter(fig, ax, step=2.0, max_pts=14.0):
     return stuck
 
 
-def _notebook(path):
-    """In Colab / Jupyter: show the picture under the cell, and in Colab also
-    download it — so "Export to Colab -> Run" is all a teacher has to do."""
+def _present(path):
+    """Show the finished picture where the script runs, so the user sees it
+    without opening a file: under a notebook cell (and downloaded, in Colab),
+    or in a chat assistant's code tool, which captures plt.show().  Desktop
+    windows are skipped so a local script never blocks."""
     try:
         from IPython import get_ipython
-        if get_ipython() is None:
-            return
-        from IPython.display import SVG, Image, display
-        print(path)
-        display(Image(path, width=420) if path.lower().endswith(".png") else SVG(path))
+        shell = get_ipython()
     except Exception:
+        shell = None
+    if shell is not None:
+        try:
+            from IPython.display import SVG, Image, display
+            display(Image(path, width=420) if path.lower().endswith(".png") else SVG(path))
+        except Exception:
+            pass
+        try:
+            from google.colab import files
+            files.download(path)
+        except Exception:
+            pass
         return
-    try:
-        from google.colab import files
-        files.download(path)
-    except Exception:
-        pass
+    backend = matplotlib.get_backend().lower()
+    if any(g in backend for g in ("macosx", "tk", "qt", "gtk", "wx")) or not path.lower().endswith(".png"):
+        return
+    img = plt.imread(path)
+    h, w = img.shape[:2]
+    f = plt.figure(figsize=(w / 150, h / 150), dpi=150)
+    a = f.add_axes([0, 0, 1, 1])
+    a.imshow(img, cmap="gray", vmin=0, vmax=1)
+    a.axis("off")
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        plt.show()
 
 
 def save(fig, path="diagram.png", aspect: float | None = None, tidy: bool = True):
     """PNG (greyscale, 300 dpi) or .svg / .pdf by extension.  The canvas grows
     to fit every label, so nothing is ever clipped.  `aspect` (w/h) pads the
     PNG with white to an exact ratio, e.g. to replace a picture in Word
-    without moving the layout.  In a notebook the picture is also shown
-    (and downloaded, in Colab).  tidy=True first nudges any label that
+    without moving the layout.  The picture is also shown: in a chat
+    assistant's code tool, under a notebook cell (downloaded, in Colab).  tidy=True first nudges any label that
     touches a line or another label into a clear spot."""
     if tidy and fig.axes:
         stuck = _declutter(fig, fig.axes[0])
@@ -455,7 +471,7 @@ def save(fig, path="diagram.png", aspect: float | None = None, tidy: bool = True
     if not path.lower().endswith(".png"):
         fig.savefig(path, facecolor="white", bbox_inches="tight", pad_inches=0.04)
         plt.close(fig)
-        _notebook(path)
+        _present(path)
         return path
     from PIL import Image
     buf = io.BytesIO()
@@ -470,5 +486,5 @@ def save(fig, path="diagram.png", aspect: float | None = None, tidy: bool = True
             c.paste(im, ((W - w) // 2, (H - h) // 2))
             im = c
     im.save(path, optimize=True)
-    _notebook(path)
+    _present(path)
     return path

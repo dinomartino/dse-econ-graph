@@ -17,90 +17,49 @@ can paste it into the script it writes.
 
 ## What you give the user
 
-Assume the user is a teacher or student who **does not code** — most of
-them use **Gemini** in the browser. They want the picture, not the program.
+Most users are teachers in a **web chat** (Gemini, ChatGPT, Claude, …)
+who do not code. They want **the picture, shown in the chat** — not code,
+not instructions.
 
-### A. You cannot run code yourself (Gemini, most web chats)
+### In a web chat: draw it and show the picture
 
-Give **one short Python script in one code block**: the 5-line loader
-below, then the diagram code. Do NOT paste the whole library — the loader
-fetches it, and a short script is easier to copy and has nothing to mistype.
+1. Write the script: the whole library from "The library" below pasted at
+   the top (do not download it — chat code tools are often offline), then
+   the diagram, saving `diagram_en.png` and/or `diagram_zh.png`.
+2. **Run it with your code tool.** `save()` displays the finished picture,
+   so it appears in the chat. Look at it; fix anything from the checklist
+   and run again.
+3. **Reply with the picture(s)** — both languages if they were asked for —
+   plus at most 2–4 lines on the economics. Attach or link the PNG files
+   too if your chat can. **Do not show the code** unless the user asks.
+4. When the user asks for a change in words ("make demand steeper",
+   "Chinese only"), edit, run again and show the new picture.
 
-```python
-# DSE graph library — downloads automatically, do not edit
-import os, urllib.request
-if not os.path.exists("dsegraph.py"):
-    urllib.request.urlretrieve("https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/dsegraph.py", "dsegraph.py")
-from dsegraph import *
-```
+`save()` also tidies the picture: a label touching a line, arrow, brace or
+another label is moved to a clear spot. A printed line
+`dsegraph note: … crowded` means it could not — move that label yourself
+and run again.
 
-After the code block, give these steps in the user's language, exactly:
+Chinese: `setup("zh")` finds a Chinese serif font, or downloads one. If
+your tool has no internet and no Chinese font, Chinese labels come out as
+boxes □□ — then show the English version, say so in one line, and ask the
+user to upload any Chinese font file (`.ttf` / `.otf`) into the chat; run
+again and it will be used.
 
-> **How to get the picture (no coding needed)**
-> 1. Click **Export to Colab** under the code (Gemini: the share / ⋮ menu
->    of the code box). No such button? Copy the code, open
->    https://colab.research.google.com/github/dinomartino/dse-econ-graph/blob/main/DSE_Graph_Maker.ipynb
->    and paste it into **Step 2**.
-> 2. Press **▶** (or **Runtime ▸ Run all**). Sign in with Google if asked;
->    if it says *"Run anyway?"*, click **Run anyway**.
-> 3. The picture appears under the code and downloads to your computer.
->    The first run takes about a minute.
+**Only if you cannot run code at all:** say so in one line, and give the
+complete script (library + diagram) in one code block with: "Open
+colab.new, paste this, press ▶ — the picture appears below it."
 
-> **如何取得圖片（不需識寫程式）**
-> 1. 按程式碼下方的 **Export to Colab（匯出至 Colab）**（Gemini：程式碼框的分享／⋮ 選單）。沒有這個按鈕？複製程式碼，打開
->    https://colab.research.google.com/github/dinomartino/dse-econ-graph/blob/main/DSE_Graph_Maker.ipynb
->    貼到 **Step 2**。
-> 2. 按 **▶**（或 **執行階段 ▸ 全部執行**）。如要求登入 Google 請登入；見到「仍要執行」請按 **仍要執行**。
-> 3. 圖片會在程式碼下方出現，並自動下載到你的電腦。第一次執行約需一分鐘。
+### In a coding tool (Claude Code, Codex, …)
 
-If the user reports an error, ask them to copy the red error text to you,
-fix the code, and give the whole corrected script again (never a partial
-patch — they cannot merge code).
+Same script; save the PNGs where the user wants them, look at them, and
+report the file paths.
 
-### B. You can run Python yourself (Claude with code execution, ChatGPT)
+### Using it again
 
-Write the script, RUN it, look at the PNG, fix every problem from the
-checklist, then give the user **the PNG files** to download. Offer the code
-only as an extra. Use the loader above if the sandbox has internet;
-otherwise paste the full library from "The library" at the top of the
-script. Chinese fonts are handled by `setup("zh")`: an installed Chinese
-serif, else a font file the user uploaded, else Noto Serif TC downloaded
-once. If there is no internet and no Chinese font, ask the user to upload
-any Chinese `.ttf` / `.otf` and run again.
-
-### Either way
-
-- Both languages unless the user says otherwise: the script saves
-  `diagram_en.png` and `diagram_zh.png` (300 dpi); `.svg` only if asked.
-- When the user asks for a change in words ("move 'shortage' lower", "make
-  demand steeper", "Chinese only"), change the code and deliver again the
-  same way. Never ask them to edit code.
-- "The library" section below is the reference for every function you
-  may call — read it; don't invent functions that are not there.
-- `save()` checks the finished picture: any label touching a line, arrow,
-  brace or another label is nudged to the nearest clear spot, and a label
-  it cannot free is printed as `dsegraph note: … crowded`. If the user
-  pastes such a note, move that label and give the whole script again.
-
-### Helping someone set it up
-
-If the user asks how to get this, keep it, or share it with colleagues —
-or seems to be using it for the first time — point them to the start page
-**https://dinomartino.github.io/dse-econ-graph/**. It has a big **Copy**
-button and pictures; nothing to download, no GitHub. Summarise in their
-language:
-
-- **Gemini (recommended):** gemini.google.com ▸ Explore Gems ▸ New Gem ▸
-  name it "DSE Econ Graph 經濟圖表" ▸ paste the copied instructions into
-  *Instructions* ▸ Save. To share: Share ▸ *Anyone with the link* ▸ send
-  the link — colleagues just click it. (School accounts may have Gems
-  switched off; a personal Gmail works.)
-- **Any other chat** (ChatGPT, DeepSeek, Copilot, Poe…): paste the copied
-  instructions as the first message, then ask. ChatGPT: make a GPT with
-  them as its Instructions. Claude: a Project, or upload the skill zip.
-
-The copied instructions are `PROMPT.txt` in the repository — a compact
-(under 8 000 characters) version of this file for chat assistants.
+To use it in a new chat, the user attaches `SKILL.md` again (or keeps it
+in their assistant's custom instructions / project knowledge, if it has
+that).
 
 ## Workflow
 
@@ -232,8 +191,8 @@ makes an English and a Chinese version.
 - `10_ppc.py` — Production possibilities curve (PPC) and economic growth.
 <!-- END TEMPLATE LIST -->
 
-A complete template, to show the pattern (for a web chat, this is the
-whole script you hand over):
+A complete template, to show the pattern (the library goes where the
+comment is):
 
 <!-- BEGIN EXAMPLE 01 -->
 ```python
@@ -243,11 +202,7 @@ Marking-scheme points it shows:
   - price (P) below the equilibrium price (Pe)
   - correct position of the shortage / excess demand (Qs to Qd at P)
 """
-# DSE graph library — downloads automatically, do not edit
-import os, urllib.request
-if not os.path.exists("dsegraph.py"):
-    urllib.request.urlretrieve("https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/dsegraph.py", "dsegraph.py")
-from dsegraph import *
+# (paste the whole dsegraph library from "The library" here)
 
 
 def diagram(lang="en"):
@@ -322,7 +277,6 @@ import os
 import warnings
 
 import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
 from matplotlib.patches import FancyArrowPatch, PathPatch, Polygon, Rectangle
@@ -718,31 +672,48 @@ def _declutter(fig, ax, step=2.0, max_pts=14.0):
     return stuck
 
 
-def _notebook(path):
-    """In Colab / Jupyter: show the picture under the cell, and in Colab also
-    download it — so "Export to Colab -> Run" is all a teacher has to do."""
+def _present(path):
+    """Show the finished picture where the script runs, so the user sees it
+    without opening a file: under a notebook cell (and downloaded, in Colab),
+    or in a chat assistant's code tool, which captures plt.show().  Desktop
+    windows are skipped so a local script never blocks."""
     try:
         from IPython import get_ipython
-        if get_ipython() is None:
-            return
-        from IPython.display import SVG, Image, display
-        print(path)
-        display(Image(path, width=420) if path.lower().endswith(".png") else SVG(path))
+        shell = get_ipython()
     except Exception:
+        shell = None
+    if shell is not None:
+        try:
+            from IPython.display import SVG, Image, display
+            display(Image(path, width=420) if path.lower().endswith(".png") else SVG(path))
+        except Exception:
+            pass
+        try:
+            from google.colab import files
+            files.download(path)
+        except Exception:
+            pass
         return
-    try:
-        from google.colab import files
-        files.download(path)
-    except Exception:
-        pass
+    backend = matplotlib.get_backend().lower()
+    if any(g in backend for g in ("macosx", "tk", "qt", "gtk", "wx")) or not path.lower().endswith(".png"):
+        return
+    img = plt.imread(path)
+    h, w = img.shape[:2]
+    f = plt.figure(figsize=(w / 150, h / 150), dpi=150)
+    a = f.add_axes([0, 0, 1, 1])
+    a.imshow(img, cmap="gray", vmin=0, vmax=1)
+    a.axis("off")
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        plt.show()
 
 
 def save(fig, path="diagram.png", aspect: float | None = None, tidy: bool = True):
     """PNG (greyscale, 300 dpi) or .svg / .pdf by extension.  The canvas grows
     to fit every label, so nothing is ever clipped.  `aspect` (w/h) pads the
     PNG with white to an exact ratio, e.g. to replace a picture in Word
-    without moving the layout.  In a notebook the picture is also shown
-    (and downloaded, in Colab).  tidy=True first nudges any label that
+    without moving the layout.  The picture is also shown: in a chat
+    assistant's code tool, under a notebook cell (downloaded, in Colab).  tidy=True first nudges any label that
     touches a line or another label into a clear spot."""
     if tidy and fig.axes:
         stuck = _declutter(fig, fig.axes[0])
@@ -752,7 +723,7 @@ def save(fig, path="diagram.png", aspect: float | None = None, tidy: bool = True
     if not path.lower().endswith(".png"):
         fig.savefig(path, facecolor="white", bbox_inches="tight", pad_inches=0.04)
         plt.close(fig)
-        _notebook(path)
+        _present(path)
         return path
     from PIL import Image
     buf = io.BytesIO()
@@ -767,7 +738,7 @@ def save(fig, path="diagram.png", aspect: float | None = None, tidy: bool = True
             c.paste(im, ((W - w) // 2, (H - h) // 2))
             im = c
     im.save(path, optimize=True)
-    _notebook(path)
+    _present(path)
     return path
 ```
 <!-- END dsegraph.py -->
