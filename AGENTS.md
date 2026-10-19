@@ -1,4 +1,4 @@
-# dse-econ-graph — working notes for Claude
+# dse-econ-graph — working notes for AI agents
 
 Read this first. Then read `docs/ROADMAP.md` (what to do next) and
 `docs/DECISIONS.md` (why things are the way they are). At the end of a

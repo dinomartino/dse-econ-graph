@@ -194,7 +194,7 @@ Chinese, and as a last resort downloads the free Noto Serif TC once.
 one), then run `python tools/build.py`. It renders the gallery, pastes the
 library and every template into `SKILL.md`, runs each template as a chat
 AI would paste it, and rewrites `download/`. Project notes and the release
-steps are in [`CLAUDE.md`](CLAUDE.md).
+steps are in [`AGENTS.md`](AGENTS.md).
 
 ## Notes
 
