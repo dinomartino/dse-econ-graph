@@ -59,7 +59,10 @@ teacher ──► Grok Skill / Claude Skill (dse-econ-graph.zip)
 | `README.md` | Teacher-first page (EN + 繁中). The block between `<!-- BEGIN INSTRUCTIONS -->` markers is generated. | yes, except that block |
 | `CHANGELOG.md` | Top entry = current version + "what's new" (`- en:` / `- zh:` lines). | yes |
 | `download/` | Built files for the website + `manifest.json`. | **never by hand** |
-| `gallery/` | PNGs rendered from `examples/`. | built |
+| `gallery/` | PNGs rendered from `examples/`; `gallery/chat/` from `chat/variants/`. | built |
+| `chat/variants/NNx_*.py` | Chat-only variants for DSEconMentor's chat tutor (e.g. `13b_supply_increase`: 13 with the shift reversed). Same format as the templates plus a `Variant of: NN_name` line. Not in SKILL.md, the zips or the manifest. | yes |
+| `chat/meta.json` | Per diagram id (templates and variants): `caption`, `alt`, `shows_zh`, `labels`, en + zh. The build stops if an id lacks an entry. | yes |
+| `download/chat-catalogue.json` | Every template and variant with its texts, PNG paths, sizes and sha256. Read by DSEconMentor's chat tutor through a sync pinned to a commit. Not a teacher download (not in `FILES`). | **never by hand** |
 | `tools/build.py` | Syncs SKILL.md, renders gallery, runs every template exactly as pasted from SKILL.md under the library (the "pasted test"), writes `download/`. | yes |
 | `tools/release.py` | Pushes and creates the GitHub release. | yes |
 
@@ -102,6 +105,16 @@ before unzipping.
    that AI needs them; the same file must work everywhere.
 7. After any change, run `python tools/build.py` and **look at the changed
    gallery PNGs** (Read them) before committing. Check both `_en` and `_zh`.
+   On a machine without Times New Roman (Linux) every PNG re-renders a
+   little differently: `git checkout -- gallery/<file>` the ones whose
+   template you did not change, then `python tools/build.py --no-render` so
+   the catalogue's sha256 describes the committed PNGs.
+8. **Chat variants and the catalogue.** `chat/variants/` never goes into
+   SKILL.md, the zips, `FILES` or the manifest's `gallery[]` (teachers see
+   that list). Catalogue ids (every template and variant id) are a contract:
+   DSEconMentor saves them in chat messages, so never rename or remove one.
+   A new template or variant needs a complete `chat/meta.json` entry
+   (Traditional Chinese, HK wording, the glossary in SKILL.md).
 
 ## Release (only when the maintainer asks)
 

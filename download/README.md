@@ -11,6 +11,7 @@ change, so links to them keep working.
 | `instructions.txt` | Text pasted into the Grok / ChatGPT project's Instructions (also in the manifest as `instructions_text`, to show in a copy box) |
 | `SKILL.md`, `SKILL.txt` | The guide alone, only for an AI that can't open the zip |
 | `manifest.json` | (for the website) version, what's new, setup steps, links, gallery |
+| `chat-catalogue.json` | (not for teachers: not in `m.files`) every template plus the chat-only variants, for DSEconMentor's chat tutor; see below |
 
 ## Reading it from the website
 
@@ -28,7 +29,7 @@ const m = await (await fetch(M, { cache: "no-cache" })).json();
 //   use      = how to draw once set up (same for every AI)
 //   quick    = no setup: attach the zip to any chat
 //   updating = what to do when a new version is out
-// m.gallery[]                      { id, title, en: png url, zh: png url }
+// m.gallery[]                      { id, title, title_zh, topic, en: png url, zh: png url }
 ```
 
 - **Page idea:** an AI picker (tabs from `providers`, the `recommended`
@@ -41,3 +42,19 @@ const m = await (await fetch(M, { cache: "no-cache" })).json();
 - `raw.githubusercontent.com` caches for about 5 minutes, so a new version
   shows up a few minutes after it is pushed.
 - Fields may be added in later versions; existing fields keep their meaning.
+
+## chat-catalogue.json (DSEconMentor's chat tutor)
+
+```js
+// c.schema, c.version              1, "1.5.2"
+// c.diagrams[]                     the 43 templates in order, then the chat-only variants:
+//   { id, variant_of: null | "<template id>", topic,
+//     title{en,zh}, caption{en,zh}, use, shows{en[],zh[]}, labels{en[],zh[]}, alt{en,zh},
+//     png{en,zh}: path in the repo ("gallery/…png", variants "gallery/chat/…png"),
+//     size{en,zh}: [width, height] px, sha256{en,zh} }
+```
+
+- Ids are a contract: the chat saves them in messages, so none is ever
+  renamed or removed. Read it at a pinned commit, not `main`.
+- The variants (`chat/variants/`) are not in SKILL.md, the zips or
+  `m.gallery`, so teachers never see them.
