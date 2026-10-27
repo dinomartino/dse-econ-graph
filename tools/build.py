@@ -1,14 +1,20 @@
 """Rebuild everything that is generated from the sources.
 
-    python tools/build.py            # sync SKILL.md, render the gallery, write download/
-    python tools/build.py --check    # exit 1 if SKILL.md, README.md or download/ is out of date
+    python tools/build.py              # sync SKILL.md, render the gallery, write download/
+    python tools/build.py --check      # exit 1 if SKILL.md, README.md or download/ is out of date
+    python tools/build.py --no-render  # as the first, but keep the PNGs already in gallery/
+                                       # (a machine whose fonts differ from the committed gallery)
 
 1. Pastes dsegraph.py, the template list and example 01 into SKILL.md, so
    SKILL.md stays a single self-contained file any chat assistant can use.
-2. Runs every examples/NN_*.py (English + Chinese PNGs into gallery/).
+2. Runs every examples/NN_*.py (English + Chinese PNGs into gallery/) and
+   every chat-only variant chat/variants/NNx_*.py (into gallery/chat/).
 3. Writes download/ — the files teachers download, with fixed names (the
    website links to them, so never rename one) and manifest.json, which the
    website reads: version, what's new, setup steps, file links, gallery.
+4. Writes download/chat-catalogue.json for DSEconMentor's chat tutor: every
+   template and variant with the texts in chat/meta.json and its PNGs' size
+   and sha256. Variants never go into SKILL.md, the zips or manifest.json.
 """
 from __future__ import annotations
 
@@ -27,6 +33,12 @@ SKILL = ROOT / "SKILL.md"
 EXAMPLES = sorted((ROOT / "examples").glob("[0-9][0-9]_*.py"))
 DOWNLOAD = ROOT / "download"
 TEACHER = ROOT / "teacher"
+GALLERY = ROOT / "gallery"
+# Chat-only variants (DSEconMentor's chat tutor): rendered into gallery/chat/,
+# never pasted into SKILL.md or put in the teacher zips or manifest.json.
+VARIANTS = sorted((ROOT / "chat" / "variants").glob("[0-9][0-9][a-z]_*.py"))
+CHAT_META = ROOT / "chat" / "meta.json"
+CATALOGUE = "chat-catalogue.json"                                 # in download/, not in FILES
 
 REPO = "dinomartino/dse-econ-graph"
 RAW = f"https://raw.githubusercontent.com/{REPO}/main"           # CORS-friendly, for fetch()
@@ -75,8 +87,18 @@ def meta(path: Path) -> dict:
     use = re.search(r"^Use for:\s*(.+?)(?:\n\n|\Z)", doc, re.M | re.S)
     if not topic or topic.group(1).strip() not in TOPICS:
         raise SystemExit(f"{path.name}: needs a 'Topic:' line, one of {TOPICS}")
+    shows = []                                     # "  - point" lines, continuations joined
+    pts = re.search(r"^Marking-scheme points it shows:\n(.*?)(?:\n\n|\Z)", doc, re.M | re.S)
+    for line in (pts.group(1).splitlines() if pts else []):
+        s = line.strip()
+        if s.startswith("- "):
+            shows.append(" ".join(s[2:].split()))
+        elif s and shows:
+            shows[-1] += " " + " ".join(s.split())
+    base = re.search(r"^Variant of:\s*(\S+)\s*$", doc, re.M)
     return {"title": title, "topic": topic.group(1).strip(),
-            "use": " ".join(l.strip() for l in use.group(1).splitlines()) if use else ""}
+            "use": " ".join(l.strip() for l in use.group(1).splitlines()) if use else "",
+            "shows": shows, "variant_of": base.group(1) if base else None}
 
 
 def doc_first_line(path: Path) -> str:
@@ -252,10 +274,12 @@ def downloads(skill: str) -> dict[str, bytes]:
     unknown = {f for prov in setup["providers"] for f in prov["files"]} - set(FILES)
     if unknown:
         raise SystemExit(f"teacher/setup.json names files that are not built: {unknown}")
+    texts = chat_meta()
     gallery = []
-    for p in EXAMPLES:
+    for p in EXAMPLES:                             # templates only: variants are chat-only
         stem = p.stem
         gallery.append({"id": stem, "title": doc_first_line(p),
+                        "title_zh": texts[stem]["caption"]["zh"], "topic": meta(p)["topic"],
                         "en": f"{RAW}/gallery/{stem}_en.png", "zh": f"{RAW}/gallery/{stem}_zh.png"})
     manifest = {
         "name": "dse-econ-graph",
@@ -276,13 +300,82 @@ def downloads(skill: str) -> dict[str, bytes]:
         "gallery": gallery,
     }
     out["manifest.json"] = (json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+    out[CATALOGUE] = catalogue(texts)
     return out
+
+
+def chat_meta() -> dict:
+    """chat/meta.json, checked: a complete entry for every template and
+    variant (caption, alt, shows_zh, labels; en and zh), and every variant's
+    "Variant of:" names a template. Stops the build with every problem found."""
+    texts = json.loads(CHAT_META.read_text(encoding="utf-8"))
+    bases = {p.stem for p in EXAMPLES}
+    ids = [p.stem for p in EXAMPLES + VARIANTS]
+    bad = [f"{i}: no entry" for i in ids if i not in texts]
+    bad += [f"{i}: in meta.json but no such template or variant" for i in texts if i not in ids]
+
+    def text(v):
+        return isinstance(v, str) and v.strip() != ""
+
+    for p in EXAMPLES + VARIANTS:
+        e, m = texts.get(p.stem), meta(p)
+        if e is None:
+            continue
+        for k in ("caption", "alt"):
+            if not (isinstance(e.get(k), dict) and text(e[k].get("en")) and text(e[k].get("zh"))):
+                bad.append(f"{p.stem}: needs {k} {{en, zh}}")
+        lab = e.get("labels")
+        if not (isinstance(lab, dict) and all(isinstance(lab.get(l), list) and lab[l]
+                                              and all(map(text, lab[l])) for l in ("en", "zh"))):
+            bad.append(f"{p.stem}: needs labels {{en: [...], zh: [...]}}")
+        zh = e.get("shows_zh")
+        if not m["shows"]:
+            bad.append(f"{p.stem}: docstring has no 'Marking-scheme points it shows:' list")
+        elif not (isinstance(zh, list) and len(zh) == len(m["shows"]) and all(map(text, zh))):
+            bad.append(f"{p.stem}: shows_zh needs {len(m['shows'])} points, like the docstring")
+        if p in VARIANTS and m["variant_of"] not in bases:
+            bad.append(f"{p.name}: 'Variant of: {m['variant_of']}' is not a template in examples/")
+        if p in EXAMPLES and m["variant_of"]:
+            bad.append(f"{p.name}: templates in examples/ must not have a 'Variant of:' line")
+    if bad:
+        raise SystemExit("chat/meta.json / chat variants:\n  " + "\n  ".join(bad))
+    return texts
+
+
+def catalogue(texts: dict) -> bytes:
+    """download/chat-catalogue.json, read by DSEconMentor's chat tutor through a
+    pinned sync: the 43 templates in order, then the chat-only variants. Ids are
+    a contract (saved in chat messages): never rename or remove one. size and
+    sha256 describe the PNGs in gallery/ as they are now."""
+    from PIL import Image
+    diagrams = []
+    for p in EXAMPLES + VARIANTS:
+        m, e = meta(p), texts[p.stem]
+        png, size, sha = {}, {}, {}
+        for lang in ("en", "zh"):
+            f = (GALLERY / "chat" if p in VARIANTS else GALLERY) / f"{p.stem}_{lang}.png"
+            if not f.exists():
+                raise SystemExit(f"{f.relative_to(ROOT)} is missing — run: python tools/build.py")
+            png[lang] = f.relative_to(ROOT).as_posix()
+            with Image.open(f) as im:
+                size[lang] = list(im.size)
+            sha[lang] = hashlib.sha256(f.read_bytes()).hexdigest()
+        diagrams.append({
+            "id": p.stem, "variant_of": m["variant_of"], "topic": m["topic"],
+            "title": {"en": m["title"], "zh": e["caption"]["zh"]},
+            "caption": e["caption"], "use": m["use"],
+            "shows": {"en": m["shows"], "zh": e["shows_zh"]},
+            "labels": e["labels"], "alt": e["alt"],
+            "png": png, "size": size, "sha256": sha})
+    cat = {"schema": 1, "version": changelog()["version"], "diagrams": diagrams}
+    return (json.dumps(cat, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
 
 
 def main() -> int:
     new = sync()
-    files = downloads(new)
+    chat_meta()                                    # fail fast, before the long render
     if "--check" in sys.argv:
+        files = downloads(new)
         stale = [] if new == SKILL.read_text(encoding="utf-8") else ["SKILL.md"]
         stale += [] if readme() == README.read_text(encoding="utf-8") else ["README.md"]
         stale += [f"download/{n}" for n, b in files.items()
@@ -297,16 +390,19 @@ def main() -> int:
     print(f"synced {SKILL.name}: library + {len(EXAMPLES)} templates")
 
     failed = []
-    for p in EXAMPLES:
+    for p in ([] if "--no-render" in sys.argv else EXAMPLES + VARIANTS):
         r = subprocess.run([sys.executable, str(p)], cwd=ROOT, capture_output=True, text=True)
-        print(("ok    " if r.returncode == 0 else "FAIL  ") + p.name)
-        if r.returncode:
+        bad = r.returncode or (p in VARIANTS and "crowded" in r.stdout)
+        print(("FAIL  " if bad else "ok    ") + str(p.relative_to(ROOT)))
+        if bad:
             failed.append(p.name)
-            print(r.stderr[-2000:])
+            print(r.stdout[-500:] + r.stderr[-2000:])
 
+    # SKILL.md's templates only: the chat variants are not in the guide
     failed += pasted_test((ROOT / "dsegraph.py").read_text(encoding="utf-8"))
     print(f"pasted test: {len(EXAMPLES)} templates run as a chat AI would paste them")
 
+    files = downloads(new)                         # after rendering: the catalogue hashes gallery/
     DOWNLOAD.mkdir(exist_ok=True)
     for name, data in files.items():
         (DOWNLOAD / name).write_bytes(data)
