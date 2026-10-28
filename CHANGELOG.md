@@ -5,6 +5,10 @@ its number, date and `en:` / `zh:` lines into `download/manifest.json`, and
 the website shows them as "What's new". Write them for teachers, in plain
 words.
 
+## 1.7.0 — 2026-10-28
+- en: Nothing changes in how you use the skill. Behind the scenes, every diagram now comes with a short drawing plan, so DSEconMentor's AI tutor can adjust these diagrams for a student's question.
+- zh: 使用方法不變。每幅圖現已附簡短的繪圖說明，讓 DSEconMentor 的 AI 導師可按學生的問題調整這些圖。
+
 ## 1.6.0 — 2026-10-28
 - en: Nothing changes in how you use the skill. Behind the scenes, every diagram now has a Chinese title and a short description, so DSEconMentor's AI tutor can show these same diagrams to students.
 - zh: 使用方法不變。每幅圖現已附中文標題及簡短說明，讓 DSEconMentor 的 AI 導師可以向學生展示同一批圖。

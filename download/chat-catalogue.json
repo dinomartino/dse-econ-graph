@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.6.0",
+  "version": "1.7.0",
   "recipes": {
     "schema": "recipes/schema.json",
     "glossary": "recipes/glossary.json",
