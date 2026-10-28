@@ -1,0 +1,19 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "31_unit_tax_burden_dwl",
+ "family": "market",
+ "axes": {"x": {"key": "q"}, "y": {"key": "p"}},
+ "curves": [{"id": "D", "role": "demand", "slope": "steep", "name": "D"}, {"id": "S0", "role": "supply", "name": "S_0"}],
+ "tax": {"kind": "unit_tax", "on": "S0", "id": "S1", "name": "S_1", "arrowLabel": {"key": "tax"}},
+ "points": [{"at": ["D", "S1"], "dot": false, "guides": ["P_1", "Q_1"], "id": "E1"}, {"at": ["D", "S0"], "dot": false, "guides": ["P_0", "Q_0"]}, {"at": {"curve": "S0", "atQuantityOf": "E1"}, "id": "B", "dot": false, "guides": ["P_2", null]}],
+ "areas": [{"kind": "dwl", "pattern": "hatch", "label": "a"}],
+ "gaps": [{"kind": "consumers_burden", "label": {"key": "buyers_burden"}}, {"kind": "producers_burden", "label": {"key": "sellers_burden"}}],
+ "expect": {"price": "up", "quantity": "down"},
+ "geom": {"size": [3.4, 2.8],
+  "origin": [12, 12],
+  "xEnd": [92, 12],
+  "yEnd": [12, 94],
+  "curves": {"D": {"p": [32, 90], "q": [62, 22], "draw": [32, 62], "end": "right", "dy": -1.5}, "S0": {"p": [12, 18], "m": 0.7, "draw": [12, 80], "end": "right"}, "S1": {"draw": [20, 64], "end": "right"}},
+  "tax": 28}
+}

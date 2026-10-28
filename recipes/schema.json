@@ -1,0 +1,989 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/recipes/schema.json",
+  "title": "dse-econ-graph diagram recipe, v1",
+  "description": "What a diagram contains, in economics terms: curves, shifts and their direction, price or quantity lines, marked points, areas, braces, labels and language. No coordinates: a renderer computes every point (DSEconMentor's chat tutor writes these; see recipes/README.md). Recipes stored in this folder also carry `geom`, the template's own numbers, so the renderer can reproduce the template exactly; a chat model never writes `geom`.",
+  "$comment": "Canonical forms: a price fixed at the old equilibrium is `fixed_price` with level `at_eq` (not a ceiling); a unit tax or subsidy goes in `tax`, not in `shifts`; a vertical curve (LRAS, fixed stock) is placed with `at`. Adding optional fields is allowed within v1; renaming or removing one needs v2.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "v",
+    "lang",
+    "family",
+    "curves"
+  ],
+  "properties": {
+    "v": {
+      "const": 1
+    },
+    "lang": {
+      "enum": [
+        "en",
+        "zh"
+      ],
+      "description": "Language of the labels; the picture can be drawn in the other language too (words come from glossary keys or {en, zh} pairs)."
+    },
+    "base": {
+      "$ref": "#/$defs/catalogueId",
+      "description": "The catalogue diagram this recipe started from."
+    },
+    "family": {
+      "enum": [
+        "market",
+        "externality",
+        "adas",
+        "ppc"
+      ]
+    },
+    "axes": {
+      "oneOf": [
+        {
+          "enum": [
+            "goods",
+            "labour",
+            "adas",
+            "ppc"
+          ],
+          "description": "goods: Quantity / Price; labour: Number of workers / Wage rate; adas: Real output / Price level; ppc: Consumer goods / Capital goods. Default by family."
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "x",
+            "y"
+          ],
+          "properties": {
+            "x": {
+              "$ref": "#/$defs/text"
+            },
+            "y": {
+              "$ref": "#/$defs/text"
+            }
+          }
+        }
+      ]
+    },
+    "curves": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/curve"
+      }
+    },
+    "shifts": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "$ref": "#/$defs/shift"
+      }
+    },
+    "lines": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "$ref": "#/$defs/line"
+      }
+    },
+    "tax": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "on"
+      ],
+      "description": "A unit tax moves the supply curve `on` up by t; a unit subsidy moves it down by s. `id` names the new curve so points can use it.",
+      "properties": {
+        "kind": {
+          "enum": [
+            "unit_tax",
+            "unit_subsidy"
+          ]
+        },
+        "on": {
+          "$ref": "#/$defs/id"
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "size": {
+          "$ref": "#/$defs/size"
+        },
+        "name": {
+          "$ref": "#/$defs/label"
+        },
+        "arrowLabel": {
+          "$ref": "#/$defs/labelOrText",
+          "description": "Text on the shift arrow (\"tax\"); no arrow when absent."
+        },
+        "arrow": {
+          "type": "boolean",
+          "description": "Draw the shift arrow (default: only when it has an arrowLabel)."
+        }
+      }
+    },
+    "points": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/point"
+      }
+    },
+    "areas": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "$ref": "#/$defs/area"
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "$ref": "#/$defs/gap"
+      }
+    },
+    "moves": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Arrows beside the axes: price (or price level) on the y side, quantity (or output) under the x axis. true = from the first to the last named equilibrium; a pair = between those two points.",
+      "properties": {
+        "price": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "#/$defs/pointPair"
+            }
+          ]
+        },
+        "quantity": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "#/$defs/pointPair"
+            }
+          ]
+        }
+      }
+    },
+    "expect": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "What the accompanying text says changes (first to last equilibrium). The renderer checks the picture agrees; `unknown` = depends on the sizes of the shifts.",
+      "properties": {
+        "price": {
+          "$ref": "#/$defs/dir"
+        },
+        "quantity": {
+          "$ref": "#/$defs/dir"
+        },
+        "price_level": {
+          "$ref": "#/$defs/dir"
+        },
+        "output": {
+          "$ref": "#/$defs/dir"
+        },
+        "tr": {
+          "$ref": "#/$defs/dir"
+        },
+        "gap": {
+          "enum": [
+            "deflationary",
+            "inflationary",
+            "none"
+          ],
+          "description": "The output gap at the first equilibrium (E left of LRAS = deflationary)."
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "$ref": "#/$defs/text"
+      },
+      "description": "Legend lines (a key or \"A: consumers' burden\")."
+    },
+    "geom": {
+      "$ref": "#/$defs/geom"
+    }
+  },
+  "$defs": {
+    "catalogueId": {
+      "type": "string",
+      "pattern": "^[0-9]{2}[a-z]?_[a-z0-9_]+$"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_]{0,11}$"
+    },
+    "label": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9 _^{}’'+\\-−=*.,()]{1,16}$",
+      "description": "Symbols as printed, mathtext without $: letters, digits, `_1` or `_{c1}` subscripts, `^*` superscripts (P^*), ’ for a prime, + − = * . , ( ). Symbols stay English in Chinese pictures."
+    },
+    "text": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "key"
+          ],
+          "properties": {
+            "key": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$",
+              "description": "A key in recipes/glossary.json."
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "en",
+            "zh"
+          ],
+          "properties": {
+            "en": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 32,
+              "pattern": "^[A-Za-z0-9 _{}’'+\\-−=*.,:()/]+$"
+            },
+            "zh": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 24,
+              "pattern": "^[\\u3400-\\u9fff\\uf900-\\ufaffA-Za-z0-9 _{}’'+\\-−=*.,()、，：（）／]+$"
+            }
+          }
+        }
+      ]
+    },
+    "labelOrText": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/label"
+        },
+        {
+          "$ref": "#/$defs/text"
+        }
+      ]
+    },
+    "size": {
+      "enum": [
+        "small",
+        "medium",
+        "large"
+      ]
+    },
+    "dir": {
+      "enum": [
+        "up",
+        "down",
+        "same",
+        "unknown"
+      ]
+    },
+    "pair": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "$ref": "#/$defs/id"
+        },
+        {
+          "$ref": "#/$defs/id"
+        }
+      ],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "curve": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "role",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "role": {
+          "enum": [
+            "demand",
+            "supply",
+            "ad",
+            "sras",
+            "lras",
+            "mpc",
+            "msc",
+            "mpb",
+            "msb",
+            "ppc"
+          ]
+        },
+        "slope": {
+          "enum": [
+            "normal",
+            "steep",
+            "flat",
+            "vertical"
+          ],
+          "description": "steep = inelastic, flat = elastic; vertical = fixed stock (LRAS is always vertical)."
+        },
+        "name": {
+          "$ref": "#/$defs/label"
+        },
+        "note": {
+          "$ref": "#/$defs/text",
+          "description": "Words after the name: S (Local)."
+        },
+        "kinked": {
+          "$ref": "#/$defs/id",
+          "description": "Supply under a quota: S up to this quota line, then vertical along it (the line's name labels the vertical part); S itself stays drawn in full as MC."
+        },
+        "at": {
+          "description": "Where a vertical curve stands: through an intersection, or left / right of it.",
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "through"
+              ],
+              "properties": {
+                "through": {
+                  "$ref": "#/$defs/pair"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "leftOf"
+              ],
+              "properties": {
+                "leftOf": {
+                  "$ref": "#/$defs/pair"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "rightOf"
+              ],
+              "properties": {
+                "rightOf": {
+                  "$ref": "#/$defs/pair"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "shift": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "of",
+        "id",
+        "name",
+        "dir"
+      ],
+      "properties": {
+        "of": {
+          "$ref": "#/$defs/id"
+        },
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "name": {
+          "$ref": "#/$defs/label"
+        },
+        "note": {
+          "$ref": "#/$defs/text"
+        },
+        "dir": {
+          "enum": [
+            "left",
+            "right",
+            "up",
+            "down"
+          ],
+          "description": "Increase = right, decrease = left; up / down only where the economics is vertical (MSC above MPC)."
+        },
+        "size": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/size"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "biggerThan"
+              ],
+              "properties": {
+                "biggerThan": {
+                  "$ref": "#/$defs/id"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "smallerThan"
+              ],
+              "properties": {
+                "smallerThan": {
+                  "$ref": "#/$defs/id"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "equalTo"
+              ],
+              "properties": {
+                "equalTo": {
+                  "$ref": "#/$defs/id"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "onto"
+              ],
+              "properties": {
+                "onto": {
+                  "$ref": "#/$defs/id"
+                }
+              },
+              "description": "Until the new equilibrium lies on this vertical curve (self-adjustment back to LRAS)."
+            }
+          ]
+        },
+        "arrow": {
+          "type": "boolean",
+          "description": "Draw the shift arrow (default true)."
+        },
+        "arrowLabel": {
+          "$ref": "#/$defs/labelOrText"
+        },
+        "returnsTo": {
+          "$ref": "#/$defs/id",
+          "description": "The shift ends on this earlier curve (a shock that reverses): the curve is not drawn or named again."
+        }
+      }
+    },
+    "line": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "kind"
+      ],
+      "description": "A horizontal price line or a vertical quantity line (quota).",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "name": {
+          "$ref": "#/$defs/label"
+        },
+        "kind": {
+          "enum": [
+            "price_ceiling",
+            "price_floor",
+            "minimum_wage",
+            "fixed_price",
+            "price",
+            "quota"
+          ],
+          "description": "`price` = a given price with no policy (a movement along D in a TR diagram)."
+        },
+        "level": {
+          "enum": [
+            "below_eq",
+            "above_eq",
+            "at_eq"
+          ],
+          "description": "Relative to the equilibrium of `of` (default: the first demand and supply). For a quota: below_eq = less than the equilibrium quantity."
+        },
+        "depth": {
+          "$ref": "#/$defs/size"
+        },
+        "of": {
+          "$ref": "#/$defs/pair"
+        },
+        "below": {
+          "$ref": "#/$defs/id"
+        },
+        "above": {
+          "$ref": "#/$defs/id"
+        },
+        "leftOf": {
+          "$ref": "#/$defs/id"
+        },
+        "rightOf": {
+          "$ref": "#/$defs/id"
+        },
+        "from": {
+          "$ref": "#/$defs/id",
+          "description": "This line replaces that one (ceiling lowered, quota raised): an arrow from the old to the new."
+        },
+        "full": {
+          "type": "boolean",
+          "description": "Draw the line across the plot (default: dashed guide from the axis to where it is used)."
+        },
+        "note": {
+          "$ref": "#/$defs/text",
+          "description": "A word printed at the line's end (\"Quota\")."
+        }
+      }
+    },
+    "pointRef": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/pair",
+          "description": "Intersection of two curves."
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "curve",
+            "line"
+          ],
+          "properties": {
+            "curve": {
+              "$ref": "#/$defs/id"
+            },
+            "line": {
+              "$ref": "#/$defs/id"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "curve",
+            "axis"
+          ],
+          "properties": {
+            "curve": {
+              "$ref": "#/$defs/id"
+            },
+            "axis": {
+              "enum": [
+                "price",
+                "quantity"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "ppc",
+            "where"
+          ],
+          "properties": {
+            "ppc": {
+              "$ref": "#/$defs/id"
+            },
+            "where": {
+              "enum": [
+                "inside",
+                "on",
+                "outside"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "curve",
+            "atQuantityOf"
+          ],
+          "properties": {
+            "curve": {
+              "$ref": "#/$defs/id"
+            },
+            "atQuantityOf": {
+              "$ref": "#/$defs/pointId"
+            }
+          },
+          "description": "On this curve at another point's quantity (the price sellers receive under a tax: S at the new quantity)."
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "curve",
+            "atPriceOf"
+          ],
+          "properties": {
+            "curve": {
+              "$ref": "#/$defs/id"
+            },
+            "atPriceOf": {
+              "$ref": "#/$defs/pointId"
+            }
+          },
+          "description": "On this curve at another point's price (local employment at the new wage)."
+        }
+      ]
+    },
+    "point": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "at"
+      ],
+      "properties": {
+        "at": {
+          "$ref": "#/$defs/pointRef"
+        },
+        "name": {
+          "$ref": "#/$defs/label",
+          "description": "Printed beside the point."
+        },
+        "dot": {
+          "type": "boolean",
+          "description": "Draw a dot (default: true when the point has a name, else false)."
+        },
+        "guides": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/label"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "description": "Dashed guides to the axes with these labels: [price label, quantity label]; null = no guide to that axis."
+        },
+        "id": {
+          "$ref": "#/$defs/id",
+          "description": "A handle other parts can refer to when the point has no printed name."
+        },
+        "leader": {
+          "$ref": "#/$defs/labelOrText",
+          "description": "A word placed nearby with a thin arrow to the point (\"MC\" at A, \"MB\" at E1)."
+        },
+        "guideStyle": {
+          "oneOf": [
+            {
+              "enum": [
+                "dashed",
+                "solid",
+                "none"
+              ]
+            },
+            {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "enum": [
+                    "dashed",
+                    "solid",
+                    "none"
+                  ]
+                },
+                {
+                  "enum": [
+                    "dashed",
+                    "solid",
+                    "none"
+                  ]
+                }
+              ],
+              "minItems": 2,
+              "maxItems": 2
+            }
+          ],
+          "description": "How the guides are drawn (default dashed): solid for quantity transacted under a price control, none for a label on the axis with no line. A pair = [price guide, quantity guide]."
+        }
+      }
+    },
+    "area": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "consumer_surplus",
+            "producer_surplus",
+            "dwl",
+            "dwl_change",
+            "tax_revenue",
+            "consumers_burden",
+            "producers_burden",
+            "consumer_benefit",
+            "producer_benefit",
+            "subsidy_spending",
+            "tr_gain",
+            "tr_loss",
+            "tr_change",
+            "cs_gain",
+            "cs_loss",
+            "ts_change",
+            "external_cost"
+          ]
+        },
+        "at": {
+          "$ref": "#/$defs/pointId",
+          "description": "The line or point it is measured at (a ceiling, a quota, an equilibrium)."
+        },
+        "between": {
+          "$ref": "#/$defs/pointPair",
+          "description": "Two points (before, after) for a change: TR, DWL, total social surplus. Without it, a change area uses the first and last marked points."
+        },
+        "pattern": {
+          "enum": [
+            "hatch",
+            "dots",
+            "crosshatch"
+          ],
+          "description": "Patterns carry no meaning; they only tell areas apart (a key explains them)."
+        },
+        "label": {
+          "$ref": "#/$defs/labelOrText"
+        },
+        "key": {
+          "type": "boolean",
+          "description": "Explain it in a legend with a swatch instead of a label inside."
+        },
+        "corners": {
+          "$ref": "#/$defs/label",
+          "description": "The area named by its corner letters, printed in the key as \"= area abE_1E_0\"."
+        }
+      },
+      "description": "Consumer and producer surplus at an equilibrium also draw the price line from the axis to it. A change area without `between` uses the first and last marked points."
+    },
+    "gap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind"
+      ],
+      "description": "A curly brace with its word: along a price line (shortage), on the price axis (tax per unit, burdens) or under the output axis (output gaps).",
+      "properties": {
+        "kind": {
+          "enum": [
+            "shortage",
+            "surplus",
+            "excess_demand",
+            "excess_supply",
+            "unemployment",
+            "tax_per_unit",
+            "subsidy_per_unit",
+            "consumers_burden",
+            "producers_burden",
+            "deflationary_gap",
+            "inflationary_gap"
+          ]
+        },
+        "at": {
+          "$ref": "#/$defs/id",
+          "description": "The price line it sits on."
+        },
+        "between": {
+          "$ref": "#/$defs/pair",
+          "description": "The curves that set it (D_1 and S for the gap after a shift; AD and SRAS for an output gap)."
+        },
+        "label": {
+          "$ref": "#/$defs/labelOrText"
+        }
+      }
+    },
+    "xy": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "geom": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "size",
+        "origin",
+        "xEnd",
+        "yEnd",
+        "curves"
+      ],
+      "description": "The template's own numbers on the 0..100 canvas (stored recipes only). tools/recipes.py checks them against the template's golden scene.",
+      "properties": {
+        "size": {
+          "$ref": "#/$defs/xy",
+          "description": "Printed size in inches (new(w, h))."
+        },
+        "origin": {
+          "$ref": "#/$defs/xy"
+        },
+        "xEnd": {
+          "$ref": "#/$defs/xy"
+        },
+        "yEnd": {
+          "$ref": "#/$defs/xy"
+        },
+        "curves": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/geomCurve"
+          },
+          "description": "By curve, shift or tax id."
+        },
+        "shifts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "dx": {
+                "type": "number"
+              },
+              "dy": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "lines": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          },
+          "description": "Price (y) of a horizontal line, quantity (x) of a quota."
+        },
+        "tax": {
+          "type": "number",
+          "description": "t or s, vertical canvas units."
+        },
+        "points": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/xy"
+          },
+          "description": "Points placed by hand (PPC points A, B, C)."
+        }
+      }
+    },
+    "geomCurve": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "p": {
+          "$ref": "#/$defs/xy"
+        },
+        "q": {
+          "$ref": "#/$defs/xy"
+        },
+        "m": {
+          "type": "number"
+        },
+        "x": {
+          "type": "number",
+          "description": "A vertical line."
+        },
+        "ellipse": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "center",
+            "rx",
+            "ry"
+          ],
+          "properties": {
+            "center": {
+              "$ref": "#/$defs/xy"
+            },
+            "rx": {
+              "type": "number"
+            },
+            "ry": {
+              "type": "number"
+            }
+          },
+          "description": "A PPC quarter-ellipse."
+        },
+        "draw": {
+          "$ref": "#/$defs/xy",
+          "description": "Drawn from x0 to x1 (vertical: y0 to y1)."
+        },
+        "end": {
+          "enum": [
+            "right",
+            "left",
+            "top",
+            "bottom"
+          ]
+        },
+        "dx": {
+          "type": "number"
+        },
+        "dy": {
+          "type": "number"
+        }
+      }
+    },
+    "pointId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9 _^{}’'+\\-−=*.,()]{1,16}$",
+      "description": "A point's `id`, or its `name` when it has one."
+    },
+    "pointPair": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "$ref": "#/$defs/pointId"
+        },
+        {
+          "$ref": "#/$defs/pointId"
+        }
+      ],
+      "minItems": 2,
+      "maxItems": 2
+    }
+  }
+}

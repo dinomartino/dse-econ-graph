@@ -1,0 +1,17 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "25_price_floor_deadweight_loss",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S", "role": "supply", "name": "S"}],
+ "lines": [{"id": "P", "kind": "price_floor", "level": "above_eq", "name": "P", "full": true}],
+ "points": [{"at": {"curve": "D", "line": "P"}, "dot": false, "guides": [null, "Q"], "guideStyle": "solid"}],
+ "areas": [{"kind": "dwl", "at": "P", "pattern": "crosshatch", "label": "DL"}],
+ "gaps": [{"kind": "excess_supply", "at": "P", "label": {"key": "excess_supply"}}],
+ "geom": {"size": [3.4, 2.7],
+  "origin": [12, 12],
+  "xEnd": [90, 12],
+  "yEnd": [12, 92],
+  "curves": {"D": {"p": [18, 74], "q": [78, 20], "draw": [18, 78], "end": "right", "dy": -1.5}, "S": {"p": [18, 22], "q": [74, 84], "draw": [18, 74], "end": "top"}},
+  "lines": {"P": 64}}
+}

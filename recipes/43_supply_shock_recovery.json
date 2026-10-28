@@ -1,0 +1,16 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "43_supply_shock_recovery",
+ "family": "adas",
+ "curves": [{"id": "AD", "role": "ad", "name": "AD"}, {"id": "SRAS0", "role": "sras", "name": "SRAS_0"}, {"id": "LRAS", "role": "lras", "slope": "vertical", "name": "LRAS", "at": {"through": ["AD", "SRAS0"]}}],
+ "shifts": [{"of": "SRAS0", "id": "SRAS1", "dir": "left", "size": "medium", "name": "SRAS_1", "arrowLabel": "1"}, {"of": "SRAS1", "id": "SRAS0b", "dir": "right", "size": {"equalTo": "SRAS1"}, "name": "SRAS_0", "arrowLabel": "2", "returnsTo": "SRAS0"}],
+ "points": [{"at": ["AD", "SRAS0"], "name": "E_0", "guides": ["P_0", null]}, {"at": ["AD", "SRAS1"], "name": "E_1", "guides": ["P_1", "Y_1"]}, {"at": {"curve": "LRAS", "axis": "quantity"}, "name": "Y_f", "dot": false}],
+ "expect": {"price_level": "same", "output": "same"},
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 90],
+  "curves": {"AD": {"p": [16, 78], "m": -0.9, "draw": [16, 76], "end": "right", "dy": -1.5}, "LRAS": {"x": 56, "draw": [12, 88], "end": "top"}, "SRAS0": {"p": [56, 42], "m": 1.2, "draw": [36, 87.7], "end": "top"}, "SRAS1": {"draw": [16, 67.7], "end": "top"}, "SRAS0b": {"draw": [36, 87.7], "end": "top"}},
+  "shifts": {"SRAS1": {"dx": -20}, "SRAS0b": {"dx": 20}}}
+}

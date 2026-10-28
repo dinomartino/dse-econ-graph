@@ -1,0 +1,17 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "12b_demand_increase",
+ "family": "market",
+ "curves": [{"id": "S", "role": "supply", "name": "S"}, {"id": "D1", "role": "demand", "name": "D_1"}],
+ "shifts": [{"of": "D1", "id": "D2", "dir": "right", "size": "medium", "name": "D_2"}],
+ "points": [{"at": ["D1", "S"], "name": "E_1", "guides": ["P_1", "Q_1"]}, {"at": ["D2", "S"], "name": "E_2", "guides": ["P_2", "Q_2"]}],
+ "moves": {"price": true, "quantity": true},
+ "expect": {"price": "up", "quantity": "up"},
+ "geom": {"size": [3.4, 2.7],
+  "origin": [12, 12],
+  "xEnd": [90, 12],
+  "yEnd": [12, 92],
+  "curves": {"S": {"p": [20, 18], "q": [80, 78], "draw": [20, 80], "end": "right", "dy": 1.5}, "D1": {"p": [16, 82], "q": [60, 24], "draw": [16, 53], "end": "right", "dy": -1.5}, "D2": {"draw": [40, 84], "end": "right", "dy": -1.5}},
+  "shifts": {"D2": {"dx": 26}}}
+}

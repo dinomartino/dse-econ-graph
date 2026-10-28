@@ -1,0 +1,17 @@
+{"id": "32_consumer_producer_surplus", "lang": "zh", "matplotlib": "3.11.2", "fonts": ["Liberation Serif", "Noto Serif CJK TC"], "stuck": [], "fig_in": [3.6, 2.6], "dpi": 300, "tight_in": [0.0, 0.0, 3.659333, 2.6], "pad_in": 0.04,
+ "items": [
+  {"t":"line","pts":[[12.0,86.0],[70.0,20.0]],"lw":0.8,"dash":null,"cap":"butt","join":"round","z":3},
+  {"t":"line","pts":[[12.0,34.0],[76.0,80.0]],"lw":0.8,"dash":null,"cap":"butt","join":"round","z":3},
+  {"t":"line","pts":[[12.0,54.130006],[40.006965,54.130006]],"lw":0.8,"dash":null,"cap":"butt","join":"round","z":3},
+  {"t":"arrow","a":[12,12],"b":[92,12],"head_length":0.45,"head_width":0.18,"mutation":10,"lw":0.8,"z":4},
+  {"t":"arrow","a":[12,12],"b":[12,92],"head_length":0.45,"head_width":0.18,"mutation":10,"lw":0.8,"z":4},
+  {"t":"text","s":"數量","at":[93.5,12],"ha":"left","va":"center","size":10.5,"patch":false,"z":3,"ext_in":[3.366,0.235065,3.659333,0.388935]},
+  {"t":"text","s":"價格 ($)","at":[12,94],"ha":"center","va":"bottom","size":10.5,"patch":false,"z":3,"ext_in":[0.180333,2.444,0.683667,2.59787]},
+  {"t":"text","s":"0","at":[10.5,10.5],"ha":"right","va":"top","size":10.5,"patch":false,"z":3,"ext_in":[0.304667,0.140411,0.378,0.273]},
+  {"t":"text","s":"D","at":[71.2,18.5],"ha":"left","va":"center","size":10.5,"patch":false,"z":6,"ext_in":[2.5632,0.414706,2.669867,0.547294]},
+  {"t":"text","s":"S","at":[77.2,81.5],"ha":"left","va":"center","size":10.5,"patch":false,"z":6,"ext_in":[2.7792,2.052706,2.8592,2.185294]},
+  {"t":"text","s":"C.S.","at":[21.335655,64.753337],"ha":"center","va":"center","size":10.5,"patch":false,"z":6,"ext_in":[0.643084,1.617292,0.893084,1.749881]},
+  {"t":"text","s":"P.S.","at":[21.335655,47.420004],"ha":"center","va":"center","size":10.5,"patch":false,"z":6,"ext_in":[0.65949,1.166626,0.876677,1.299214]},
+  {"t":"text","s":"C.S. = 消費者盈餘","at":[58,46],"ha":"left","va":"center","size":10.5,"patch":false,"z":6,"ext_in":[2.088,1.118805,3.228,1.273195]},
+  {"t":"text","s":"P.S. = 生產者盈餘","at":[58,39],"ha":"left","va":"center","size":10.5,"patch":false,"z":6,"ext_in":[2.088,0.936805,3.195188,1.091195]}
+ ]}

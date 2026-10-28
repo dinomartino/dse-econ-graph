@@ -1,0 +1,17 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "37_lras_ad_increase",
+ "family": "adas",
+ "curves": [{"id": "AD1", "role": "ad", "name": "AD_1"}, {"id": "LRAS", "role": "lras", "slope": "vertical", "name": "LRAS"}],
+ "shifts": [{"of": "AD1", "id": "AD2", "dir": "right", "size": "medium", "name": "AD_2"}],
+ "points": [{"at": ["AD1", "LRAS"], "name": "E_1", "guides": ["P_1", null]}, {"at": ["AD2", "LRAS"], "name": "E_2", "guides": ["P_2", null]}, {"at": {"curve": "LRAS", "axis": "quantity"}, "name": "Y_f", "dot": false}],
+ "moves": {"price": true},
+ "expect": {"price_level": "up", "output": "same"},
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 90],
+  "curves": {"LRAS": {"x": 50, "draw": [12, 82], "end": "top"}, "AD1": {"p": [18, 70], "q": [70, 18], "draw": [18, 70], "end": "right", "dy": -1.5}, "AD2": {"draw": [32, 82], "end": "right", "dy": -1.5}},
+  "shifts": {"AD2": {"dx": 22}}}
+}

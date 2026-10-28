@@ -1,0 +1,187 @@
+{
+ "$comment": "Does recipes/schema.json say everything each catalogue diagram shows? `full` = every labelled element, word, meaningful arrow and area; layout (label offsets, arrow positions, line breaks, legend position) is not part of a recipe: the golden scene has it. `partial` needs a `missing` list. Checked by tools/recipes.py.",
+ "conventions": [
+  "1. Consumer and producer surplus at an equilibrium also draw the price line from the price axis to it.",
+  "2. A change area (TR, DWL, total social surplus) without `between` uses the first and last marked points.",
+  "3. A point's dot defaults to true when it has a name; guides default to dashed (`guideStyle` solid for quantity transacted under a control, none for an axis label with no line).",
+  "4. A guide that runs along a vertical curve, a quota or a full price line is that line and is not drawn again.",
+  "5. `kinked` supply under a quota: S up to the quota, then vertical along the quota line (labelled by the line's name); S stays drawn in full as MC.",
+  "6. A `price` line's name labels the price axis; a point on it with the same guide label prints it once."
+ ],
+ "diagrams": {
+  "01_price_ceiling_shortage": {
+   "fit": "full"
+  },
+  "02_price_floor_surplus": {
+   "fit": "full"
+  },
+  "03_demand_increase_fixed_price": {
+   "fit": "full"
+  },
+  "04_vertical_supply_shortage": {
+   "fit": "full"
+  },
+  "05_tr_price_change_elastic": {
+   "fit": "full",
+   "note": "TR gain / loss areas have no `between`: they use the first and last marked points (convention 2)."
+  },
+  "06_tr_supply_decrease_inelastic": {
+   "fit": "full"
+  },
+  "07_unit_tax_incidence": {
+   "fit": "full"
+  },
+  "08_surplus_deadweight_quota": {
+   "fit": "full",
+   "note": "Three keyed areas need three patterns (dots, hatch, crosshatch); patterns carry no meaning."
+  },
+  "09_externality_overproduction": {
+   "fit": "full"
+  },
+  "10_ppc": {
+   "fit": "full"
+  },
+  "11_tr_demand_increase": {
+   "fit": "full",
+   "note": "The TR change area uses the first and last marked points (convention 2)."
+  },
+  "12_demand_decrease": {
+   "fit": "full"
+  },
+  "13_supply_decrease": {
+   "fit": "full"
+  },
+  "14_simultaneous_shifts": {
+   "fit": "full"
+  },
+  "15_vertical_supply_demand_shift": {
+   "fit": "full"
+  },
+  "16_labour_imported_workers": {
+   "fit": "full",
+   "note": "`expect` can state only the wage (first to last equilibrium); the fall in local employment (Q1 to Q2, read off S (Local)) is in `moves`, not checked as a claim."
+  },
+  "17_tr_demand_decrease": {
+   "fit": "full",
+   "note": "The TR change area uses the first and last marked points (convention 2)."
+  },
+  "18_tr_price_rise_inelastic": {
+   "fit": "full",
+   "note": "TR areas use the first and last marked points (convention 2)."
+  },
+  "19_tr_vertical_supply_increase": {
+   "fit": "full"
+  },
+  "20_fixed_wage_supply_increase": {
+   "fit": "full"
+  },
+  "21_vertical_supply_price_raised": {
+   "fit": "full"
+  },
+  "22_fixed_price_surplus_revenue_fall": {
+   "fit": "full"
+  },
+  "23_fixed_price_rent_increase": {
+   "fit": "full"
+  },
+  "24_price_ceiling_deadweight_loss": {
+   "fit": "full"
+  },
+  "25_price_floor_deadweight_loss": {
+   "fit": "full",
+   "note": "The DWL is cross-hatched in the template; recorded as crosshatch (no meaning)."
+  },
+  "26_price_ceiling_consumer_surplus_change": {
+   "fit": "full"
+  },
+  "27_price_ceiling_lowered_dwl_increase": {
+   "fit": "full"
+  },
+  "28_unit_subsidy": {
+   "fit": "full"
+  },
+  "29_quota_increase": {
+   "fit": "full"
+  },
+  "30_quota_demand_increase": {
+   "fit": "full",
+   "note": "Relies on the `kinked` definition: S0 = MC stays drawn in full; the quota line's name S_quota labels the vertical part."
+  },
+  "31_unit_tax_burden_dwl": {
+   "fit": "full"
+  },
+  "32_consumer_producer_surplus": {
+   "fit": "full",
+   "note": "The price line from the equilibrium to the price axis is implied by the CS / PS areas (convention 1)."
+  },
+  "33_mc_rise_social_surplus": {
+   "fit": "full"
+  },
+  "34_ad_increase": {
+   "fit": "full"
+  },
+  "35_sras_decrease": {
+   "fit": "full"
+  },
+  "36_ad_sras_both_decrease": {
+   "fit": "full"
+  },
+  "37_lras_ad_increase": {
+   "fit": "full"
+  },
+  "38_economic_growth": {
+   "fit": "full"
+  },
+  "39_deflationary_gap": {
+   "fit": "full"
+  },
+  "40_inflationary_gap": {
+   "fit": "full",
+   "note": "AD1 is stored as its own line in geom (the template builds it through the target point), so geom.shifts has no dx."
+  },
+  "41_self_adjust_deflationary": {
+   "fit": "full",
+   "note": "SRAS1 is stored as its own line in geom; `expect.gap` is the gap at the first equilibrium."
+  },
+  "42_self_adjust_inflationary": {
+   "fit": "full",
+   "note": "SRAS1 is stored as its own line in geom; `expect.gap` is the gap at the first equilibrium."
+  },
+  "43_supply_shock_recovery": {
+   "fit": "full",
+   "note": "The second shift `returnsTo` SRAS0: drawn and named once."
+  },
+  "02b_price_floor_surplus": {
+   "fit": "full"
+  },
+  "05b_tr_price_rise_elastic": {
+   "fit": "full",
+   "note": "TR areas use the first and last marked points (convention 2)."
+  },
+  "09b_positive_externality": {
+   "fit": "full"
+  },
+  "10b_ppc_growth": {
+   "fit": "full"
+  },
+  "10c_ppc_points": {
+   "fit": "full"
+  },
+  "12b_demand_increase": {
+   "fit": "full"
+  },
+  "13b_supply_increase": {
+   "fit": "full"
+  },
+  "18b_tr_price_fall_inelastic": {
+   "fit": "full",
+   "note": "TR areas use the first and last marked points (convention 2)."
+  },
+  "34b_ad_decrease": {
+   "fit": "full"
+  },
+  "35b_sras_increase": {
+   "fit": "full"
+  }
+ }
+}

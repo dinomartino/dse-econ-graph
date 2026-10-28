@@ -1,0 +1,19 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "23_fixed_price_rent_increase",
+ "family": "market",
+ "axes": {"x": {"key": "quantity"}, "y": {"key": "rental"}},
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S", "role": "supply", "slope": "vertical", "name": "S"}],
+ "lines": [{"id": "P0", "kind": "price_ceiling", "level": "below_eq", "name": "P_0"}, {"id": "P1", "kind": "price_ceiling", "level": "below_eq", "name": "P_1", "above": "P0", "from": "P0"}],
+ "points": [{"at": {"curve": "S", "axis": "quantity"}, "name": "Q_0", "dot": false}],
+ "areas": [{"kind": "tr_change", "at": "P1", "pattern": "hatch", "key": true, "label": {"key": "increase_in_rental_payment"}}],
+ "gaps": [{"kind": "excess_demand", "at": "P1", "between": ["D", "S"], "label": {"key": "excess_demand"}}],
+ "expect": {"tr": "up"},
+ "geom": {"size": [3.4, 2.7],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 92],
+  "curves": {"D": {"p": [20, 80], "q": [84, 24], "draw": [20, 84], "end": "right", "dy": -1.5}, "S": {"x": 44, "draw": [12, 84], "end": "top"}},
+  "lines": {"P0": 28, "P1": 38}}
+}

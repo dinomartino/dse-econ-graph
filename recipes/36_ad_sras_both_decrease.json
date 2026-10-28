@@ -1,0 +1,17 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "36_ad_sras_both_decrease",
+ "family": "adas",
+ "curves": [{"id": "AD0", "role": "ad", "name": "AD_0"}, {"id": "SRAS0", "role": "sras", "name": "SRAS_0"}],
+ "shifts": [{"of": "AD0", "id": "AD1", "dir": "left", "size": "medium", "name": "AD_1"}, {"of": "SRAS0", "id": "SRAS1", "dir": "left", "size": "medium", "name": "SRAS_1"}],
+ "points": [{"at": ["AD0", "SRAS0"], "name": "E_0", "guides": [null, "Y_0"]}, {"at": ["AD1", "SRAS1"], "name": "E_1", "guides": [null, "Y_1"]}],
+ "moves": {"quantity": true},
+ "expect": {"price_level": "unknown", "output": "down"},
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 90],
+  "curves": {"AD0": {"p": [38, 80], "q": [82, 26], "draw": [38, 80], "end": "top"}, "SRAS0": {"p": [40, 26], "q": [82, 72], "draw": [40, 82], "end": "top"}, "AD1": {"draw": [18, 54], "end": "top"}, "SRAS1": {"draw": [20, 62], "end": "top"}},
+  "shifts": {"AD1": {"dx": -20}, "SRAS1": {"dx": -20}}}
+}

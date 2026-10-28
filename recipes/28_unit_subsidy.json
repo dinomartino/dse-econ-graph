@@ -1,0 +1,17 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "28_unit_subsidy",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S0", "role": "supply", "name": "S_0"}],
+ "tax": {"kind": "unit_subsidy", "on": "S0", "id": "Ss", "name": "S_s", "arrow": true},
+ "points": [{"at": ["D", "S0"], "name": "E_0", "guides": ["P_0", "Q_0"]}, {"at": ["D", "Ss"], "name": "E_1", "guides": ["P_1", "Q_1"], "leader": "MB"}, {"at": {"curve": "S0", "atQuantityOf": "E_1"}, "name": "A", "guides": ["P_2", null], "leader": "MC"}],
+ "areas": [{"kind": "consumer_benefit", "between": ["E_0", "E_1"], "pattern": "dots", "key": true, "label": {"key": "consumer_benefit"}}, {"kind": "producer_benefit", "between": ["E_0", "E_1"], "pattern": "hatch", "key": true, "label": {"key": "producer_benefit"}}],
+ "expect": {"price": "down", "quantity": "up"},
+ "geom": {"size": [3.4, 2.8],
+  "origin": [12, 12],
+  "xEnd": [92, 12],
+  "yEnd": [12, 94],
+  "curves": {"D": {"p": [16, 88], "q": [80, 18], "draw": [16, 80], "end": "right", "dy": -1.5}, "S0": {"p": [16, 40], "q": [80, 80], "draw": [16, 80], "end": "right"}, "Ss": {"draw": [24, 80], "end": "right"}},
+  "tax": 22}
+}

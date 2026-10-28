@@ -1,0 +1,19 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "39_deflationary_gap",
+ "family": "adas",
+ "curves": [{"id": "AD0", "role": "ad", "name": "AD_0"}, {"id": "SRAS", "role": "sras", "name": "SRAS"}, {"id": "LRAS", "role": "lras", "slope": "vertical", "name": "LRAS", "at": {"rightOf": ["AD0", "SRAS"]}}],
+ "shifts": [{"of": "AD0", "id": "AD1", "dir": "right", "size": "medium", "name": "AD_1"}],
+ "points": [{"at": ["AD0", "SRAS"], "name": "E_0", "guides": ["P_0", "Y_0"]}, {"at": ["AD1", "SRAS"], "name": "E_1", "guides": ["P_1", "Y_1"]}, {"at": {"curve": "LRAS", "axis": "quantity"}, "name": "Y_f", "dot": false}],
+ "gaps": [{"kind": "deflationary_gap", "between": ["AD1", "SRAS"], "label": "gap_1"}, {"kind": "deflationary_gap", "between": ["AD0", "SRAS"], "label": "gap_0"}],
+ "notes": [{"en": "gap = deflationary gap", "zh": "gap = 通縮缺口"}],
+ "moves": {"price": true},
+ "expect": {"price_level": "up", "output": "up", "gap": "deflationary"},
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 90],
+  "curves": {"AD0": {"p": [36, 38], "m": -1.4, "draw": [18, 44], "end": "top"}, "SRAS": {"p": [22, 24], "m": 1, "draw": [22, 78], "end": "right", "dy": 1.5}, "LRAS": {"x": 70, "draw": [12, 86], "end": "top"}, "AD1": {"draw": [38, 66], "end": "top"}},
+  "shifts": {"AD1": {"dx": 20}}}
+}

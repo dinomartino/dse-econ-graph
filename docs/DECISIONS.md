@@ -3,6 +3,28 @@
 Why things are the way they are. Newest first. One entry per decision:
 what was decided, why, and what we rejected.
 
+## 2026-10-28 — Recipes: the chat tutor describes diagrams, its own renderer draws them
+
+- **Decided:** a recipe format (`recipes/schema.json`, v1) that says what a
+  diagram contains in economics terms (curves, shifts and their direction,
+  price / quantity lines, points, areas, braces, words by glossary key) and
+  never coordinates. DSEconMentor's chat model fills one in; its TypeScript
+  renderer draws it in this library's look. Every catalogue id gets a stored
+  recipe with `geom` (the template's numbers), the starting point the model
+  edits, and a golden scene (`recipes/golden/`, `tools/trace.py`): the
+  template's picture as primitives, which the renderer is tested against.
+- **This repo defines recipes and owns the look;** DSEconMentor owns the TS
+  renderer; Python stays for teachers (their AIs run Python offline). The
+  scenes are traced with Liberation Serif + Noto Serif CJK TC, the fonts the
+  renderer bundles (Times New Roman and Songti can't be bundled).
+- **Why:** the maintainer chose option B (DSEconMentor u-e4xi) and accepted
+  the plan's 9 recommendations (u-y9qm); the phase-0 spike drew six templates
+  in TS within 0.1–0.8 % of the Python pixels, and the chat model wrote 40/40
+  valid recipes. Approved by the maintainer after seeing the comparison
+  sheets (u-muyj).
+- **Rejected:** JS replacing Python (teachers' AIs need Python), and
+  generating the templates from recipes now (later, if teachers want edits).
+
 ## 2026-10-27 — A catalogue for DSEconMentor's chat tutor, and chat-only variants
 
 - **Decided:** the build also writes `download/chat-catalogue.json`: every

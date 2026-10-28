@@ -66,6 +66,12 @@ Run the test in [`grok-test.md`](grok-test.md) and record the answers here.
 
 ## Done
 
+- 2026-10-28 (unreleased, branch `feat/recipes`): diagram recipes for
+  DSEconMentor's chat renderer: `recipes/schema.json` (v1), `glossary.json`,
+  a recipe per catalogue id with `geom`, `fit.json`, golden scenes
+  (`tools/trace.py`) and `tools/recipes.py`, both run by `build.py`; the
+  catalogue lists each recipe and scene with its sha256.
+
 - 2026-10-27 (unreleased): `download/chat-catalogue.json` for DSEconMentor's
   chat tutor (43 templates + 10 chat-only variants in `chat/variants/`,
   texts in `chat/meta.json`); Chinese gallery titles (`gallery[].title_zh`)

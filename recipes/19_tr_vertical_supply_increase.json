@@ -1,0 +1,19 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "19_tr_vertical_supply_increase",
+ "family": "market",
+ "axes": {"x": {"key": "taxi_licence_quantity"}, "y": {"key": "taxi_licence_price"}},
+ "curves": [{"id": "S1", "role": "supply", "slope": "vertical", "name": "S"}, {"id": "D", "role": "demand", "slope": "flat", "name": "D"}],
+ "shifts": [{"of": "S1", "id": "S2", "dir": "right", "size": "large", "name": "S’"}],
+ "points": [{"at": ["S1", "D"], "name": "E_1", "guides": ["P_1", "Q_1"]}, {"at": ["S2", "D"], "name": "E_2", "guides": ["P_2", "Q_2"]}],
+ "areas": [{"kind": "tr_loss", "between": ["E_1", "E_2"], "pattern": "hatch", "label": "−"}, {"kind": "tr_gain", "between": ["E_1", "E_2"], "pattern": "dots", "label": "+"}],
+ "moves": {"price": true, "quantity": true},
+ "expect": {"price": "down", "quantity": "up", "tr": "up"},
+ "geom": {"size": [3.2, 2.7],
+  "origin": [12, 12],
+  "xEnd": [86, 12],
+  "yEnd": [12, 92],
+  "curves": {"S1": {"x": 40, "draw": [12, 84], "end": "top"}, "S2": {"draw": [12, 84], "end": "top"}, "D": {"p": [20, 70], "m": -0.45, "draw": [20, 76], "end": "right", "dy": -1.5}},
+  "shifts": {"S2": {"dx": 22}}}
+}

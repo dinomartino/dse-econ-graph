@@ -1,0 +1,18 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "05_tr_price_change_elastic",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "slope": "flat", "name": "D"}],
+ "lines": [{"id": "P1", "kind": "price", "name": "P_1"}, {"id": "P2", "kind": "price", "name": "P_2", "below": "P1"}],
+ "points": [{"at": {"curve": "D", "line": "P1"}, "dot": true, "guides": ["P_1", "Q_1"]}, {"at": {"curve": "D", "line": "P2"}, "dot": true, "guides": ["P_2", "Q_2"]}],
+ "areas": [{"kind": "tr_gain", "pattern": "dots", "label": "+"}, {"kind": "tr_loss", "pattern": "hatch", "label": "−"}],
+ "moves": {"price": true, "quantity": true},
+ "expect": {"price": "down", "quantity": "up", "tr": "up"},
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [90, 12],
+  "yEnd": [12, 90],
+  "curves": {"D": {"p": [20, 66], "q": [84, 38], "draw": [20, 84], "end": "right", "dy": -1.5}},
+  "lines": {"P1": 58, "P2": 46}}
+}

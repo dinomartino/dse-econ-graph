@@ -1,0 +1,16 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "08_surplus_deadweight_quota",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S", "role": "supply", "name": "S"}],
+ "lines": [{"id": "Q", "kind": "quota", "level": "below_eq", "name": "Q_q", "full": true, "note": {"key": "quota"}}],
+ "points": [{"at": ["D", "S"], "guides": ["P_e", "Q_e"], "dot": true}, {"at": {"curve": "D", "line": "Q"}, "dot": false, "guides": ["P_q", null], "guideStyle": "none"}, {"at": {"curve": "S", "line": "Q"}, "dot": false, "guides": ["P_s", null]}],
+ "areas": [{"kind": "consumer_surplus", "at": "Q", "pattern": "dots", "label": {"key": "consumer_surplus"}, "key": true}, {"kind": "producer_surplus", "at": "Q", "pattern": "hatch", "label": {"key": "producer_surplus"}, "key": true}, {"kind": "dwl", "at": "Q", "label": {"key": "dwl"}, "key": true, "pattern": "crosshatch"}],
+ "geom": {"size": [3.4, 2.7],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 94],
+  "curves": {"D": {"p": [12, 86], "q": [80, 24], "draw": [12, 80], "end": "right", "dy": -1.5}, "S": {"p": [12, 18], "q": [80, 80], "draw": [12, 72], "end": "right", "dy": 1.5}},
+  "lines": {"Q": 34.3741935483871}}
+}

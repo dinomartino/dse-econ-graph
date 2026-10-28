@@ -1,0 +1,17 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "35_sras_decrease",
+ "family": "adas",
+ "curves": [{"id": "AD", "role": "ad", "name": "AD"}, {"id": "SRAS0", "role": "sras", "name": "SRAS_0"}],
+ "shifts": [{"of": "SRAS0", "id": "SRAS1", "dir": "left", "size": "medium", "name": "SRAS_1"}],
+ "points": [{"at": ["AD", "SRAS0"], "name": "E_0", "guides": ["P_0", "Y_0"]}, {"at": ["AD", "SRAS1"], "name": "E_1", "guides": ["P_1", "Y_1"]}],
+ "moves": {"price": true, "quantity": true},
+ "expect": {"price_level": "up", "output": "down"},
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 90],
+  "curves": {"AD": {"p": [18, 80], "q": [76, 22], "draw": [18, 76], "end": "right", "dy": -1.5}, "SRAS0": {"p": [34, 22], "q": [82, 70], "draw": [34, 82], "end": "top"}, "SRAS1": {"draw": [16, 64], "end": "top"}},
+  "shifts": {"SRAS1": {"dx": -22}}}
+}

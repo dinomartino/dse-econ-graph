@@ -1,0 +1,13 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "10b_ppc_growth",
+ "family": "ppc",
+ "curves": [{"id": "PPC0", "role": "ppc", "name": "PPC_0"}],
+ "shifts": [{"of": "PPC0", "id": "PPC1", "dir": "right", "size": "medium", "name": "PPC_1"}],
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [90, 12],
+  "yEnd": [12, 98],
+  "curves": {"PPC0": {"ellipse": {"center": [12, 12], "rx": 55.0, "ry": 60.0}}, "PPC1": {"ellipse": {"center": [12, 12], "rx": 74.0, "ry": 80.72727272727273}}}}
+}

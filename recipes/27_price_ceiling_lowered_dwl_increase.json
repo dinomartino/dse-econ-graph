@@ -1,0 +1,18 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "27_price_ceiling_lowered_dwl_increase",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S", "role": "supply", "name": "S"}],
+ "lines": [{"id": "Pc1", "kind": "price_ceiling", "level": "below_eq", "name": "P_{c1}", "full": true}, {"id": "Pc2", "kind": "price_ceiling", "level": "below_eq", "name": "P_{c2}", "full": true, "below": "Pc1", "from": "Pc1"}],
+ "points": [{"at": ["D", "S"], "dot": true, "guides": [null, "Q_e"]}, {"at": {"curve": "S", "line": "Pc1"}, "dot": false, "guides": [null, "Q_1"], "guideStyle": "solid"}, {"at": {"curve": "S", "line": "Pc2"}, "dot": false, "guides": [null, "Q_2"], "guideStyle": "solid"}],
+ "areas": [{"kind": "dwl", "at": "Pc1", "pattern": "dots", "key": true, "label": {"key": "original_dwl"}}, {"kind": "dwl_change", "at": "Pc2", "pattern": "hatch", "key": true, "label": {"key": "increase_in_dwl"}}],
+ "moves": {"quantity": true},
+ "expect": {"quantity": "down"},
+ "geom": {"size": [3.4, 2.7],
+  "origin": [12, 12],
+  "xEnd": [90, 12],
+  "yEnd": [12, 92],
+  "curves": {"D": {"p": [14, 86], "m": -0.85, "draw": [14, 84], "end": "right", "dy": -1.5}, "S": {"p": [20, 16], "m": 1.0, "draw": [20, 78], "end": "top"}},
+  "lines": {"Pc1": 40, "Pc2": 28}}
+}

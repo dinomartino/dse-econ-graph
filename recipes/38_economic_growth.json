@@ -1,0 +1,17 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "38_economic_growth",
+ "family": "adas",
+ "curves": [{"id": "AD0", "role": "ad", "name": "AD_0"}, {"id": "LRAS0", "role": "lras", "slope": "vertical", "name": "LRAS_0"}],
+ "shifts": [{"of": "LRAS0", "id": "LRAS1", "dir": "right", "size": "small", "name": "LRAS_1"}, {"of": "AD0", "id": "AD1", "dir": "right", "size": {"biggerThan": "LRAS1"}, "name": "AD_1"}],
+ "points": [{"at": ["AD0", "LRAS0"], "name": "E_0", "guides": ["P_0", "Y_0"]}, {"at": ["AD1", "LRAS1"], "name": "E_1", "guides": ["P_1", "Y_1"]}],
+ "moves": {"price": true, "quantity": true},
+ "expect": {"price_level": "up", "output": "up"},
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 90],
+  "curves": {"LRAS0": {"x": 46, "draw": [12, 86]}, "LRAS1": {"draw": [12, 86]}, "AD0": {"p": [14, 80], "m": -1, "draw": [16, 70], "end": "right", "dy": -1.5}, "AD1": {"draw": [40, 84], "end": "right", "dy": -1.5}},
+  "shifts": {"LRAS1": {"dx": 12}, "AD1": {"dx": 28}}}
+}

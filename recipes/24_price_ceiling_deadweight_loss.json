@@ -1,0 +1,17 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "24_price_ceiling_deadweight_loss",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "name": "D = MB"}, {"id": "S", "role": "supply", "name": "S = MC"}],
+ "lines": [{"id": "Pc", "kind": "price_ceiling", "level": "below_eq", "name": "P_c", "full": true}],
+ "points": [{"at": {"curve": "S", "line": "Pc"}, "dot": false, "guides": [null, "Q_c"], "guideStyle": "solid"}, {"at": {"curve": "D", "line": "Pc"}, "dot": false, "guides": [null, "Q_d"]}],
+ "areas": [{"kind": "dwl", "at": "Pc", "pattern": "hatch", "label": "DL"}],
+ "gaps": [{"kind": "shortage", "at": "Pc", "label": {"key": "shortage"}}],
+ "geom": {"size": [3.4, 2.7],
+  "origin": [12, 12],
+  "xEnd": [90, 12],
+  "yEnd": [12, 92],
+  "curves": {"D": {"p": [16, 84], "q": [80, 24], "draw": [16, 80], "end": "right", "dy": -1.5}, "S": {"p": [22, 18], "q": [70, 82], "draw": [22, 70], "end": "top"}},
+  "lines": {"Pc": 34}}
+}

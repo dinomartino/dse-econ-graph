@@ -1,6 +1,12 @@
 {
   "schema": 1,
   "version": "1.6.0",
+  "recipes": {
+    "schema": "recipes/schema.json",
+    "glossary": "recipes/glossary.json",
+    "fit": "recipes/fit.json",
+    "recipe_version": 1
+  },
   "diagrams": [
     {
       "id": "01_price_ceiling_shortage",
@@ -70,6 +76,20 @@
       "sha256": {
         "en": "db74362b056e566d8f4dbef82fd6d9a5de2db56ba6af1f29784e631c908b4b63",
         "zh": "1eaa1cb2b66c8c2f3e2a2398562b664eee9f3cb52038dd66bfb734f3e04d9fb8"
+      },
+      "recipe": {
+        "path": "recipes/01_price_ceiling_shortage.json",
+        "sha256": "bfc954ce89d396be6fb94812a82ea825ac8af8ad28461a0ec668a97c80d70aeb"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/01_price_ceiling_shortage_en.scene.json",
+          "sha256": "9088fd520b5092f8952053224fba2308210c67d7f7539812f7b6afd5494e7007"
+        },
+        "zh": {
+          "path": "recipes/golden/01_price_ceiling_shortage_zh.scene.json",
+          "sha256": "63ca45fd253608ea4b792aeadb2e27a2b0aa0b06aa6a42bc61b64474b14921d3"
+        }
       }
     },
     {
@@ -140,6 +160,20 @@
       "sha256": {
         "en": "b656fca9cb909dac8b2ec193209d0af50d2ed24b4deca15beb5ee159a64ee192",
         "zh": "cefd1e5378c60f9e8d8d75488a3a7bf3454a60c0f1c7f1446c3b874a3c4ad8c3"
+      },
+      "recipe": {
+        "path": "recipes/02_price_floor_surplus.json",
+        "sha256": "8b917ea5909fbec3270a5a28ab2b0faa213e4c12fdb777c858a6f4f61b20358f"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/02_price_floor_surplus_en.scene.json",
+          "sha256": "0a64880549e2125529f77dd554b682ae521de0c2c5f4febc6d0f4818bcc40e67"
+        },
+        "zh": {
+          "path": "recipes/golden/02_price_floor_surplus_zh.scene.json",
+          "sha256": "c7d8e86972c29ae258ac22985b8029e9024a74f6c091d06c579c8c1d7077579b"
+        }
       }
     },
     {
@@ -216,6 +250,20 @@
       "sha256": {
         "en": "9435949ba39b70f470a71423d4f872325138507be8ffffad88dbfe810013fe6d",
         "zh": "c358a8efabb01321772d8294d7b3de4bbaba897e46cc89154395e6bbdcde35cf"
+      },
+      "recipe": {
+        "path": "recipes/03_demand_increase_fixed_price.json",
+        "sha256": "0c76b8cf698dd9f1261726f7a6277a3254a578f1792aeb84f851692030449e97"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/03_demand_increase_fixed_price_en.scene.json",
+          "sha256": "2d3b790a397543ec5b023b41c4975bf514bb707f5611c5bd1f8f5e4cb6eebf51"
+        },
+        "zh": {
+          "path": "recipes/golden/03_demand_increase_fixed_price_zh.scene.json",
+          "sha256": "036c31c62c527e7d227a63a4a78e6f91db5960bcf051c430b309c5cf9c51bdba"
+        }
       }
     },
     {
@@ -288,6 +336,20 @@
       "sha256": {
         "en": "ca4de70fb2c01eb96fbc88bd87052bc8ec4e3de8fe48e548ebd121076ef41dd9",
         "zh": "c7d429ac89a11331c7787dcae56b293cef79c6cd29f71948e03be23d631805e6"
+      },
+      "recipe": {
+        "path": "recipes/04_vertical_supply_shortage.json",
+        "sha256": "76316fc7ce44ffa18de737baf3f5d60a3da860b776248272053ede28a61326a2"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/04_vertical_supply_shortage_en.scene.json",
+          "sha256": "0f9d77c8982f0488b27c4db65203606a5bcca47ac1f3c02e096fb16d8d1c0b3e"
+        },
+        "zh": {
+          "path": "recipes/golden/04_vertical_supply_shortage_zh.scene.json",
+          "sha256": "7211c4c8af31a648e92c1dd6ef3ac90963223b00ee67acef727e519ea5da2dfc"
+        }
       }
     },
     {
@@ -362,6 +424,20 @@
       "sha256": {
         "en": "662e356147ef74fb69f32fb7692378259c5031e6a1d4b47263e1337804e149b3",
         "zh": "c2b97adb4dd57f43213d9a6a04bd2f87eb5f222c0753008b10d45bd7a6673fe0"
+      },
+      "recipe": {
+        "path": "recipes/05_tr_price_change_elastic.json",
+        "sha256": "0a0ffaddbb8b034100cc35692a170d052ee62a833d2b923861f97a3a7b0021f7"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/05_tr_price_change_elastic_en.scene.json",
+          "sha256": "2dbfdd3eed7a9a6c0127d33b79ea1ae64a50fc066c0dcab9ff397aeee47df2df"
+        },
+        "zh": {
+          "path": "recipes/golden/05_tr_price_change_elastic_zh.scene.json",
+          "sha256": "be89db253d87defe4b4bb33da0a759914d652575b51feee539fa07afdeeb9846"
+        }
       }
     },
     {
@@ -442,6 +518,20 @@
       "sha256": {
         "en": "299b01b0f3e8521ceed59a1e11beea96991dc856b896a188fada33a2005df346",
         "zh": "7c612d370f47f61c438ccc586fde50c5c4c8c2eaa5ee473b6f72b1f447589798"
+      },
+      "recipe": {
+        "path": "recipes/06_tr_supply_decrease_inelastic.json",
+        "sha256": "8c69ccc654cac1e5aba29ec10b85a06ac1778ca861d41ea54c27cf6ea329f494"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/06_tr_supply_decrease_inelastic_en.scene.json",
+          "sha256": "20311078aec4d412516134256b99a44ebaaf1e39ac1792eca670ff253b1c870f"
+        },
+        "zh": {
+          "path": "recipes/golden/06_tr_supply_decrease_inelastic_zh.scene.json",
+          "sha256": "d5c0c9be6e857b1b5c9e931e5507eb8abb24c65fbf3ef42fe90e185bcad48baf"
+        }
       }
     },
     {
@@ -530,6 +620,20 @@
       "sha256": {
         "en": "6fb9977a15671e7280a8617032bee9bb22bbb884d08ed922e45e59dceb429533",
         "zh": "eadc57e9fd9eaab97d88867796b51bb23e93b9ec281fee0c5f694acb08716de8"
+      },
+      "recipe": {
+        "path": "recipes/07_unit_tax_incidence.json",
+        "sha256": "8172f02639a9ef4d7760e24c86335d903e67608f48fc78c2ba039d715cb2cf53"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/07_unit_tax_incidence_en.scene.json",
+          "sha256": "bb4241312277f94036021495b3a87ce3d21dd034907fd32060573654943d5d70"
+        },
+        "zh": {
+          "path": "recipes/golden/07_unit_tax_incidence_zh.scene.json",
+          "sha256": "2f026a029722a0becd660007409ba3f818dc7470dc7bb266827da7c341617b64"
+        }
       }
     },
     {
@@ -612,6 +716,20 @@
       "sha256": {
         "en": "4d65dc2c31a56752c035d35503932b95c2011be7ad4ac5f7127fa5304a659002",
         "zh": "c1e9f28f373d3715966211c463af19099af64a4d151a52a1f1aa5f5e06675bd7"
+      },
+      "recipe": {
+        "path": "recipes/08_surplus_deadweight_quota.json",
+        "sha256": "4b03299444159222501bba2712495981014fecc4cc1699f0ad23dca2e216d7eb"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/08_surplus_deadweight_quota_en.scene.json",
+          "sha256": "cc8a9df45d848feda668ad2dbccfe68a2cc806608e0a608484e77717b84258f3"
+        },
+        "zh": {
+          "path": "recipes/golden/08_surplus_deadweight_quota_zh.scene.json",
+          "sha256": "bd924c8ef9ebc251b164749b4ad819d8f713e6f9e2293a98d127c3e0e463e278"
+        }
       }
     },
     {
@@ -688,6 +806,20 @@
       "sha256": {
         "en": "d409345bd64e2bc6ee550b5c8c726af0991a7df3de1a106761a0f56f44c1be35",
         "zh": "6c2abcc28c71e93c9b4b2a5a6bfe83fcd0c4022fab510c0f32c71a0ca97d9ae6"
+      },
+      "recipe": {
+        "path": "recipes/09_externality_overproduction.json",
+        "sha256": "44cc098ec4e2eefb57f10e1cb5f712011ee03239b1a247a8a02ba56f64b962d2"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/09_externality_overproduction_en.scene.json",
+          "sha256": "e97b217e659d5c05c4a2f617806caf41b8a8f341c169dab0ab2f4ccb6375df52"
+        },
+        "zh": {
+          "path": "recipes/golden/09_externality_overproduction_zh.scene.json",
+          "sha256": "d9b1e87bcbfcec6d2c0ca20c5aa417cdabf7b1df1a2050b8dc63131d8e24904a"
+        }
       }
     },
     {
@@ -756,6 +888,20 @@
       "sha256": {
         "en": "bc9b168c5c221622bae86ba0cd3014e1c8d9a7145a5419f05231ccc05fc0f62e",
         "zh": "a7632b664f971efc546a1be93214bcdbaae360212f6dc31e8bee9afe9e3bedda"
+      },
+      "recipe": {
+        "path": "recipes/10_ppc.json",
+        "sha256": "aadfea88295f89895b4b4f257deed838dd5e1585670210d8a5dca1395162dc52"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/10_ppc_en.scene.json",
+          "sha256": "c3186bc6ec267f202b34002a1dc607c44cb0db60bcd5a2d5883f2d023a890044"
+        },
+        "zh": {
+          "path": "recipes/golden/10_ppc_zh.scene.json",
+          "sha256": "11a5c35da64dca98e6bb7517a4faefcd925fa0ce559575bd463212d4964a4cf9"
+        }
       }
     },
     {
@@ -830,6 +976,20 @@
       "sha256": {
         "en": "d86dc4e864880bf2bf5f88baadafd4353725807b4cf8e9870b0914201663a59f",
         "zh": "899416b38f83540ecadf0cd0cac267df87e5e420269ea40636855ccd787c840c"
+      },
+      "recipe": {
+        "path": "recipes/11_tr_demand_increase.json",
+        "sha256": "443ea0987c641aa6055b01111047a017da37a8e2eb5cb873ca9fbf0ea43c0557"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/11_tr_demand_increase_en.scene.json",
+          "sha256": "c8401958c1ec3928513725ef1d38dc10ba568a11c842dfd1cf8b5ae1d423bcf4"
+        },
+        "zh": {
+          "path": "recipes/golden/11_tr_demand_increase_zh.scene.json",
+          "sha256": "aff512b952166aa97e8301b344b3360deec1b0cd6a9e5ac0c7125d3338f45d86"
+        }
       }
     },
     {
@@ -904,6 +1064,20 @@
       "sha256": {
         "en": "e28ddffb9c6fc34116ca9f00ee3b338c558bd297dada016bd37e37ae928bbc02",
         "zh": "1289dd11b9c1e20b548bdd868b27cf00eb76440598611987cdd0e339c0dad182"
+      },
+      "recipe": {
+        "path": "recipes/12_demand_decrease.json",
+        "sha256": "8bc27edc7e3e7c55afe27d750590f37fdeee60b7b9fdd2ff4a3e3ab035f36b5b"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/12_demand_decrease_en.scene.json",
+          "sha256": "a580039d47fe0fae1c4c37ee93bc02e56dcb0090a398282c5db6ad4146a7c029"
+        },
+        "zh": {
+          "path": "recipes/golden/12_demand_decrease_zh.scene.json",
+          "sha256": "997ddc04d70925eb3f60253e9df913dc51452d4c50f910e122295072dfe52b07"
+        }
       }
     },
     {
@@ -978,6 +1152,20 @@
       "sha256": {
         "en": "7d3100b11e3fd893fe4a06b4150f33703bd92ec36aeb39b16cd5412c6bce32c1",
         "zh": "afda2858ee007de3397f2ace1cac7275a5c7b6cc9f5a9193e613d2a3dee2b1c0"
+      },
+      "recipe": {
+        "path": "recipes/13_supply_decrease.json",
+        "sha256": "a2124da9336122353e7a97c6109c3732975f28f262090181d5f807fe8e017428"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/13_supply_decrease_en.scene.json",
+          "sha256": "f85a90e360d0989972bdeab0e36e2152f626e773a96f1723b6eccec43f090b7f"
+        },
+        "zh": {
+          "path": "recipes/golden/13_supply_decrease_zh.scene.json",
+          "sha256": "cf0fac1e8886ac35652e11b9aafce5f93d56f249193838344ea8025f394acea9"
+        }
       }
     },
     {
@@ -1056,6 +1244,20 @@
       "sha256": {
         "en": "12905e2147c14960aefe51052357d44e090b18c30e051cfb6382356df3d021db",
         "zh": "fb4d4695ecd51ae207d267f51b418097cf90ebb49e49f9d27e4ece1111bb0a22"
+      },
+      "recipe": {
+        "path": "recipes/14_simultaneous_shifts.json",
+        "sha256": "fadad8c2e4bce559ea2b34f7990963edec09240cfcb4dce899b8bc71233326cf"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/14_simultaneous_shifts_en.scene.json",
+          "sha256": "8db357609ef3d0691eab7319722755f3d7b6f8f12bb9771d19d892a1a470d460"
+        },
+        "zh": {
+          "path": "recipes/golden/14_simultaneous_shifts_zh.scene.json",
+          "sha256": "274767356a5997cec36da151ab8cc7c3a27ddc06e5db1bb015ee3b1233ae0a9f"
+        }
       }
     },
     {
@@ -1132,6 +1334,20 @@
       "sha256": {
         "en": "9454b20ec50bfc08219d504eb31a4e9b29d05c8e1438bba1848b9b3c7ce4df53",
         "zh": "e05678033db1b1740c946601d2aeebff657094b10d6ebd5f565a2634b285b056"
+      },
+      "recipe": {
+        "path": "recipes/15_vertical_supply_demand_shift.json",
+        "sha256": "0d0fd5013c185a7b56a969a9f47d79ac81bbeba97affa9b2c071a19d26ff59f8"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/15_vertical_supply_demand_shift_en.scene.json",
+          "sha256": "3bd122cfbd98f0de31ed31b53e47d7a993251605e6684b2588fec318fc89ee5c"
+        },
+        "zh": {
+          "path": "recipes/golden/15_vertical_supply_demand_shift_zh.scene.json",
+          "sha256": "d991d231cde914d9ad2479a15433a771b50a8901902f87aaf0191eaedac3ef83"
+        }
       }
     },
     {
@@ -1204,6 +1420,20 @@
       "sha256": {
         "en": "98ab97812bc282112a669d39d66e409b5562d9b53c5012ad0713f0d77c28ba3c",
         "zh": "ff536da6cb83262b5899ef7645353d962df8ff45b91b8f2eabb120caa1be3022"
+      },
+      "recipe": {
+        "path": "recipes/16_labour_imported_workers.json",
+        "sha256": "5a2590fd974881d896e14fa706829702d263bdd04dc4dd8a7a8f062993c94df5"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/16_labour_imported_workers_en.scene.json",
+          "sha256": "a4140ff674340daa6e3a0760fea4cdd8278553536576027864ca76a76f6fbec7"
+        },
+        "zh": {
+          "path": "recipes/golden/16_labour_imported_workers_zh.scene.json",
+          "sha256": "4c6a6786c37c8a86e56c981a61f579f99416de4689f996bf90a6933de20b666b"
+        }
       }
     },
     {
@@ -1278,6 +1508,20 @@
       "sha256": {
         "en": "4088dee464617f0388452722eb7614322fa3d62b1fdb20647ceccf2e63d3f44e",
         "zh": "27f3b47a67154294bfe845ee8622abc60eab5b6b117eb539728a9d39a9db718a"
+      },
+      "recipe": {
+        "path": "recipes/17_tr_demand_decrease.json",
+        "sha256": "7d4134782b25fa18ec38e14a49cd996dece59ed07a4efdf2601ff3b21886abc5"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/17_tr_demand_decrease_en.scene.json",
+          "sha256": "8b7baa677fb14bfaeb5c6f8889d7e8287d5062b404d82d1fe41ff0e0a1c4acfe"
+        },
+        "zh": {
+          "path": "recipes/golden/17_tr_demand_decrease_zh.scene.json",
+          "sha256": "1b22e5612c8b1c372bcd7740deb4d3270a2b388abe19eabf7b1c37f8b9c4102d"
+        }
       }
     },
     {
@@ -1352,6 +1596,20 @@
       "sha256": {
         "en": "5dcf5a9c65b5b77b2c7335dbeae7f110d9836cb1f3242822151bbf52cdec06a3",
         "zh": "c002261927dfbfce36dd09c635af4136410aa25dee498dd4b0b152a56a88188f"
+      },
+      "recipe": {
+        "path": "recipes/18_tr_price_rise_inelastic.json",
+        "sha256": "c4e018525030c7907ced2eb7f1636fb241f3638cdd40d83e9a6209359822f882"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/18_tr_price_rise_inelastic_en.scene.json",
+          "sha256": "e4926b77bc42bbec1fd77b8409a6edc31635cf57a7e1939729ca9582dcc86994"
+        },
+        "zh": {
+          "path": "recipes/golden/18_tr_price_rise_inelastic_zh.scene.json",
+          "sha256": "8f32479f2dbbf14a9eb27ca69c31ebf60568de07b964deeca82584d1d36576ef"
+        }
       }
     },
     {
@@ -1434,6 +1692,20 @@
       "sha256": {
         "en": "d4dd5bd8dd0e9ddef6e55b939ce288d6a156c1f85daf94ea2a1599af05cbb39d",
         "zh": "5e0738fe8d6ddbb7da0d1f802d545112b6471697ea97dd8252c2039d5a44840e"
+      },
+      "recipe": {
+        "path": "recipes/19_tr_vertical_supply_increase.json",
+        "sha256": "c4d498019037fdf0f03f3ad550ed75e222e6eb38981fa73d4f99e5bbdfbf1856"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/19_tr_vertical_supply_increase_en.scene.json",
+          "sha256": "85dd11d85fba25094269292a6f8b119324fb19acbdde30d8300bcec0fb78a5cd"
+        },
+        "zh": {
+          "path": "recipes/golden/19_tr_vertical_supply_increase_zh.scene.json",
+          "sha256": "a34c25b126704a51f2d5cf5f24093f72f6316b77bbb6036c7fb4b9354becbb39"
+        }
       }
     },
     {
@@ -1510,6 +1782,20 @@
       "sha256": {
         "en": "d411db819dc7eeaac35fba9c5e3fe381f7b59f04605457f4da5574f10925e427",
         "zh": "71150b309455815b9ed0723a2bf5d765ff06c17fba89e64701d0fcc372969e87"
+      },
+      "recipe": {
+        "path": "recipes/20_fixed_wage_supply_increase.json",
+        "sha256": "afb9a746b04be64c5b79684c9cb6d85e7d90e9b6e2262f14a9b144134679f929"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/20_fixed_wage_supply_increase_en.scene.json",
+          "sha256": "7432dd031bc143123bd5f118340901d842ccc2ef6d44a24af7a9fa3a000c87db"
+        },
+        "zh": {
+          "path": "recipes/golden/20_fixed_wage_supply_increase_zh.scene.json",
+          "sha256": "b038fb8582c01881d42a3feb3ecefe17bba007850b90411553cecd111a6fca28"
+        }
       }
     },
     {
@@ -1582,6 +1868,20 @@
       "sha256": {
         "en": "f0dbd67e9905ccaa9c92bb15d572a2ccab3a3d63854b2fc3890307deb5ed5ada",
         "zh": "1e1d030b5388dc24657d5b1a93da2ef577777297486ced1d64bb614a75e83f34"
+      },
+      "recipe": {
+        "path": "recipes/21_vertical_supply_price_raised.json",
+        "sha256": "2da1ca3deb613f08dc5db142fb7fc72e0d9bdf90f30a2303ea56d7401bfb352f"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/21_vertical_supply_price_raised_en.scene.json",
+          "sha256": "682bf900359baf78725ceeac238c160d1bf022487d4500dc9083e1ab10797c1c"
+        },
+        "zh": {
+          "path": "recipes/golden/21_vertical_supply_price_raised_zh.scene.json",
+          "sha256": "30950a7318893ed87e8b83b170aab9ed13fe49ac237d10257c39424afbc1b7db"
+        }
       }
     },
     {
@@ -1658,6 +1958,20 @@
       "sha256": {
         "en": "6a102c826eecb40eab2780d042aa35249da02b3f4ebe5c4df83f3415cb857282",
         "zh": "61f33dc6069ab74ced666698331bc1e664d1629e4b30ba3bbd4b5e3c60e27db4"
+      },
+      "recipe": {
+        "path": "recipes/22_fixed_price_surplus_revenue_fall.json",
+        "sha256": "7bc0bdb090fb8a49a8e6eab0a50e7b355585a993dd9bd9334d821144e899affc"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/22_fixed_price_surplus_revenue_fall_en.scene.json",
+          "sha256": "043731579bc04bb786ea9ef1656100aeebd8a0864f71fea98ddcd67e0a7ef971"
+        },
+        "zh": {
+          "path": "recipes/golden/22_fixed_price_surplus_revenue_fall_zh.scene.json",
+          "sha256": "d27886b4afcb873cc1673fff74ce98d96cf09a2dcb93d637d617b41f42f12ee7"
+        }
       }
     },
     {
@@ -1730,6 +2044,20 @@
       "sha256": {
         "en": "1d82631b3d101a049fcd7c2455c3fdd8b3546ae2ee2a02d9fb5102ee2cd5198c",
         "zh": "b03dc7b731117049113c4cdf8cd1c6927c573c48cb43971a4e0a6aa7588f4494"
+      },
+      "recipe": {
+        "path": "recipes/23_fixed_price_rent_increase.json",
+        "sha256": "10cb797def4d7bce86c15aa4f16d639157d194bded0d167b37f8603818fb700d"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/23_fixed_price_rent_increase_en.scene.json",
+          "sha256": "11421962c2ec8c885f61d0beedfcd37dfeb506b3eaa2984bf0882218b11135ed"
+        },
+        "zh": {
+          "path": "recipes/golden/23_fixed_price_rent_increase_zh.scene.json",
+          "sha256": "1f3b9a00ef52bd6211c621ff22f0a0acce4456527d9673f1bb7c33003460458a"
+        }
       }
     },
     {
@@ -1804,6 +2132,20 @@
       "sha256": {
         "en": "ced3c74f36456a02983a9b2196c56b1ebf07da69e7df7ab2255260196acddbf7",
         "zh": "b1e3c2b28dfaca07ebf51b32c347a4b0007066c1da578f640a3a011fd8f31819"
+      },
+      "recipe": {
+        "path": "recipes/24_price_ceiling_deadweight_loss.json",
+        "sha256": "48b5b522a44210df334b8a1377dca1c497683e519554335ad91218e87c5cf41b"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/24_price_ceiling_deadweight_loss_en.scene.json",
+          "sha256": "4ac5d463d7012e982f6c021f5a9fd1598c851300fba5a26197e5e5dd6252a110"
+        },
+        "zh": {
+          "path": "recipes/golden/24_price_ceiling_deadweight_loss_zh.scene.json",
+          "sha256": "38cd538cb7ee1845469622b85173720995f9c837714cfb210092b1764e5f9dea"
+        }
       }
     },
     {
@@ -1876,6 +2218,20 @@
       "sha256": {
         "en": "f6079c75a4c15078ba544be8270c28d040793abb7ae7c687456dfb76b2624b56",
         "zh": "fea670da96887c0eba5e629ece9b565ad1fc270d65eb51b1937a99e6ce2b2624"
+      },
+      "recipe": {
+        "path": "recipes/25_price_floor_deadweight_loss.json",
+        "sha256": "a39f1e8e2b6735d0002d6897d74ab1aed759c73933c847e8d601ef928580bba7"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/25_price_floor_deadweight_loss_en.scene.json",
+          "sha256": "cdb27c3be7953c37b6710d7c8eebebde56c29e8bf9ba62a8d984b90b85ee4a82"
+        },
+        "zh": {
+          "path": "recipes/golden/25_price_floor_deadweight_loss_zh.scene.json",
+          "sha256": "4d5e0673b5cd63665e4462261c56af47e1b7387c5aa54d4f5ba876e61a9fe240"
+        }
       }
     },
     {
@@ -1950,6 +2306,20 @@
       "sha256": {
         "en": "921b79187efd6cca462681c31986c6e7270a60dc52a84b73d09b19f2ccb51f5c",
         "zh": "80bd25e1460c4af8f41643160affed4a92347138dad2f419c497953ab564c00a"
+      },
+      "recipe": {
+        "path": "recipes/26_price_ceiling_consumer_surplus_change.json",
+        "sha256": "c0872150ad94b9e5571ea7be8c8108680f67571fe05e868622151bddb85b8864"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/26_price_ceiling_consumer_surplus_change_en.scene.json",
+          "sha256": "d67152bfc247589aa37912a7344c784d5a07f064511172d551b2179ea1787644"
+        },
+        "zh": {
+          "path": "recipes/golden/26_price_ceiling_consumer_surplus_change_zh.scene.json",
+          "sha256": "ee263c04a63d915f9c26af2aedbd78e722ccf03c143e3a535ff184584816c9c3"
+        }
       }
     },
     {
@@ -2026,6 +2396,20 @@
       "sha256": {
         "en": "a57b62e02acdefcfe5cb088ff571974c111396074c32882dd01fd0eae9085379",
         "zh": "149da27c6a440bf8d0a016ad506992c571f792658d173995da8d32f65a090971"
+      },
+      "recipe": {
+        "path": "recipes/27_price_ceiling_lowered_dwl_increase.json",
+        "sha256": "2af6579937897a64f2644c9b2e031fa95ac3f8bc5b54450fc93113579e16181e"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/27_price_ceiling_lowered_dwl_increase_en.scene.json",
+          "sha256": "ab6488268f15d2202afc9c31c2140853edc6d81f642c497bbada08c0f06fe2d8"
+        },
+        "zh": {
+          "path": "recipes/golden/27_price_ceiling_lowered_dwl_increase_zh.scene.json",
+          "sha256": "3a77481c53eacd36705cc179962f50b5cffdebb06f463b950577b42abbf42672"
+        }
       }
     },
     {
@@ -2116,6 +2500,20 @@
       "sha256": {
         "en": "25df79c09fa29538a233d64d27bd3a27e477419f7b1788ec0ad393b4ed11a6c4",
         "zh": "76f62403591a58385d471eeabe665627ff67a617a9260ab8304ced7697a2a37a"
+      },
+      "recipe": {
+        "path": "recipes/28_unit_subsidy.json",
+        "sha256": "32a33fdcfaeb62f41c3530e4f55bf0264f4b458f4f438384aa48293eb171b928"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/28_unit_subsidy_en.scene.json",
+          "sha256": "b648e79a5bdcec6de8cde702a0a237adccc1f2ad3917090e012db10ae21cdb29"
+        },
+        "zh": {
+          "path": "recipes/golden/28_unit_subsidy_zh.scene.json",
+          "sha256": "5e1a28dabc0a3783ca3fa71247a83400292a85e88ace867e0ab7cae9ab40c4cc"
+        }
       }
     },
     {
@@ -2200,6 +2598,20 @@
       "sha256": {
         "en": "b58ffb23bb57443ba2deaf3391f7102fea9b33dc2b6681631de8c437115ec6c2",
         "zh": "23b1ca1018021d6ef8cd2abc1cc33a6d2e67b7b55b5bb2add7e7d7f5fcf5a4b1"
+      },
+      "recipe": {
+        "path": "recipes/29_quota_increase.json",
+        "sha256": "5b3912fdb2e3ca73ee7a4e491c91c35065cab0e78edb02be2ccc780684c2233f"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/29_quota_increase_en.scene.json",
+          "sha256": "319a6dac3807b762f630f069150e180ccf1dfc7f7f64278cc809e600cbb69045"
+        },
+        "zh": {
+          "path": "recipes/golden/29_quota_increase_zh.scene.json",
+          "sha256": "c5af070dfd5817983300820bbc9c4572a46af1704576ddbb01a67adf4450462d"
+        }
       }
     },
     {
@@ -2276,6 +2688,20 @@
       "sha256": {
         "en": "f84f0a7d107e67e33901ffda2f157bcc494b1c56a4fcbcfa7dcfd76d52668ead",
         "zh": "7a6a210e28b39b4e464bfb76fc956f7658305f71478e0ea07b33e3b5682b0040"
+      },
+      "recipe": {
+        "path": "recipes/30_quota_demand_increase.json",
+        "sha256": "ee19eb84ffbc3b84e7f257dcbb7799064937542b25e5881dc4c3c9a7426340b1"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/30_quota_demand_increase_en.scene.json",
+          "sha256": "670908a760d65782e1e807675b7c5e9619e424aa890e47c0281ab668e6bcf2c8"
+        },
+        "zh": {
+          "path": "recipes/golden/30_quota_demand_increase_zh.scene.json",
+          "sha256": "9847a6e5bc23d3e145800c4e3e8e30f07c8f722d88b376f330b55ddf6c731ede"
+        }
       }
     },
     {
@@ -2360,6 +2786,20 @@
       "sha256": {
         "en": "4239468d9b9adaa2c80f6d0cc84eb1ad5ac72a2185dfe1c4dc4d276e19e35daf",
         "zh": "6e9357dbcbbc96b2a30daadd444db723fcfc86a31ed3cbc6303cfa1eab0912c0"
+      },
+      "recipe": {
+        "path": "recipes/31_unit_tax_burden_dwl.json",
+        "sha256": "59f3de36faa60557e5462a29678e85f481fbf53f5a896bc6a57d494da6249b6e"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/31_unit_tax_burden_dwl_en.scene.json",
+          "sha256": "4db08dcdaad7ef54c0292d2cd0c1e23e29a3f4252b3a605829edc831249c194e"
+        },
+        "zh": {
+          "path": "recipes/golden/31_unit_tax_burden_dwl_zh.scene.json",
+          "sha256": "4dfc3df8e732988ebe61971cc37d0ee4c667e9c12a2d44571ab140a0cd5ac490"
+        }
       }
     },
     {
@@ -2432,6 +2872,20 @@
       "sha256": {
         "en": "01a081c55a0e4fee0e9eb2733a80b018a1d39099349d235cdc9502c60e759999",
         "zh": "d331b2cadac2125147402acf08ad807db4d4f766efade54a2453f8382593adcc"
+      },
+      "recipe": {
+        "path": "recipes/32_consumer_producer_surplus.json",
+        "sha256": "3db9d86363315dc581c3aff263749d900cc7577f0cd17e3a05399c90f29403b5"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/32_consumer_producer_surplus_en.scene.json",
+          "sha256": "5b104a86dda16081c987b15c9211b86ccc339c813595bbe171f7eef1546ed947"
+        },
+        "zh": {
+          "path": "recipes/golden/32_consumer_producer_surplus_zh.scene.json",
+          "sha256": "a30dd6cfc251d2bc3b5e3eb5790bdd170a02468b1fec3013d6553d8ba08ca8cc"
+        }
       }
     },
     {
@@ -2512,6 +2966,20 @@
       "sha256": {
         "en": "62e61a92b3a676da6c939f13824d5b9f781a5399fb157933637196252ffea8e3",
         "zh": "f3a188f1daba2b1406a4e2b2c9a59b05685c38c5c09bcdabd2f25adafab8a8f0"
+      },
+      "recipe": {
+        "path": "recipes/33_mc_rise_social_surplus.json",
+        "sha256": "03f29d38d664cbc9925ea0ceda888a78699c97f678f1b8bd312a658760c4e19a"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/33_mc_rise_social_surplus_en.scene.json",
+          "sha256": "d58a4c326b3c457848248de86febab3306d3b11cd30b58973959ccf3af582aef"
+        },
+        "zh": {
+          "path": "recipes/golden/33_mc_rise_social_surplus_zh.scene.json",
+          "sha256": "374648befab78d5c86347d589162896ef75f1f097db63ad47ec8510e4f8156b9"
+        }
       }
     },
     {
@@ -2588,6 +3056,20 @@
       "sha256": {
         "en": "df1779415b5a2ee0462adfc554b9500bd78671e4987374b2253e491e1092b0f6",
         "zh": "4cbd41922bc8231208d3a710002ea5d52afa6f90786bc5ff17894c3faa8f6292"
+      },
+      "recipe": {
+        "path": "recipes/34_ad_increase.json",
+        "sha256": "2ab2a94327dd034c3a9ffd12f0301011fb232c339380ef6738a1000f46c01aac"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/34_ad_increase_en.scene.json",
+          "sha256": "b133cc6f55d5073d54d6ddee63b195f4fc06c1127efe5bc36beef1ce6a9ab244"
+        },
+        "zh": {
+          "path": "recipes/golden/34_ad_increase_zh.scene.json",
+          "sha256": "0f90b08c5df207d098d52f7f6bd656a6d9462b25b8f4747f3e6e2b486e86c336"
+        }
       }
     },
     {
@@ -2664,6 +3146,20 @@
       "sha256": {
         "en": "3add786cd96db3729b2b978160a28f85a68b35bdf8715e406330e1a5788ea3fb",
         "zh": "caebc12e52e95b33c5bd1b8ec202de556b97a008fa78b5c39ad7828aed4570c3"
+      },
+      "recipe": {
+        "path": "recipes/35_sras_decrease.json",
+        "sha256": "e2c637e0e2ac3e326f20be9ec71916899f122ff44291ed8805516ca76b8f0c6b"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/35_sras_decrease_en.scene.json",
+          "sha256": "ebd757adf331c25c4620a04aa0d0becbfd8c2c5b9db55629e601992ac6266a99"
+        },
+        "zh": {
+          "path": "recipes/golden/35_sras_decrease_zh.scene.json",
+          "sha256": "7c7cdc7ed35735dc908f4dfbe5cb60f5b49e8bc4a2ab53efcc0692edd47ba539"
+        }
       }
     },
     {
@@ -2738,6 +3234,20 @@
       "sha256": {
         "en": "68ac0476c3fd46eb3571c7800011b1890a58ee0b50e01c55919431b55a15eb5e",
         "zh": "395884ce49704ae0cc4d1872cc166337869106a59ed3b5bc5d9206c837665404"
+      },
+      "recipe": {
+        "path": "recipes/36_ad_sras_both_decrease.json",
+        "sha256": "57fc8c5d5659a54f3dd0e8e47162821a781074a06501d2370f0670f8ad7360d4"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/36_ad_sras_both_decrease_en.scene.json",
+          "sha256": "84dc35e510c3fadbb9a9616c9f6106dc11454e9cb8e45d11c7f6913d42d4a972"
+        },
+        "zh": {
+          "path": "recipes/golden/36_ad_sras_both_decrease_zh.scene.json",
+          "sha256": "87005691cce345002a38b09ef9a98c3d20cc229c186b5b89ff10d1a0e58f4ffe"
+        }
       }
     },
     {
@@ -2812,6 +3322,20 @@
       "sha256": {
         "en": "3deaa42b892e3b9adcbd2d68f054d2f2955821c6ffa4bfd32eccebb1cb349b92",
         "zh": "3c53a2e70813db4d9b9b350c21b275f25588cb19e78b30fc91707c27792e7b36"
+      },
+      "recipe": {
+        "path": "recipes/37_lras_ad_increase.json",
+        "sha256": "2684dfd02465d347beaa3db5504864ae0a2c18b1cfb2e8ba74cbc7ad9e223376"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/37_lras_ad_increase_en.scene.json",
+          "sha256": "2adb0d093bfa3d38de0568287671a0875fd98138ff72f7c6e97d2d5d5b2f5f9c"
+        },
+        "zh": {
+          "path": "recipes/golden/37_lras_ad_increase_zh.scene.json",
+          "sha256": "965a32d0682afde9e8793c31474a0d92653035d8f2f2b57f7cabd9b4dc46a674"
+        }
       }
     },
     {
@@ -2890,6 +3414,20 @@
       "sha256": {
         "en": "f00fbfcfd881ad929063ab2d3d3554de0c386cbec5f19acdf715a9c558199107",
         "zh": "037bee0275bd5bdbd27940b5281a6dad4a4893cdc47ae29ff422a6a037e50fa8"
+      },
+      "recipe": {
+        "path": "recipes/38_economic_growth.json",
+        "sha256": "fc7666183eeebea6432eb518eaec8b28d113ca1bbee9837d0746dc362907e1f9"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/38_economic_growth_en.scene.json",
+          "sha256": "4a056e6b68e9c2f5f2ea655e2ae6f00bee78424c1accd27d81cda600553f6f65"
+        },
+        "zh": {
+          "path": "recipes/golden/38_economic_growth_zh.scene.json",
+          "sha256": "8aa9630b93cfd012b1141ce5577c0f9abc69c1064df0ae4796a7077e11bb6853"
+        }
       }
     },
     {
@@ -2976,6 +3514,20 @@
       "sha256": {
         "en": "1f67f8f2823522d6c30c05cec2e74b014b77274d17c852a181fa797782879805",
         "zh": "fc58629b553c7f832aa085f4b8f48006567aa379b8c0b45f79b7928c82065e7b"
+      },
+      "recipe": {
+        "path": "recipes/39_deflationary_gap.json",
+        "sha256": "065693a02d04eed69515955d88b12c89a8e743989dbc5dbaf91f133d1b1cec06"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/39_deflationary_gap_en.scene.json",
+          "sha256": "eedcd01be4ce58dc2a60e844616f38036c3decc12cfce424ed6bf7b40c36f538"
+        },
+        "zh": {
+          "path": "recipes/golden/39_deflationary_gap_zh.scene.json",
+          "sha256": "aaa9d39da7cfaf60186aa94fbe7cca69954d128a06b83d97e1a2c207211ef21c"
+        }
       }
     },
     {
@@ -3058,6 +3610,20 @@
       "sha256": {
         "en": "b0c9fc1603f15e24ce8d612d8746f3bf3f1954e2b4dabe43e60bcdd447eef5fc",
         "zh": "0d5a06baa9fdd9a822d15b2f0e7c1e5239ca60c03446f8ed44dbc62fae27ac64"
+      },
+      "recipe": {
+        "path": "recipes/40_inflationary_gap.json",
+        "sha256": "5b4e612c7f538fbc837978e85e2cd9a723169ad558a39b8e37292e6b60f14eda"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/40_inflationary_gap_en.scene.json",
+          "sha256": "227a2ae6a23324e8e136fe51f282ed0d10751b6301a7e96e70d8e523ba77a829"
+        },
+        "zh": {
+          "path": "recipes/golden/40_inflationary_gap_zh.scene.json",
+          "sha256": "eb3720f87c8584f465624a481ebbd622c8c29afa0f4883b2ca452a97381bc5a7"
+        }
       }
     },
     {
@@ -3136,6 +3702,20 @@
       "sha256": {
         "en": "101dfb771027de0d4acbcb81a4c1451ff39807ff6fbcf2b9a898f9c33c6194dc",
         "zh": "f0c1dda9fa2ac61cfd78f384467144fcbe9cde973e8d302941d1d440d95d91fc"
+      },
+      "recipe": {
+        "path": "recipes/41_self_adjust_deflationary.json",
+        "sha256": "bca1300d2cdffbfbc0d5cacac42737e6267cc49714cadc755b777fdfb740d365"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/41_self_adjust_deflationary_en.scene.json",
+          "sha256": "aea567cfb48de6060f810168a6106ff40b090fa4e3e25e1df0df04033f61e851"
+        },
+        "zh": {
+          "path": "recipes/golden/41_self_adjust_deflationary_zh.scene.json",
+          "sha256": "8cd295cd7b6125f581599467d645de58b1fecd6d95a9e9e48832f82c28524438"
+        }
       }
     },
     {
@@ -3214,6 +3794,20 @@
       "sha256": {
         "en": "60a9605a600be3402c4bf3910b00e80646eea30c847ad2ff2798266afa04fe60",
         "zh": "d10c6c4508e35ae6f3e3d3f37acf8ab0270981bf4230c1da94855f47e1d8c6b5"
+      },
+      "recipe": {
+        "path": "recipes/42_self_adjust_inflationary.json",
+        "sha256": "ee0347493bc5d827fae78e62b3079a1c7933b7c42e1fe8f12757fd03849f4cbc"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/42_self_adjust_inflationary_en.scene.json",
+          "sha256": "e8990828d971d3eced9aa13efebd42ef1808a04e2436e7107b3ed537243c3951"
+        },
+        "zh": {
+          "path": "recipes/golden/42_self_adjust_inflationary_zh.scene.json",
+          "sha256": "32c09e634758c940e91316c5ada26c5ddd279e774169060fa739449e22bfe821"
+        }
       }
     },
     {
@@ -3296,6 +3890,20 @@
       "sha256": {
         "en": "ef9e4c7410f08dd7253ee3291ca899676084fba4381886b6558529f1a0487c6b",
         "zh": "450c1ba1be96666015518a93c3593d70757464fab1f46253c5cc3098db6d0146"
+      },
+      "recipe": {
+        "path": "recipes/43_supply_shock_recovery.json",
+        "sha256": "c05286b042d4bed02e7a3b3b5fb13122788fe279f00c07f54f8ac50ee0c91643"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/43_supply_shock_recovery_en.scene.json",
+          "sha256": "14c1329c1a2fb23c26f4c10f7c3a08a746682d5007a742fcea94fcd463a496cb"
+        },
+        "zh": {
+          "path": "recipes/golden/43_supply_shock_recovery_zh.scene.json",
+          "sha256": "c4a08e9273ac59e303e3465ea6d7a0c0644025d3f2f1a82d03cedbbe6de77d1e"
+        }
       }
     },
     {
@@ -3366,6 +3974,20 @@
       "sha256": {
         "en": "c9fb089c5485d84cddb480e08344b3f55883e66bc4c6fd7e15e1e99a4fca42bf",
         "zh": "d5696bff5dbc7d7984020ba810c4bc913a47e6790f576f596178946043b6c34f"
+      },
+      "recipe": {
+        "path": "recipes/02b_price_floor_surplus.json",
+        "sha256": "ae000a48e4e95e28ea4d31ae420ea65f67865e9ccf106af6508670d573ea92f3"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/02b_price_floor_surplus_en.scene.json",
+          "sha256": "358ccbaaca6e09218937bd7c5f275428bbec1e4159eff7d52171c9988282de5b"
+        },
+        "zh": {
+          "path": "recipes/golden/02b_price_floor_surplus_zh.scene.json",
+          "sha256": "42f2c7471d160a81c759a36ac6a20fdb97b9f89059e9b2afa35a5c2b6ec3e579"
+        }
       }
     },
     {
@@ -3440,6 +4062,20 @@
       "sha256": {
         "en": "e219b511c47b85220e86ad6b56d0b59d1119cf590e830ace8b4076c51528bc9f",
         "zh": "32823dc9d0edcf366b51b5e00748232c90f99e49746d4efb323853e71e494dc2"
+      },
+      "recipe": {
+        "path": "recipes/05b_tr_price_rise_elastic.json",
+        "sha256": "19fdc67157b8da15ad39a150087dad103884de2cfa90a259e46862491f8b2d46"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/05b_tr_price_rise_elastic_en.scene.json",
+          "sha256": "66039dd972f5baae8aed5ca24be2c247fb84912c68448d0ef5a15d5a1ded7bf3"
+        },
+        "zh": {
+          "path": "recipes/golden/05b_tr_price_rise_elastic_zh.scene.json",
+          "sha256": "3f8424c1ec7fbedb3bcea6d7583703828ecb89a1da4661248bee9829d2acc1ca"
+        }
       }
     },
     {
@@ -3514,6 +4150,20 @@
       "sha256": {
         "en": "1160f265ce414e2f6891df32c12c1d089292e613c0c5cec126e3d8cb6b62bca7",
         "zh": "cb384fb324b818d11a20a14d278d97e5b7de7fa08f5b11cb054b7237025decf9"
+      },
+      "recipe": {
+        "path": "recipes/09b_positive_externality.json",
+        "sha256": "e0ae78da94f150be521dab54f17cb939a816c189b2cef84e02dce514627d3682"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/09b_positive_externality_en.scene.json",
+          "sha256": "72d633e3d96fbcc2bf034544f3f1318af13ba788afc84a1d0d6acd0d41417b9e"
+        },
+        "zh": {
+          "path": "recipes/golden/09b_positive_externality_zh.scene.json",
+          "sha256": "9d2f28edd8b437982008f1abdb1e728c65ef80166de6ec2cf00ffc218b22c391"
+        }
       }
     },
     {
@@ -3574,6 +4224,20 @@
       "sha256": {
         "en": "a51b940f1eab0f23c3ef4fd104918856629ee5bec9e2d4038f597ab8f6cb7943",
         "zh": "99b6122b8d9792a7835185c25529dbbcd302461d6b5844916a2613660e866521"
+      },
+      "recipe": {
+        "path": "recipes/10b_ppc_growth.json",
+        "sha256": "397fc5a0d23154108621b8b673d9757980c0c6070e4f89e9a2745c70a450f3b3"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/10b_ppc_growth_en.scene.json",
+          "sha256": "e89236850db0a16bf8a0bca40a6eb5ba413a3de3509b307b8d6efb0fc3e82e04"
+        },
+        "zh": {
+          "path": "recipes/golden/10b_ppc_growth_zh.scene.json",
+          "sha256": "c1cd4463b6d066cb201ee343ad1d3b519a352b0120e1999027678f43043d9abf"
+        }
       }
     },
     {
@@ -3644,6 +4308,20 @@
       "sha256": {
         "en": "97d0cc08f5a70e61d503a936109bb0b3921917e0abd8096e085be5b33057380d",
         "zh": "226bf8d1666489a073f63212ea56bf7fa1d86b25cc9a84d4b03c37df4edbaa4f"
+      },
+      "recipe": {
+        "path": "recipes/10c_ppc_points.json",
+        "sha256": "474fcef75ffecb69ae2f38932064d4776f1ae51a03c024321041fe575a71a486"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/10c_ppc_points_en.scene.json",
+          "sha256": "7dee4204a447504579739d16600bd3f97c3dbdcb10fffe15818e6a368e9fb6e8"
+        },
+        "zh": {
+          "path": "recipes/golden/10c_ppc_points_zh.scene.json",
+          "sha256": "433b4e1b6aad350e498d2105001a665bad8b9a87b956a705c03bbf2607a605ae"
+        }
       }
     },
     {
@@ -3718,6 +4396,20 @@
       "sha256": {
         "en": "85a98fbf924f4cf0290c25a91d4ff4a72dac27f267fcb80669880dc64fe1f09a",
         "zh": "f154c7379429d83442f7c5c41f1979d16526cda1252c6de4ab1f3e9d5de6b19e"
+      },
+      "recipe": {
+        "path": "recipes/12b_demand_increase.json",
+        "sha256": "d7e8ba59962e87ce2ab0dfcdaf202de6c4db51ea2ac778919c2f07e5ff1b8831"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/12b_demand_increase_en.scene.json",
+          "sha256": "526babdc0e6ed689ea805b8c0908e22061625248bd94c8ea8c71dc00dfa68f7e"
+        },
+        "zh": {
+          "path": "recipes/golden/12b_demand_increase_zh.scene.json",
+          "sha256": "bed693b92c913a3f22b8a67f21c4fb8cdde6bd01325abc6fd72539861b8384e8"
+        }
       }
     },
     {
@@ -3792,6 +4484,20 @@
       "sha256": {
         "en": "002fd16eeff048859ae6efec8ecc05cb588aee31d3befed1a0171cab76bf7bcb",
         "zh": "5dc88ec449aaf23606ca2d64f3c7f6819cba73d80e9c048a3070cba3a7e8c9db"
+      },
+      "recipe": {
+        "path": "recipes/13b_supply_increase.json",
+        "sha256": "822e6f4369cf7659b4c8f4ba6b4684c64239ea09410fc9e39bb7e684aadb42e9"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/13b_supply_increase_en.scene.json",
+          "sha256": "9350db63890fdf7693941dcc1b3f82a3e788478ce192ed00240ea684d3fa7eee"
+        },
+        "zh": {
+          "path": "recipes/golden/13b_supply_increase_zh.scene.json",
+          "sha256": "636db7b88c41ad5e17f40bf8604585258be2d8db5c8d67f28abf6f9da3a2a584"
+        }
       }
     },
     {
@@ -3866,6 +4572,20 @@
       "sha256": {
         "en": "e6076e70aede00462d689d22ac0789d13ac0935e8c26a217744bf82ccdfe3b73",
         "zh": "25b814f6b388f4c5550cb8d6983e67363e7842fc1a655fdd9f369ea451425eeb"
+      },
+      "recipe": {
+        "path": "recipes/18b_tr_price_fall_inelastic.json",
+        "sha256": "cf724eb71cb3162895cb66be1f3a9b166aafee2c17614432fce73b138437dace"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/18b_tr_price_fall_inelastic_en.scene.json",
+          "sha256": "26c09531392195e898b643b0123c14c50bdd2a12d430ec51f093b0f55487ba32"
+        },
+        "zh": {
+          "path": "recipes/golden/18b_tr_price_fall_inelastic_zh.scene.json",
+          "sha256": "fac2d8c1e8a838d9882c9035465e4bc421403d760e6c093559b7b491f6f6a493"
+        }
       }
     },
     {
@@ -3942,6 +4662,20 @@
       "sha256": {
         "en": "6f69e8611335ce059849a8701016ec66b80afa26008a29f1b058ac3f7c2ceb06",
         "zh": "5a8ecf799c37c8f630cae2a49a3ce39328f51de180b39fef6c2d66e05a45282a"
+      },
+      "recipe": {
+        "path": "recipes/34b_ad_decrease.json",
+        "sha256": "e77a964f54536288e238fac4c8d528efb536c27a61aaa241ec49b62b5f5b5a6a"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/34b_ad_decrease_en.scene.json",
+          "sha256": "39dd0758205df861ad9d453ec47702ea2e5c39036be93ef202254e69beb8c26b"
+        },
+        "zh": {
+          "path": "recipes/golden/34b_ad_decrease_zh.scene.json",
+          "sha256": "73a8e6556974a8ac67ba2ca78a8f0b82beb991311b07a0af64e03d0860f188e2"
+        }
       }
     },
     {
@@ -4018,6 +4752,20 @@
       "sha256": {
         "en": "77a1e8e48427d0ced8ebab336f4144bb1c6ff6d5612ebab2a8ded2f5664e8427",
         "zh": "3a3b9721c29d1c6f26ca7cc7e0811a39b9d040a4a586c1701b60030c22c705ad"
+      },
+      "recipe": {
+        "path": "recipes/35b_sras_increase.json",
+        "sha256": "28604497069e62e306b9fec4003a9e4ac4d6992ee9162e88b545031c6aa64fbb"
+      },
+      "golden": {
+        "en": {
+          "path": "recipes/golden/35b_sras_increase_en.scene.json",
+          "sha256": "f9f27d7c94812620957e36fcd6efe73674a5045d64aac92a66d031a200ce07cf"
+        },
+        "zh": {
+          "path": "recipes/golden/35b_sras_increase_zh.scene.json",
+          "sha256": "c2f010f4bc0533215b3765bd4a94b2bd1aacb61c8d0ecd822dc1fd6a1dfc6bbf"
+        }
       }
     }
   ]
