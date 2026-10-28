@@ -5,6 +5,10 @@ its number, date and `en:` / `zh:` lines into `download/manifest.json`, and
 the website shows them as "What's new". Write them for teachers, in plain
 words.
 
+## 1.6.0 — 2026-10-28
+- en: Nothing changes in how you use the skill. Behind the scenes, every diagram now has a Chinese title and a short description, so DSEconMentor's AI tutor can show these same diagrams to students.
+- zh: 使用方法不變。每幅圖現已附中文標題及簡短說明，讓 DSEconMentor 的 AI 導師可以向學生展示同一批圖。
+
 ## 1.5.2 — 2026-10-03
 - en: Grok setup is now one step: upload dse-econ-graph.zip as a skill (Plugins ▸ Skills ▸ Add skill ▸ Upload skill file). No project or instructions text needed.
 - zh: Grok 設定只需一步：把 dse-econ-graph.zip 上載為技能（插件 ▸ 技能 ▸ 新增技能 ▸ 上傳技能檔案），不用建立專案或輸入指示文字。

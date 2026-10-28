@@ -4,14 +4,14 @@
     "en": "Paste a DSE Economics question and its marking scheme into Grok, Claude or ChatGPT and get the diagram in the HKEAA marking-scheme style, in English or Chinese.",
     "zh": "把 DSE 經濟題目和評卷參考貼到 Grok、Claude 或 ChatGPT，即可得到 HKEAA 評卷參考風格的圖，中英文皆可。"
   },
-  "version": "1.5.2",
-  "released": "2026-10-03",
+  "version": "1.6.0",
+  "released": "2026-10-28",
   "whats_new": {
     "en": [
-      "Grok setup is now one step: upload dse-econ-graph.zip as a skill (Plugins ▸ Skills ▸ Add skill ▸ Upload skill file). No project or instructions text needed."
+      "Nothing changes in how you use the skill. Behind the scenes, every diagram now has a Chinese title and a short description, so DSEconMentor's AI tutor can show these same diagrams to students."
     ],
     "zh": [
-      "Grok 設定只需一步：把 dse-econ-graph.zip 上載為技能（插件 ▸ 技能 ▸ 新增技能 ▸ 上傳技能檔案），不用建立專案或輸入指示文字。"
+      "使用方法不變。每幅圖現已附中文標題及簡短說明，讓 DSEconMentor 的 AI 導師可以向學生展示同一批圖。"
     ]
   },
   "files": [
@@ -41,7 +41,7 @@
         "zh": "ChatGPT 專用版本：在 Plugins ▸ Upload plugin 上載，不用解壓。"
       },
       "bytes": 92736,
-      "sha256": "5a27bbe3397ef75c52778a710f4c18bbf5141d5a611f644fc207684f280d5c5c",
+      "sha256": "7b4f7d22f535069a1d5946e9651400e185435012b3ed60cf26e5cdb84e20f630",
       "url": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/download/dse-econ-graph-chatgpt.zip",
       "download_url": "https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph-chatgpt.zip"
     },
