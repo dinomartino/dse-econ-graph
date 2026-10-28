@@ -1,0 +1,15 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "09b_positive_externality",
+ "family": "externality",
+ "axes": {"x": {"key": "quantity"}, "y": {"key": "price_cost"}},
+ "curves": [{"id": "S", "role": "supply", "name": "S = MPC = MSC"}, {"id": "D", "role": "demand", "name": "D = MPB"}, {"id": "MSB", "role": "msb", "name": "MSB"}],
+ "points": [{"at": ["D", "S"], "guides": ["P_m", "Q_m"], "dot": true}, {"at": ["MSB", "S"], "guides": [null, "Q^*"], "dot": true}],
+ "areas": [{"kind": "dwl", "pattern": "hatch", "label": {"key": "dwl"}}],
+ "geom": {"size": [3.4, 2.7],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 94],
+  "curves": {"S": {"p": [12, 18], "q": [80, 72], "draw": [12, 80], "end": "right", "dy": 0}, "D": {"p": [12, 72], "m": -0.75, "draw": [12, 70], "end": "right", "dy": -1.5}, "MSB": {"p": [12, 94], "m": -0.75, "draw": [16, 80], "end": "right", "dy": -1.5}}}
+}

@@ -1,0 +1,20 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "30_quota_demand_increase",
+ "family": "market",
+ "axes": {"x": {"key": "q"}, "y": {"key": "p"}},
+ "curves": [{"id": "S0", "role": "supply", "name": "S_0 = MC", "kinked": "Q0"}, {"id": "D0", "role": "demand", "name": "D_0 = MB_0"}],
+ "shifts": [{"of": "D0", "id": "D1", "dir": "right", "size": "medium", "name": "D_1 = MB_1"}],
+ "lines": [{"id": "Q0", "kind": "quota", "level": "below_eq", "of": ["D0", "S0"], "name": "S_{quota}"}],
+ "points": [{"at": {"curve": "S0", "line": "Q0"}, "dot": false, "guides": [null, "Q_0"]}, {"at": ["D0", "S0"], "dot": false, "guides": [null, "Q_1"]}, {"at": ["D1", "S0"], "dot": false, "guides": [null, "Q_2"]}],
+ "areas": [{"kind": "dwl_change", "at": "Q0", "pattern": "hatch", "key": true, "label": {"key": "increase_in_dwl"}}],
+ "moves": {"quantity": true},
+ "geom": {"size": [3.4, 2.8],
+  "origin": [12, 12],
+  "xEnd": [92, 12],
+  "yEnd": [12, 94],
+  "curves": {"S0": {"p": [16, 20], "q": [80, 76], "draw": [16, 80], "end": "right", "dy": 1}, "D0": {"p": [16, 80], "q": [70, 20], "draw": [16, 66], "end": "bottom"}, "D1": {"draw": [26, 80], "end": "right", "dy": -1.5}},
+  "shifts": {"D1": {"dx": 16}},
+  "lines": {"Q0": 30}}
+}

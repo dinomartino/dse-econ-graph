@@ -1,0 +1,19 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "29_quota_increase",
+ "family": "market",
+ "axes": {"x": {"key": "q"}, "y": {"key": "p"}},
+ "curves": [{"id": "D", "role": "demand", "name": "D = MB"}, {"id": "S0", "role": "supply", "name": "S_0 = MC"}],
+ "lines": [{"id": "Q1", "kind": "quota", "level": "below_eq", "name": "S_1"}, {"id": "Q2", "kind": "quota", "level": "below_eq", "name": "S_2", "rightOf": "Q1", "from": "Q1"}],
+ "points": [{"at": {"curve": "D", "line": "Q1"}, "name": "W", "guides": ["P_1", null]}, {"at": {"curve": "D", "line": "Q2"}, "name": "X", "guides": ["P_2", null]}, {"at": {"curve": "S0", "line": "Q2"}, "name": "Y", "guides": [null, "Q_2"]}, {"at": {"curve": "S0", "line": "Q1"}, "name": "Z", "guides": [null, "Q_1"]}],
+ "areas": [{"kind": "dwl_change", "between": ["W", "X"], "pattern": "hatch", "key": true, "label": {"key": "reduction_in_dwl"}}],
+ "moves": {"price": true, "quantity": true},
+ "expect": {"price": "down", "quantity": "up"},
+ "geom": {"size": [3.4, 2.8],
+  "origin": [12, 12],
+  "xEnd": [92, 12],
+  "yEnd": [12, 94],
+  "curves": {"D": {"p": [18, 84], "q": [80, 22], "draw": [18, 80], "end": "right", "dy": -1.5}, "S0": {"p": [20, 18], "q": [80, 78], "draw": [20, 80], "end": "right", "dy": 1}},
+  "lines": {"Q1": 28, "Q2": 40}}
+}

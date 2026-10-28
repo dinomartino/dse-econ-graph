@@ -1,0 +1,16 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "42_self_adjust_inflationary",
+ "family": "adas",
+ "curves": [{"id": "AD", "role": "ad", "name": "AD"}, {"id": "SRAS0", "role": "sras", "name": "SRAS_0"}, {"id": "LRAS", "role": "lras", "slope": "vertical", "name": "LRAS", "at": {"leftOf": ["AD", "SRAS0"]}}],
+ "shifts": [{"of": "SRAS0", "id": "SRAS1", "dir": "left", "size": {"onto": "LRAS"}, "name": "SRAS_1"}],
+ "points": [{"at": ["AD", "SRAS0"], "name": "E_0", "guides": ["P_0", "Y_0"]}, {"at": ["AD", "SRAS1"], "name": "E_1", "guides": ["P_1", null]}, {"at": {"curve": "LRAS", "axis": "quantity"}, "name": "Y_f", "dot": false}],
+ "moves": {"price": true, "quantity": true},
+ "expect": {"price_level": "up", "output": "down", "gap": "inflationary"},
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 90],
+  "curves": {"AD": {"p": [16, 80], "m": -0.7, "draw": [16, 84], "end": "right", "dy": -1.5}, "LRAS": {"x": 44, "draw": [12, 86], "end": "top"}, "SRAS0": {"p": [64, 46.4], "m": 1.5, "draw": [52, 80], "end": "top"}, "SRAS1": {"p": [44, 60.4], "m": 1.5, "draw": [30, 60], "end": "top"}}}
+}

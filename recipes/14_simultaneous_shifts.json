@@ -1,0 +1,17 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "14_simultaneous_shifts",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S", "role": "supply", "name": "S"}],
+ "shifts": [{"of": "D", "id": "D2", "dir": "right", "size": {"biggerThan": "S2"}, "name": "D’"}, {"of": "S", "id": "S2", "dir": "right", "size": "small", "name": "S’"}],
+ "points": [{"at": ["D", "S"], "name": "E_1", "guides": ["P_1", "Q_1"]}, {"at": ["D2", "S2"], "name": "E_2", "guides": ["P_2", "Q_2"]}],
+ "moves": {"price": true, "quantity": true},
+ "expect": {"price": "up", "quantity": "up"},
+ "geom": {"size": [3.4, 2.7],
+  "origin": [12, 12],
+  "xEnd": [92, 12],
+  "yEnd": [12, 92],
+  "curves": {"D": {"p": [16, 78], "m": -1, "draw": [16, 58], "end": "right", "dy": -1.5}, "S": {"p": [18, 20], "m": 1, "draw": [18, 78], "end": "top"}, "D2": {"draw": [42, 88], "end": "right", "dy": -1.5}, "S2": {"draw": [30, 88], "end": "top"}},
+  "shifts": {"D2": {"dx": 30}, "S2": {"dx": 12}}}
+}

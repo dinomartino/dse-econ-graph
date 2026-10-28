@@ -15,6 +15,11 @@
 4. Writes download/chat-catalogue.json for DSEconMentor's chat tutor: every
    template and variant with the texts in chat/meta.json and its PNGs' size
    and sha256. Variants never go into SKILL.md, the zips or manifest.json.
+5. Recipes for the chat tutor's renderer: re-traces recipes/golden/ (every
+   template's picture as primitives, tools/trace.py) after rendering and checks
+   recipes/ (tools/recipes.py): every catalogue id has a recipe that matches
+   its golden scene. The catalogue lists each recipe and scene with its sha256.
+   --check also runs both checks (the trace takes a few seconds).
 """
 from __future__ import annotations
 
@@ -39,6 +44,7 @@ GALLERY = ROOT / "gallery"
 VARIANTS = sorted((ROOT / "chat" / "variants").glob("[0-9][0-9][a-z]_*.py"))
 CHAT_META = ROOT / "chat" / "meta.json"
 CATALOGUE = "chat-catalogue.json"                                 # in download/, not in FILES
+RECIPES = ROOT / "recipes"                                        # recipe per catalogue id + golden scenes
 
 REPO = "dinomartino/dse-econ-graph"
 RAW = f"https://raw.githubusercontent.com/{REPO}/main"           # CORS-friendly, for fetch()
@@ -360,15 +366,34 @@ def catalogue(texts: dict) -> bytes:
             with Image.open(f) as im:
                 size[lang] = list(im.size)
             sha[lang] = hashlib.sha256(f.read_bytes()).hexdigest()
+        recipe = RECIPES / f"{p.stem}.json"
+        golden = {lang: RECIPES / "golden" / f"{p.stem}_{lang}.scene.json" for lang in ("en", "zh")}
+        for f in (recipe, *golden.values()):
+            if not f.exists():
+                raise SystemExit(f"{f.relative_to(ROOT)} is missing — write the recipe / run: python tools/trace.py")
         diagrams.append({
             "id": p.stem, "variant_of": m["variant_of"], "topic": m["topic"],
             "title": {"en": m["title"], "zh": e["caption"]["zh"]},
             "caption": e["caption"], "use": m["use"],
             "shows": {"en": m["shows"], "zh": e["shows_zh"]},
             "labels": e["labels"], "alt": e["alt"],
-            "png": png, "size": size, "sha256": sha})
-    cat = {"schema": 1, "version": changelog()["version"], "diagrams": diagrams}
+            "png": png, "size": size, "sha256": sha,
+            "recipe": {"path": recipe.relative_to(ROOT).as_posix(),
+                       "sha256": hashlib.sha256(recipe.read_bytes()).hexdigest()},
+            "golden": {lang: {"path": f.relative_to(ROOT).as_posix(),
+                              "sha256": hashlib.sha256(f.read_bytes()).hexdigest()} for lang, f in golden.items()}})
+    cat = {"schema": 1, "version": changelog()["version"],
+           "recipes": {"schema": "recipes/schema.json", "glossary": "recipes/glossary.json",
+                       "fit": "recipes/fit.json", "recipe_version": 1},
+           "diagrams": diagrams}
     return (json.dumps(cat, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+
+
+def recipe_problems() -> list[str]:
+    """tools/recipes.py: a recipe for every catalogue id, each matching its golden scene."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    import recipes
+    return recipes.check()
 
 
 def main() -> int:
@@ -380,10 +405,20 @@ def main() -> int:
         stale += [] if readme() == README.read_text(encoding="utf-8") else ["README.md"]
         stale += [f"download/{n}" for n, b in files.items()
                   if not (DOWNLOAD / n).exists() or (DOWNLOAD / n).read_bytes() != b]
-        if stale:
-            print("out of date: " + ", ".join(stale) + " — run: python tools/build.py")
+        traced = subprocess.run([sys.executable, str(ROOT / "tools" / "trace.py"), "--check"], cwd=ROOT,
+                                capture_output=True, text=True)
+        stale += [] if traced.returncode == 0 else ["recipes/golden/"]
+        bad = recipe_problems()
+        if stale or bad:
+            if stale:
+                print("out of date: " + ", ".join(stale) + " — run: python tools/build.py")
+            if traced.returncode:
+                print(traced.stdout[-1500:].rstrip())
+            if bad:
+                print(f"recipes: {len(bad)} problem(s)\n  " + "\n  ".join(bad))
             return 1
-        print("SKILL.md, README.md and download/ are up to date")
+        print("SKILL.md, README.md, download/ and recipes/golden/ are up to date; "
+              f"{len(EXAMPLES) + len(VARIANTS)} recipes check out")
         return 0
     SKILL.write_text(new, encoding="utf-8")
     README.write_text(readme(), encoding="utf-8")
@@ -402,7 +437,18 @@ def main() -> int:
     failed += pasted_test((ROOT / "dsegraph.py").read_text(encoding="utf-8"))
     print(f"pasted test: {len(EXAMPLES)} templates run as a chat AI would paste them")
 
-    files = downloads(new)                         # after rendering: the catalogue hashes gallery/
+    traced = subprocess.run([sys.executable, str(ROOT / "tools" / "trace.py")], cwd=ROOT,
+                            capture_output=True, text=True)
+    print(traced.stdout.strip().splitlines()[-1] if traced.stdout.strip() else traced.stderr[-800:])
+    if traced.returncode:
+        failed.append("tools/trace.py")
+    bad = recipe_problems()
+    print(f"recipes: {len(EXAMPLES) + len(VARIANTS)} catalogue ids, " + (f"{len(bad)} problem(s)" if bad else "all check out"))
+    if bad:
+        print("  " + "\n  ".join(bad))
+        failed.append("recipes/")
+
+    files = downloads(new)                         # after rendering: the catalogue hashes gallery/ and recipes/
     DOWNLOAD.mkdir(exist_ok=True)
     for name, data in files.items():
         (DOWNLOAD / name).write_bytes(data)

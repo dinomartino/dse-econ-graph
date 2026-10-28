@@ -1,0 +1,16 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "02b_price_floor_surplus",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S", "role": "supply", "name": "S"}],
+ "lines": [{"id": "Pf", "kind": "price_floor", "level": "above_eq", "name": "P_f", "full": true}],
+ "points": [{"at": ["D", "S"], "dot": false, "guides": ["P_e", null]}, {"at": {"curve": "D", "line": "Pf"}, "dot": false, "guides": [null, "Q_d"]}, {"at": {"curve": "S", "line": "Pf"}, "dot": false, "guides": [null, "Q_s"]}],
+ "gaps": [{"kind": "surplus", "at": "Pf", "label": {"key": "surplus"}}],
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 90],
+  "curves": {"D": {"p": [20, 82], "q": [78, 22], "draw": [20, 78], "end": "right", "dy": -1.5}, "S": {"p": [20, 22], "q": [78, 82], "draw": [20, 78], "end": "right", "dy": 1.5}},
+  "lines": {"Pf": 66}}
+}

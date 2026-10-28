@@ -1,0 +1,16 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "26_price_ceiling_consumer_surplus_change",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S", "role": "supply", "name": "S"}],
+ "lines": [{"id": "Pc", "kind": "price_ceiling", "level": "below_eq", "name": "P_c", "full": true}],
+ "points": [{"at": ["D", "S"], "dot": true, "guides": ["P_e", "Q_e"], "guideStyle": ["none", "dashed"]}, {"at": {"curve": "S", "line": "Pc"}, "dot": false, "guides": [null, "Q_s"], "guideStyle": "solid"}],
+ "areas": [{"kind": "cs_gain", "at": "Pc", "pattern": "hatch", "label": "+"}, {"kind": "cs_loss", "at": "Pc", "pattern": "hatch", "label": "−"}],
+ "geom": {"size": [3.4, 2.7],
+  "origin": [12, 12],
+  "xEnd": [90, 12],
+  "yEnd": [12, 92],
+  "curves": {"D": {"p": [16, 86], "q": [80, 24], "draw": [16, 84], "end": "right", "dy": -1.5}, "S": {"p": [22, 16], "q": [76, 82], "draw": [22, 76], "end": "top"}},
+  "lines": {"Pc": 26}}
+}

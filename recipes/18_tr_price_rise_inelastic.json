@@ -1,0 +1,18 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "18_tr_price_rise_inelastic",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "slope": "steep", "name": "D"}],
+ "lines": [{"id": "P1", "kind": "price", "name": "P_1"}, {"id": "P2", "kind": "price", "name": "P_2", "above": "P1", "from": "P1"}],
+ "points": [{"at": {"curve": "D", "line": "P1"}, "dot": true, "guides": ["P_1", "Q_1"]}, {"at": {"curve": "D", "line": "P2"}, "dot": true, "guides": ["P_2", "Q_2"]}],
+ "areas": [{"kind": "tr_gain", "pattern": "dots", "label": "+"}, {"kind": "tr_loss", "pattern": "hatch", "label": "−"}],
+ "moves": {"price": true, "quantity": true},
+ "expect": {"price": "up", "quantity": "down", "tr": "up"},
+ "geom": {"size": [3.2, 2.7],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 92],
+  "curves": {"D": {"p": [30, 86], "q": [66, 20], "draw": [30, 66], "end": "right", "dy": -1.5}},
+  "lines": {"P1": 34, "P2": 62}}
+}

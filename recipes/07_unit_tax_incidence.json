@@ -1,0 +1,19 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "07_unit_tax_incidence",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S", "role": "supply", "name": "S"}],
+ "tax": {"kind": "unit_tax", "on": "S", "id": "St", "size": "medium", "name": "S+t"},
+ "points": [{"at": ["D", "S"], "guides": ["P_e", "Q_0"], "dot": true}, {"at": ["D", "St"], "guides": ["P_c", "Q_1"], "id": "E1", "dot": true}, {"at": {"curve": "S", "atQuantityOf": "E1"}, "dot": true, "guides": ["P_p", null]}],
+ "areas": [{"kind": "tax_revenue", "pattern": "hatch"}, {"kind": "consumers_burden", "label": "A"}, {"kind": "producers_burden", "label": "B"}],
+ "gaps": [{"kind": "tax_per_unit", "label": "t"}],
+ "notes": [{"en": "A: consumers' burden", "zh": "A：消費者負擔"}, {"en": "B: producers' burden", "zh": "B：生產者負擔"}, {"en": "A + B: tax revenue", "zh": "A + B：政府稅收"}],
+ "expect": {"price": "up", "quantity": "down"},
+ "geom": {"size": [3.4, 2.8],
+  "origin": [14, 12],
+  "xEnd": [92, 12],
+  "yEnd": [14, 92],
+  "curves": {"D": {"p": [22, 84], "q": [84, 26], "draw": [22, 72], "end": "right", "dy": -1.5}, "S": {"p": [22, 26], "q": [84, 72], "draw": [22, 84], "end": "right", "dy": 1.0}, "St": {"draw": [44.65384615384616, 74], "end": "right", "dy": 1.5}},
+  "tax": 20}
+}

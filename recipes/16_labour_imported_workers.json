@@ -1,0 +1,18 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "16_labour_imported_workers",
+ "family": "market",
+ "axes": "labour",
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S", "role": "supply", "name": "S", "note": {"key": "local"}}],
+ "shifts": [{"of": "S", "id": "S2", "dir": "right", "size": "large", "name": "S’", "note": {"key": "local_imported"}, "arrow": false}],
+ "points": [{"at": ["D", "S"], "id": "E1", "dot": false, "guides": ["W_1", "Q_1"], "guideStyle": ["dashed", "solid"]}, {"at": ["D", "S2"], "id": "E2", "dot": false, "guides": ["W_2", null]}, {"at": {"curve": "S", "atPriceOf": "E2"}, "id": "L2", "dot": false, "guides": [null, "Q_2"], "guideStyle": "solid"}],
+ "moves": {"price": true, "quantity": ["E1", "L2"]},
+ "expect": {"price": "down"},
+ "geom": {"size": [3.4, 2.7],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 92],
+  "curves": {"D": {"p": [24, 84], "m": -1, "draw": [24, 80], "end": "right", "dy": -1.5}, "S": {"p": [16, 20], "m": 1, "draw": [16, 74], "end": "right", "dy": 1.5}, "S2": {"draw": [38, 84], "end": "right", "dy": 1.5}},
+  "shifts": {"S2": {"dx": 26}}}
+}

@@ -1,0 +1,15 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "09_externality_overproduction",
+ "family": "externality",
+ "axes": {"x": {"key": "quantity"}, "y": {"key": "price_cost"}},
+ "curves": [{"id": "D", "role": "demand", "name": "D = MPB = MSB"}, {"id": "MPC", "role": "mpc", "name": "MPC"}, {"id": "MSC", "role": "msc", "name": "MSC"}],
+ "points": [{"at": ["D", "MPC"], "guides": ["P_m", "Q_m"], "dot": true}, {"at": ["D", "MSC"], "guides": ["P^*", "Q^*"], "dot": true}],
+ "areas": [{"kind": "dwl", "pattern": "hatch", "label": {"key": "dwl"}}],
+ "geom": {"size": [3.4, 2.7],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 94],
+  "curves": {"D": {"p": [12, 86], "q": [80, 24], "draw": [12, 80], "end": "right", "dy": -1.5}, "MPC": {"p": [12, 16], "q": [80, 70], "draw": [12, 80], "end": "right", "dy": 0}, "MSC": {"p": [12, 32], "q": [80, 86], "draw": [12, 76], "end": "right", "dy": 0}}}
+}

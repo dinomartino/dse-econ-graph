@@ -1,0 +1,17 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "06_tr_supply_decrease_inelastic",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "slope": "steep", "name": "D"}, {"id": "S1", "role": "supply", "name": "S_1"}],
+ "shifts": [{"of": "S1", "id": "S2", "dir": "left", "size": "large", "name": "S_2"}],
+ "points": [{"at": ["D", "S1"], "guides": ["P_1", "Q_1"], "dot": true}, {"at": ["D", "S2"], "guides": ["P_2", "Q_2"], "dot": true}],
+ "areas": [{"kind": "tr_gain", "pattern": "dots", "label": "+"}, {"kind": "tr_loss", "pattern": "hatch", "label": "−"}],
+ "expect": {"price": "up", "quantity": "down", "tr": "up"},
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [90, 12],
+  "yEnd": [12, 90],
+  "curves": {"D": {"p": [34, 84], "q": [62, 20], "draw": [34, 62], "end": "right", "dy": -1.5}, "S1": {"p": [20, 24], "q": [84, 72], "draw": [20, 84], "end": "right", "dy": 1.0}, "S2": {"draw": [20, 60], "end": "top", "dx": 0}},
+  "shifts": {"S2": {"dx": -30}}}
+}

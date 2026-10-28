@@ -1,0 +1,317 @@
+{
+ "$comment": "Words a recipe may use by key, English and Traditional Chinese (HK wording, EDB glossary; SKILL.md 'English and Chinese'). Keys are a contract: add, never rename or remove.",
+ "terms": {
+  "quantity": {
+   "en": "Quantity",
+   "zh": "數量"
+  },
+  "price": {
+   "en": "Price",
+   "zh": "價格"
+  },
+  "price_dollars": {
+   "en": "Price ($)",
+   "zh": "價格 ($)"
+  },
+  "price_cost": {
+   "en": "Price / cost",
+   "zh": "價格／成本"
+  },
+  "unit_price": {
+   "en": "Unit price",
+   "zh": "單位價格"
+  },
+  "quantity_transacted": {
+   "en": "Quantity transacted",
+   "zh": "交易量"
+  },
+  "wage_rate": {
+   "en": "Wage rate",
+   "zh": "工資率"
+  },
+  "number_of_workers": {
+   "en": "Number of workers",
+   "zh": "工人數目"
+  },
+  "real_output": {
+   "en": "Real output",
+   "zh": "實質產出"
+  },
+  "price_level": {
+   "en": "Price level",
+   "zh": "物價水平"
+  },
+  "consumer_goods": {
+   "en": "Consumer goods",
+   "zh": "消費品"
+  },
+  "capital_goods": {
+   "en": "Capital goods",
+   "zh": "資本品"
+  },
+  "rental": {
+   "en": "Rental",
+   "zh": "租金"
+  },
+  "taxi_licence_price": {
+   "en": "Price of a taxi licence",
+   "zh": "的士牌照價格"
+  },
+  "taxi_licence_quantity": {
+   "en": "Quantity of taxi licences",
+   "zh": "的士牌照數量"
+  },
+  "shortage": {
+   "en": "shortage",
+   "zh": "短缺"
+  },
+  "surplus": {
+   "en": "surplus",
+   "zh": "盈餘"
+  },
+  "excess_demand": {
+   "en": "excess demand",
+   "zh": "超額需求"
+  },
+  "excess_supply": {
+   "en": "excess supply",
+   "zh": "超額供應"
+  },
+  "unemployment": {
+   "en": "unemployment",
+   "zh": "失業"
+  },
+  "deflationary_gap": {
+   "en": "deflationary gap",
+   "zh": "通縮缺口"
+  },
+  "inflationary_gap": {
+   "en": "inflationary gap",
+   "zh": "通脹缺口"
+  },
+  "full_employment": {
+   "en": "full employment",
+   "zh": "充分就業"
+  },
+  "consumer_surplus": {
+   "en": "Consumer surplus",
+   "zh": "消費者盈餘"
+  },
+  "producer_surplus": {
+   "en": "Producer surplus",
+   "zh": "生產者盈餘"
+  },
+  "total_social_surplus": {
+   "en": "Total social surplus",
+   "zh": "總社會盈餘"
+  },
+  "dwl": {
+   "en": "Deadweight loss",
+   "zh": "無謂損失"
+  },
+  "original_dwl": {
+   "en": "Original deadweight loss",
+   "zh": "原有無謂損失"
+  },
+  "increase_in_dwl": {
+   "en": "Increase in deadweight loss",
+   "zh": "無謂損失增加"
+  },
+  "reduction_in_dwl": {
+   "en": "Reduction in deadweight loss",
+   "zh": "無謂損失減少"
+  },
+  "tax_revenue": {
+   "en": "tax revenue",
+   "zh": "政府稅收"
+  },
+  "tax": {
+   "en": "tax",
+   "zh": "稅"
+  },
+  "consumers_burden": {
+   "en": "consumers' burden",
+   "zh": "消費者負擔"
+  },
+  "producers_burden": {
+   "en": "producers' burden",
+   "zh": "生產者負擔"
+  },
+  "buyers_burden": {
+   "en": "Buyers' burden",
+   "zh": "買家負擔"
+  },
+  "sellers_burden": {
+   "en": "Sellers' burden",
+   "zh": "賣家負擔"
+  },
+  "consumer_benefit": {
+   "en": "Consumer benefit",
+   "zh": "消費者得益"
+  },
+  "producer_benefit": {
+   "en": "Producer benefit",
+   "zh": "生產者得益"
+  },
+  "subsidy": {
+   "en": "Subsidy",
+   "zh": "津貼"
+  },
+  "per_unit_subsidy": {
+   "en": "Per-unit subsidy",
+   "zh": "從量津貼"
+  },
+  "unit_tax": {
+   "en": "Unit tax",
+   "zh": "從量稅"
+  },
+  "total_revenue": {
+   "en": "Total revenue",
+   "zh": "總收入"
+  },
+  "total_expenditure": {
+   "en": "Total expenditure",
+   "zh": "總開支"
+  },
+  "increase_in_tr": {
+   "en": "Increase in TR",
+   "zh": "總收入增加"
+  },
+  "decrease_in_tr": {
+   "en": "Decrease in total revenue",
+   "zh": "總收入減少"
+  },
+  "fall_in_sales_revenue": {
+   "en": "Fall in sales revenue",
+   "zh": "銷售收入減少"
+  },
+  "increase_in_rental_payment": {
+   "en": "Increase in total rental payment",
+   "zh": "總租金支出增加"
+  },
+  "decrease_in_total_social_surplus": {
+   "en": "Decrease in total social surplus",
+   "zh": "總社會盈餘減少"
+  },
+  "gain": {
+   "en": "gain",
+   "zh": "增加"
+  },
+  "loss": {
+   "en": "loss",
+   "zh": "減少"
+  },
+  "external_cost": {
+   "en": "external cost",
+   "zh": "外部成本"
+  },
+  "external_benefit": {
+   "en": "external benefit",
+   "zh": "外部利益"
+  },
+  "price_ceiling": {
+   "en": "Price ceiling",
+   "zh": "價格上限"
+  },
+  "price_floor": {
+   "en": "Price floor",
+   "zh": "價格下限"
+  },
+  "minimum_wage": {
+   "en": "Minimum wage",
+   "zh": "最低工資"
+  },
+  "quota": {
+   "en": "Quota",
+   "zh": "配額"
+  },
+  "equilibrium_price": {
+   "en": "Equilibrium price",
+   "zh": "均衡價格"
+  },
+  "demand": {
+   "en": "Demand",
+   "zh": "需求"
+  },
+  "supply": {
+   "en": "Supply",
+   "zh": "供應"
+  },
+  "marginal_private_cost": {
+   "en": "Marginal private cost",
+   "zh": "邊際私人成本"
+  },
+  "marginal_social_cost": {
+   "en": "Marginal social cost",
+   "zh": "邊際社會成本"
+  },
+  "marginal_private_benefit": {
+   "en": "Marginal private benefit",
+   "zh": "邊際私人利益"
+  },
+  "marginal_social_benefit": {
+   "en": "Marginal social benefit",
+   "zh": "邊際社會利益"
+  },
+  "ppc": {
+   "en": "Production possibilities curve",
+   "zh": "生產可能曲線"
+  },
+  "aggregate_demand": {
+   "en": "Aggregate demand",
+   "zh": "總需求"
+  },
+  "aggregate_supply": {
+   "en": "Aggregate supply",
+   "zh": "總供應"
+  },
+  "local": {
+   "en": "Local",
+   "zh": "本地"
+  },
+  "local_imported": {
+   "en": "Local + imported",
+   "zh": "本地＋輸入"
+  },
+  "efficient": {
+   "en": "efficient",
+   "zh": "有效率"
+  },
+  "unemployment_inefficiency": {
+   "en": "unemployment / inefficiency",
+   "zh": "失業／沒有效率"
+  },
+  "unattainable": {
+   "en": "unattainable",
+   "zh": "無法達到"
+  },
+  "equals_area": {
+   "en": "= area",
+   "zh": "= 面積"
+  },
+  "q": {
+   "en": "Q",
+   "zh": "Q"
+  },
+  "p": {
+   "en": "P",
+   "zh": "P"
+  },
+  "excess_demand_short": {
+   "en": "ex dd",
+   "zh": "超額需求"
+  },
+  "excess_demand_abbr": {
+   "en": "Ex. D",
+   "zh": "超額需求"
+  },
+  "cs_equals": {
+   "en": "C.S. = Consumer surplus",
+   "zh": "C.S. = 消費者盈餘"
+  },
+  "ps_equals": {
+   "en": "P.S. = Producer surplus",
+   "zh": "P.S. = 生產者盈餘"
+  }
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "04_vertical_supply_shortage",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S", "role": "supply", "slope": "vertical", "name": "S"}],
+ "lines": [{"id": "P", "kind": "price_ceiling", "level": "below_eq", "name": "P", "full": true}],
+ "points": [{"at": ["D", "S"], "guides": ["P_e", "Q_0"], "dot": true}, {"at": {"curve": "D", "line": "P"}, "dot": false, "guides": [null, "Q_d"]}],
+ "gaps": [{"kind": "shortage", "at": "P", "label": {"key": "shortage"}}],
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 90],
+  "curves": {"D": {"p": [18, 84], "q": [82, 24], "draw": [18, 82], "end": "right", "dy": -1.5}, "S": {"x": 46, "draw": [12, 82], "end": "top"}},
+  "lines": {"P": 32}}
+}

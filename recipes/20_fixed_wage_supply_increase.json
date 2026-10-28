@@ -1,0 +1,19 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "20_fixed_wage_supply_increase",
+ "family": "market",
+ "axes": "labour",
+ "curves": [{"id": "D", "role": "demand", "name": "D_0"}, {"id": "S0", "role": "supply", "name": "S_0"}],
+ "shifts": [{"of": "S0", "id": "S1", "dir": "right", "size": "large", "name": "S_1"}],
+ "lines": [{"id": "W0", "kind": "fixed_price", "level": "below_eq", "name": "W_0", "full": true}],
+ "points": [{"at": {"curve": "S0", "line": "W0"}, "dot": false, "guides": [null, "Q_0"], "guideStyle": "solid"}, {"at": {"curve": "S1", "line": "W0"}, "dot": false, "guides": [null, "Q_1"], "guideStyle": "solid"}, {"at": {"curve": "D", "line": "W0"}, "dot": false, "guides": [null, "Q_d"], "guideStyle": "solid"}],
+ "gaps": [{"kind": "excess_demand", "at": "W0", "between": ["D", "S0"], "label": {"en": "ex dd_0", "zh": "超額需求_0"}}, {"kind": "excess_demand", "at": "W0", "between": ["D", "S1"], "label": {"en": "ex dd_1", "zh": "超額需求_1"}}],
+ "geom": {"size": [3.5, 2.7],
+  "origin": [12, 12],
+  "xEnd": [94, 12],
+  "yEnd": [12, 92],
+  "curves": {"D": {"p": [84, 36], "m": -0.45, "draw": [20, 90], "end": "right", "dy": -1.5}, "S0": {"p": [20, 36], "m": 1.6, "draw": [10, 50], "end": "top"}, "S1": {"draw": [46, 86], "end": "top"}},
+  "shifts": {"S1": {"dx": 36}},
+  "lines": {"W0": 36}}
+}

@@ -1,0 +1,15 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "32_consumer_producer_surplus",
+ "family": "market",
+ "axes": {"x": {"key": "quantity"}, "y": {"key": "price_dollars"}},
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S", "role": "supply", "name": "S"}],
+ "areas": [{"kind": "consumer_surplus", "label": "C.S."}, {"kind": "producer_surplus", "label": "P.S."}],
+ "notes": [{"key": "cs_equals"}, {"key": "ps_equals"}],
+ "geom": {"size": [3.6, 2.6],
+  "origin": [12, 12],
+  "xEnd": [92, 12],
+  "yEnd": [12, 92],
+  "curves": {"D": {"p": [12, 86], "q": [70, 20], "draw": [12, 70], "end": "right", "dy": -1.5}, "S": {"p": [12, 34], "q": [76, 80], "draw": [12, 76], "end": "right", "dy": 1.5}}}
+}

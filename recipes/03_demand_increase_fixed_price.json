@@ -1,0 +1,18 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "03_demand_increase_fixed_price",
+ "family": "market",
+ "curves": [{"id": "D0", "role": "demand", "name": "D_0"}, {"id": "S", "role": "supply", "name": "S"}],
+ "shifts": [{"of": "D0", "id": "D1", "dir": "right", "size": "medium", "name": "D_1"}],
+ "lines": [{"id": "P", "kind": "fixed_price", "level": "below_eq", "name": "P", "full": true}],
+ "points": [{"at": {"curve": "S", "line": "P"}, "dot": false, "guides": [null, "Q_s"]}, {"at": {"curve": "D0", "line": "P"}, "dot": false, "guides": [null, "Q_{d0}"]}, {"at": {"curve": "D1", "line": "P"}, "dot": false, "guides": [null, "Q_{d1}"]}],
+ "gaps": [{"kind": "shortage", "at": "P", "between": ["D0", "S"], "label": "a"}, {"kind": "shortage", "at": "P", "between": ["D1", "S"], "label": "b"}],
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [94, 12],
+  "yEnd": [12, 90],
+  "curves": {"D0": {"p": [14, 82], "q": [62, 34], "draw": [21, 72], "end": "top"}, "D1": {"draw": [35, 86], "end": "top"}, "S": {"p": [20, 22], "q": [74, 76], "draw": [20, 74], "end": "right", "dy": 1.5}},
+  "shifts": {"D1": {"dx": 14}},
+  "lines": {"P": 34}}
+}

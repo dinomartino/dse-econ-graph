@@ -1,0 +1,17 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "33_mc_rise_social_surplus",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "name": "D = MB"}, {"id": "S0", "role": "supply", "name": "S_0 = MC_0"}],
+ "shifts": [{"of": "S0", "id": "S1", "dir": "up", "size": "medium", "name": "S_1 = MC_1"}],
+ "points": [{"at": ["D", "S0"], "name": "E_0"}, {"at": ["D", "S1"], "name": "E_1"}, {"at": {"curve": "S0", "axis": "price"}, "name": "a", "dot": false}, {"at": {"curve": "S1", "axis": "price"}, "name": "b", "dot": false}],
+ "areas": [{"kind": "ts_change", "between": ["E_0", "E_1"], "pattern": "hatch", "key": true, "label": {"key": "decrease_in_total_social_surplus"}, "corners": "abE_1E_0"}],
+ "expect": {"price": "up", "quantity": "down"},
+ "geom": {"size": [3.4, 2.8],
+  "origin": [12, 12],
+  "xEnd": [92, 12],
+  "yEnd": [12, 94],
+  "curves": {"D": {"p": [12, 88], "q": [80, 16], "draw": [12, 74], "end": "right", "dy": -1.5}, "S0": {"p": [12, 18], "m": 0.75, "draw": [12, 80], "end": "right"}, "S1": {"draw": [12, 72], "end": "right"}},
+  "shifts": {"S1": {"dy": 18}}}
+}

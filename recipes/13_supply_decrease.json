@@ -1,0 +1,17 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "13_supply_decrease",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S1", "role": "supply", "name": "S"}],
+ "shifts": [{"of": "S1", "id": "S2", "dir": "left", "size": "medium", "name": "S’"}],
+ "points": [{"at": ["D", "S1"], "name": "E_1", "guides": ["P_1", "Q_1"]}, {"at": ["D", "S2"], "name": "E_2", "guides": ["P_2", "Q_2"]}],
+ "moves": {"price": true, "quantity": true},
+ "expect": {"price": "up", "quantity": "down"},
+ "geom": {"size": [3.4, 2.7],
+  "origin": [12, 12],
+  "xEnd": [90, 12],
+  "yEnd": [12, 92],
+  "curves": {"D": {"p": [18, 78], "q": [84, 22], "draw": [18, 84], "end": "right", "dy": -1.5}, "S1": {"p": [36, 18], "q": [82, 78], "draw": [36, 82], "end": "top"}, "S2": {"draw": [18, 60], "end": "top"}},
+  "shifts": {"S2": {"dx": -22}}}
+}

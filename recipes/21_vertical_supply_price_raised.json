@@ -1,0 +1,16 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "21_vertical_supply_price_raised",
+ "family": "market",
+ "curves": [{"id": "D", "role": "demand", "name": "D"}, {"id": "S", "role": "supply", "slope": "vertical", "name": "S"}],
+ "lines": [{"id": "P1", "kind": "fixed_price", "level": "below_eq", "name": "P_1", "full": true}, {"id": "P2", "kind": "fixed_price", "level": "below_eq", "name": "P_2", "above": "P1", "from": "P1", "full": true}],
+ "points": [{"at": {"curve": "S", "axis": "quantity"}, "name": "Q_0", "dot": false}],
+ "gaps": [{"kind": "excess_demand", "at": "P1", "label": {"en": "Ex. D_1", "zh": "超額需求_1"}}, {"kind": "excess_demand", "at": "P2", "label": {"en": "Ex. D_2", "zh": "超額需求_2"}}],
+ "geom": {"size": [3.2, 2.6],
+  "origin": [14, 12],
+  "xEnd": [90, 12],
+  "yEnd": [14, 90],
+  "curves": {"D": {"p": [22, 84], "q": [86, 24], "draw": [22, 86], "end": "right", "dy": -1.5}, "S": {"x": 34, "draw": [12, 84], "end": "top"}},
+  "lines": {"P1": 28, "P2": 48}}
+}

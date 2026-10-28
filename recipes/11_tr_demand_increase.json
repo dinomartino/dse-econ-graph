@@ -1,0 +1,19 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "11_tr_demand_increase",
+ "family": "market",
+ "axes": {"x": {"key": "q"}, "y": {"key": "p"}},
+ "curves": [{"id": "S", "role": "supply", "name": "S"}, {"id": "D0", "role": "demand", "name": "D_0"}],
+ "shifts": [{"of": "D0", "id": "D1", "dir": "right", "size": "medium", "name": "D_1"}],
+ "points": [{"at": ["D0", "S"], "dot": false, "guides": ["P_0", "Q_0"]}, {"at": ["D1", "S"], "dot": false, "guides": ["P_1", "Q_1"]}],
+ "areas": [{"kind": "tr_change", "pattern": "hatch", "label": {"key": "increase_in_tr"}, "key": true}],
+ "moves": {"price": true, "quantity": true},
+ "expect": {"price": "up", "quantity": "up", "tr": "up"},
+ "geom": {"size": [3.4, 2.7],
+  "origin": [12, 12],
+  "xEnd": [90, 12],
+  "yEnd": [12, 92],
+  "curves": {"S": {"p": [20, 18], "q": [80, 78], "draw": [20, 80], "end": "right", "dy": 1.5}, "D0": {"p": [16, 80], "q": [62, 20], "draw": [16, 62], "end": "right", "dy": -1.5}, "D1": {"draw": [38, 82], "end": "right", "dy": -1.5}},
+  "shifts": {"D1": {"dx": 22}}}
+}

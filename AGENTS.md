@@ -64,6 +64,10 @@ teacher ──► Grok Skill / Claude Skill (dse-econ-graph.zip)
 | `chat/meta.json` | Per diagram id (templates and variants): `caption`, `alt`, `shows_zh`, `labels`, en + zh. The build stops if an id lacks an entry. | yes |
 | `download/chat-catalogue.json` | Every template and variant with its texts, PNG paths, sizes and sha256. Read by DSEconMentor's chat tutor through a sync pinned to a commit. Not a teacher download (not in `FILES`). | **never by hand** |
 | `tools/build.py` | Syncs SKILL.md, renders gallery, runs every template exactly as pasted from SKILL.md under the library (the "pasted test"), writes `download/`. | yes |
+| `recipes/schema.json`, `recipes/glossary.json` | The diagram recipe format (v1) and its words (EN + 繁中) for DSEconMentor's chat renderer. See `recipes/README.md`. | yes (add, never rename) |
+| `recipes/<id>.json`, `recipes/fit.json` | One recipe per catalogue id with `geom` (the template's own numbers); `fit.json` says which ones the schema covers fully. | yes |
+| `recipes/golden/` | Every template's picture as primitives, traced with fixed fonts by `tools/trace.py`. | **never by hand** |
+| `tools/trace.py`, `tools/recipes.py` | Write / check the golden scenes; check every recipe against its scene. Both run in `build.py`. | yes |
 | `tools/release.py` | Pushes and creates the GitHub release. | yes |
 
 ## Where the diagrams come from
@@ -115,6 +119,15 @@ before unzipping.
    DSEconMentor saves them in chat messages, so never rename or remove one.
    A new template or variant needs a complete `chat/meta.json` entry
    (Traditional Chinese, HK wording, the glossary in SKILL.md).
+
+9. **Recipes match their templates.** Every catalogue id has `recipes/<id>.json`
+   and a `recipes/fit.json` entry. Changing a template means changing its
+   recipe in the same commit (names, levels, `geom`) and re-tracing
+   (`python tools/build.py`, or `python tools/trace.py` after a `--no-render`
+   build); `tools/recipes.py` must pass. Golden scenes need Liberation Serif and
+   Noto Serif CJK TC installed (the trace refuses other fonts). Recipes, the
+   schema and the glossary are chat-only: never in SKILL.md, the zips, `FILES`
+   or `gallery[]`. Schema fields and glossary keys are a contract like ids.
 
 ## Release (only when the maintainer asks)
 

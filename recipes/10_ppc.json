@@ -1,0 +1,15 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "10_ppc",
+ "family": "ppc",
+ "curves": [{"id": "PPC0", "role": "ppc", "name": "PPC_0"}],
+ "shifts": [{"of": "PPC0", "id": "PPC1", "dir": "right", "size": "medium", "name": "PPC_1"}],
+ "points": [{"at": {"ppc": "PPC0", "where": "inside"}, "name": "A"}, {"at": {"ppc": "PPC0", "where": "on"}, "name": "B"}, {"at": {"ppc": "PPC0", "where": "outside"}, "name": "C"}],
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [90, 12],
+  "yEnd": [12, 98],
+  "curves": {"PPC0": {"ellipse": {"center": [12, 12], "rx": 55.0, "ry": 60.0}}, "PPC1": {"ellipse": {"center": [12, 12], "rx": 74.0, "ry": 80.72727272727273}}},
+  "points": {"A": [33.2119911196558, 39.57759995228321], "B": [47.353318532759666, 57.96266658713868], "C": [53.3633826833288, 65.77631990695224]}}
+}

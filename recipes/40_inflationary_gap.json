@@ -1,0 +1,18 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "40_inflationary_gap",
+ "family": "adas",
+ "curves": [{"id": "AD0", "role": "ad", "name": "AD_0"}, {"id": "SRAS", "role": "sras", "name": "SRAS"}, {"id": "LRAS", "role": "lras", "slope": "vertical", "name": "LRAS", "at": {"leftOf": ["AD0", "SRAS"]}}],
+ "shifts": [{"of": "AD0", "id": "AD1", "dir": "left", "size": {"onto": "LRAS"}, "name": "AD_1"}],
+ "points": [{"at": ["AD0", "SRAS"], "name": "E_0", "guides": ["P_0", "Y_0"]}, {"at": ["AD1", "LRAS"], "name": "E_1", "guides": ["P_1", null]}, {"at": {"curve": "LRAS", "axis": "quantity"}, "name": "Y_f", "dot": false}],
+ "gaps": [{"kind": "inflationary_gap", "between": ["AD0", "SRAS"], "label": "gap"}],
+ "notes": [{"en": "gap = inflationary gap", "zh": "gap = 通脹缺口"}],
+ "moves": {"price": true, "quantity": true},
+ "expect": {"price_level": "down", "output": "down", "gap": "inflationary"},
+ "geom": {"size": [3.2, 2.6],
+  "origin": [12, 12],
+  "xEnd": [88, 12],
+  "yEnd": [12, 90],
+  "curves": {"SRAS": {"p": [20, 30], "m": 0.6, "draw": [20, 84], "end": "right", "dy": 1.5}, "LRAS": {"x": 42, "draw": [12, 86], "end": "top"}, "AD0": {"p": [64, 56.4], "m": -1.5, "draw": [50, 78], "end": "right", "dy": -1.5}, "AD1": {"p": [42, 43.2], "m": -1.5, "draw": [26, 54], "end": "top"}}}
+}

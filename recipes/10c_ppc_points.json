@@ -1,0 +1,15 @@
+{
+ "v": 1,
+ "lang": "en",
+ "base": "10c_ppc_points",
+ "family": "ppc",
+ "curves": [{"id": "PPC", "role": "ppc", "name": "PPC"}],
+ "points": [{"at": {"ppc": "PPC", "where": "inside"}, "name": "A"}, {"at": {"ppc": "PPC", "where": "on"}, "name": "B"}, {"at": {"ppc": "PPC", "where": "outside"}, "name": "C"}],
+ "notes": [{"en": "A: unemployment / inefficiency", "zh": "A：失業／沒有效率"}, {"en": "B: efficient", "zh": "B：有效率"}, {"en": "C: unattainable", "zh": "C：無法達到"}],
+ "geom": {"size": [3.4, 2.6],
+  "origin": [12, 12],
+  "xEnd": [90, 12],
+  "yEnd": [12, 98],
+  "curves": {"PPC": {"ellipse": {"center": [12, 12], "rx": 55.0, "ry": 60.0}}},
+  "points": {"A": [33.2119911196558, 39.57759995228321], "B": [47.353318532759666, 57.96266658713868], "C": [56.19164816594958, 69.45333323392336]}}
+}
