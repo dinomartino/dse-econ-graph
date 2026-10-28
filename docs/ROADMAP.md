@@ -43,6 +43,12 @@ Run the test in [`grok-test.md`](grok-test.md) and record the answers here.
 
 ## Next
 
+- [ ] **Release with the batch** (chat catalogue, `title_zh` / `topic` in the
+      gallery): the next version's CHANGELOG entry, then `tools/release.py`,
+      when the maintainer asks. The variant PNGs in `gallery/chat/` were
+      rendered on Linux (Liberation Serif, not Times New Roman); a build on
+      the maintainer's Mac re-renders them in Times, which changes their
+      sha256 in the catalogue (fine: DSEconMentor pins a commit).
 - [ ] Test the new S&D and AD-AS templates against real questions in Grok:
       paste 5 LQs per topic from KP_ECON and compare with the scheme images.
 - [ ] Watch SKILL.md size (~125 KB). If ChatGPT or Grok misses parts,
@@ -51,8 +57,6 @@ Run the test in [`grok-test.md`](grok-test.md) and record the answers here.
 - [ ] Run the 11 templates' typical questions through Grok and keep a
       small "Grok results" log (question → OK / what went wrong). Turn
       repeated mistakes into rules in SKILL.md.
-- [ ] Chinese titles for the gallery (manifest `gallery[].title` is
-      English only), e.g. a `zh:` line in each example's docstring.
 - [ ] Screenshots of the Grok setup steps for the website (EN + 中文 UI).
 
 ## Later / ideas
@@ -61,6 +65,11 @@ Run the test in [`grok-test.md`](grok-test.md) and record the answers here.
 - [ ] Shrink the library for pasting (strip docstrings in the SKILL.md copy).
 
 ## Done
+
+- 2026-10-27 (unreleased): `download/chat-catalogue.json` for DSEconMentor's
+  chat tutor (43 templates + 10 chat-only variants in `chat/variants/`,
+  texts in `chat/meta.json`); Chinese gallery titles (`gallery[].title_zh`)
+  and `topic` in the manifest; `build.py --no-render`.
 
 - 2026-10-02 v1.5.0: 32 new S&D and AD-AS templates mirroring the KP_ECON
   answers (43 in all), full template code and a topic index in SKILL.md,

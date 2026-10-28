@@ -164,6 +164,7 @@ The full list, with the past-paper questions each template matches, is in
 | **Claude Code** | `git clone https://github.com/dinomartino/dse-econ-graph ~/.claude/skills/dse-econ-graph` |
 | **A website** | read [`download/manifest.json`](download/): see [`download/README.md`](download/README.md) |
 | **Your own Python** | `pip install matplotlib pillow`, put `dsegraph.py` beside your script |
+| **DSEconMentor's chat tutor** | reads [`download/chat-catalogue.json`](download/) (every diagram with captions, alt text and labels, plus chat-only variants in [`chat/`](chat/)) through a sync pinned to a commit |
 
 ```python
 from dsegraph import *
@@ -191,7 +192,7 @@ that, it uses an uploaded font file, then any installed font that has
 Chinese, and as a last resort downloads the free Noto Serif TC once.
 
 **Building.** Add a template as `examples/NN_name.py` (copy an existing
-one), then run `python tools/build.py`. It renders the gallery, pastes the
+one) and its entry in `chat/meta.json`, then run `python tools/build.py`. It renders the gallery, pastes the
 library and every template into `SKILL.md`, runs each template as a chat
 AI would paste it, and rewrites `download/`. Project notes and the release
 steps are in [`AGENTS.md`](AGENTS.md).

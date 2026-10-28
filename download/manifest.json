@@ -240,258 +240,344 @@
     {
       "id": "01_price_ceiling_shortage",
       "title": "Price set BELOW equilibrium (price ceiling / fixed low price) -> shortage.",
+      "title_zh": "低於均衡價格的價格上限：短缺",
+      "topic": "Price fixed away from equilibrium",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/01_price_ceiling_shortage_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/01_price_ceiling_shortage_zh.png"
     },
     {
       "id": "02_price_floor_surplus",
       "title": "Minimum wage ABOVE equilibrium in a labour market -> unemployment.",
+      "title_zh": "高於均衡工資的最低工資：失業",
+      "topic": "Labour market",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/02_price_floor_surplus_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/02_price_floor_surplus_zh.png"
     },
     {
       "id": "03_demand_increase_fixed_price",
       "title": "Price fixed BELOW equilibrium; demand increases -> shortage grows.",
+      "title_zh": "價格固定於均衡價格以下而需求增加：短缺擴大",
+      "topic": "Price fixed away from equilibrium",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/03_demand_increase_fixed_price_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/03_demand_increase_fixed_price_zh.png"
     },
     {
       "id": "04_vertical_supply_shortage",
       "title": "Perfectly inelastic (vertical) supply, price set BELOW equilibrium -> shortage.",
+      "title_zh": "垂直供應及低於均衡價格的價格：短缺",
+      "topic": "Price fixed away from equilibrium",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/04_vertical_supply_shortage_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/04_vertical_supply_shortage_zh.png"
     },
     {
       "id": "05_tr_price_change_elastic",
       "title": "Price falls on ELASTIC (flat) demand -> total revenue rises.",
+      "title_zh": "富彈性需求下價格下降：總收入增加",
+      "topic": "Total revenue and elasticity",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/05_tr_price_change_elastic_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/05_tr_price_change_elastic_zh.png"
     },
     {
       "id": "06_tr_supply_decrease_inelastic",
       "title": "Supply decreases on INELASTIC (steep) demand -> total revenue rises.",
+      "title_zh": "缺乏彈性需求下供應減少：總收入增加",
+      "topic": "Total revenue and elasticity",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/06_tr_supply_decrease_inelastic_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/06_tr_supply_decrease_inelastic_zh.png"
     },
     {
       "id": "07_unit_tax_incidence",
       "title": "Per-unit tax: incidence and tax revenue.",
+      "title_zh": "從量稅：稅負分擔及政府稅收",
+      "topic": "Tax, subsidy and quota",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/07_unit_tax_incidence_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/07_unit_tax_incidence_zh.png"
     },
     {
       "id": "08_surplus_deadweight_quota",
       "title": "A quota (Qq) set BELOW the equilibrium quantity (Qe): consumer surplus, producer surplus and deadweight loss.",
+      "title_zh": "低於均衡數量的配額：消費者盈餘、生產者盈餘及無謂損失",
+      "topic": "Tax, subsidy and quota",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/08_surplus_deadweight_quota_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/08_surplus_deadweight_quota_zh.png"
     },
     {
       "id": "09_externality_overproduction",
       "title": "Negative externality in production: overproduction and deadweight loss.",
+      "title_zh": "生產的負外部效應：生產過多及無謂損失",
+      "topic": "Other",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/09_externality_overproduction_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/09_externality_overproduction_zh.png"
     },
     {
       "id": "10_ppc",
       "title": "Production possibilities curve (PPC) and economic growth.",
+      "title_zh": "生產可能曲線：效率、失業及經濟增長",
+      "topic": "Other",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/10_ppc_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/10_ppc_zh.png"
     },
     {
       "id": "11_tr_demand_increase",
       "title": "Demand increases -> price and quantity both rise -> total revenue increases (shade the change only).",
+      "title_zh": "需求增加：總收入的增加",
+      "topic": "Total revenue and elasticity",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/11_tr_demand_increase_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/11_tr_demand_increase_zh.png"
     },
     {
       "id": "12_demand_decrease",
       "title": "Demand decreases -> price and quantity fall.",
+      "title_zh": "需求減少：價格及數量下降",
+      "topic": "Demand and supply: shifts",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/12_demand_decrease_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/12_demand_decrease_zh.png"
     },
     {
       "id": "13_supply_decrease",
       "title": "Supply decreases -> price rises, quantity falls.",
+      "title_zh": "供應減少：價格上升，數量下降",
+      "topic": "Demand and supply: shifts",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/13_supply_decrease_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/13_supply_decrease_zh.png"
     },
     {
       "id": "14_simultaneous_shifts",
       "title": "Demand and supply both increase, demand by MORE -> price rises.",
+      "title_zh": "需求及供應同時增加而需求增幅較大：價格上升",
+      "topic": "Demand and supply: shifts",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/14_simultaneous_shifts_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/14_simultaneous_shifts_zh.png"
     },
     {
       "id": "15_vertical_supply_demand_shift",
       "title": "Fixed stock (vertical supply): supply rises a little, demand rises a lot -> price rises.",
+      "title_zh": "垂直供應稍為增加而需求大幅增加：價格上升",
+      "topic": "Demand and supply: shifts",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/15_vertical_supply_demand_shift_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/15_vertical_supply_demand_shift_zh.png"
     },
     {
       "id": "16_labour_imported_workers",
       "title": "Imported workers: labour supply rises -> wage falls, LOCAL employment falls.",
+      "title_zh": "輸入勞工：工資及本地就業下降",
+      "topic": "Labour market",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/16_labour_imported_workers_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/16_labour_imported_workers_zh.png"
     },
     {
       "id": "17_tr_demand_decrease",
       "title": "Demand decreases -> price and quantity both fall -> total revenue falls (shade the change only).",
+      "title_zh": "需求減少：總收入的減少",
+      "topic": "Total revenue and elasticity",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/17_tr_demand_decrease_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/17_tr_demand_decrease_zh.png"
     },
     {
       "id": "18_tr_price_rise_inelastic",
       "title": "Price rises on INELASTIC (steep) demand -> total revenue rises.",
+      "title_zh": "缺乏彈性需求下價格上升：總收入增加",
+      "topic": "Total revenue and elasticity",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/18_tr_price_rise_inelastic_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/18_tr_price_rise_inelastic_zh.png"
     },
     {
       "id": "19_tr_vertical_supply_increase",
       "title": "Fixed stock (vertical supply) increases on ELASTIC (flat) demand -> total value rises.",
+      "title_zh": "富彈性需求下的士牌照增加：牌照總值上升",
+      "topic": "Total revenue and elasticity",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/19_tr_vertical_supply_increase_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/19_tr_vertical_supply_increase_zh.png"
     },
     {
       "id": "20_fixed_wage_supply_increase",
       "title": "Wage fixed BELOW equilibrium; labour supply increases -> excess demand for labour shrinks.",
+      "title_zh": "工資固定於均衡工資以下而勞工供應增加：超額需求減少",
+      "topic": "Price fixed away from equilibrium",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/20_fixed_wage_supply_increase_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/20_fixed_wage_supply_increase_zh.png"
     },
     {
       "id": "21_vertical_supply_price_raised",
       "title": "Vertical supply; the fixed price is raised but stays below equilibrium -> shortage shrinks.",
+      "title_zh": "垂直供應，固定價格提高但仍低於均衡價格：短缺減少",
+      "topic": "Price fixed away from equilibrium",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/21_vertical_supply_price_raised_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/21_vertical_supply_price_raised_zh.png"
     },
     {
       "id": "22_fixed_price_surplus_revenue_fall",
       "title": "Price fixed ABOVE equilibrium; demand falls -> quantity sold and sales revenue fall.",
+      "title_zh": "價格固定於均衡價格以上而需求減少：銷售收入減少",
+      "topic": "Price fixed away from equilibrium",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/22_fixed_price_surplus_revenue_fall_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/22_fixed_price_surplus_revenue_fall_zh.png"
     },
     {
       "id": "23_fixed_price_rent_increase",
       "title": "Vertical supply; the controlled rent is raised but stays below equilibrium -> total rental payment rises.",
+      "title_zh": "垂直供應而管制租金提高：總租金支出增加",
+      "topic": "Price fixed away from equilibrium",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/23_fixed_price_rent_increase_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/23_fixed_price_rent_increase_zh.png"
     },
     {
       "id": "24_price_ceiling_deadweight_loss",
       "title": "Price ceiling BELOW equilibrium -> shortage and deadweight loss.",
+      "title_zh": "低於均衡價格的價格上限：短缺及無謂損失",
+      "topic": "Price controls and efficiency",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/24_price_ceiling_deadweight_loss_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/24_price_ceiling_deadweight_loss_zh.png"
     },
     {
       "id": "25_price_floor_deadweight_loss",
       "title": "Price (fare / price floor) set ABOVE equilibrium -> excess supply and deadweight loss.",
+      "title_zh": "高於均衡價格的價格下限：超額供應及無謂損失",
+      "topic": "Price controls and efficiency",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/25_price_floor_deadweight_loss_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/25_price_floor_deadweight_loss_zh.png"
     },
     {
       "id": "26_price_ceiling_consumer_surplus_change",
       "title": "Price ceiling BELOW equilibrium -> change in consumer surplus (gain \"+\" and loss \"−\").",
+      "title_zh": "價格上限：消費者盈餘的變化",
+      "topic": "Price controls and efficiency",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/26_price_ceiling_consumer_surplus_change_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/26_price_ceiling_consumer_surplus_change_zh.png"
     },
     {
       "id": "27_price_ceiling_lowered_dwl_increase",
       "title": "A price ceiling is lowered further below equilibrium -> deadweight loss increases.",
+      "title_zh": "價格上限進一步降低：無謂損失增加",
+      "topic": "Price controls and efficiency",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/27_price_ceiling_lowered_dwl_increase_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/27_price_ceiling_lowered_dwl_increase_zh.png"
     },
     {
       "id": "28_unit_subsidy",
       "title": "Per-unit subsidy: S shifts down, buyers pay less, sellers receive more, MC > MB.",
+      "title_zh": "從量津貼：買家支付較少，賣家收取較多",
+      "topic": "Tax, subsidy and quota",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/28_unit_subsidy_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/28_unit_subsidy_zh.png"
     },
     {
       "id": "29_quota_increase",
       "title": "A quota is raised -> price falls, quantity rises, deadweight loss shrinks.",
+      "title_zh": "配額提高：價格下降，無謂損失減少",
+      "topic": "Tax, subsidy and quota",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/29_quota_increase_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/29_quota_increase_zh.png"
     },
     {
       "id": "30_quota_demand_increase",
       "title": "Demand rises under a quota -> quantity stays at the quota, deadweight loss grows.",
+      "title_zh": "配額下需求增加：無謂損失增加",
+      "topic": "Tax, subsidy and quota",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/30_quota_demand_increase_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/30_quota_demand_increase_zh.png"
     },
     {
       "id": "31_unit_tax_burden_dwl",
       "title": "Unit tax on a good with inelastic (steep) demand: buyers bear more, deadweight loss \"a\".",
+      "title_zh": "缺乏彈性需求下的從量稅：買家負擔較多，無謂損失 a",
+      "topic": "Tax, subsidy and quota",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/31_unit_tax_burden_dwl_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/31_unit_tax_burden_dwl_zh.png"
     },
     {
       "id": "32_consumer_producer_surplus",
       "title": "Consumer surplus and producer surplus at the market equilibrium.",
+      "title_zh": "均衡時的消費者盈餘及生產者盈餘",
+      "topic": "Consumer and producer surplus",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/32_consumer_producer_surplus_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/32_consumer_producer_surplus_zh.png"
     },
     {
       "id": "33_mc_rise_social_surplus",
       "title": "Marginal cost rises -> supply shifts up -> total social surplus falls by area abE1E0.",
+      "title_zh": "邊際成本上升：總社會盈餘減少",
+      "topic": "Consumer and producer surplus",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/33_mc_rise_social_surplus_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/33_mc_rise_social_surplus_zh.png"
     },
     {
       "id": "34_ad_increase",
       "title": "Aggregate demand increases -> price level and real output both rise.",
+      "title_zh": "總需求增加：物價水平及實質產出上升",
+      "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/34_ad_increase_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/34_ad_increase_zh.png"
     },
     {
       "id": "35_sras_decrease",
       "title": "Short-run aggregate supply decreases -> price level rises, real output falls.",
+      "title_zh": "短期總供應減少：物價水平上升，實質產出下降",
+      "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/35_sras_decrease_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/35_sras_decrease_zh.png"
     },
     {
       "id": "36_ad_sras_both_decrease",
       "title": "AD and SRAS both decrease -> real output falls; the price level is indeterminate.",
+      "title_zh": "總需求及短期總供應同時減少：實質產出下降，物價水平可升可跌",
+      "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/36_ad_sras_both_decrease_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/36_ad_sras_both_decrease_zh.png"
     },
     {
       "id": "37_lras_ad_increase",
       "title": "Long run: AD increases on a vertical LRAS -> price level rises, real output stays at Yf.",
+      "title_zh": "長期：垂直 LRAS 下總需求增加，只有物價水平上升",
+      "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/37_lras_ad_increase_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/37_lras_ad_increase_zh.png"
     },
     {
       "id": "38_economic_growth",
       "title": "Economic growth: LRAS and AD both increase -> real output rises; P rises if AD grows more.",
+      "title_zh": "經濟增長：長期總供應及總需求同時增加",
+      "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/38_economic_growth_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/38_economic_growth_zh.png"
     },
     {
       "id": "39_deflationary_gap",
       "title": "Deflationary gap narrows: AD increases -> real output rises towards Yf.",
+      "title_zh": "總需求增加：通縮缺口收窄",
+      "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/39_deflationary_gap_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/39_deflationary_gap_zh.png"
     },
     {
       "id": "40_inflationary_gap",
       "title": "Inflationary gap closed by a fall in AD -> real output falls back to Yf.",
+      "title_zh": "總需求減少：通脹缺口消除",
+      "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/40_inflationary_gap_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/40_inflationary_gap_zh.png"
     },
     {
       "id": "41_self_adjust_deflationary",
       "title": "Deflationary gap closed by market forces: SRAS increases -> price level falls, output rises to Yf.",
+      "title_zh": "市場力量消除通縮缺口：短期總供應增加",
+      "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/41_self_adjust_deflationary_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/41_self_adjust_deflationary_zh.png"
     },
     {
       "id": "42_self_adjust_inflationary",
       "title": "Inflationary gap closed by market forces: SRAS decreases -> price level rises, output falls to Yf.",
+      "title_zh": "市場力量消除通脹缺口：短期總供應減少",
+      "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/42_self_adjust_inflationary_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/42_self_adjust_inflationary_zh.png"
     },
     {
       "id": "43_supply_shock_recovery",
       "title": "Temporary supply shock: SRAS falls (1), then recovers (2) -> P and Y return to P0 and Yf.",
+      "title_zh": "短暫的供應衝擊：短期總供應先減少後回復",
+      "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/43_supply_shock_recovery_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/43_supply_shock_recovery_zh.png"
     }

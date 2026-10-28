@@ -3,6 +3,29 @@
 Why things are the way they are. Newest first. One entry per decision:
 what was decided, why, and what we rejected.
 
+## 2026-10-27 — A catalogue for DSEconMentor's chat tutor, and chat-only variants
+
+- **Decided:** the build also writes `download/chat-catalogue.json`: every
+  template plus chat-only variants, each with an English and Chinese
+  caption, alt text, the marking-scheme points in both languages, the
+  labels drawn in the picture, and its PNGs' paths, sizes and sha256. The
+  texts live in `chat/meta.json`; the build stops if an id lacks one. The
+  manifest's `gallery[]` gains `title_zh` and `topic`.
+- **Chat-only variants** (`chat/variants/`, e.g. `13b_supply_increase`,
+  `09b_positive_externality`, `10c_ppc_points`): simpler or reversed cases
+  students ask about. Rendered into `gallery/chat/`, but never pasted into
+  SKILL.md, the zips or `gallery[]`, so the teacher download stays lean and
+  unchanged.
+- **Why:** the approved plan in DSEconMentor (`docs/GRAPH_SKILL_CHAT_PLAN.md`,
+  maintainer "follow all your recommendations", u-hjnb): the chat tutor shows
+  these pre-rendered diagrams by id from a copy pinned to a commit, and
+  explains with the labels in the picture.
+- **Ids are a contract** from now on (saved in chat messages): never rename
+  or remove one.
+- **Rejected:** the chat model writing its own diagram code (it has no code
+  tool and drew poorly), and putting the variants in SKILL.md (bigger guide
+  for every teacher request).
+
 ## 2026-10-02 — A second zip for ChatGPT (v1.5.1)
 
 - ChatGPT's Upload plugin rejected the main zip: "Plugin archive must

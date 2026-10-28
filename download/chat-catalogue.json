@@ -1,0 +1,4024 @@
+{
+  "schema": 1,
+  "version": "1.5.2",
+  "diagrams": [
+    {
+      "id": "01_price_ceiling_shortage",
+      "variant_of": null,
+      "topic": "Price fixed away from equilibrium",
+      "title": {
+        "en": "Price set BELOW equilibrium (price ceiling / fixed low price) -> shortage.",
+        "zh": "低於均衡價格的價格上限：短缺"
+      },
+      "caption": {
+        "en": "Price ceiling below equilibrium: shortage",
+        "zh": "低於均衡價格的價格上限：短缺"
+      },
+      "use": "a price ceiling / fixed price BELOW equilibrium causes a shortage (CE1991 Q4(c)(i))",
+      "shows": {
+        "en": [
+          "price (P) below the equilibrium price (Pe)",
+          "correct position of the shortage / excess demand (Qs to Qd at P)"
+        ],
+        "zh": [
+          "價格（P）低於均衡價格（Pe）",
+          "短缺／超額需求的正確位置（在 P 由 Qs 至 Qd）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "S",
+          "Pe",
+          "P",
+          "Qs",
+          "Qd",
+          "shortage"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "S",
+          "Pe",
+          "P",
+          "Qs",
+          "Qd",
+          "短缺"
+        ]
+      },
+      "alt": {
+        "en": "Demand curve D and supply curve S cross at the equilibrium price Pe. A price P is fixed below Pe; at P the quantity supplied is Qs and the quantity demanded is Qd, and a brace from Qs to Qd marks the shortage.",
+        "zh": "需求曲線 D 與供應曲線 S 相交於均衡價格 Pe。價格 P 定於 Pe 以下；在 P，供應量為 Qs，需求量為 Qd，由 Qs 至 Qd 的括號標示短缺。"
+      },
+      "png": {
+        "en": "gallery/01_price_ceiling_shortage_en.png",
+        "zh": "gallery/01_price_ceiling_shortage_zh.png"
+      },
+      "size": {
+        "en": [
+          1035,
+          804
+        ],
+        "zh": [
+          984,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "db74362b056e566d8f4dbef82fd6d9a5de2db56ba6af1f29784e631c908b4b63",
+        "zh": "1eaa1cb2b66c8c2f3e2a2398562b664eee9f3cb52038dd66bfb734f3e04d9fb8"
+      }
+    },
+    {
+      "id": "02_price_floor_surplus",
+      "variant_of": null,
+      "topic": "Labour market",
+      "title": {
+        "en": "Minimum wage ABOVE equilibrium in a labour market -> unemployment.",
+        "zh": "高於均衡工資的最低工資：失業"
+      },
+      "caption": {
+        "en": "Minimum wage above equilibrium: unemployment",
+        "zh": "高於均衡工資的最低工資：失業"
+      },
+      "use": "a minimum wage ABOVE the equilibrium wage causes unemployment (excess supply of labour); for its deadweight loss use template 25 (CE1990 Q1(b), DSE2018 Q10(c))",
+      "shows": {
+        "en": [
+          "minimum wage (W_min) above the equilibrium wage (W_e)",
+          "correct position of the excess supply of labour / unemployment (Qd to Qs at W_min)"
+        ],
+        "zh": [
+          "最低工資（Wmin）高於均衡工資（We）",
+          "勞工超額供應／失業的正確位置（在 Wmin 由 Qd 至 Qs）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Number of workers",
+          "Wage rate",
+          "D",
+          "S",
+          "We",
+          "Wmin",
+          "Qd",
+          "Qs",
+          "excess supply"
+        ],
+        "zh": [
+          "工人數目",
+          "工資率",
+          "D",
+          "S",
+          "We",
+          "Wmin",
+          "Qd",
+          "Qs",
+          "超額供應"
+        ]
+      },
+      "alt": {
+        "en": "A labour market with the wage rate on the vertical axis and the number of workers on the horizontal axis. Labour demand D and labour supply S meet at the equilibrium wage We; the minimum wage Wmin is above We, and a brace from Qd to Qs at Wmin marks the excess supply of labour (unemployment).",
+        "zh": "勞工市場，縱軸為工資率，橫軸為工人數目。勞工需求 D 與勞工供應 S 相交於均衡工資 We；最低工資 Wmin 高於 We，在 Wmin 由 Qd 至 Qs 的括號標示勞工的超額供應（失業）。"
+      },
+      "png": {
+        "en": "gallery/02_price_floor_surplus_en.png",
+        "zh": "gallery/02_price_floor_surplus_zh.png"
+      },
+      "size": {
+        "en": [
+          1225,
+          804
+        ],
+        "zh": [
+          1058,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "b656fca9cb909dac8b2ec193209d0af50d2ed24b4deca15beb5ee159a64ee192",
+        "zh": "cefd1e5378c60f9e8d8d75488a3a7bf3454a60c0f1c7f1446c3b874a3c4ad8c3"
+      }
+    },
+    {
+      "id": "03_demand_increase_fixed_price",
+      "variant_of": null,
+      "topic": "Price fixed away from equilibrium",
+      "title": {
+        "en": "Price fixed BELOW equilibrium; demand increases -> shortage grows.",
+        "zh": "價格固定於均衡價格以下而需求增加：短缺擴大"
+      },
+      "caption": {
+        "en": "Fixed price below equilibrium and demand increases: shortage grows",
+        "zh": "價格固定於均衡價格以下而需求增加：短缺擴大"
+      },
+      "use": "price stays fixed below equilibrium while demand rises (or supply falls), so the shortage grows from a to b (DSE2022 Q10(e), CE2003 Q1(a))",
+      "shows": {
+        "en": [
+          "fixed price (P) below the equilibrium price",
+          "rightward shift of demand D0 to D1 (arrow)",
+          "shortage at P: a (before) enlarges to b (after)"
+        ],
+        "zh": [
+          "固定價格（P）低於均衡價格",
+          "需求由 D0 向右移至 D1（箭頭）",
+          "在 P 的短缺：a（之前）擴大至 b（之後）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D0",
+          "D1",
+          "S",
+          "P",
+          "Qs",
+          "Qd0",
+          "Qd1",
+          "a",
+          "b"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D0",
+          "D1",
+          "S",
+          "P",
+          "Qs",
+          "Qd0",
+          "Qd1",
+          "a",
+          "b"
+        ]
+      },
+      "alt": {
+        "en": "The price P is fixed below equilibrium. Demand shifts right from D0 to D1 (arrow) while S is unchanged, so at P the shortage grows from a (Qs to Qd0) to b (Qs to Qd1).",
+        "zh": "價格 P 固定於均衡價格以下。需求由 D0 向右移至 D1（箭頭），S 不變；在 P，短缺由 a（Qs 至 Qd0）擴大至 b（Qs 至 Qd1）。"
+      },
+      "png": {
+        "en": "gallery/03_demand_increase_fixed_price_en.png",
+        "zh": "gallery/03_demand_increase_fixed_price_zh.png"
+      },
+      "size": {
+        "en": [
+          1093,
+          804
+        ],
+        "zh": [
+          1028,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "9435949ba39b70f470a71423d4f872325138507be8ffffad88dbfe810013fe6d",
+        "zh": "c358a8efabb01321772d8294d7b3de4bbaba897e46cc89154395e6bbdcde35cf"
+      }
+    },
+    {
+      "id": "04_vertical_supply_shortage",
+      "variant_of": null,
+      "topic": "Price fixed away from equilibrium",
+      "title": {
+        "en": "Perfectly inelastic (vertical) supply, price set BELOW equilibrium -> shortage.",
+        "zh": "垂直供應及低於均衡價格的價格：短缺"
+      },
+      "caption": {
+        "en": "Vertical supply with a price below equilibrium: shortage",
+        "zh": "垂直供應及低於均衡價格的價格：短缺"
+      },
+      "use": "a fixed stock (tickets, seats, licences, flats, university places) sold at a price below equilibrium (DSE2020 Q11(b), DSEPP Q12(a)(i), DSE2023 Q11(a))",
+      "shows": {
+        "en": [
+          "vertical supply at fixed quantity Q0",
+          "controlled price (P) below the equilibrium price (Pe)",
+          "shortage / excess demand from Q0 to Qd at P"
+        ],
+        "zh": [
+          "供應曲線在固定數量 Q0 垂直",
+          "管制價格（P）低於均衡價格（Pe）",
+          "在 P 由 Q0 至 Qd 的短缺／超額需求"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "S",
+          "Pe",
+          "Q0",
+          "P",
+          "Qd",
+          "shortage"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "S",
+          "Pe",
+          "Q0",
+          "P",
+          "Qd",
+          "短缺"
+        ]
+      },
+      "alt": {
+        "en": "Supply S is vertical at the fixed quantity Q0 and meets demand D at the equilibrium price Pe. The controlled price P is below Pe, and a brace from Q0 to Qd at P marks the shortage.",
+        "zh": "供應 S 在固定數量 Q0 垂直，與需求 D 相交於均衡價格 Pe。管制價格 P 低於 Pe，在 P 由 Q0 至 Qd 的括號標示短缺。"
+      },
+      "png": {
+        "en": "gallery/04_vertical_supply_shortage_en.png",
+        "zh": "gallery/04_vertical_supply_shortage_zh.png"
+      },
+      "size": {
+        "en": [
+          1035,
+          804
+        ],
+        "zh": [
+          984,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "ca4de70fb2c01eb96fbc88bd87052bc8ec4e3de8fe48e548ebd121076ef41dd9",
+        "zh": "c7d429ac89a11331c7787dcae56b293cef79c6cd29f71948e03be23d631805e6"
+      }
+    },
+    {
+      "id": "05_tr_price_change_elastic",
+      "variant_of": null,
+      "topic": "Total revenue and elasticity",
+      "title": {
+        "en": "Price falls on ELASTIC (flat) demand -> total revenue rises.",
+        "zh": "富彈性需求下價格下降：總收入增加"
+      },
+      "caption": {
+        "en": "Price falls on elastic demand: total revenue rises",
+        "zh": "富彈性需求下價格下降：總收入增加"
+      },
+      "use": "a price fall along one ELASTIC demand curve raises total revenue / expenditure; for a price rise on inelastic demand use 18 (CE1993 Q1(a), CE2003 Q9(a))",
+      "shows": {
+        "en": [
+          "flat (elastic) demand curve D",
+          "price falls from P1 to P2, quantity demanded rises from Q1 to Q2",
+          "loss of revenue (P2..P1 x 0..Q1) marked \"-\", gain (Q1..Q2 x 0..P2) marked \"+\"",
+          "gain > loss, so total revenue rises"
+        ],
+        "zh": [
+          "平坦（富彈性）的需求曲線 D",
+          "價格由 P1 下降至 P2，需求量由 Q1 增加至 Q2",
+          "收入損失（P2..P1 × 0..Q1）標示「−」，得益（Q1..Q2 × 0..P2）標示「+」",
+          "得益 > 損失，所以總收入增加"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "P1",
+          "Q1",
+          "P2",
+          "Q2",
+          "+",
+          "−"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "P1",
+          "Q1",
+          "P2",
+          "Q2",
+          "+",
+          "−"
+        ]
+      },
+      "alt": {
+        "en": "A flat (elastic) demand curve D. The price falls from P1 to P2 and the quantity demanded rises from Q1 to Q2; the loss rectangle (P2 to P1, 0 to Q1) is marked − and the larger gain rectangle (Q1 to Q2, 0 to P2) is marked +.",
+        "zh": "平坦（富彈性）的需求曲線 D。價格由 P1 下降至 P2，需求量由 Q1 增加至 Q2；損失的長方形（P2 至 P1，0 至 Q1）標示「−」，較大的得益長方形（Q1 至 Q2，0 至 P2）標示「+」。"
+      },
+      "png": {
+        "en": "gallery/05_tr_price_change_elastic_en.png",
+        "zh": "gallery/05_tr_price_change_elastic_zh.png"
+      },
+      "size": {
+        "en": [
+          1055,
+          804
+        ],
+        "zh": [
+          989,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "662e356147ef74fb69f32fb7692378259c5031e6a1d4b47263e1337804e149b3",
+        "zh": "c2b97adb4dd57f43213d9a6a04bd2f87eb5f222c0753008b10d45bd7a6673fe0"
+      }
+    },
+    {
+      "id": "06_tr_supply_decrease_inelastic",
+      "variant_of": null,
+      "topic": "Total revenue and elasticity",
+      "title": {
+        "en": "Supply decreases on INELASTIC (steep) demand -> total revenue rises.",
+        "zh": "缺乏彈性需求下供應減少：總收入增加"
+      },
+      "caption": {
+        "en": "Supply decreases on inelastic demand: total revenue rises",
+        "zh": "缺乏彈性需求下供應減少：總收入增加"
+      },
+      "use": "a supply shift (cost up, bad harvest; or reversed: subsidy, cost down) with inelastic or elastic demand changes total revenue (CE1994 Q11(b), CE1997 Q11(c), CE2009 Q9(b), DSEPP Q3, DSE2021 Q10(c), CE2000 Q11(b) wage bill)",
+      "shows": {
+        "en": [
+          "steep (inelastic) demand curve D",
+          "supply decreases: S1 shifts left to S2 (shift arrow)",
+          "price rises P1 -> P2, quantity falls Q1 -> Q2",
+          "gain (P1..P2 x 0..Q2) marked \"+\", loss (Q2..Q1 x 0..P1) marked \"-\"",
+          "gain > loss, so total revenue rises"
+        ],
+        "zh": [
+          "陡峭（缺乏彈性）的需求曲線 D",
+          "供應減少：S1 向左移至 S2（箭頭）",
+          "價格由 P1 上升至 P2，數量由 Q1 減少至 Q2",
+          "得益（P1..P2 × 0..Q2）標示「+」，損失（Q2..Q1 × 0..P1）標示「−」",
+          "得益 > 損失，所以總收入增加"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "S1",
+          "S2",
+          "P1",
+          "Q1",
+          "P2",
+          "Q2",
+          "+",
+          "−"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "S1",
+          "S2",
+          "P1",
+          "Q1",
+          "P2",
+          "Q2",
+          "+",
+          "−"
+        ]
+      },
+      "alt": {
+        "en": "A steep (inelastic) demand curve D. Supply shifts left from S1 to S2 (arrow), so the price rises from P1 to P2 and the quantity falls from Q1 to Q2; the gain rectangle (P1 to P2, 0 to Q2) is marked + and is larger than the loss rectangle (Q2 to Q1, 0 to P1) marked −.",
+        "zh": "陡峭（缺乏彈性）的需求曲線 D。供應由 S1 向左移至 S2（箭頭），價格由 P1 上升至 P2，數量由 Q1 減少至 Q2；標示「+」的得益長方形（P1 至 P2，0 至 Q2）大於標示「−」的損失長方形（Q2 至 Q1，0 至 P1）。"
+      },
+      "png": {
+        "en": "gallery/06_tr_supply_decrease_inelastic_en.png",
+        "zh": "gallery/06_tr_supply_decrease_inelastic_zh.png"
+      },
+      "size": {
+        "en": [
+          1055,
+          804
+        ],
+        "zh": [
+          989,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "299b01b0f3e8521ceed59a1e11beea96991dc856b896a188fada33a2005df346",
+        "zh": "7c612d370f47f61c438ccc586fde50c5c4c8c2eaa5ee473b6f72b1f447589798"
+      }
+    },
+    {
+      "id": "07_unit_tax_incidence",
+      "variant_of": null,
+      "topic": "Tax, subsidy and quota",
+      "title": {
+        "en": "Per-unit tax: incidence and tax revenue.",
+        "zh": "從量稅：稅負分擔及政府稅收"
+      },
+      "caption": {
+        "en": "Unit tax: who pays it and the tax revenue",
+        "zh": "從量稅：稅負分擔及政府稅收"
+      },
+      "use": "per-unit tax: who pays it and the tax revenue; for burden labels and the deadweight-loss triangle use 31 (CE1993 Q4(c), DSE2016 Q10(c))",
+      "shows": {
+        "en": [
+          "S shifts up (vertically) by the tax t to S+t",
+          "consumers pay Pc, producers receive Pp = Pc - t, quantity falls Q0 -> Q1",
+          "brace for the tax per unit t",
+          "hatched tax revenue (Pp..Pc x 0..Q1), split into consumers' and producers' burden"
+        ],
+        "zh": [
+          "S 向上（垂直）移從量稅 t 至 S+t",
+          "消費者支付 Pc，生產者收取 Pp = Pc − t，數量由 Q0 減少至 Q1",
+          "以括號標示每單位的稅款 t",
+          "斜線區域為政府稅收（Pp..Pc × 0..Q1），分為消費者負擔及生產者負擔"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "S",
+          "S+t",
+          "Pc",
+          "Q1",
+          "Pp",
+          "Pe",
+          "Q0",
+          "A",
+          "B",
+          "t",
+          "A: consumers' burden",
+          "B: producers' burden",
+          "A + B: tax revenue"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "S",
+          "S+t",
+          "Pc",
+          "Q1",
+          "Pp",
+          "Pe",
+          "Q0",
+          "A",
+          "B",
+          "t",
+          "A：消費者負擔",
+          "B：生產者負擔",
+          "A + B：政府稅收"
+        ]
+      },
+      "alt": {
+        "en": "Supply S shifts up by the unit tax t to S+t (brace t). Consumers pay Pc, producers receive Pp and the quantity falls from Q0 to Q1; the hatched tax revenue from Pp to Pc up to Q1 is split at Pe into A (consumers' burden) and B (producers' burden).",
+        "zh": "供應 S 向上移從量稅 t 至 S+t（括號 t）。消費者支付 Pc，生產者收取 Pp，數量由 Q0 減少至 Q1；由 Pp 至 Pc、直至 Q1 的斜線區域為政府稅收，在 Pe 分為 A（消費者負擔）及 B（生產者負擔）。"
+      },
+      "png": {
+        "en": "gallery/07_unit_tax_incidence_en.png",
+        "zh": "gallery/07_unit_tax_incidence_zh.png"
+      },
+      "size": {
+        "en": [
+          1139,
+          864
+        ],
+        "zh": [
+          1074,
+          864
+        ]
+      },
+      "sha256": {
+        "en": "6fb9977a15671e7280a8617032bee9bb22bbb884d08ed922e45e59dceb429533",
+        "zh": "eadc57e9fd9eaab97d88867796b51bb23e93b9ec281fee0c5f694acb08716de8"
+      }
+    },
+    {
+      "id": "08_surplus_deadweight_quota",
+      "variant_of": null,
+      "topic": "Tax, subsidy and quota",
+      "title": {
+        "en": "A quota (Qq) set BELOW the equilibrium quantity (Qe): consumer surplus, producer surplus and deadweight loss.",
+        "zh": "低於均衡數量的配額：消費者盈餘、生產者盈餘及無謂損失"
+      },
+      "caption": {
+        "en": "Quota below the equilibrium quantity: consumer surplus, producer surplus and deadweight loss",
+        "zh": "低於均衡數量的配額：消費者盈餘、生產者盈餘及無謂損失"
+      },
+      "use": "a quota below the equilibrium quantity: consumer surplus, producer surplus and deadweight loss (CE1997 Q10(b), CE1998 Q2)",
+      "shows": {
+        "en": [
+          "quota line at Qq < Qe; price rises to Pq (on D at Qq)",
+          "consumer surplus: above Pq, under D, up to Qq",
+          "producer surplus: above S, below Pq, up to Qq",
+          "deadweight loss: triangle between D and S from Qq to Qe"
+        ],
+        "zh": [
+          "配額線在 Qq < Qe；價格上升至 Pq（在 Qq 處 D 上的點）",
+          "消費者盈餘：Pq 以上、D 以下，直至 Qq",
+          "生產者盈餘：S 以上、Pq 以下，直至 Qq",
+          "無謂損失：由 Qq 至 Qe 在 D 與 S 之間的三角形"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "S",
+          "Quota",
+          "Pq",
+          "Ps",
+          "Pe",
+          "Qe",
+          "Qq",
+          "Consumer surplus",
+          "Producer surplus",
+          "Deadweight loss"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "S",
+          "配額",
+          "Pq",
+          "Ps",
+          "Pe",
+          "Qe",
+          "Qq",
+          "消費者盈餘",
+          "生產者盈餘",
+          "無謂損失"
+        ]
+      },
+      "alt": {
+        "en": "A vertical quota line at Qq, below the equilibrium quantity Qe, raises the price to Pq on D. A key shows consumer surplus (dotted, under D and above Pq), producer surplus (hatched, above S and below Pq) and deadweight loss (cross-hatched triangle between D and S from Qq to Qe).",
+        "zh": "配額線垂直於 Qq，低於均衡數量 Qe，令價格上升至 D 上的 Pq。圖例標示消費者盈餘（點狀，D 以下、Pq 以上）、生產者盈餘（斜線，S 以上、Pq 以下）及無謂損失（交叉線，由 Qq 至 Qe 在 D 與 S 之間的三角形）。"
+      },
+      "png": {
+        "en": "gallery/08_surplus_deadweight_quota_en.png",
+        "zh": "gallery/08_surplus_deadweight_quota_zh.png"
+      },
+      "size": {
+        "en": [
+          1089,
+          840
+        ],
+        "zh": [
+          1044,
+          840
+        ]
+      },
+      "sha256": {
+        "en": "4d65dc2c31a56752c035d35503932b95c2011be7ad4ac5f7127fa5304a659002",
+        "zh": "c1e9f28f373d3715966211c463af19099af64a4d151a52a1f1aa5f5e06675bd7"
+      }
+    },
+    {
+      "id": "09_externality_overproduction",
+      "variant_of": null,
+      "topic": "Other",
+      "title": {
+        "en": "Negative externality in production: overproduction and deadweight loss.",
+        "zh": "生產的負外部效應：生產過多及無謂損失"
+      },
+      "caption": {
+        "en": "Negative externality in production: overproduction and deadweight loss",
+        "zh": "生產的負外部效應：生產過多及無謂損失"
+      },
+      "use": "negative externality: overproduction and deadweight loss (MSC above MPC)",
+      "shows": {
+        "en": [
+          "MSC above MPC (external cost); D = MPB = MSB",
+          "market output Qm where D = MPC; efficient output Q* where D = MSC",
+          "Qm > Q* (overproduction)",
+          "deadweight loss: triangle between MSC and D from Q* to Qm"
+        ],
+        "zh": [
+          "MSC 在 MPC 之上（外部成本）；D = MPB = MSB",
+          "市場產量 Qm 在 D = MPC 處；有效率產量 Q* 在 D = MSC 處",
+          "Qm > Q*（生產過多）",
+          "無謂損失：由 Q* 至 Qm 在 MSC 與 D 之間的三角形"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price / cost",
+          "D = MPB = MSB",
+          "MPC",
+          "MSC",
+          "Pm",
+          "Qm",
+          "P*",
+          "Q*",
+          "Deadweight loss"
+        ],
+        "zh": [
+          "數量",
+          "價格／成本",
+          "D = MPB = MSB",
+          "MPC",
+          "MSC",
+          "Pm",
+          "Qm",
+          "P*",
+          "Q*",
+          "無謂損失"
+        ]
+      },
+      "alt": {
+        "en": "MSC lies above MPC by the external cost, and D = MPB = MSB. The market produces Qm at price Pm (D meets MPC), more than the efficient output Q* at P* (D meets MSC); the hatched triangle between MSC and D from Q* to Qm is the deadweight loss.",
+        "zh": "MSC 在 MPC 之上，兩者相差外部成本；D = MPB = MSB。市場產量為 Qm、價格為 Pm（D 與 MPC 相交），多於有效率產量 Q*、價格 P*（D 與 MSC 相交）；由 Q* 至 Qm 在 MSC 與 D 之間的斜線三角形為無謂損失。"
+      },
+      "png": {
+        "en": "gallery/09_externality_overproduction_en.png",
+        "zh": "gallery/09_externality_overproduction_zh.png"
+      },
+      "size": {
+        "en": [
+          1161,
+          840
+        ],
+        "zh": [
+          1161,
+          842
+        ]
+      },
+      "sha256": {
+        "en": "d409345bd64e2bc6ee550b5c8c726af0991a7df3de1a106761a0f56f44c1be35",
+        "zh": "6c2abcc28c71e93c9b4b2a5a6bfe83fcd0c4022fab510c0f32c71a0ca97d9ae6"
+      }
+    },
+    {
+      "id": "10_ppc",
+      "variant_of": null,
+      "topic": "Other",
+      "title": {
+        "en": "Production possibilities curve (PPC) and economic growth.",
+        "zh": "生產可能曲線：效率、失業及經濟增長"
+      },
+      "caption": {
+        "en": "Production possibilities curve: efficiency, unemployment and growth",
+        "zh": "生產可能曲線：效率、失業及經濟增長"
+      },
+      "use": "production possibilities curve: efficiency, unemployment and growth",
+      "shows": {
+        "en": [
+          "PPC concave to the origin (increasing opportunity cost)",
+          "point on the curve (B): efficient; inside (A): unemployment / inefficiency; outside (C): unattainable with current resources",
+          "outward shift of the PPC (PPC1) = economic growth"
+        ],
+        "zh": [
+          "生產可能曲線凹向原點（機會成本遞增）",
+          "曲線上的點（B）：有效率；曲線以內（A）：失業／沒有效率；曲線以外（C）：以現有資源無法達到",
+          "生產可能曲線向外移（PPC1）= 經濟增長"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Consumer goods",
+          "Capital goods",
+          "PPC1",
+          "PPC0",
+          "A",
+          "B",
+          "C"
+        ],
+        "zh": [
+          "消費品",
+          "資本品",
+          "PPC1",
+          "PPC0",
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "alt": {
+        "en": "A production possibilities curve PPC0 for capital goods and consumer goods, concave to the origin, and a dashed PPC1 further out with an arrow showing economic growth. Point A is inside PPC0 (unemployment), B is on it (efficient) and C is outside it (unattainable now).",
+        "zh": "資本品與消費品的生產可能曲線 PPC0，凹向原點；較外的虛線 PPC1 及箭頭表示經濟增長。A 點在 PPC0 以內（失業），B 點在曲線上（有效率），C 點在曲線以外（現時無法達到）。"
+      },
+      "png": {
+        "en": "gallery/10_ppc_en.png",
+        "zh": "gallery/10_ppc_zh.png"
+      },
+      "size": {
+        "en": [
+          1203,
+          843
+        ],
+        "zh": [
+          1033,
+          843
+        ]
+      },
+      "sha256": {
+        "en": "bc9b168c5c221622bae86ba0cd3014e1c8d9a7145a5419f05231ccc05fc0f62e",
+        "zh": "a7632b664f971efc546a1be93214bcdbaae360212f6dc31e8bee9afe9e3bedda"
+      }
+    },
+    {
+      "id": "11_tr_demand_increase",
+      "variant_of": null,
+      "topic": "Total revenue and elasticity",
+      "title": {
+        "en": "Demand increases -> price and quantity both rise -> total revenue increases (shade the change only).",
+        "zh": "需求增加：總收入的增加"
+      },
+      "caption": {
+        "en": "Demand increases: the increase in total revenue",
+        "zh": "需求增加：總收入的增加"
+      },
+      "use": "demand increases, so P and Q both rise: shade only the increase in total revenue / expenditure (DSE2017 Q10(c), CE2010 Q1)",
+      "shows": {
+        "en": [
+          "rightward shift of the demand curve (D0 -> D1)",
+          "higher price and quantity (P0 -> P1, Q0 -> Q1)",
+          "increase in total revenue = the L-shaped strip between the old and new P x Q corners (never the whole old or new TR rectangle)"
+        ],
+        "zh": [
+          "需求曲線向右移（D0 → D1）",
+          "價格及數量上升（P0 → P1，Q0 → Q1）",
+          "總收入增加 = 新舊「價格 × 數量」角位之間的 L 形區域（不是整個舊或新的總收入長方形）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Q",
+          "P",
+          "S",
+          "D0",
+          "D1",
+          "P0",
+          "Q0",
+          "P1",
+          "Q1",
+          "Increase in TR"
+        ],
+        "zh": [
+          "Q",
+          "P",
+          "S",
+          "D0",
+          "D1",
+          "P0",
+          "Q0",
+          "P1",
+          "Q1",
+          "總收入增加"
+        ]
+      },
+      "alt": {
+        "en": "Demand shifts right from D0 to D1 (arrow) along S, so the price rises from P0 to P1 and the quantity from Q0 to Q1. The hatched L-shaped strip between the old and new price-times-quantity corners is the increase in TR (key).",
+        "zh": "需求由 D0 向右移至 D1（箭頭），沿 S 移動，價格由 P0 上升至 P1，數量由 Q0 增加至 Q1。新舊「價格 × 數量」角位之間的 L 形斜線區域為總收入增加（圖例）。"
+      },
+      "png": {
+        "en": "gallery/11_tr_demand_increase_en.png",
+        "zh": "gallery/11_tr_demand_increase_zh.png"
+      },
+      "size": {
+        "en": [
+          1044,
+          834
+        ],
+        "zh": [
+          1044,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "d86dc4e864880bf2bf5f88baadafd4353725807b4cf8e9870b0914201663a59f",
+        "zh": "899416b38f83540ecadf0cd0cac267df87e5e420269ea40636855ccd787c840c"
+      }
+    },
+    {
+      "id": "12_demand_decrease",
+      "variant_of": null,
+      "topic": "Demand and supply: shifts",
+      "title": {
+        "en": "Demand decreases -> price and quantity fall.",
+        "zh": "需求減少：價格及數量下降"
+      },
+      "caption": {
+        "en": "Demand decreases: price and quantity fall",
+        "zh": "需求減少：價格及數量下降"
+      },
+      "use": "demand falls (fewer buyers, lower income, a cheaper substitute ...) and the question asks the effect on price and quantity (CE2000 Q9(b)(i), DSE2012 Q12(c)(i), CE1993 Q4(b)(ii))",
+      "shows": {
+        "en": [
+          "leftward shift of demand D1 -> D2 (arrow), S unchanged",
+          "new equilibrium E2: price falls P1 -> P2, quantity falls Q1 -> Q2"
+        ],
+        "zh": [
+          "需求由 D1 向左移至 D2（箭頭），S 不變",
+          "新均衡點 E2：價格由 P1 下降至 P2，數量由 Q1 減少至 Q2"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "S",
+          "D1",
+          "D2",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "S",
+          "D1",
+          "D2",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2"
+        ]
+      },
+      "alt": {
+        "en": "Demand shifts left from D1 to D2 (arrow) while supply S is unchanged. The equilibrium moves from E1 to E2: the price falls from P1 to P2 and the quantity falls from Q1 to Q2.",
+        "zh": "需求由 D1 向左移至 D2（箭頭），供應 S 不變。均衡點由 E1 移至 E2：價格由 P1 下降至 P2，數量由 Q1 減少至 Q2。"
+      },
+      "png": {
+        "en": "gallery/12_demand_decrease_en.png",
+        "zh": "gallery/12_demand_decrease_zh.png"
+      },
+      "size": {
+        "en": [
+          1110,
+          834
+        ],
+        "zh": [
+          1044,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "e28ddffb9c6fc34116ca9f00ee3b338c558bd297dada016bd37e37ae928bbc02",
+        "zh": "1289dd11b9c1e20b548bdd868b27cf00eb76440598611987cdd0e339c0dad182"
+      }
+    },
+    {
+      "id": "13_supply_decrease",
+      "variant_of": null,
+      "topic": "Demand and supply: shifts",
+      "title": {
+        "en": "Supply decreases -> price rises, quantity falls.",
+        "zh": "供應減少：價格上升，數量下降"
+      },
+      "caption": {
+        "en": "Supply decreases: price rises, quantity falls",
+        "zh": "供應減少：價格上升，數量下降"
+      },
+      "use": "supply falls (higher production cost, a unit tax, a higher tariff on imports, bad weather ...) and the question asks the effect on price and quantity; a demand increase or a supply increase is drawn the same way with the arrow reversed (CE1992 Q2(b)(i), CE1994 Q9(b)(i))",
+      "shows": {
+        "en": [
+          "leftward shift of supply S -> S' (arrow), D unchanged",
+          "new equilibrium E2: price rises P1 -> P2, quantity falls Q1 -> Q2"
+        ],
+        "zh": [
+          "供應由 S 向左移至 S’（箭頭），D 不變",
+          "新均衡點 E2：價格由 P1 上升至 P2，數量由 Q1 減少至 Q2"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "S",
+          "S’",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "S",
+          "S’",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2"
+        ]
+      },
+      "alt": {
+        "en": "Supply shifts left from S to S’ (arrow) while demand D is unchanged. The equilibrium moves from E1 to E2: the price rises from P1 to P2 and the quantity falls from Q1 to Q2.",
+        "zh": "供應由 S 向左移至 S’（箭頭），需求 D 不變。均衡點由 E1 移至 E2：價格由 P1 上升至 P2，數量由 Q1 減少至 Q2。"
+      },
+      "png": {
+        "en": "gallery/13_supply_decrease_en.png",
+        "zh": "gallery/13_supply_decrease_zh.png"
+      },
+      "size": {
+        "en": [
+          1110,
+          834
+        ],
+        "zh": [
+          1044,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "7d3100b11e3fd893fe4a06b4150f33703bd92ec36aeb39b16cd5412c6bce32c1",
+        "zh": "afda2858ee007de3397f2ace1cac7275a5c7b6cc9f5a9193e613d2a3dee2b1c0"
+      }
+    },
+    {
+      "id": "14_simultaneous_shifts",
+      "variant_of": null,
+      "topic": "Demand and supply: shifts",
+      "title": {
+        "en": "Demand and supply both increase, demand by MORE -> price rises.",
+        "zh": "需求及供應同時增加而需求增幅較大：價格上升"
+      },
+      "caption": {
+        "en": "Demand and supply both increase, demand by more: price rises",
+        "zh": "需求及供應同時增加而需求增幅較大：價格上升"
+      },
+      "use": "\"under what condition does the price rise?\" when demand and supply both change; variants: both shift left with the supply shift bigger (CE2002 Q2) also raises the price; equal shifts leave the price unchanged (CE1995 Q11(a), CE2002 Q2, CE2003 Q10(b)(ii), DSE2015 Q11(d))",
+      "shows": {
+        "en": [
+          "D shifts right D -> D' and S shifts right S -> S', each with its own arrow",
+          "the demand shift is clearly larger than the supply shift",
+          "new equilibrium E2: price rises P1 -> P2, quantity rises Q1 -> Q2"
+        ],
+        "zh": [
+          "D 向右移（D → D’），S 向右移（S → S’），各有箭頭",
+          "需求的移動明顯大於供應的移動",
+          "新均衡點 E2：價格由 P1 上升至 P2，數量由 Q1 增加至 Q2"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "D’",
+          "S",
+          "S’",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "D’",
+          "S",
+          "S’",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2"
+        ]
+      },
+      "alt": {
+        "en": "Demand shifts right from D to D’ and supply from S to S’, each with an arrow; the demand shift is clearly larger. The equilibrium moves from E1 to E2: the price rises from P1 to P2 and the quantity rises from Q1 to Q2.",
+        "zh": "需求由 D 向右移至 D’，供應由 S 向右移至 S’，各有箭頭；需求的移動明顯較大。均衡點由 E1 移至 E2：價格由 P1 上升至 P2，數量由 Q1 增加至 Q2。"
+      },
+      "png": {
+        "en": "gallery/14_simultaneous_shifts_en.png",
+        "zh": "gallery/14_simultaneous_shifts_zh.png"
+      },
+      "size": {
+        "en": [
+          1130,
+          834
+        ],
+        "zh": [
+          1065,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "12905e2147c14960aefe51052357d44e090b18c30e051cfb6382356df3d021db",
+        "zh": "fb4d4695ecd51ae207d267f51b418097cf90ebb49e49f9d27e4ece1111bb0a22"
+      }
+    },
+    {
+      "id": "15_vertical_supply_demand_shift",
+      "variant_of": null,
+      "topic": "Demand and supply: shifts",
+      "title": {
+        "en": "Fixed stock (vertical supply): supply rises a little, demand rises a lot -> price rises.",
+        "zh": "垂直供應稍為增加而需求大幅增加：價格上升"
+      },
+      "caption": {
+        "en": "Vertical supply rises a little and demand rises a lot: price rises",
+        "zh": "垂直供應稍為增加而需求大幅增加：價格上升"
+      },
+      "use": "a fixed stock (taxi licences, land, flats, seats) whose quota is raised slightly while demand grows more, so the price still rises (CE2011 Q11(a), CE1992 Q1(d))",
+      "shows": {
+        "en": [
+          "vertical supply S1 -> S2 (small shift right) and demand D1 -> D2 (larger shift right)",
+          "equilibria E1, E2: price rises P1 -> P2, quantity rises Q1 -> Q2"
+        ],
+        "zh": [
+          "垂直供應 S1 → S2（稍為向右移），需求 D1 → D2（向右移較多）",
+          "均衡點 E1、E2：價格由 P1 上升至 P2，數量由 Q1 增加至 Q2"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "S1",
+          "S2",
+          "D1",
+          "D2",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "S1",
+          "S2",
+          "D1",
+          "D2",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2"
+        ]
+      },
+      "alt": {
+        "en": "Vertical supply shifts a little right from S1 to S2 and demand shifts further right from D1 to D2 (arrows). The equilibrium moves from E1 to E2: the price rises from P1 to P2 and the quantity rises from Q1 to Q2.",
+        "zh": "垂直的供應由 S1 稍為向右移至 S2，需求由 D1 向右移至 D2，移動較大（箭頭）。均衡點由 E1 移至 E2：價格由 P1 上升至 P2，數量由 Q1 增加至 Q2。"
+      },
+      "png": {
+        "en": "gallery/15_vertical_supply_demand_shift_en.png",
+        "zh": "gallery/15_vertical_supply_demand_shift_zh.png"
+      },
+      "size": {
+        "en": [
+          1110,
+          840
+        ],
+        "zh": [
+          1044,
+          840
+        ]
+      },
+      "sha256": {
+        "en": "9454b20ec50bfc08219d504eb31a4e9b29d05c8e1438bba1848b9b3c7ce4df53",
+        "zh": "e05678033db1b1740c946601d2aeebff657094b10d6ebd5f565a2634b285b056"
+      }
+    },
+    {
+      "id": "16_labour_imported_workers",
+      "variant_of": null,
+      "topic": "Labour market",
+      "title": {
+        "en": "Imported workers: labour supply rises -> wage falls, LOCAL employment falls.",
+        "zh": "輸入勞工：工資及本地就業下降"
+      },
+      "caption": {
+        "en": "Imported workers: the wage and local employment fall",
+        "zh": "輸入勞工：工資及本地就業下降"
+      },
+      "use": "importing workers (or more immigrants) adds to the local labour supply; the wage falls and fewer LOCAL workers are employed (read off the local S at W2) (CE1998 Q9(c)(i)(ii))",
+      "shows": {
+        "en": [
+          "S (Local) and S' (Local + imported) to its right, labour demand D",
+          "wage rate falls W1 -> W2",
+          "local employment falls Q1 -> Q2, Q2 read off S (Local) at W2"
+        ],
+        "zh": [
+          "S（本地）及其右方的 S’（本地＋輸入），勞工需求 D",
+          "工資率由 W1 下降至 W2",
+          "本地就業由 Q1 減少至 Q2，Q2 為 W2 時 S（本地）上的數量"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Number of workers",
+          "Wage rate",
+          "D",
+          "S (Local)",
+          "S’ (Local + imported)",
+          "W1",
+          "W2",
+          "Q1",
+          "Q2"
+        ],
+        "zh": [
+          "工人數目",
+          "工資率",
+          "D",
+          "S（本地）",
+          "S’（本地＋輸入）",
+          "W1",
+          "W2",
+          "Q1",
+          "Q2"
+        ]
+      },
+      "alt": {
+        "en": "Labour demand D, the local labour supply S (Local) and, to its right, S’ (Local + imported). The wage rate falls from W1 to W2, and local employment, read off S (Local) at W2, falls from Q1 to Q2.",
+        "zh": "勞工需求 D、本地勞工供應 S（本地），其右方為 S’（本地＋輸入）。工資率由 W1 下降至 W2；在 W2 時 S（本地）上的本地就業由 Q1 減少至 Q2。"
+      },
+      "png": {
+        "en": "gallery/16_labour_imported_workers_en.png",
+        "zh": "gallery/16_labour_imported_workers_zh.png"
+      },
+      "size": {
+        "en": [
+          1272,
+          834
+        ],
+        "zh": [
+          1238,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "98ab97812bc282112a669d39d66e409b5562d9b53c5012ad0713f0d77c28ba3c",
+        "zh": "ff536da6cb83262b5899ef7645353d962df8ff45b91b8f2eabb120caa1be3022"
+      }
+    },
+    {
+      "id": "17_tr_demand_decrease",
+      "variant_of": null,
+      "topic": "Total revenue and elasticity",
+      "title": {
+        "en": "Demand decreases -> price and quantity both fall -> total revenue falls (shade the change only).",
+        "zh": "需求減少：總收入的減少"
+      },
+      "caption": {
+        "en": "Demand decreases: the decrease in total revenue",
+        "zh": "需求減少：總收入的減少"
+      },
+      "use": "a fall in demand and its effect on sellers' total revenue, or the decrease in consumers' expenditure / sales revenue (CE1997 Q9(b), CE1999 Q9(b), CE2004 Q3)",
+      "shows": {
+        "en": [
+          "leftward shift of demand D1 -> D2 (arrow), S unchanged",
+          "lower price and quantity (P1 -> P2, Q1 -> Q2)",
+          "decrease in total revenue = the L-shaped strip between the old and new P x Q corners (never the whole old or new TR rectangle)"
+        ],
+        "zh": [
+          "需求由 D1 向左移至 D2（箭頭），S 不變",
+          "價格及數量下降（P1 → P2，Q1 → Q2）",
+          "總收入減少 = 新舊「價格 × 數量」角位之間的 L 形區域（不是整個舊或新的總收入長方形）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "S",
+          "D1",
+          "D2",
+          "P1",
+          "Q1",
+          "P2",
+          "Q2",
+          "Decrease in total revenue"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "S",
+          "D1",
+          "D2",
+          "P1",
+          "Q1",
+          "P2",
+          "Q2",
+          "總收入減少"
+        ]
+      },
+      "alt": {
+        "en": "Demand shifts left from D1 to D2 (arrow) along S, so the price falls from P1 to P2 and the quantity from Q1 to Q2. The hatched L-shaped strip between the old and new price-times-quantity corners is the decrease in total revenue (key).",
+        "zh": "需求由 D1 向左移至 D2（箭頭），沿 S 移動，價格由 P1 下降至 P2，數量由 Q1 減少至 Q2。新舊「價格 × 數量」角位之間的 L 形斜線區域為總收入減少（圖例）。"
+      },
+      "png": {
+        "en": "gallery/17_tr_demand_decrease_en.png",
+        "zh": "gallery/17_tr_demand_decrease_zh.png"
+      },
+      "size": {
+        "en": [
+          1110,
+          834
+        ],
+        "zh": [
+          1044,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "4088dee464617f0388452722eb7614322fa3d62b1fdb20647ceccf2e63d3f44e",
+        "zh": "27f3b47a67154294bfe845ee8622abc60eab5b6b117eb539728a9d39a9db718a"
+      }
+    },
+    {
+      "id": "18_tr_price_rise_inelastic",
+      "variant_of": null,
+      "topic": "Total revenue and elasticity",
+      "title": {
+        "en": "Price rises on INELASTIC (steep) demand -> total revenue rises.",
+        "zh": "缺乏彈性需求下價格上升：總收入增加"
+      },
+      "caption": {
+        "en": "Price rises on inelastic demand: total revenue rises",
+        "zh": "缺乏彈性需求下價格上升：總收入增加"
+      },
+      "use": "a price rise along an inelastic demand curve raises total revenue / expenditure, e.g. the HK$ depreciates so the import price in HK$ rises and spending on the import rises; for a price fall on elastic demand use template 05 (DSE2013 Q9(a), CE2005 Q9(a), CE1993 Q1(a))",
+      "shows": {
+        "en": [
+          "steep (inelastic) demand curve D, no supply curve needed",
+          "price rises from P1 to P2, quantity demanded falls from Q1 to Q2",
+          "gain (P1..P2 x 0..Q2) marked \"+\", loss (Q2..Q1 x 0..P1) marked \"-\"",
+          "gain > loss, so total revenue rises"
+        ],
+        "zh": [
+          "陡峭（缺乏彈性）的需求曲線 D，不需畫供應曲線",
+          "價格由 P1 上升至 P2，需求量由 Q1 減少至 Q2",
+          "得益（P1..P2 × 0..Q2）標示「+」，損失（Q2..Q1 × 0..P1）標示「−」",
+          "得益 > 損失，所以總收入增加"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "P1",
+          "Q1",
+          "P2",
+          "Q2",
+          "+",
+          "−"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "P1",
+          "Q1",
+          "P2",
+          "Q2",
+          "+",
+          "−"
+        ]
+      },
+      "alt": {
+        "en": "A steep (inelastic) demand curve D. The price rises from P1 to P2 and the quantity demanded falls from Q1 to Q2; the gain rectangle (P1 to P2, 0 to Q2) is marked + and is larger than the loss rectangle (Q2 to Q1, 0 to P1) marked −.",
+        "zh": "陡峭（缺乏彈性）的需求曲線 D。價格由 P1 上升至 P2，需求量由 Q1 減少至 Q2；標示「+」的得益長方形（P1 至 P2，0 至 Q2）大於標示「−」的損失長方形（Q2 至 Q1，0 至 P1）。"
+      },
+      "png": {
+        "en": "gallery/18_tr_price_rise_inelastic_en.png",
+        "zh": "gallery/18_tr_price_rise_inelastic_zh.png"
+      },
+      "size": {
+        "en": [
+          1035,
+          834
+        ],
+        "zh": [
+          984,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "5dcf5a9c65b5b77b2c7335dbeae7f110d9836cb1f3242822151bbf52cdec06a3",
+        "zh": "c002261927dfbfce36dd09c635af4136410aa25dee498dd4b0b152a56a88188f"
+      }
+    },
+    {
+      "id": "19_tr_vertical_supply_increase",
+      "variant_of": null,
+      "topic": "Total revenue and elasticity",
+      "title": {
+        "en": "Fixed stock (vertical supply) increases on ELASTIC (flat) demand -> total value rises.",
+        "zh": "富彈性需求下的士牌照增加：牌照總值上升"
+      },
+      "caption": {
+        "en": "More taxi licences on elastic demand: the total value of licences rises",
+        "zh": "富彈性需求下的士牌照增加：牌照總值上升"
+      },
+      "use": "more taxi licences (land, flats ...) are issued and demand is elastic, so the price falls but the total value of all licences rises (CE1992 Q1(d)(ii))",
+      "shows": {
+        "en": [
+          "vertical supply S shifts right to S' (arrow), flat (elastic) demand D",
+          "equilibria E1, E2: price falls P1 -> P2, quantity rises Q1 -> Q2",
+          "gain (Q1..Q2 x 0..P2) marked \"+\", loss (P2..P1 x 0..Q1) marked \"-\"",
+          "gain > loss, so the total value of licences rises"
+        ],
+        "zh": [
+          "垂直供應 S 向右移至 S’（箭頭），平坦（富彈性）的需求 D",
+          "均衡點 E1、E2：價格由 P1 下降至 P2，數量由 Q1 增加至 Q2",
+          "得益（Q1..Q2 × 0..P2）標示「+」，損失（P2..P1 × 0..Q1）標示「−」",
+          "得益 > 損失，所以牌照總值上升"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity of taxi licences",
+          "Price of a taxi licence",
+          "S",
+          "S’",
+          "D",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2",
+          "−",
+          "+"
+        ],
+        "zh": [
+          "的士牌照數量",
+          "的士牌照價格",
+          "S",
+          "S’",
+          "D",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2",
+          "−",
+          "+"
+        ]
+      },
+      "alt": {
+        "en": "The vertical supply of taxi licences shifts right from S to S’ (arrow) along a flat (elastic) demand curve D. The equilibrium moves from E1 to E2: the price falls from P1 to P2 and the quantity rises from Q1 to Q2; the gain rectangle marked + (Q1 to Q2, 0 to P2) is larger than the loss rectangle marked − (P2 to P1, 0 to Q1).",
+        "zh": "的士牌照的垂直供應由 S 向右移至 S’（箭頭），需求曲線 D 平坦（富彈性）。均衡點由 E1 移至 E2：價格由 P1 下降至 P2，數量由 Q1 增加至 Q2；標示「+」的得益長方形（Q1 至 Q2，0 至 P2）大於標示「−」的損失長方形（P2 至 P1，0 至 Q1）。"
+      },
+      "png": {
+        "en": "gallery/19_tr_vertical_supply_increase_en.png",
+        "zh": "gallery/19_tr_vertical_supply_increase_zh.png"
+      },
+      "size": {
+        "en": [
+          1155,
+          834
+        ],
+        "zh": [
+          1055,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "d4dd5bd8dd0e9ddef6e55b939ce288d6a156c1f85daf94ea2a1599af05cbb39d",
+        "zh": "5e0738fe8d6ddbb7da0d1f802d545112b6471697ea97dd8252c2039d5a44840e"
+      }
+    },
+    {
+      "id": "20_fixed_wage_supply_increase",
+      "variant_of": null,
+      "topic": "Price fixed away from equilibrium",
+      "title": {
+        "en": "Wage fixed BELOW equilibrium; labour supply increases -> excess demand for labour shrinks.",
+        "zh": "工資固定於均衡工資以下而勞工供應增加：超額需求減少"
+      },
+      "caption": {
+        "en": "Wage fixed below equilibrium and labour supply increases: excess demand shrinks",
+        "zh": "工資固定於均衡工資以下而勞工供應增加：超額需求減少"
+      },
+      "use": "a wage or price fixed below equilibrium when supply rises; the same layout works for any fixed price when D or S shifts (DSE2021 Q12(c), CE1991 Q4(c)(ii))",
+      "shows": {
+        "en": [
+          "fixed wage W0 below the equilibrium wage",
+          "rightward shift of labour supply S0 -> S1 (arrow)",
+          "excess demand at W0 shrinks: ex dd0 (Q0 to Qd) -> ex dd1 (Q1 to Qd)"
+        ],
+        "zh": [
+          "固定工資 W0 低於均衡工資",
+          "勞工供應由 S0 向右移至 S1（箭頭）",
+          "在 W0 的超額需求減少：超額需求0（Q0 至 Qd）→ 超額需求1（Q1 至 Qd）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Number of workers",
+          "Wage rate",
+          "D0",
+          "S0",
+          "S1",
+          "W0",
+          "Q0",
+          "Q1",
+          "Qd",
+          "ex dd0",
+          "ex dd1"
+        ],
+        "zh": [
+          "工人數目",
+          "工資率",
+          "D0",
+          "S0",
+          "S1",
+          "W0",
+          "Q0",
+          "Q1",
+          "Qd",
+          "超額需求0",
+          "超額需求1"
+        ]
+      },
+      "alt": {
+        "en": "The wage is fixed at W0, below equilibrium, in a labour market with labour demand D0. Labour supply shifts right from S0 to S1 (arrow), so the excess demand for labour at W0 shrinks from ex dd0 (Q0 to Qd) to ex dd1 (Q1 to Qd).",
+        "zh": "勞工市場的工資固定於 W0，低於均衡工資，勞工需求為 D0。勞工供應由 S0 向右移至 S1（箭頭），在 W0 的勞工超額需求由超額需求0（Q0 至 Qd）減少至超額需求1（Q1 至 Qd）。"
+      },
+      "png": {
+        "en": "gallery/20_fixed_wage_supply_increase_en.png",
+        "zh": "gallery/20_fixed_wage_supply_increase_zh.png"
+      },
+      "size": {
+        "en": [
+          1369,
+          834
+        ],
+        "zh": [
+          1201,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "d411db819dc7eeaac35fba9c5e3fe381f7b59f04605457f4da5574f10925e427",
+        "zh": "71150b309455815b9ed0723a2bf5d765ff06c17fba89e64701d0fcc372969e87"
+      }
+    },
+    {
+      "id": "21_vertical_supply_price_raised",
+      "variant_of": null,
+      "topic": "Price fixed away from equilibrium",
+      "title": {
+        "en": "Vertical supply; the fixed price is raised but stays below equilibrium -> shortage shrinks.",
+        "zh": "垂直供應，固定價格提高但仍低於均衡價格：短缺減少"
+      },
+      "caption": {
+        "en": "Vertical supply, fixed price raised but still below equilibrium: shortage shrinks",
+        "zh": "垂直供應，固定價格提高但仍低於均衡價格：短缺減少"
+      },
+      "use": "a fixed tuition fee or ticket price raised from P1 to P2 (e.g. $10 to $20) with a fixed number of places or seats; also the variant where vertical S shifts right at a fixed price (DSEPP Q12(a)(ii), CE2007 Q8(a), CE2005 Q9(b)(i))",
+      "shows": {
+        "en": [
+          "vertical supply S at Q0; both prices below the equilibrium price",
+          "price raised from P1 to P2 (arrow between the labels)",
+          "shortage shrinks: Ex. D1 (wide, at P1) -> Ex. D2 (narrow, at P2)"
+        ],
+        "zh": [
+          "垂直供應 S 在 Q0；兩個價格均低於均衡價格",
+          "價格由 P1 提高至 P2（兩個標籤之間的箭頭）",
+          "短缺減少：超額需求1（在 P1，較闊）→ 超額需求2（在 P2，較窄）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "S",
+          "Q0",
+          "P1",
+          "Ex. D1",
+          "P2",
+          "Ex. D2"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "S",
+          "Q0",
+          "P1",
+          "超額需求1",
+          "P2",
+          "超額需求2"
+        ]
+      },
+      "alt": {
+        "en": "Supply S is vertical at Q0 and meets demand D above both price lines. The price is raised from P1 to P2 (arrow), both below equilibrium, so the shortage shrinks from Ex. D1 (wide, at P1) to Ex. D2 (narrow, at P2).",
+        "zh": "供應 S 在 Q0 垂直，與需求 D 相交於兩條價格線之上。價格由 P1 提高至 P2（箭頭），兩者均低於均衡價格，短缺由超額需求1（在 P1，較闊）減少至超額需求2（在 P2，較窄）。"
+      },
+      "png": {
+        "en": "gallery/21_vertical_supply_price_raised_en.png",
+        "zh": "gallery/21_vertical_supply_price_raised_zh.png"
+      },
+      "size": {
+        "en": [
+          1055,
+          804
+        ],
+        "zh": [
+          989,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "f0dbd67e9905ccaa9c92bb15d572a2ccab3a3d63854b2fc3890307deb5ed5ada",
+        "zh": "1e1d030b5388dc24657d5b1a93da2ef577777297486ced1d64bb614a75e83f34"
+      }
+    },
+    {
+      "id": "22_fixed_price_surplus_revenue_fall",
+      "variant_of": null,
+      "topic": "Price fixed away from equilibrium",
+      "title": {
+        "en": "Price fixed ABOVE equilibrium; demand falls -> quantity sold and sales revenue fall.",
+        "zh": "價格固定於均衡價格以上而需求減少：銷售收入減少"
+      },
+      "caption": {
+        "en": "Price fixed above equilibrium and demand falls: sales revenue falls",
+        "zh": "價格固定於均衡價格以上而需求減少：銷售收入減少"
+      },
+      "use": "a price kept above equilibrium when demand falls: the quantity sold is Qd, so sales revenue falls by P x (Q1 - Q2); reverse the shift for a rise (CE2004 Q10(a), CE2002 Q11(b))",
+      "shows": {
+        "en": [
+          "fixed price P above equilibrium; leftward shift D1 -> D2 (arrow)",
+          "excess supply at P after the change (Q2 to Qs)",
+          "quantity sold (= Qd) falls from Q1 to Q2",
+          "fall in sales revenue = P x (Q1 - Q2), hatched with a key"
+        ],
+        "zh": [
+          "固定價格 P 高於均衡價格；需求由 D1 向左移至 D2（箭頭）",
+          "變化後在 P 的超額供應（Q2 至 Qs）",
+          "銷售量（= 需求量）由 Q1 減少至 Q2",
+          "銷售收入減少 = P × (Q1 − Q2)，以斜線及圖例標示"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "S",
+          "D1",
+          "D2",
+          "P",
+          "Q1",
+          "Q2",
+          "excess supply",
+          "Fall in sales revenue"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "S",
+          "D1",
+          "D2",
+          "P",
+          "Q1",
+          "Q2",
+          "超額供應",
+          "銷售收入減少"
+        ]
+      },
+      "alt": {
+        "en": "The price P is fixed above equilibrium and demand shifts left from D1 to D2 (arrow). The quantity sold, read off demand, falls from Q1 to Q2, a brace marks the excess supply at P, and the hatched rectangle under P from Q2 to Q1 is the fall in sales revenue (key).",
+        "zh": "價格 P 固定於均衡價格以上，需求由 D1 向左移至 D2（箭頭）。按需求讀出的銷售量由 Q1 減少至 Q2，括號標示在 P 的超額供應，P 以下由 Q2 至 Q1 的斜線長方形為銷售收入減少（圖例）。"
+      },
+      "png": {
+        "en": "gallery/22_fixed_price_surplus_revenue_fall_en.png",
+        "zh": "gallery/22_fixed_price_surplus_revenue_fall_zh.png"
+      },
+      "size": {
+        "en": [
+          1110,
+          834
+        ],
+        "zh": [
+          1044,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "6a102c826eecb40eab2780d042aa35249da02b3f4ebe5c4df83f3415cb857282",
+        "zh": "61f33dc6069ab74ced666698331bc1e664d1629e4b30ba3bbd4b5e3c60e27db4"
+      }
+    },
+    {
+      "id": "23_fixed_price_rent_increase",
+      "variant_of": null,
+      "topic": "Price fixed away from equilibrium",
+      "title": {
+        "en": "Vertical supply; the controlled rent is raised but stays below equilibrium -> total rental payment rises.",
+        "zh": "垂直供應而管制租金提高：總租金支出增加"
+      },
+      "caption": {
+        "en": "Vertical supply and a controlled rent raised: total rental payment rises",
+        "zh": "垂直供應而管制租金提高：總租金支出增加"
+      },
+      "use": "a rent (or other controlled price) raised from P0 to P1 with a fixed number of units; also capital raised by a share issue at a fixed price, P̄ x Q̄ (hatch the whole rectangle under P̄ up to Q̄ there) (DSE2025 Q11(b)(i), CE2001 Q10(c)(i))",
+      "shows": {
+        "en": [
+          "vertical supply S at Q0; rent raised from P0 to P1, both below equilibrium",
+          "increase in total rental payment = (P1 - P0) x Q0, hatched with a key",
+          "excess demand (shortage) at P1, from Q0 to Qd"
+        ],
+        "zh": [
+          "垂直供應 S 在 Q0；租金由 P0 提高至 P1，兩者均低於均衡水平",
+          "總租金支出增加 = (P1 − P0) × Q0，以斜線及圖例標示",
+          "在 P1 的超額需求（短缺），由 Q0 至 Qd"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Rental",
+          "D",
+          "S",
+          "Q0",
+          "P0",
+          "P1",
+          "Excess demand",
+          "Increase in total rental payment"
+        ],
+        "zh": [
+          "數量",
+          "租金",
+          "D",
+          "S",
+          "Q0",
+          "P0",
+          "P1",
+          "超額需求",
+          "總租金支出增加"
+        ]
+      },
+      "alt": {
+        "en": "Supply S is vertical at Q0. The rent is raised from P0 to P1 (arrow), both below equilibrium; the hatched rectangle from P0 to P1 up to Q0 is the increase in total rental payment (key), and a brace from Q0 to the demand curve D at P1 marks the excess demand.",
+        "zh": "供應 S 在 Q0 垂直。租金由 P0 提高至 P1（箭頭），兩者均低於均衡水平；由 P0 至 P1、直至 Q0 的斜線長方形為總租金支出增加（圖例），在 P1 由 Q0 至需求曲線 D 的括號標示超額需求。"
+      },
+      "png": {
+        "en": "gallery/23_fixed_price_rent_increase_en.png",
+        "zh": "gallery/23_fixed_price_rent_increase_zh.png"
+      },
+      "size": {
+        "en": [
+          1089,
+          834
+        ],
+        "zh": [
+          1044,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "1d82631b3d101a049fcd7c2455c3fdd8b3546ae2ee2a02d9fb5102ee2cd5198c",
+        "zh": "b03dc7b731117049113c4cdf8cd1c6927c573c48cb43971a4e0a6aa7588f4494"
+      }
+    },
+    {
+      "id": "24_price_ceiling_deadweight_loss",
+      "variant_of": null,
+      "topic": "Price controls and efficiency",
+      "title": {
+        "en": "Price ceiling BELOW equilibrium -> shortage and deadweight loss.",
+        "zh": "低於均衡價格的價格上限：短缺及無謂損失"
+      },
+      "caption": {
+        "en": "Price ceiling below equilibrium: shortage and deadweight loss",
+        "zh": "低於均衡價格的價格上限：短缺及無謂損失"
+      },
+      "use": "a price ceiling or controlled price below equilibrium when the question asks about efficiency / deadweight loss (DSEPP Q4(b)(ii), DSE2016 Q11(b), DSE2014)",
+      "shows": {
+        "en": [
+          "ceiling Pc below the equilibrium price; D = MB, S = MC",
+          "quantity transacted Qc read off S (the short side), solid line up to D",
+          "deadweight loss DL: triangle between D and S from Qc to Qe",
+          "shortage at Pc (Qc to Qd)"
+        ],
+        "zh": [
+          "價格上限 Pc 低於均衡價格；D = MB，S = MC",
+          "交易量 Qc 由 S 讀出（較少的一方），實線直至 D",
+          "無謂損失 DL：由 Qc 至 Qe 在 D 與 S 之間的三角形",
+          "在 Pc 的短缺（Qc 至 Qd）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D = MB",
+          "S = MC",
+          "DL",
+          "Qc",
+          "Pc",
+          "Qd",
+          "shortage"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D = MB",
+          "S = MC",
+          "DL",
+          "Qc",
+          "Pc",
+          "Qd",
+          "短缺"
+        ]
+      },
+      "alt": {
+        "en": "D = MB and S = MC, and the price ceiling Pc is below the equilibrium price. The quantity transacted Qc is read off S (solid line up to D), a brace from Qc to Qd at Pc marks the shortage, and the hatched triangle DL between D and S from Qc to the equilibrium is the deadweight loss.",
+        "zh": "D = MB，S = MC，價格上限 Pc 低於均衡價格。交易量 Qc 由 S 讀出（實線直至 D），在 Pc 由 Qc 至 Qd 的括號標示短缺，由 Qc 至均衡點在 D 與 S 之間的斜線三角形 DL 為無謂損失。"
+      },
+      "png": {
+        "en": "gallery/24_price_ceiling_deadweight_loss_en.png",
+        "zh": "gallery/24_price_ceiling_deadweight_loss_zh.png"
+      },
+      "size": {
+        "en": [
+          1110,
+          834
+        ],
+        "zh": [
+          1044,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "ced3c74f36456a02983a9b2196c56b1ebf07da69e7df7ab2255260196acddbf7",
+        "zh": "b1e3c2b28dfaca07ebf51b32c347a4b0007066c1da578f640a3a011fd8f31819"
+      }
+    },
+    {
+      "id": "25_price_floor_deadweight_loss",
+      "variant_of": null,
+      "topic": "Price controls and efficiency",
+      "title": {
+        "en": "Price (fare / price floor) set ABOVE equilibrium -> excess supply and deadweight loss.",
+        "zh": "高於均衡價格的價格下限：超額供應及無謂損失"
+      },
+      "caption": {
+        "en": "Price floor above equilibrium: excess supply and deadweight loss",
+        "zh": "高於均衡價格的價格下限：超額供應及無謂損失"
+      },
+      "use": "a fixed fare or price floor above equilibrium when the question asks about deadweight loss; a minimum wage with DWL (DSE2018 Q10(c): relabel the axes Wage rate / Quantity of labour); a raised price floor (DSE2014 Q3) (DSE2019 Q11(b), DSE2014 Q3, DSE2018 Q10(c))",
+      "shows": {
+        "en": [
+          "price P above the equilibrium price",
+          "quantity transacted Q read off D (the short side), solid line from Q up to P",
+          "deadweight loss DL: triangle between D and S from Q to Qe",
+          "excess supply at P (Q to Qs)"
+        ],
+        "zh": [
+          "價格 P 高於均衡價格",
+          "交易量 Q 由 D 讀出（較少的一方），由 Q 至 P 的實線",
+          "無謂損失 DL：由 Q 至 Qe 在 D 與 S 之間的三角形",
+          "在 P 的超額供應（Q 至 Qs）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "S",
+          "DL",
+          "Q",
+          "P",
+          "excess supply"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "S",
+          "DL",
+          "Q",
+          "P",
+          "超額供應"
+        ]
+      },
+      "alt": {
+        "en": "The price P is set above the equilibrium price. The quantity transacted Q is read off D (solid line up to P), a brace from Q to S at P marks the excess supply, and the cross-hatched triangle DL between D and S from Q to the equilibrium is the deadweight loss.",
+        "zh": "價格 P 定於均衡價格以上。交易量 Q 由 D 讀出（實線直至 P），在 P 由 Q 至 S 的括號標示超額供應，由 Q 至均衡點在 D 與 S 之間的交叉線三角形 DL 為無謂損失。"
+      },
+      "png": {
+        "en": "gallery/25_price_floor_deadweight_loss_en.png",
+        "zh": "gallery/25_price_floor_deadweight_loss_zh.png"
+      },
+      "size": {
+        "en": [
+          1110,
+          834
+        ],
+        "zh": [
+          1044,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "f6079c75a4c15078ba544be8270c28d040793abb7ae7c687456dfb76b2624b56",
+        "zh": "fea670da96887c0eba5e629ece9b565ad1fc270d65eb51b1937a99e6ce2b2624"
+      }
+    },
+    {
+      "id": "26_price_ceiling_consumer_surplus_change",
+      "variant_of": null,
+      "topic": "Price controls and efficiency",
+      "title": {
+        "en": "Price ceiling BELOW equilibrium -> change in consumer surplus (gain \"+\" and loss \"−\").",
+        "zh": "價格上限：消費者盈餘的變化"
+      },
+      "caption": {
+        "en": "Price ceiling: the change in consumer surplus",
+        "zh": "價格上限：消費者盈餘的變化"
+      },
+      "use": "how a price ceiling changes consumer surplus: buyers who still get the good pay less (+), the units no longer sold are lost (−) (DSEPP Q4(b)(i))",
+      "shows": {
+        "en": [
+          "ceiling Pc below the equilibrium price Pe; quantity transacted Qs (on S)",
+          "gain \"+\": rectangle (Pe - Pc) x Qs",
+          "loss \"−\": triangle between D and the Pe line, from Qs to Qe"
+        ],
+        "zh": [
+          "價格上限 Pc 低於均衡價格 Pe；交易量 Qs（在 S 上）",
+          "得益「+」：長方形 (Pe − Pc) × Qs",
+          "損失「−」：由 Qs 至 Qe 在 D 與 Pe 線之間的三角形"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "S",
+          "+",
+          "−",
+          "Qs",
+          "Pc",
+          "Pe",
+          "Qe"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "S",
+          "+",
+          "−",
+          "Qs",
+          "Pc",
+          "Pe",
+          "Qe"
+        ]
+      },
+      "alt": {
+        "en": "The price ceiling Pc is below the equilibrium price Pe, and the quantity transacted is Qs on S. The rectangle between Pc and Pe up to Qs is the gain to consumers (+); the triangle between D and the Pe line from Qs to Qe is the loss (−).",
+        "zh": "價格上限 Pc 低於均衡價格 Pe，交易量為 S 上的 Qs。Pc 與 Pe 之間、直至 Qs 的長方形為消費者的得益（+）；由 Qs 至 Qe 在 D 與 Pe 線之間的三角形為損失（−）。"
+      },
+      "png": {
+        "en": "gallery/26_price_ceiling_consumer_surplus_change_en.png",
+        "zh": "gallery/26_price_ceiling_consumer_surplus_change_zh.png"
+      },
+      "size": {
+        "en": [
+          1110,
+          834
+        ],
+        "zh": [
+          1044,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "921b79187efd6cca462681c31986c6e7270a60dc52a84b73d09b19f2ccb51f5c",
+        "zh": "80bd25e1460c4af8f41643160affed4a92347138dad2f419c497953ab564c00a"
+      }
+    },
+    {
+      "id": "27_price_ceiling_lowered_dwl_increase",
+      "variant_of": null,
+      "topic": "Price controls and efficiency",
+      "title": {
+        "en": "A price ceiling is lowered further below equilibrium -> deadweight loss increases.",
+        "zh": "價格上限進一步降低：無謂損失增加"
+      },
+      "caption": {
+        "en": "Price ceiling lowered further: deadweight loss increases",
+        "zh": "價格上限進一步降低：無謂損失增加"
+      },
+      "use": "a price ceiling (or controlled price) lowered from Pc1 to Pc2, both below equilibrium, when the question asks for the change in deadweight loss (DSE2012 Q5(c))",
+      "shows": {
+        "en": [
+          "ceiling lowered Pc1 -> Pc2; quantity transacted falls Q1 -> Q2 along S",
+          "original deadweight loss: triangle between D and S from Q1 to Qe (dotted)",
+          "increase in deadweight loss: trapezoid between D and S from Q2 to Q1 (hatched)"
+        ],
+        "zh": [
+          "價格上限由 Pc1 降至 Pc2；交易量沿 S 由 Q1 減少至 Q2",
+          "原有無謂損失：由 Q1 至 Qe 在 D 與 S 之間的三角形（點狀）",
+          "無謂損失增加：由 Q2 至 Q1 在 D 與 S 之間的梯形（斜線）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "S",
+          "Qe",
+          "Pc1",
+          "Q1",
+          "Pc2",
+          "Q2",
+          "Original deadweight loss",
+          "Increase in deadweight loss"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "S",
+          "Qe",
+          "Pc1",
+          "Q1",
+          "Pc2",
+          "Q2",
+          "原有無謂損失",
+          "無謂損失增加"
+        ]
+      },
+      "alt": {
+        "en": "The price ceiling is lowered from Pc1 to Pc2 (arrow), both below equilibrium, so the quantity transacted falls along S from Q1 to Q2. The dotted triangle from Q1 to Qe is the original deadweight loss and the hatched trapezoid between D and S from Q2 to Q1 is the increase in deadweight loss (key).",
+        "zh": "價格上限由 Pc1 降至 Pc2（箭頭），兩者均低於均衡價格，交易量沿 S 由 Q1 減少至 Q2。由 Q1 至 Qe 的點狀三角形為原有無謂損失，由 Q2 至 Q1 在 D 與 S 之間的斜線梯形為無謂損失增加（圖例）。"
+      },
+      "png": {
+        "en": "gallery/27_price_ceiling_lowered_dwl_increase_en.png",
+        "zh": "gallery/27_price_ceiling_lowered_dwl_increase_zh.png"
+      },
+      "size": {
+        "en": [
+          1132,
+          834
+        ],
+        "zh": [
+          1044,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "a57b62e02acdefcfe5cb088ff571974c111396074c32882dd01fd0eae9085379",
+        "zh": "149da27c6a440bf8d0a016ad506992c571f792658d173995da8d32f65a090971"
+      }
+    },
+    {
+      "id": "28_unit_subsidy",
+      "variant_of": null,
+      "topic": "Tax, subsidy and quota",
+      "title": {
+        "en": "Per-unit subsidy: S shifts down, buyers pay less, sellers receive more, MC > MB.",
+        "zh": "從量津貼：買家支付較少，賣家收取較多"
+      },
+      "caption": {
+        "en": "Unit subsidy: buyers pay less and sellers receive more",
+        "zh": "從量津貼：買家支付較少，賣家收取較多"
+      },
+      "use": "subsidy incidence; the less elastic side benefits more (draw D or S steeper to match) (DSE2017 Q11(b))",
+      "shows": {
+        "en": [
+          "S0 shifts down by the subsidy s to Ss (arrow); E0 -> E1, Q0 -> Q1",
+          "buyers pay P1 < P0; sellers receive P2 = P1 + s (point A on S0)",
+          "consumer benefit (P0-P1) x Q1 dotted, producer benefit (P2-P0) x Q1 hatched",
+          "at Q1, MC (A) > MB (E1): overproduction"
+        ],
+        "zh": [
+          "S0 向下移津貼 s 至 Ss（箭頭）；E0 → E1，Q0 → Q1",
+          "買家支付 P1 < P0；賣家收取 P2 = P1 + s（S0 上的 A 點）",
+          "消費者得益 (P0 − P1) × Q1 以點狀標示，生產者得益 (P2 − P0) × Q1 以斜線標示",
+          "在 Q1，MC（A）> MB（E1）：生產過多"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "S0",
+          "Ss",
+          "P0",
+          "Q0",
+          "P1",
+          "Q1",
+          "P2",
+          "E0",
+          "A",
+          "E1",
+          "MC",
+          "MB",
+          "Consumer benefit",
+          "Producer benefit"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "S0",
+          "Ss",
+          "P0",
+          "Q0",
+          "P1",
+          "Q1",
+          "P2",
+          "E0",
+          "A",
+          "E1",
+          "MC",
+          "MB",
+          "消費者得益",
+          "生產者得益"
+        ]
+      },
+      "alt": {
+        "en": "Supply shifts down by the subsidy from S0 to Ss (arrow); the equilibrium moves from E0 to E1 and the quantity rises from Q0 to Q1. Buyers pay P1, below P0, and sellers receive P2 (point A on S0); the dotted rectangle is the consumer benefit, the hatched one the producer benefit, and at Q1 MC (at A) is above MB (at E1).",
+        "zh": "供應因津貼由 S0 向下移至 Ss（箭頭）；均衡點由 E0 移至 E1，數量由 Q0 增加至 Q1。買家支付 P1，低於 P0，賣家收取 P2（S0 上的 A 點）；點狀長方形為消費者得益，斜線長方形為生產者得益；在 Q1，MC（A 點）高於 MB（E1）。"
+      },
+      "png": {
+        "en": "gallery/28_unit_subsidy_en.png",
+        "zh": "gallery/28_unit_subsidy_zh.png"
+      },
+      "size": {
+        "en": [
+          1130,
+          869
+        ],
+        "zh": [
+          1065,
+          869
+        ]
+      },
+      "sha256": {
+        "en": "25df79c09fa29538a233d64d27bd3a27e477419f7b1788ec0ad393b4ed11a6c4",
+        "zh": "76f62403591a58385d471eeabe665627ff67a617a9260ab8304ced7697a2a37a"
+      }
+    },
+    {
+      "id": "29_quota_increase",
+      "variant_of": null,
+      "topic": "Tax, subsidy and quota",
+      "title": {
+        "en": "A quota is raised -> price falls, quantity rises, deadweight loss shrinks.",
+        "zh": "配額提高：價格下降，無謂損失減少"
+      },
+      "caption": {
+        "en": "Quota raised: price falls and deadweight loss shrinks",
+        "zh": "配額提高：價格下降，無謂損失減少"
+      },
+      "use": "relaxing (raising) an effective quota and its effect on efficiency (DSE2015 Q3)",
+      "shows": {
+        "en": [
+          "S0 (= MC) and D (= MB); the quota moves right from S1 to S2 (arrow)",
+          "P falls P1 -> P2 and Q rises Q1 -> Q2 (axis arrows)",
+          "W, X on D and Z, Y on S0; area WXYZ = reduction in deadweight loss (hatched, key)"
+        ],
+        "zh": [
+          "S0（= MC）及 D（= MB）；配額由 S1 向右移至 S2（箭頭）",
+          "P 由 P1 下降至 P2，Q 由 Q1 增加至 Q2（軸旁的箭頭）",
+          "W、X 在 D 上，Z、Y 在 S0 上；面積 WXYZ = 無謂損失減少（斜線，圖例）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Q",
+          "P",
+          "D = MB",
+          "S0 = MC",
+          "S1",
+          "S2",
+          "W",
+          "X",
+          "Y",
+          "Z",
+          "P1",
+          "P2",
+          "Q1",
+          "Q2",
+          "Reduction in deadweight loss"
+        ],
+        "zh": [
+          "Q",
+          "P",
+          "D = MB",
+          "S0 = MC",
+          "S1",
+          "S2",
+          "W",
+          "X",
+          "Y",
+          "Z",
+          "P1",
+          "P2",
+          "Q1",
+          "Q2",
+          "無謂損失減少"
+        ]
+      },
+      "alt": {
+        "en": "D = MB and S0 = MC. The quota is raised from S1 to S2 (vertical lines, arrow), so the price falls from P1 to P2 and the quantity rises from Q1 to Q2; the hatched area WXYZ (W and X on D, Y and Z on S0) is the reduction in deadweight loss (key).",
+        "zh": "D = MB，S0 = MC。配額由 S1 提高至 S2（垂直線，箭頭），價格由 P1 下降至 P2，數量由 Q1 增加至 Q2；斜線區域 WXYZ（W、X 在 D 上；Y、Z 在 S0 上）為無謂損失減少（圖例）。"
+      },
+      "png": {
+        "en": "gallery/29_quota_increase_en.png",
+        "zh": "gallery/29_quota_increase_zh.png"
+      },
+      "size": {
+        "en": [
+          1146,
+          869
+        ],
+        "zh": [
+          1044,
+          869
+        ]
+      },
+      "sha256": {
+        "en": "b58ffb23bb57443ba2deaf3391f7102fea9b33dc2b6681631de8c437115ec6c2",
+        "zh": "23b1ca1018021d6ef8cd2abc1cc33a6d2e67b7b55b5bb2add7e7d7f5fcf5a4b1"
+      }
+    },
+    {
+      "id": "30_quota_demand_increase",
+      "variant_of": null,
+      "topic": "Tax, subsidy and quota",
+      "title": {
+        "en": "Demand rises under a quota -> quantity stays at the quota, deadweight loss grows.",
+        "zh": "配額下需求增加：無謂損失增加"
+      },
+      "caption": {
+        "en": "Demand rises under a quota: deadweight loss increases",
+        "zh": "配額下需求增加：無謂損失增加"
+      },
+      "use": "demand increases while a quota is in force; also an effective quota (P rises, Q falls to the quota), drawn with the same kinked S (DSE2024 Q3, CE1997 Q10(b))",
+      "shows": {
+        "en": [
+          "kinked S_quota: S0 (= MC) up to the quota Q0, then vertical",
+          "D0 (= MB0) shifts right to D1 (= MB1); quantity stays at Q0",
+          "efficient quantity rises from Q1 to Q2 (D meets S0)",
+          "hatched: the increase in deadweight loss (key)"
+        ],
+        "zh": [
+          "拗折的 Squota：沿 S0（= MC）直至配額 Q0，之後垂直",
+          "D0（= MB0）向右移至 D1（= MB1）；數量維持在 Q0",
+          "有效率數量由 Q1 增加至 Q2（D 與 S0 相交處）",
+          "斜線區域：無謂損失增加（圖例）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Q",
+          "P",
+          "S0 = MC",
+          "D0 = MB0",
+          "D1 = MB1",
+          "Squota",
+          "Q0",
+          "Q1",
+          "Q2",
+          "Increase in deadweight loss"
+        ],
+        "zh": [
+          "Q",
+          "P",
+          "S0 = MC",
+          "D0 = MB0",
+          "D1 = MB1",
+          "Squota",
+          "Q0",
+          "Q1",
+          "Q2",
+          "無謂損失增加"
+        ]
+      },
+      "alt": {
+        "en": "The supply with a quota, Squota, follows S0 = MC up to the quota Q0 and is then vertical. Demand shifts right from D0 = MB0 to D1 = MB1 (arrow); the quantity stays at Q0 while the efficient quantity rises from Q1 to Q2, and the hatched area is the increase in deadweight loss (key).",
+        "zh": "有配額的供應 Squota 沿 S0 = MC 直至配額 Q0，之後垂直。需求由 D0 = MB0 向右移至 D1 = MB1（箭頭）；數量維持在 Q0，有效率數量則由 Q1 增加至 Q2，斜線區域為無謂損失增加（圖例）。"
+      },
+      "png": {
+        "en": "gallery/30_quota_demand_increase_en.png",
+        "zh": "gallery/30_quota_demand_increase_zh.png"
+      },
+      "size": {
+        "en": [
+          1112,
+          869
+        ],
+        "zh": [
+          1044,
+          869
+        ]
+      },
+      "sha256": {
+        "en": "f84f0a7d107e67e33901ffda2f157bcc494b1c56a4fcbcfa7dcfd76d52668ead",
+        "zh": "7a6a210e28b39b4e464bfb76fc956f7658305f71478e0ea07b33e3b5682b0040"
+      }
+    },
+    {
+      "id": "31_unit_tax_burden_dwl",
+      "variant_of": null,
+      "topic": "Tax, subsidy and quota",
+      "title": {
+        "en": "Unit tax on a good with inelastic (steep) demand: buyers bear more, deadweight loss \"a\".",
+        "zh": "缺乏彈性需求下的從量稅：買家負擔較多，無謂損失 a"
+      },
+      "caption": {
+        "en": "Unit tax with inelastic demand: buyers bear more, deadweight loss a",
+        "zh": "缺乏彈性需求下的從量稅：買家負擔較多，無謂損失 a"
+      },
+      "use": "who bears more of a unit tax (the less elastic side) and the deadweight loss; for tax-revenue shading see template 07 (DSE2014 Q9(b), DSE2016 Q10(c))",
+      "shows": {
+        "en": [
+          "steep D; S0 shifts up by the tax to S1 (arrow \"tax\")",
+          "buyers pay P1 (was P0); sellers receive P2 = P1 - t; Q0 -> Q1",
+          "buyers' burden P0..P1 > sellers' burden P2..P0 (braces)",
+          "deadweight loss: triangle \"a\" between D and S0 from Q1 to Q0"
+        ],
+        "zh": [
+          "陡峭的 D；S0 因稅向上移至 S1（箭頭「稅」）",
+          "買家支付 P1（原為 P0）；賣家收取 P2 = P1 − t；Q0 → Q1",
+          "買家負擔 P0..P1 > 賣家負擔 P2..P0（括號）",
+          "無謂損失：由 Q1 至 Q0 在 D 與 S0 之間的三角形「a」"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Q",
+          "P",
+          "D",
+          "S0",
+          "S1",
+          "tax",
+          "a",
+          "P1",
+          "Q1",
+          "P0",
+          "Q0",
+          "P2",
+          "Buyers' burden",
+          "Sellers' burden"
+        ],
+        "zh": [
+          "Q",
+          "P",
+          "D",
+          "S0",
+          "S1",
+          "稅",
+          "a",
+          "P1",
+          "Q1",
+          "P0",
+          "Q0",
+          "P2",
+          "買家負擔",
+          "賣家負擔"
+        ]
+      },
+      "alt": {
+        "en": "A steep demand curve D. Supply shifts up by the tax from S0 to S1 (arrow labelled tax): buyers pay P1 (was P0), sellers receive P2 and the quantity falls from Q0 to Q1. Braces show the buyers' burden (P0 to P1) larger than the sellers' burden (P2 to P0), and the hatched triangle a between D and S0 from Q1 to Q0 is the deadweight loss.",
+        "zh": "陡峭的需求曲線 D。供應因稅由 S0 向上移至 S1（標示「稅」的箭頭）：買家支付 P1（原為 P0），賣家收取 P2，數量由 Q0 減少至 Q1。括號顯示買家負擔（P0 至 P1）大於賣家負擔（P2 至 P0），由 Q1 至 Q0 在 D 與 S0 之間的斜線三角形 a 為無謂損失。"
+      },
+      "png": {
+        "en": "gallery/31_unit_tax_burden_dwl_en.png",
+        "zh": "gallery/31_unit_tax_burden_dwl_zh.png"
+      },
+      "size": {
+        "en": [
+          1292,
+          869
+        ],
+        "zh": [
+          1203,
+          869
+        ]
+      },
+      "sha256": {
+        "en": "4239468d9b9adaa2c80f6d0cc84eb1ad5ac72a2185dfe1c4dc4d276e19e35daf",
+        "zh": "6e9357dbcbbc96b2a30daadd444db723fcfc86a31ed3cbc6303cfa1eab0912c0"
+      }
+    },
+    {
+      "id": "32_consumer_producer_surplus",
+      "variant_of": null,
+      "topic": "Consumer and producer surplus",
+      "title": {
+        "en": "Consumer surplus and producer surplus at the market equilibrium.",
+        "zh": "均衡時的消費者盈餘及生產者盈餘"
+      },
+      "caption": {
+        "en": "Consumer surplus and producer surplus at equilibrium",
+        "zh": "均衡時的消費者盈餘及生產者盈餘"
+      },
+      "use": "show (or name) consumer surplus and producer surplus in a market (DSESP Q9(a))",
+      "shows": {
+        "en": [
+          "D and S, a price line from the equilibrium to the price axis",
+          "C.S.: the triangle under D and above the price",
+          "P.S.: the triangle above S and below the price",
+          "a text legend: C.S. = consumer surplus, P.S. = producer surplus"
+        ],
+        "zh": [
+          "D 及 S，由均衡點至價格軸的價格線",
+          "C.S.：D 以下、價格以上的三角形",
+          "P.S.：S 以上、價格以下的三角形",
+          "文字圖例：C.S. = 消費者盈餘，P.S. = 生產者盈餘"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price ($)",
+          "D",
+          "S",
+          "C.S.",
+          "P.S.",
+          "C.S. = Consumer surplus",
+          "P.S. = Producer surplus"
+        ],
+        "zh": [
+          "數量",
+          "價格 ($)",
+          "D",
+          "S",
+          "C.S.",
+          "P.S.",
+          "C.S. = 消費者盈餘",
+          "P.S. = 生產者盈餘"
+        ]
+      },
+      "alt": {
+        "en": "D and S cross at the equilibrium, with a price line from there to the price axis. C.S. marks the triangle under D and above the price, P.S. the triangle above S and below the price, and a legend reads C.S. = Consumer surplus, P.S. = Producer surplus.",
+        "zh": "D 與 S 相交於均衡點，由該點至價格軸有一條價格線。C.S. 標示 D 以下、價格以上的三角形，P.S. 標示 S 以上、價格以下的三角形，圖例寫明 C.S. = 消費者盈餘，P.S. = 生產者盈餘。"
+      },
+      "png": {
+        "en": "gallery/32_consumer_producer_surplus_en.png",
+        "zh": "gallery/32_consumer_producer_surplus_zh.png"
+      },
+      "size": {
+        "en": [
+          1186,
+          804
+        ],
+        "zh": [
+          1121,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "01a081c55a0e4fee0e9eb2733a80b018a1d39099349d235cdc9502c60e759999",
+        "zh": "d331b2cadac2125147402acf08ad807db4d4f766efade54a2453f8382593adcc"
+      }
+    },
+    {
+      "id": "33_mc_rise_social_surplus",
+      "variant_of": null,
+      "topic": "Consumer and producer surplus",
+      "title": {
+        "en": "Marginal cost rises -> supply shifts up -> total social surplus falls by area abE1E0.",
+        "zh": "邊際成本上升：總社會盈餘減少"
+      },
+      "caption": {
+        "en": "Marginal cost rises: total social surplus falls",
+        "zh": "邊際成本上升：總社會盈餘減少"
+      },
+      "use": "a rise in production cost (MC) and the change in total social surplus (DSE2023 Q5(a))",
+      "shows": {
+        "en": [
+          "S0 = MC0 shifts up to S1 = MC1 (arrow); D = MB",
+          "equilibrium E0 -> E1",
+          "a, b: where S0 and S1 meet the price axis",
+          "hatched band abE1E0 = decrease in total social surplus"
+        ],
+        "zh": [
+          "S0 = MC0 向上移至 S1 = MC1（箭頭）；D = MB",
+          "均衡點 E0 → E1",
+          "a、b：S0 及 S1 與價格軸相交之處",
+          "斜線區域 abE1E0 = 總社會盈餘減少"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D = MB",
+          "S0 = MC0",
+          "S1 = MC1",
+          "E0",
+          "E1",
+          "a",
+          "b",
+          "Decrease in total social surplus",
+          "= area",
+          "abE1E0"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D = MB",
+          "S0 = MC0",
+          "S1 = MC1",
+          "E0",
+          "E1",
+          "a",
+          "b",
+          "總社會盈餘減少",
+          "= 面積",
+          "abE1E0"
+        ]
+      },
+      "alt": {
+        "en": "D = MB; supply shifts up from S0 = MC0 to S1 = MC1 (arrow) and the equilibrium moves from E0 to E1. a and b are where S0 and S1 meet the price axis, and the hatched band abE1E0 is the decrease in total social surplus (key).",
+        "zh": "D = MB；供應由 S0 = MC0 向上移至 S1 = MC1（箭頭），均衡點由 E0 移至 E1。a 及 b 為 S0 及 S1 與價格軸相交之處，斜線區域 abE1E0 為總社會盈餘減少（圖例）。"
+      },
+      "png": {
+        "en": "gallery/33_mc_rise_social_surplus_en.png",
+        "zh": "gallery/33_mc_rise_social_surplus_zh.png"
+      },
+      "size": {
+        "en": [
+          1130,
+          869
+        ],
+        "zh": [
+          1065,
+          869
+        ]
+      },
+      "sha256": {
+        "en": "62e61a92b3a676da6c939f13824d5b9f781a5399fb157933637196252ffea8e3",
+        "zh": "f3a188f1daba2b1406a4e2b2c9a59b05685c38c5c09bcdabd2f25adafab8a8f0"
+      }
+    },
+    {
+      "id": "34_ad_increase",
+      "variant_of": null,
+      "topic": "AD-AS",
+      "title": {
+        "en": "Aggregate demand increases -> price level and real output both rise.",
+        "zh": "總需求增加：物價水平及實質產出上升"
+      },
+      "caption": {
+        "en": "Aggregate demand increases: price level and real output rise",
+        "zh": "總需求增加：物價水平及實質產出上升"
+      },
+      "use": "a cash handout, more investment, more tourists, expansionary fiscal or monetary policy; for a fall in AD, swap AD0/AD1 and reverse the arrows (DSE2013 Q12(c), DSE2014 Q12(c), DSE2016 Q12(b), DSE2024 Q12(a), DSE2025 Q10(c), DSEPP Q13(b))",
+      "shows": {
+        "en": [
+          "AD0 shifts right to AD1 (arrow), SRAS unchanged",
+          "equilibrium moves E0 -> E1 along the upward-sloping SRAS",
+          "price level rises P0 -> P1, real output rises Y0 -> Y1"
+        ],
+        "zh": [
+          "AD0 向右移至 AD1（箭頭），SRAS 不變",
+          "均衡點沿向上傾斜的 SRAS 由 E0 移至 E1",
+          "物價水平由 P0 上升至 P1，實質產出由 Y0 增加至 Y1"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Real output",
+          "Price level",
+          "SRAS",
+          "AD0",
+          "AD1",
+          "P0",
+          "Y0",
+          "P1",
+          "Y1",
+          "E0",
+          "E1"
+        ],
+        "zh": [
+          "實質產出",
+          "物價水平",
+          "SRAS",
+          "AD0",
+          "AD1",
+          "P0",
+          "Y0",
+          "P1",
+          "Y1",
+          "E0",
+          "E1"
+        ]
+      },
+      "alt": {
+        "en": "AD shifts right from AD0 to AD1 (arrow) while SRAS is unchanged. The equilibrium moves up along SRAS from E0 to E1: the price level rises from P0 to P1 and real output from Y0 to Y1.",
+        "zh": "總需求由 AD0 向右移至 AD1（箭頭），SRAS 不變。均衡點沿 SRAS 由 E0 上移至 E1：物價水平由 P0 上升至 P1，實質產出由 Y0 增加至 Y1。"
+      },
+      "png": {
+        "en": "gallery/34_ad_increase_en.png",
+        "zh": "gallery/34_ad_increase_zh.png"
+      },
+      "size": {
+        "en": [
+          1085,
+          804
+        ],
+        "zh": [
+          1058,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "df1779415b5a2ee0462adfc554b9500bd78671e4987374b2253e491e1092b0f6",
+        "zh": "4cbd41922bc8231208d3a710002ea5d52afa6f90786bc5ff17894c3faa8f6292"
+      }
+    },
+    {
+      "id": "35_sras_decrease",
+      "variant_of": null,
+      "topic": "AD-AS",
+      "title": {
+        "en": "Short-run aggregate supply decreases -> price level rises, real output falls.",
+        "zh": "短期總供應減少：物價水平上升，實質產出下降"
+      },
+      "caption": {
+        "en": "Short-run aggregate supply decreases: price level rises, real output falls",
+        "zh": "短期總供應減少：物價水平上升，實質產出下降"
+      },
+      "use": "production costs rise (wages, rents, oil or raw-material prices), a natural disaster or strike cuts production; for an SRAS increase, reverse the arrows (supply-shock MCQs, DSE2017 Q12)",
+      "shows": {
+        "en": [
+          "SRAS0 shifts left to SRAS1 (arrow), AD unchanged",
+          "equilibrium moves E0 -> E1 up along AD",
+          "price level rises P0 -> P1, real output falls Y0 -> Y1"
+        ],
+        "zh": [
+          "SRAS0 向左移至 SRAS1（箭頭），AD 不變",
+          "均衡點沿 AD 由 E0 上移至 E1",
+          "物價水平由 P0 上升至 P1，實質產出由 Y0 減少至 Y1"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Real output",
+          "Price level",
+          "AD",
+          "SRAS0",
+          "SRAS1",
+          "P0",
+          "Y0",
+          "P1",
+          "Y1",
+          "E0",
+          "E1"
+        ],
+        "zh": [
+          "實質產出",
+          "物價水平",
+          "AD",
+          "SRAS0",
+          "SRAS1",
+          "P0",
+          "Y0",
+          "P1",
+          "Y1",
+          "E0",
+          "E1"
+        ]
+      },
+      "alt": {
+        "en": "SRAS shifts left from SRAS0 to SRAS1 (arrow) while AD is unchanged. The equilibrium moves up along AD from E0 to E1: the price level rises from P0 to P1 and real output falls from Y0 to Y1.",
+        "zh": "短期總供應由 SRAS0 向左移至 SRAS1（箭頭），AD 不變。均衡點沿 AD 由 E0 上移至 E1：物價水平由 P0 上升至 P1，實質產出由 Y0 減少至 Y1。"
+      },
+      "png": {
+        "en": "gallery/35_sras_decrease_en.png",
+        "zh": "gallery/35_sras_decrease_zh.png"
+      },
+      "size": {
+        "en": [
+          1085,
+          804
+        ],
+        "zh": [
+          1058,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "3add786cd96db3729b2b978160a28f85a68b35bdf8715e406330e1a5788ea3fb",
+        "zh": "caebc12e52e95b33c5bd1b8ec202de556b97a008fa78b5c39ad7828aed4570c3"
+      }
+    },
+    {
+      "id": "36_ad_sras_both_decrease",
+      "variant_of": null,
+      "topic": "AD-AS",
+      "title": {
+        "en": "AD and SRAS both decrease -> real output falls; the price level is indeterminate.",
+        "zh": "總需求及短期總供應同時減少：實質產出下降，物價水平可升可跌"
+      },
+      "caption": {
+        "en": "AD and SRAS both decrease: real output falls, the price level may rise or fall",
+        "zh": "總需求及短期總供應同時減少：實質產出下降，物價水平可升可跌"
+      },
+      "use": "one event that raises costs AND cuts spending (Brexit visa costs + less investment, a disaster that shuts factories + pessimism); only Y is certain (DSE2017 Q12(b), DSE2021 Q11(b))",
+      "shows": {
+        "en": [
+          "AD0 shifts left to AD1 (arrow)",
+          "SRAS0 shifts left to SRAS1 (arrow)",
+          "real output falls Y0 -> Y1; the price level is not labelled (may rise or fall)"
+        ],
+        "zh": [
+          "AD0 向左移至 AD1（箭頭）",
+          "SRAS0 向左移至 SRAS1（箭頭）",
+          "實質產出由 Y0 減少至 Y1；物價水平不標示（可升可跌）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Real output",
+          "Price level",
+          "AD0",
+          "AD1",
+          "SRAS0",
+          "SRAS1",
+          "Y0",
+          "Y1",
+          "E0",
+          "E1"
+        ],
+        "zh": [
+          "實質產出",
+          "物價水平",
+          "AD0",
+          "AD1",
+          "SRAS0",
+          "SRAS1",
+          "Y0",
+          "Y1",
+          "E0",
+          "E1"
+        ]
+      },
+      "alt": {
+        "en": "AD shifts left from AD0 to AD1 and SRAS from SRAS0 to SRAS1 (arrows). The equilibrium moves from E0 to E1 and real output falls from Y0 to Y1; the price level is not labelled because it may rise or fall.",
+        "zh": "總需求由 AD0 向左移至 AD1，短期總供應由 SRAS0 向左移至 SRAS1（箭頭）。均衡點由 E0 移至 E1，實質產出由 Y0 減少至 Y1；物價水平可升可跌，所以沒有標示。"
+      },
+      "png": {
+        "en": "gallery/36_ad_sras_both_decrease_en.png",
+        "zh": "gallery/36_ad_sras_both_decrease_zh.png"
+      },
+      "size": {
+        "en": [
+          1085,
+          804
+        ],
+        "zh": [
+          1058,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "68ac0476c3fd46eb3571c7800011b1890a58ee0b50e01c55919431b55a15eb5e",
+        "zh": "395884ce49704ae0cc4d1872cc166337869106a59ed3b5bc5d9206c837665404"
+      }
+    },
+    {
+      "id": "37_lras_ad_increase",
+      "variant_of": null,
+      "topic": "AD-AS",
+      "title": {
+        "en": "Long run: AD increases on a vertical LRAS -> price level rises, real output stays at Yf.",
+        "zh": "長期：垂直 LRAS 下總需求增加，只有物價水平上升"
+      },
+      "caption": {
+        "en": "Long run: AD increases on a vertical LRAS, only the price level rises",
+        "zh": "長期：垂直 LRAS 下總需求增加，只有物價水平上升"
+      },
+      "use": "the LONG-RUN effect of a demand-side change (cash handout, more spending) when production capacity is unchanged (DSE2012 Q10(c))",
+      "shows": {
+        "en": [
+          "vertical LRAS at full-employment output Yf (no SRAS)",
+          "AD1 shifts right to AD2 (arrow)",
+          "price level rises P1 -> P2; real output unchanged at Yf"
+        ],
+        "zh": [
+          "垂直的 LRAS 位於充分就業產出 Yf（沒有 SRAS）",
+          "AD1 向右移至 AD2（箭頭）",
+          "物價水平由 P1 上升至 P2；實質產出維持在 Yf"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Real output",
+          "Price level",
+          "LRAS",
+          "AD1",
+          "AD2",
+          "P1",
+          "P2",
+          "Yf",
+          "E1",
+          "E2"
+        ],
+        "zh": [
+          "實質產出",
+          "物價水平",
+          "LRAS",
+          "AD1",
+          "AD2",
+          "P1",
+          "P2",
+          "Yf",
+          "E1",
+          "E2"
+        ]
+      },
+      "alt": {
+        "en": "A vertical LRAS at full-employment output Yf, with no SRAS. AD shifts right from AD1 to AD2 (arrow): the equilibrium moves up LRAS from E1 to E2, the price level rises from P1 to P2 and real output stays at Yf.",
+        "zh": "垂直的 LRAS 位於充分就業產出 Yf，沒有 SRAS。總需求由 AD1 向右移至 AD2（箭頭）：均衡點沿 LRAS 由 E1 上移至 E2，物價水平由 P1 上升至 P2，實質產出維持在 Yf。"
+      },
+      "png": {
+        "en": "gallery/37_lras_ad_increase_en.png",
+        "zh": "gallery/37_lras_ad_increase_zh.png"
+      },
+      "size": {
+        "en": [
+          1085,
+          804
+        ],
+        "zh": [
+          1058,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "3deaa42b892e3b9adcbd2d68f054d2f2955821c6ffa4bfd32eccebb1cb349b92",
+        "zh": "3c53a2e70813db4d9b9b350c21b275f25588cb19e78b30fc91707c27792e7b36"
+      }
+    },
+    {
+      "id": "38_economic_growth",
+      "variant_of": null,
+      "topic": "AD-AS",
+      "title": {
+        "en": "Economic growth: LRAS and AD both increase -> real output rises; P rises if AD grows more.",
+        "zh": "經濟增長：長期總供應及總需求同時增加"
+      },
+      "caption": {
+        "en": "Economic growth: LRAS and AD both increase",
+        "zh": "經濟增長：長期總供應及總需求同時增加"
+      },
+      "use": "better infrastructure, more labour or capital, R&D, new tourist attractions that raise both spending and production capacity (DSE2018 Q9, DSE2020 Q9(b))",
+      "shows": {
+        "en": [
+          "LRAS0 shifts right to LRAS1 (arrow)",
+          "AD0 shifts right to AD1 (arrow), by MORE than LRAS",
+          "E0 -> E1: real output rises Y0 -> Y1, price level rises P0 -> P1"
+        ],
+        "zh": [
+          "LRAS0 向右移至 LRAS1（箭頭）",
+          "AD0 向右移至 AD1（箭頭），移動大於 LRAS",
+          "E0 → E1：實質產出由 Y0 增加至 Y1，物價水平由 P0 上升至 P1"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Real output",
+          "Price level",
+          "LRAS0",
+          "LRAS1",
+          "AD0",
+          "AD1",
+          "P0",
+          "E0",
+          "Y0",
+          "P1",
+          "E1",
+          "Y1"
+        ],
+        "zh": [
+          "實質產出",
+          "物價水平",
+          "LRAS0",
+          "LRAS1",
+          "AD0",
+          "AD1",
+          "P0",
+          "E0",
+          "Y0",
+          "P1",
+          "E1",
+          "Y1"
+        ]
+      },
+      "alt": {
+        "en": "LRAS shifts right from LRAS0 to LRAS1 and AD shifts right from AD0 to AD1 by more (arrows). The equilibrium moves from E0 to E1: real output rises from Y0 to Y1 and the price level rises from P0 to P1.",
+        "zh": "長期總供應由 LRAS0 向右移至 LRAS1，總需求由 AD0 向右移至 AD1，移動較大（箭頭）。均衡點由 E0 移至 E1：實質產出由 Y0 增加至 Y1，物價水平由 P0 上升至 P1。"
+      },
+      "png": {
+        "en": "gallery/38_economic_growth_en.png",
+        "zh": "gallery/38_economic_growth_zh.png"
+      },
+      "size": {
+        "en": [
+          1085,
+          804
+        ],
+        "zh": [
+          1058,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "f00fbfcfd881ad929063ab2d3d3554de0c386cbec5f19acdf715a9c558199107",
+        "zh": "037bee0275bd5bdbd27940b5281a6dad4a4893cdc47ae29ff422a6a037e50fa8"
+      }
+    },
+    {
+      "id": "39_deflationary_gap",
+      "variant_of": null,
+      "topic": "AD-AS",
+      "title": {
+        "en": "Deflationary gap narrows: AD increases -> real output rises towards Yf.",
+        "zh": "總需求增加：通縮缺口收窄"
+      },
+      "caption": {
+        "en": "Deflationary gap narrows as AD increases",
+        "zh": "總需求增加：通縮缺口收窄"
+      },
+      "use": "showing a deflationary (output) gap and how a rise in AD (tax cut, more tourists, expansionary policy) narrows it; add the vertical LRAS yourself (DSE2019 Q10(b), DSE2021 Q11(a), DSE2023 Q7(a), DSE2023 Q7(b))",
+      "shows": {
+        "en": [
+          "vertical LRAS at Yf, right of E0 (Y0 < Yf): gap0 = Y0 to Yf",
+          "AD0 shifts right to AD1 (arrow); E0 -> E1, P0 -> P1, Y0 -> Y1",
+          "gap1 = Y1 to Yf, narrower than gap0; key: gap = deflationary gap"
+        ],
+        "zh": [
+          "垂直的 LRAS 在 Yf，位於 E0 右方（Y0 < Yf）：gap0 = Y0 至 Yf",
+          "AD0 向右移至 AD1（箭頭）；E0 → E1，P0 → P1，Y0 → Y1",
+          "gap1 = Y1 至 Yf，比 gap0 窄；圖例：gap = 通縮缺口"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Real output",
+          "Price level",
+          "SRAS",
+          "LRAS",
+          "AD0",
+          "AD1",
+          "P0",
+          "Y0",
+          "P1",
+          "Y1",
+          "E0",
+          "E1",
+          "Yf",
+          "gap1",
+          "gap0",
+          "gap = deflationary gap"
+        ],
+        "zh": [
+          "實質產出",
+          "物價水平",
+          "SRAS",
+          "LRAS",
+          "AD0",
+          "AD1",
+          "P0",
+          "Y0",
+          "P1",
+          "Y1",
+          "E0",
+          "E1",
+          "Yf",
+          "gap1",
+          "gap0",
+          "gap = 通縮缺口"
+        ]
+      },
+      "alt": {
+        "en": "SRAS, a vertical LRAS at Yf, and AD shifting right from AD0 to AD1 (arrow). The equilibrium moves from E0 to E1, the price level rises from P0 to P1 and real output from Y0 to Y1; braces show gap0 (Y0 to Yf) narrowing to gap1 (Y1 to Yf), with the key gap = deflationary gap.",
+        "zh": "SRAS、位於 Yf 的垂直 LRAS，以及由 AD0 向右移至 AD1 的總需求（箭頭）。均衡點由 E0 移至 E1，物價水平由 P0 上升至 P1，實質產出由 Y0 增加至 Y1；括號顯示 gap0（Y0 至 Yf）收窄至 gap1（Y1 至 Yf），圖例為 gap = 通縮缺口。"
+      },
+      "png": {
+        "en": "gallery/39_deflationary_gap_en.png",
+        "zh": "gallery/39_deflationary_gap_zh.png"
+      },
+      "size": {
+        "en": [
+          1085,
+          839
+        ],
+        "zh": [
+          1058,
+          839
+        ]
+      },
+      "sha256": {
+        "en": "1f67f8f2823522d6c30c05cec2e74b014b77274d17c852a181fa797782879805",
+        "zh": "fc58629b553c7f832aa085f4b8f48006567aa379b8c0b45f79b7928c82065e7b"
+      }
+    },
+    {
+      "id": "40_inflationary_gap",
+      "variant_of": null,
+      "topic": "AD-AS",
+      "title": {
+        "en": "Inflationary gap closed by a fall in AD -> real output falls back to Yf.",
+        "zh": "總需求減少：通脹缺口消除"
+      },
+      "caption": {
+        "en": "Inflationary gap closed by a fall in AD",
+        "zh": "總需求減少：通脹缺口消除"
+      },
+      "use": "output above full employment (Y0 > Yf) and a fall in AD (fewer tourists, contractionary fiscal or monetary policy) that brings it back to Yf (DSE2015 Q12(b))",
+      "shows": {
+        "en": [
+          "E0 right of the vertical LRAS: Y0 > Yf, inflationary gap from Yf to Y0",
+          "AD0 shifts left to AD1 (arrow); new E1 where AD1 meets SRAS on LRAS",
+          "real output falls Y0 -> Yf, price level falls P0 -> P1"
+        ],
+        "zh": [
+          "E0 位於垂直 LRAS 右方：Y0 > Yf，通脹缺口由 Yf 至 Y0",
+          "AD0 向左移至 AD1（箭頭）；新的 E1 為 AD1 與 SRAS 在 LRAS 上相交之處",
+          "實質產出由 Y0 減少至 Yf，物價水平由 P0 下降至 P1"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Real output",
+          "Price level",
+          "SRAS",
+          "LRAS",
+          "AD0",
+          "AD1",
+          "P0",
+          "Y0",
+          "P1",
+          "E0",
+          "E1",
+          "Yf",
+          "gap",
+          "gap = inflationary gap"
+        ],
+        "zh": [
+          "實質產出",
+          "物價水平",
+          "SRAS",
+          "LRAS",
+          "AD0",
+          "AD1",
+          "P0",
+          "Y0",
+          "P1",
+          "E0",
+          "E1",
+          "Yf",
+          "gap",
+          "gap = 通脹缺口"
+        ]
+      },
+      "alt": {
+        "en": "The equilibrium E0 on SRAS is right of the vertical LRAS, so Y0 is above Yf and the brace gap (Yf to Y0) is the inflationary gap. AD shifts left from AD0 to AD1 (arrow) and meets SRAS on LRAS at E1: real output falls from Y0 to Yf and the price level from P0 to P1.",
+        "zh": "SRAS 上的均衡點 E0 位於垂直 LRAS 的右方，Y0 高於 Yf，括號 gap（Yf 至 Y0）為通脹缺口。總需求由 AD0 向左移至 AD1（箭頭），在 LRAS 上的 E1 與 SRAS 相交：實質產出由 Y0 減少至 Yf，物價水平由 P0 下降至 P1。"
+      },
+      "png": {
+        "en": "gallery/40_inflationary_gap_en.png",
+        "zh": "gallery/40_inflationary_gap_zh.png"
+      },
+      "size": {
+        "en": [
+          1085,
+          804
+        ],
+        "zh": [
+          1058,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "b0c9fc1603f15e24ce8d612d8746f3bf3f1954e2b4dabe43e60bcdd447eef5fc",
+        "zh": "0d5a06baa9fdd9a822d15b2f0e7c1e5239ca60c03446f8ed44dbc62fae27ac64"
+      }
+    },
+    {
+      "id": "41_self_adjust_deflationary",
+      "variant_of": null,
+      "topic": "AD-AS",
+      "title": {
+        "en": "Deflationary gap closed by market forces: SRAS increases -> price level falls, output rises to Yf.",
+        "zh": "市場力量消除通縮缺口：短期總供應增加"
+      },
+      "caption": {
+        "en": "Deflationary gap closed by market forces: SRAS increases",
+        "zh": "市場力量消除通縮缺口：短期總供應增加"
+      },
+      "use": "\"how do market forces restore full-employment output\" when Y < Yf: excess supply of labour -> wages and costs fall -> SRAS rises (DSEPP Q13(c), DSE2024 Q7(b))",
+      "shows": {
+        "en": [
+          "AD unchanged; E0 left of the vertical LRAS (Y0 < Yf)",
+          "SRAS0 shifts right to SRAS1 (arrow) until AD meets SRAS1 on LRAS",
+          "E0 -> E1: price level falls P0 -> P1, real output rises Y0 -> Yf"
+        ],
+        "zh": [
+          "AD 不變；E0 位於垂直 LRAS 左方（Y0 < Yf）",
+          "SRAS0 向右移至 SRAS1（箭頭），直至 AD 與 SRAS1 在 LRAS 上相交",
+          "E0 → E1：物價水平由 P0 下降至 P1，實質產出由 Y0 增加至 Yf"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Real output",
+          "Price level",
+          "AD",
+          "LRAS",
+          "SRAS0",
+          "SRAS1",
+          "P0",
+          "Y0",
+          "P1",
+          "E0",
+          "E1",
+          "Yf"
+        ],
+        "zh": [
+          "實質產出",
+          "物價水平",
+          "AD",
+          "LRAS",
+          "SRAS0",
+          "SRAS1",
+          "P0",
+          "Y0",
+          "P1",
+          "E0",
+          "E1",
+          "Yf"
+        ]
+      },
+      "alt": {
+        "en": "AD is unchanged and the first equilibrium E0 is left of the vertical LRAS (Y0 below Yf). SRAS shifts right from SRAS0 to SRAS1 (arrow) until AD meets it on LRAS at E1: the price level falls from P0 to P1 and real output rises from Y0 to Yf.",
+        "zh": "總需求 AD 不變，原來的均衡點 E0 位於垂直 LRAS 左方（Y0 低於 Yf）。短期總供應由 SRAS0 向右移至 SRAS1（箭頭），直至 AD 與 SRAS1 在 LRAS 上的 E1 相交：物價水平由 P0 下降至 P1，實質產出由 Y0 增加至 Yf。"
+      },
+      "png": {
+        "en": "gallery/41_self_adjust_deflationary_en.png",
+        "zh": "gallery/41_self_adjust_deflationary_zh.png"
+      },
+      "size": {
+        "en": [
+          1085,
+          804
+        ],
+        "zh": [
+          1058,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "101dfb771027de0d4acbcb81a4c1451ff39807ff6fbcf2b9a898f9c33c6194dc",
+        "zh": "f0c1dda9fa2ac61cfd78f384467144fcbe9cde973e8d302941d1d440d95d91fc"
+      }
+    },
+    {
+      "id": "42_self_adjust_inflationary",
+      "variant_of": null,
+      "topic": "AD-AS",
+      "title": {
+        "en": "Inflationary gap closed by market forces: SRAS decreases -> price level rises, output falls to Yf.",
+        "zh": "市場力量消除通脹缺口：短期總供應減少"
+      },
+      "caption": {
+        "en": "Inflationary gap closed by market forces: SRAS decreases",
+        "zh": "市場力量消除通脹缺口：短期總供應減少"
+      },
+      "use": "\"how do market forces restore full-employment output\" when Y > Yf: excess demand for labour -> wages and costs rise -> SRAS falls (DSE2020 Q6)",
+      "shows": {
+        "en": [
+          "AD unchanged; E0 right of the vertical LRAS (Y0 > Yf)",
+          "SRAS0 shifts left to SRAS1 (arrow) until AD meets SRAS1 on LRAS",
+          "E0 -> E1: price level rises P0 -> P1, real output falls Y0 -> Yf"
+        ],
+        "zh": [
+          "AD 不變；E0 位於垂直 LRAS 右方（Y0 > Yf）",
+          "SRAS0 向左移至 SRAS1（箭頭），直至 AD 與 SRAS1 在 LRAS 上相交",
+          "E0 → E1：物價水平由 P0 上升至 P1，實質產出由 Y0 減少至 Yf"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Real output",
+          "Price level",
+          "AD",
+          "LRAS",
+          "SRAS0",
+          "SRAS1",
+          "P0",
+          "Y0",
+          "P1",
+          "E0",
+          "E1",
+          "Yf"
+        ],
+        "zh": [
+          "實質產出",
+          "物價水平",
+          "AD",
+          "LRAS",
+          "SRAS0",
+          "SRAS1",
+          "P0",
+          "Y0",
+          "P1",
+          "E0",
+          "E1",
+          "Yf"
+        ]
+      },
+      "alt": {
+        "en": "AD is unchanged and the first equilibrium E0 is right of the vertical LRAS (Y0 above Yf). SRAS shifts left from SRAS0 to SRAS1 (arrow) until AD meets it on LRAS at E1: the price level rises from P0 to P1 and real output falls from Y0 to Yf.",
+        "zh": "總需求 AD 不變，原來的均衡點 E0 位於垂直 LRAS 右方（Y0 高於 Yf）。短期總供應由 SRAS0 向左移至 SRAS1（箭頭），直至 AD 與 SRAS1 在 LRAS 上的 E1 相交：物價水平由 P0 上升至 P1，實質產出由 Y0 減少至 Yf。"
+      },
+      "png": {
+        "en": "gallery/42_self_adjust_inflationary_en.png",
+        "zh": "gallery/42_self_adjust_inflationary_zh.png"
+      },
+      "size": {
+        "en": [
+          1085,
+          804
+        ],
+        "zh": [
+          1058,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "60a9605a600be3402c4bf3910b00e80646eea30c847ad2ff2798266afa04fe60",
+        "zh": "d10c6c4508e35ae6f3e3d3f37acf8ab0270981bf4230c1da94855f47e1d8c6b5"
+      }
+    },
+    {
+      "id": "43_supply_shock_recovery",
+      "variant_of": null,
+      "topic": "AD-AS",
+      "title": {
+        "en": "Temporary supply shock: SRAS falls (1), then recovers (2) -> P and Y return to P0 and Yf.",
+        "zh": "短暫的供應衝擊：短期總供應先減少後回復"
+      },
+      "caption": {
+        "en": "Temporary supply shock: SRAS falls, then recovers",
+        "zh": "短暫的供應衝擊：短期總供應先減少後回復"
+      },
+      "use": "raw-material prices rise for a while, then the economy adjusts back in the long run (excess labour supply -> wages fall -> SRAS rises again) (DSE2013 Q4(b))",
+      "shows": {
+        "en": [
+          "AD, SRAS0 and vertical LRAS all through E0 at (Yf, P0)",
+          "arrow 1: SRAS0 shifts left to SRAS1; E0 -> E1, P rises to P1, Y falls to Y1",
+          "arrow 2: SRAS1 shifts back right to SRAS0; E1 -> E0, P back to P0, Y back to Yf"
+        ],
+        "zh": [
+          "AD、SRAS0 及垂直 LRAS 均通過 E0（Yf，P0）",
+          "箭頭 1：SRAS0 向左移至 SRAS1；E0 → E1，P 上升至 P1，Y 下降至 Y1",
+          "箭頭 2：SRAS1 向右移回 SRAS0；E1 → E0，P 回到 P0，Y 回到 Yf"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Real output",
+          "Price level",
+          "AD",
+          "LRAS",
+          "SRAS0",
+          "SRAS1",
+          "1",
+          "2",
+          "P0",
+          "P1",
+          "Y1",
+          "E0",
+          "E1",
+          "Yf"
+        ],
+        "zh": [
+          "實質產出",
+          "物價水平",
+          "AD",
+          "LRAS",
+          "SRAS0",
+          "SRAS1",
+          "1",
+          "2",
+          "P0",
+          "P1",
+          "Y1",
+          "E0",
+          "E1",
+          "Yf"
+        ]
+      },
+      "alt": {
+        "en": "AD, SRAS0 and a vertical LRAS all pass through E0 at Yf and P0. Arrow 1 shifts SRAS left from SRAS0 to SRAS1, moving the equilibrium to E1 (price level P1, real output Y1); arrow 2 shifts it back to SRAS0, returning to E0 at P0 and Yf.",
+        "zh": "AD、SRAS0 及垂直的 LRAS 均通過 E0（Yf，P0）。箭頭 1 表示 SRAS 由 SRAS0 向左移至 SRAS1，均衡點移至 E1（物價水平 P1，實質產出 Y1）；箭頭 2 表示 SRAS 移回 SRAS0，回到 P0 及 Yf 的 E0。"
+      },
+      "png": {
+        "en": "gallery/43_supply_shock_recovery_en.png",
+        "zh": "gallery/43_supply_shock_recovery_zh.png"
+      },
+      "size": {
+        "en": [
+          1085,
+          804
+        ],
+        "zh": [
+          1058,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "ef9e4c7410f08dd7253ee3291ca899676084fba4381886b6558529f1a0487c6b",
+        "zh": "450c1ba1be96666015518a93c3593d70757464fab1f46253c5cc3098db6d0146"
+      }
+    },
+    {
+      "id": "02b_price_floor_surplus",
+      "variant_of": "02_price_floor_surplus",
+      "topic": "Price fixed away from equilibrium",
+      "title": {
+        "en": "Price floor ABOVE equilibrium in a goods market -> surplus (excess supply).",
+        "zh": "高於均衡價格的價格下限：盈餘"
+      },
+      "caption": {
+        "en": "Price floor above equilibrium: surplus",
+        "zh": "高於均衡價格的價格下限：盈餘"
+      },
+      "use": "a price floor / fixed price ABOVE equilibrium in a goods market causes a surplus; for a minimum wage use 02, for the deadweight loss use 25 (chat-only variant of 02 with goods-market axes)",
+      "shows": {
+        "en": [
+          "price floor (Pf) above the equilibrium price (Pe)",
+          "correct position of the surplus / excess supply (Qd to Qs at Pf)"
+        ],
+        "zh": [
+          "價格下限（Pf）高於均衡價格（Pe）",
+          "盈餘／超額供應的正確位置（在 Pf 由 Qd 至 Qs）"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "S",
+          "Pe",
+          "Pf",
+          "Qd",
+          "Qs",
+          "surplus"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "S",
+          "Pe",
+          "Pf",
+          "Qd",
+          "Qs",
+          "盈餘"
+        ]
+      },
+      "alt": {
+        "en": "Demand D and supply S cross at the equilibrium price Pe. The price floor Pf is above Pe; at Pf the quantity demanded is Qd and the quantity supplied is Qs, and a brace from Qd to Qs marks the surplus (excess supply).",
+        "zh": "需求 D 與供應 S 相交於均衡價格 Pe。價格下限 Pf 高於 Pe；在 Pf，需求量為 Qd，供應量為 Qs，由 Qd 至 Qs 的括號標示盈餘（超額供應）。"
+      },
+      "png": {
+        "en": "gallery/chat/02b_price_floor_surplus_en.png",
+        "zh": "gallery/chat/02b_price_floor_surplus_zh.png"
+      },
+      "size": {
+        "en": [
+          1037,
+          804
+        ],
+        "zh": [
+          984,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "c9fb089c5485d84cddb480e08344b3f55883e66bc4c6fd7e15e1e99a4fca42bf",
+        "zh": "d5696bff5dbc7d7984020ba810c4bc913a47e6790f576f596178946043b6c34f"
+      }
+    },
+    {
+      "id": "05b_tr_price_rise_elastic",
+      "variant_of": "05_tr_price_change_elastic",
+      "topic": "Total revenue and elasticity",
+      "title": {
+        "en": "Price rises on ELASTIC (flat) demand -> total revenue falls.",
+        "zh": "富彈性需求下價格上升：總收入減少"
+      },
+      "caption": {
+        "en": "Price rises on elastic demand: total revenue falls",
+        "zh": "富彈性需求下價格上升：總收入減少"
+      },
+      "use": "a price rise along one ELASTIC demand curve lowers total revenue / expenditure (chat-only variant: 05 with the price change reversed); for a price rise on inelastic demand use 18",
+      "shows": {
+        "en": [
+          "flat (elastic) demand curve D",
+          "price rises from P1 to P2, quantity demanded falls from Q1 to Q2",
+          "gain of revenue (P1..P2 x 0..Q2) marked \"+\", loss (Q2..Q1 x 0..P1) marked \"-\"",
+          "loss > gain, so total revenue falls"
+        ],
+        "zh": [
+          "平坦（富彈性）的需求曲線 D",
+          "價格由 P1 上升至 P2，需求量由 Q1 減少至 Q2",
+          "收入得益（P1..P2 × 0..Q2）標示「+」，損失（Q2..Q1 × 0..P1）標示「−」",
+          "損失 > 得益，所以總收入減少"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "P1",
+          "Q1",
+          "P2",
+          "Q2",
+          "+",
+          "−"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "P1",
+          "Q1",
+          "P2",
+          "Q2",
+          "+",
+          "−"
+        ]
+      },
+      "alt": {
+        "en": "A flat (elastic) demand curve D. The price rises from P1 to P2 and the quantity demanded falls from Q1 to Q2; the gain rectangle (P1 to P2, 0 to Q2) is marked + and is smaller than the loss rectangle (Q2 to Q1, 0 to P1) marked −.",
+        "zh": "平坦（富彈性）的需求曲線 D。價格由 P1 上升至 P2，需求量由 Q1 減少至 Q2；標示「+」的得益長方形（P1 至 P2，0 至 Q2）小於標示「−」的損失長方形（Q2 至 Q1，0 至 P1）。"
+      },
+      "png": {
+        "en": "gallery/chat/05b_tr_price_rise_elastic_en.png",
+        "zh": "gallery/chat/05b_tr_price_rise_elastic_zh.png"
+      },
+      "size": {
+        "en": [
+          1056,
+          804
+        ],
+        "zh": [
+          990,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "e219b511c47b85220e86ad6b56d0b59d1119cf590e830ace8b4076c51528bc9f",
+        "zh": "32823dc9d0edcf366b51b5e00748232c90f99e49746d4efb323853e71e494dc2"
+      }
+    },
+    {
+      "id": "09b_positive_externality",
+      "variant_of": "09_externality_overproduction",
+      "topic": "Other",
+      "title": {
+        "en": "Positive externality in consumption: under-consumption and deadweight loss.",
+        "zh": "消費的正外部效應：消費不足及無謂損失"
+      },
+      "caption": {
+        "en": "Positive externality in consumption: under-consumption and deadweight loss",
+        "zh": "消費的正外部效應：消費不足及無謂損失"
+      },
+      "use": "positive externality in consumption (education, vaccination, public transport ...): MSB above MPB, so the market consumes too little; no marking-scheme ID yet (chat-only variant, drawn from the syllabus)",
+      "shows": {
+        "en": [
+          "MSB above MPB (external benefit); D = MPB; S = MPC = MSC",
+          "market output Qm where D = S; efficient output Q* where MSB = S",
+          "Qm < Q* (under-consumption)",
+          "deadweight loss: triangle between MSB and S from Qm to Q*"
+        ],
+        "zh": [
+          "MSB 在 MPB 之上（外部利益）；D = MPB；S = MPC = MSC",
+          "市場數量 Qm 在 D = S 處；有效率數量 Q* 在 MSB = S 處",
+          "Qm < Q*（消費不足）",
+          "無謂損失：由 Qm 至 Q* 在 MSB 與 S 之間的三角形"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price / cost",
+          "S = MPC = MSC",
+          "D = MPB",
+          "MSB",
+          "Pm",
+          "Qm",
+          "Q*",
+          "Deadweight loss"
+        ],
+        "zh": [
+          "數量",
+          "價格／成本",
+          "S = MPC = MSC",
+          "D = MPB",
+          "MSB",
+          "Pm",
+          "Qm",
+          "Q*",
+          "無謂損失"
+        ]
+      },
+      "alt": {
+        "en": "MSB lies above D = MPB by the external benefit, and S = MPC = MSC. The market consumes Qm at price Pm (D meets S), less than the efficient quantity Q* (MSB meets S); the hatched triangle between MSB and S from Qm to Q* is the deadweight loss.",
+        "zh": "MSB 在 D = MPB 之上，兩者相差外部利益；S = MPC = MSC。市場數量為 Qm、價格為 Pm（D 與 S 相交），少於有效率數量 Q*（MSB 與 S 相交）；由 Qm 至 Q* 在 MSB 與 S 之間的斜線三角形為無謂損失。"
+      },
+      "png": {
+        "en": "gallery/chat/09b_positive_externality_en.png",
+        "zh": "gallery/chat/09b_positive_externality_zh.png"
+      },
+      "size": {
+        "en": [
+          1154,
+          841
+        ],
+        "zh": [
+          1154,
+          848
+        ]
+      },
+      "sha256": {
+        "en": "1160f265ce414e2f6891df32c12c1d089292e613c0c5cec126e3d8cb6b62bca7",
+        "zh": "cb384fb324b818d11a20a14d278d97e5b7de7fa08f5b11cb054b7237025decf9"
+      }
+    },
+    {
+      "id": "10b_ppc_growth",
+      "variant_of": "10_ppc",
+      "topic": "Other",
+      "title": {
+        "en": "Economic growth: the production possibilities curve (PPC) shifts outward.",
+        "zh": "經濟增長：生產可能曲線向外移"
+      },
+      "caption": {
+        "en": "Economic growth: the production possibilities curve shifts outward",
+        "zh": "經濟增長：生產可能曲線向外移"
+      },
+      "use": "economic growth (more labour or capital, better technology) shown on a PPC (chat-only variant: 10 without the points)",
+      "shows": {
+        "en": [
+          "PPC0 concave to the origin",
+          "outward shift PPC0 -> PPC1 (arrow) = economic growth"
+        ],
+        "zh": [
+          "PPC0 凹向原點",
+          "生產可能曲線向外移 PPC0 → PPC1（箭頭）= 經濟增長"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Consumer goods",
+          "Capital goods",
+          "PPC0",
+          "PPC1"
+        ],
+        "zh": [
+          "消費品",
+          "資本品",
+          "PPC0",
+          "PPC1"
+        ]
+      },
+      "alt": {
+        "en": "A production possibilities curve PPC0 for capital goods and consumer goods, concave to the origin, and a larger PPC1 further out, with an arrow from PPC0 to PPC1 showing economic growth.",
+        "zh": "資本品與消費品的生產可能曲線 PPC0，凹向原點；較外的 PPC1 及由 PPC0 指向 PPC1 的箭頭表示經濟增長。"
+      },
+      "png": {
+        "en": "gallery/chat/10b_ppc_growth_en.png",
+        "zh": "gallery/chat/10b_ppc_growth_zh.png"
+      },
+      "size": {
+        "en": [
+          1205,
+          844
+        ],
+        "zh": [
+          1034,
+          850
+        ]
+      },
+      "sha256": {
+        "en": "a51b940f1eab0f23c3ef4fd104918856629ee5bec9e2d4038f597ab8f6cb7943",
+        "zh": "99b6122b8d9792a7835185c25529dbbcd302461d6b5844916a2613660e866521"
+      }
+    },
+    {
+      "id": "10c_ppc_points",
+      "variant_of": "10_ppc",
+      "topic": "Other",
+      "title": {
+        "en": "Production possibilities curve (PPC): points inside, on and outside the curve.",
+        "zh": "生產可能曲線以內、線上及以外的點"
+      },
+      "caption": {
+        "en": "Points inside, on and outside the production possibilities curve",
+        "zh": "生產可能曲線以內、線上及以外的點"
+      },
+      "use": "what a point inside, on or outside the PPC means (unemployment / inefficiency, efficiency, unattainable) with no shift (chat-only variant of 10)",
+      "shows": {
+        "en": [
+          "PPC concave to the origin (increasing opportunity cost)",
+          "point on the curve (B): efficient; inside (A): unemployment / inefficiency; outside (C): unattainable with current resources"
+        ],
+        "zh": [
+          "生產可能曲線凹向原點（機會成本遞增）",
+          "曲線上的點（B）：有效率；曲線以內（A）：失業／沒有效率；曲線以外（C）：以現有資源無法達到"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Consumer goods",
+          "Capital goods",
+          "PPC",
+          "A",
+          "B",
+          "C",
+          "A: unemployment / inefficiency",
+          "B: efficient",
+          "C: unattainable"
+        ],
+        "zh": [
+          "消費品",
+          "資本品",
+          "PPC",
+          "A",
+          "B",
+          "C",
+          "A：失業／沒有效率",
+          "B：有效率",
+          "C：無法達到"
+        ]
+      },
+      "alt": {
+        "en": "One production possibilities curve PPC for capital goods and consumer goods, concave to the origin. Point A is inside the curve (unemployment / inefficiency), B is on it (efficient) and C is outside it (unattainable), as the legend says.",
+        "zh": "一條資本品與消費品的生產可能曲線 PPC，凹向原點。A 點在曲線以內（失業／沒有效率），B 點在曲線上（有效率），C 點在曲線以外（無法達到），如圖例所示。"
+      },
+      "png": {
+        "en": "gallery/chat/10c_ppc_points_en.png",
+        "zh": "gallery/chat/10c_ppc_points_zh.png"
+      },
+      "size": {
+        "en": [
+          1261,
+          844
+        ],
+        "zh": [
+          1089,
+          850
+        ]
+      },
+      "sha256": {
+        "en": "97d0cc08f5a70e61d503a936109bb0b3921917e0abd8096e085be5b33057380d",
+        "zh": "226bf8d1666489a073f63212ea56bf7fa1d86b25cc9a84d4b03c37df4edbaa4f"
+      }
+    },
+    {
+      "id": "12b_demand_increase",
+      "variant_of": "12_demand_decrease",
+      "topic": "Demand and supply: shifts",
+      "title": {
+        "en": "Demand increases -> price and quantity rise.",
+        "zh": "需求增加：價格及數量上升"
+      },
+      "caption": {
+        "en": "Demand increases: price and quantity rise",
+        "zh": "需求增加：價格及數量上升"
+      },
+      "use": "demand rises (more buyers, higher income for a normal good, a dearer substitute ...) and the question asks the effect on price and quantity (chat-only variant; same layout as 12 with the shift reversed)",
+      "shows": {
+        "en": [
+          "rightward shift of demand D1 -> D2 (arrow), S unchanged",
+          "new equilibrium E2: price rises P1 -> P2, quantity rises Q1 -> Q2"
+        ],
+        "zh": [
+          "需求由 D1 向右移至 D2（箭頭），S 不變",
+          "新均衡點 E2：價格由 P1 上升至 P2，數量由 Q1 增加至 Q2"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "S",
+          "D1",
+          "D2",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "S",
+          "D1",
+          "D2",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2"
+        ]
+      },
+      "alt": {
+        "en": "Demand shifts right from D1 to D2 (arrow) while supply S is unchanged. The equilibrium moves from E1 to E2: the price rises from P1 to P2 and the quantity rises from Q1 to Q2.",
+        "zh": "需求由 D1 向右移至 D2（箭頭），供應 S 不變。均衡點由 E1 移至 E2：價格由 P1 上升至 P2，數量由 Q1 增加至 Q2。"
+      },
+      "png": {
+        "en": "gallery/chat/12b_demand_increase_en.png",
+        "zh": "gallery/chat/12b_demand_increase_zh.png"
+      },
+      "size": {
+        "en": [
+          1111,
+          834
+        ],
+        "zh": [
+          1045,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "85a98fbf924f4cf0290c25a91d4ff4a72dac27f267fcb80669880dc64fe1f09a",
+        "zh": "f154c7379429d83442f7c5c41f1979d16526cda1252c6de4ab1f3e9d5de6b19e"
+      }
+    },
+    {
+      "id": "13b_supply_increase",
+      "variant_of": "13_supply_decrease",
+      "topic": "Demand and supply: shifts",
+      "title": {
+        "en": "Supply increases -> price falls, quantity rises.",
+        "zh": "供應增加：價格下降，數量上升"
+      },
+      "caption": {
+        "en": "Supply increases: price falls, quantity rises",
+        "zh": "供應增加：價格下降，數量上升"
+      },
+      "use": "supply rises (lower production cost, better technology, a subsidy, a lower tariff on imports, good weather ...) and the question asks the effect on price and quantity (chat-only variant; same layout as 13 with the shift reversed)",
+      "shows": {
+        "en": [
+          "rightward shift of supply S -> S' (arrow), D unchanged",
+          "new equilibrium E2: price falls P1 -> P2, quantity rises Q1 -> Q2"
+        ],
+        "zh": [
+          "供應由 S 向右移至 S’（箭頭），D 不變",
+          "新均衡點 E2：價格由 P1 下降至 P2，數量由 Q1 增加至 Q2"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "S",
+          "S’",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "S",
+          "S’",
+          "E1",
+          "P1",
+          "Q1",
+          "E2",
+          "P2",
+          "Q2"
+        ]
+      },
+      "alt": {
+        "en": "Supply shifts right from S to S’ (arrow) while demand D is unchanged. The equilibrium moves from E1 to E2: the price falls from P1 to P2 and the quantity rises from Q1 to Q2.",
+        "zh": "供應由 S 向右移至 S’（箭頭），需求 D 不變。均衡點由 E1 移至 E2：價格由 P1 下降至 P2，數量由 Q1 增加至 Q2。"
+      },
+      "png": {
+        "en": "gallery/chat/13b_supply_increase_en.png",
+        "zh": "gallery/chat/13b_supply_increase_zh.png"
+      },
+      "size": {
+        "en": [
+          1111,
+          834
+        ],
+        "zh": [
+          1045,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "002fd16eeff048859ae6efec8ecc05cb588aee31d3befed1a0171cab76bf7bcb",
+        "zh": "5dc88ec449aaf23606ca2d64f3c7f6819cba73d80e9c048a3070cba3a7e8c9db"
+      }
+    },
+    {
+      "id": "18b_tr_price_fall_inelastic",
+      "variant_of": "18_tr_price_rise_inelastic",
+      "topic": "Total revenue and elasticity",
+      "title": {
+        "en": "Price falls on INELASTIC (steep) demand -> total revenue falls.",
+        "zh": "缺乏彈性需求下價格下降：總收入減少"
+      },
+      "caption": {
+        "en": "Price falls on inelastic demand: total revenue falls",
+        "zh": "缺乏彈性需求下價格下降：總收入減少"
+      },
+      "use": "a price fall along an inelastic demand curve lowers total revenue / expenditure, e.g. a bumper harvest lowers farmers' revenue (chat-only variant: 18 with the price change reversed); for a price fall on elastic demand use 05",
+      "shows": {
+        "en": [
+          "steep (inelastic) demand curve D, no supply curve needed",
+          "price falls from P1 to P2, quantity demanded rises from Q1 to Q2",
+          "loss (P2..P1 x 0..Q1) marked \"-\", gain (Q1..Q2 x 0..P2) marked \"+\"",
+          "loss > gain, so total revenue falls"
+        ],
+        "zh": [
+          "陡峭（缺乏彈性）的需求曲線 D，不需畫供應曲線",
+          "價格由 P1 下降至 P2，需求量由 Q1 增加至 Q2",
+          "損失（P2..P1 × 0..Q1）標示「−」，得益（Q1..Q2 × 0..P2）標示「+」",
+          "損失 > 得益，所以總收入減少"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Quantity",
+          "Price",
+          "D",
+          "P1",
+          "Q1",
+          "P2",
+          "Q2",
+          "−",
+          "+"
+        ],
+        "zh": [
+          "數量",
+          "價格",
+          "D",
+          "P1",
+          "Q1",
+          "P2",
+          "Q2",
+          "−",
+          "+"
+        ]
+      },
+      "alt": {
+        "en": "A steep (inelastic) demand curve D. The price falls from P1 to P2 and the quantity demanded rises from Q1 to Q2; the loss rectangle (P2 to P1, 0 to Q1) is marked − and is larger than the gain rectangle (Q1 to Q2, 0 to P2) marked +.",
+        "zh": "陡峭（缺乏彈性）的需求曲線 D。價格由 P1 下降至 P2，需求量由 Q1 增加至 Q2；標示「−」的損失長方形（P2 至 P1，0 至 Q1）大於標示「+」的得益長方形（Q1 至 Q2，0 至 P2）。"
+      },
+      "png": {
+        "en": "gallery/chat/18b_tr_price_fall_inelastic_en.png",
+        "zh": "gallery/chat/18b_tr_price_fall_inelastic_zh.png"
+      },
+      "size": {
+        "en": [
+          1037,
+          834
+        ],
+        "zh": [
+          984,
+          834
+        ]
+      },
+      "sha256": {
+        "en": "e6076e70aede00462d689d22ac0789d13ac0935e8c26a217744bf82ccdfe3b73",
+        "zh": "25b814f6b388f4c5550cb8d6983e67363e7842fc1a655fdd9f369ea451425eeb"
+      }
+    },
+    {
+      "id": "34b_ad_decrease",
+      "variant_of": "34_ad_increase",
+      "topic": "AD-AS",
+      "title": {
+        "en": "Aggregate demand decreases -> price level and real output both fall.",
+        "zh": "總需求減少：物價水平及實質產出下降"
+      },
+      "caption": {
+        "en": "Aggregate demand decreases: price level and real output fall",
+        "zh": "總需求減少：物價水平及實質產出下降"
+      },
+      "use": "less investment, fewer tourists, a fall in exports, contractionary fiscal or monetary policy (chat-only variant: 34 with the shift reversed)",
+      "shows": {
+        "en": [
+          "AD0 shifts left to AD1 (arrow), SRAS unchanged",
+          "equilibrium moves E0 -> E1 down along the upward-sloping SRAS",
+          "price level falls P0 -> P1, real output falls Y0 -> Y1"
+        ],
+        "zh": [
+          "AD0 向左移至 AD1（箭頭），SRAS 不變",
+          "均衡點沿向上傾斜的 SRAS 由 E0 下移至 E1",
+          "物價水平由 P0 下降至 P1，實質產出由 Y0 減少至 Y1"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Real output",
+          "Price level",
+          "SRAS",
+          "AD0",
+          "AD1",
+          "P0",
+          "Y0",
+          "P1",
+          "Y1",
+          "E0",
+          "E1"
+        ],
+        "zh": [
+          "實質產出",
+          "物價水平",
+          "SRAS",
+          "AD0",
+          "AD1",
+          "P0",
+          "Y0",
+          "P1",
+          "Y1",
+          "E0",
+          "E1"
+        ]
+      },
+      "alt": {
+        "en": "AD shifts left from AD0 to AD1 (arrow) while SRAS is unchanged. The equilibrium moves down along SRAS from E0 to E1: the price level falls from P0 to P1 and real output from Y0 to Y1.",
+        "zh": "總需求由 AD0 向左移至 AD1（箭頭），SRAS 不變。均衡點沿 SRAS 由 E0 下移至 E1：物價水平由 P0 下降至 P1，實質產出由 Y0 減少至 Y1。"
+      },
+      "png": {
+        "en": "gallery/chat/34b_ad_decrease_en.png",
+        "zh": "gallery/chat/34b_ad_decrease_zh.png"
+      },
+      "size": {
+        "en": [
+          1087,
+          804
+        ],
+        "zh": [
+          1059,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "6f69e8611335ce059849a8701016ec66b80afa26008a29f1b058ac3f7c2ceb06",
+        "zh": "5a8ecf799c37c8f630cae2a49a3ce39328f51de180b39fef6c2d66e05a45282a"
+      }
+    },
+    {
+      "id": "35b_sras_increase",
+      "variant_of": "35_sras_decrease",
+      "topic": "AD-AS",
+      "title": {
+        "en": "Short-run aggregate supply increases -> price level falls, real output rises.",
+        "zh": "短期總供應增加：物價水平下降，實質產出上升"
+      },
+      "caption": {
+        "en": "Short-run aggregate supply increases: price level falls, real output rises",
+        "zh": "短期總供應增加：物價水平下降，實質產出上升"
+      },
+      "use": "production costs fall (wages, rents, oil or raw-material prices), better technology raises output per worker in the short run (chat-only variant: 35 with the shift reversed)",
+      "shows": {
+        "en": [
+          "SRAS0 shifts right to SRAS1 (arrow), AD unchanged",
+          "equilibrium moves E0 -> E1 down along AD",
+          "price level falls P0 -> P1, real output rises Y0 -> Y1"
+        ],
+        "zh": [
+          "SRAS0 向右移至 SRAS1（箭頭），AD 不變",
+          "均衡點沿 AD 由 E0 下移至 E1",
+          "物價水平由 P0 下降至 P1，實質產出由 Y0 增加至 Y1"
+        ]
+      },
+      "labels": {
+        "en": [
+          "Real output",
+          "Price level",
+          "AD",
+          "SRAS0",
+          "SRAS1",
+          "P0",
+          "Y0",
+          "P1",
+          "Y1",
+          "E0",
+          "E1"
+        ],
+        "zh": [
+          "實質產出",
+          "物價水平",
+          "AD",
+          "SRAS0",
+          "SRAS1",
+          "P0",
+          "Y0",
+          "P1",
+          "Y1",
+          "E0",
+          "E1"
+        ]
+      },
+      "alt": {
+        "en": "SRAS shifts right from SRAS0 to SRAS1 (arrow) while AD is unchanged. The equilibrium moves down along AD from E0 to E1: the price level falls from P0 to P1 and real output rises from Y0 to Y1.",
+        "zh": "短期總供應由 SRAS0 向右移至 SRAS1（箭頭），AD 不變。均衡點沿 AD 由 E0 下移至 E1：物價水平由 P0 下降至 P1，實質產出由 Y0 增加至 Y1。"
+      },
+      "png": {
+        "en": "gallery/chat/35b_sras_increase_en.png",
+        "zh": "gallery/chat/35b_sras_increase_zh.png"
+      },
+      "size": {
+        "en": [
+          1087,
+          804
+        ],
+        "zh": [
+          1059,
+          804
+        ]
+      },
+      "sha256": {
+        "en": "77a1e8e48427d0ced8ebab336f4144bb1c6ff6d5612ebab2a8ded2f5664e8427",
+        "zh": "3a3b9721c29d1c6f26ca7cc7e0811a39b9d040a4a586c1701b60030c22c705ad"
+      }
+    }
+  ]
+}
