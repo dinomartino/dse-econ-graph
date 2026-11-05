@@ -40,8 +40,8 @@ def diagram(lang="en"):
         label(ax, Q, O[1] - 1.8, f"$Q_{n}$", va="top")
     arrow(ax, (2, P1), (2, P2))                # ceiling lowered
     arrow(ax, (Q1, 3), (Q2, 3))                # Q falls
-    key(ax, 52, 92, T("Original deadweight loss", "原有無謂損失"), "....")
-    key(ax, 52, 85.5, T("Increase in deadweight loss", "無謂損失增加"))
+    key(ax, 52, 92, T("Original deadweight loss", "原有效率損失"), "....")
+    key(ax, 52, 85.5, T("Increase in deadweight loss", "效率損失增加"))
     return fig
 
 

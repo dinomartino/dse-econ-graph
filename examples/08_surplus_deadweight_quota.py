@@ -48,7 +48,7 @@ def diagram(lang="en"):
 
     key(ax, 60, 92, T("Consumer surplus", "消費者盈餘"), "....")
     key(ax, 60, 85.5, T("Producer surplus", "生產者盈餘"), "////")
-    key(ax, 60, 79, T("Deadweight loss", "無謂損失"), "xxxx")
+    key(ax, 60, 79, T("Deadweight loss", "效率損失"), "xxxx")
     return fig
 
 

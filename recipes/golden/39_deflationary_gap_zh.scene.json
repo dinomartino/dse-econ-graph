@@ -32,5 +32,5 @@
   {"t":"text","s":"$Y_f$","at":[70,10.2],"ha":"center","va":"top","size":10.5,"patch":false,"z":6,"ext_in":[2.166667,0.132611,2.313333,0.2652]},
   {"t":"text","s":"$gap_1$","at":[58.833333,17.0],"ha":"center","va":"bottom","size":10.5,"patch":false,"z":6,"ext_in":[1.749333,0.442,2.016,0.576448]},
   {"t":"text","s":"$gap_0$","at":[53.0,0.5],"ha":"center","va":"top","size":10.5,"patch":false,"z":6,"ext_in":[1.562667,-0.121448,1.829333,0.013]},
-  {"t":"text","s":"gap =\n通縮缺口","at":[73,44],"ha":"left","va":"center","size":10.5,"patch":false,"z":6,"ext_in":[2.336,0.978858,2.922667,1.309142]}
+  {"t":"text","s":"gap =\n通縮差距","at":[73,44],"ha":"left","va":"center","size":10.5,"patch":false,"z":6,"ext_in":[2.336,0.978441,2.922667,1.309559]}
  ]}

@@ -7,7 +7,7 @@
  "shifts": [{"of": "AD0", "id": "AD1", "dir": "right", "size": "medium", "name": "AD_1"}],
  "points": [{"at": ["AD0", "SRAS"], "name": "E_0", "guides": ["P_0", "Y_0"]}, {"at": ["AD1", "SRAS"], "name": "E_1", "guides": ["P_1", "Y_1"]}, {"at": {"curve": "LRAS", "axis": "quantity"}, "name": "Y_f", "dot": false}],
  "gaps": [{"kind": "deflationary_gap", "between": ["AD1", "SRAS"], "label": "gap_1"}, {"kind": "deflationary_gap", "between": ["AD0", "SRAS"], "label": "gap_0"}],
- "notes": [{"en": "gap = deflationary gap", "zh": "gap = 通縮缺口"}],
+ "notes": [{"en": "gap = deflationary gap", "zh": "gap = 通縮差距"}],
  "moves": {"price": true},
  "expect": {"price_level": "up", "output": "up", "gap": "deflationary"},
  "geom": {"size": [3.2, 2.6],

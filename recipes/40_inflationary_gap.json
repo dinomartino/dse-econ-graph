@@ -7,7 +7,7 @@
  "shifts": [{"of": "AD0", "id": "AD1", "dir": "left", "size": {"onto": "LRAS"}, "name": "AD_1"}],
  "points": [{"at": ["AD0", "SRAS"], "name": "E_0", "guides": ["P_0", "Y_0"]}, {"at": ["AD1", "LRAS"], "name": "E_1", "guides": ["P_1", null]}, {"at": {"curve": "LRAS", "axis": "quantity"}, "name": "Y_f", "dot": false}],
  "gaps": [{"kind": "inflationary_gap", "between": ["AD0", "SRAS"], "label": "gap"}],
- "notes": [{"en": "gap = inflationary gap", "zh": "gap = 通脹缺口"}],
+ "notes": [{"en": "gap = inflationary gap", "zh": "gap = 通脹差距"}],
  "moves": {"price": true, "quantity": true},
  "expect": {"price_level": "down", "output": "down", "gap": "inflationary"},
  "geom": {"size": [3.2, 2.6],
