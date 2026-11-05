@@ -45,7 +45,7 @@ def diagram(lang="en"):
     label(ax, Q2, O[1] - 1.8, r"$Q_2$", va="top")
     arrow(ax, (4, W[1]), (4, X[1]))             # price falls
     arrow(ax, (Q1, 3), (Q2, 3))                 # quantity rises
-    key(ax, 50, 91, T("Reduction in deadweight loss", "無謂損失減少"))
+    key(ax, 50, 91, T("Reduction in deadweight loss", "效率損失減少"))
     return fig
 
 

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.7.0",
+  "version": "1.7.1",
   "recipes": {
     "schema": "recipes/schema.json",
     "glossary": "recipes/glossary.json",
@@ -141,7 +141,7 @@
       },
       "alt": {
         "en": "A labour market with the wage rate on the vertical axis and the number of workers on the horizontal axis. Labour demand D and labour supply S meet at the equilibrium wage We; the minimum wage Wmin is above We, and a brace from Qd to Qs at Wmin marks the excess supply of labour (unemployment).",
-        "zh": "勞工市場，縱軸為工資率，橫軸為工人數目。勞工需求 D 與勞工供應 S 相交於均衡工資 We；最低工資 Wmin 高於 We，在 Wmin 由 Qd 至 Qs 的括號標示勞工的超額供應（失業）。"
+        "zh": "勞工市場，縱軸為工資率，橫軸為工人數目。勞力需求 D 與勞力供應 S 相交於均衡工資 We；最低工資 Wmin 高於 We，在 Wmin 由 Qd 至 Qs 的括號標示勞工的超額供應（失業）。"
       },
       "png": {
         "en": "gallery/02_price_floor_surplus_en.png",
@@ -642,11 +642,11 @@
       "topic": "Tax, subsidy and quota",
       "title": {
         "en": "A quota (Qq) set BELOW the equilibrium quantity (Qe): consumer surplus, producer surplus and deadweight loss.",
-        "zh": "低於均衡數量的配額：消費者盈餘、生產者盈餘及無謂損失"
+        "zh": "低於均衡數量的配額：消費者盈餘、生產者盈餘及效率損失"
       },
       "caption": {
         "en": "Quota below the equilibrium quantity: consumer surplus, producer surplus and deadweight loss",
-        "zh": "低於均衡數量的配額：消費者盈餘、生產者盈餘及無謂損失"
+        "zh": "低於均衡數量的配額：消費者盈餘、生產者盈餘及效率損失"
       },
       "use": "a quota below the equilibrium quantity: consumer surplus, producer surplus and deadweight loss (CE1997 Q10(b), CE1998 Q2)",
       "shows": {
@@ -660,7 +660,7 @@
           "配額線在 Qq < Qe；價格上升至 Pq（在 Qq 處 D 上的點）",
           "消費者盈餘：Pq 以上、D 以下，直至 Qq",
           "生產者盈餘：S 以上、Pq 以下，直至 Qq",
-          "無謂損失：由 Qq 至 Qe 在 D 與 S 之間的三角形"
+          "效率損失：由 Qq 至 Qe 在 D 與 S 之間的三角形"
         ]
       },
       "labels": {
@@ -692,12 +692,12 @@
           "Qq",
           "消費者盈餘",
           "生產者盈餘",
-          "無謂損失"
+          "效率損失"
         ]
       },
       "alt": {
         "en": "A vertical quota line at Qq, below the equilibrium quantity Qe, raises the price to Pq on D. A key shows consumer surplus (dotted, under D and above Pq), producer surplus (hatched, above S and below Pq) and deadweight loss (cross-hatched triangle between D and S from Qq to Qe).",
-        "zh": "配額線垂直於 Qq，低於均衡數量 Qe，令價格上升至 D 上的 Pq。圖例標示消費者盈餘（點狀，D 以下、Pq 以上）、生產者盈餘（斜線，S 以上、Pq 以下）及無謂損失（交叉線，由 Qq 至 Qe 在 D 與 S 之間的三角形）。"
+        "zh": "配額線垂直於 Qq，低於均衡數量 Qe，令價格上升至 D 上的 Pq。圖例標示消費者盈餘（點狀，D 以下、Pq 以上）、生產者盈餘（斜線，S 以上、Pq 以下）及效率損失（交叉線，由 Qq 至 Qe 在 D 與 S 之間的三角形）。"
       },
       "png": {
         "en": "gallery/08_surplus_deadweight_quota_en.png",
@@ -705,17 +705,17 @@
       },
       "size": {
         "en": [
-          1089,
-          840
+          1090,
+          841
         ],
         "zh": [
           1044,
-          840
+          847
         ]
       },
       "sha256": {
-        "en": "4d65dc2c31a56752c035d35503932b95c2011be7ad4ac5f7127fa5304a659002",
-        "zh": "c1e9f28f373d3715966211c463af19099af64a4d151a52a1f1aa5f5e06675bd7"
+        "en": "dc61ec706bf0640512a458af54a952c4488a57ed96d9b8194a92e4eaeae3362a",
+        "zh": "6c80025ae7567e17148e394bbf8c20038cbebe3f075832859001db5386be4e6f"
       },
       "recipe": {
         "path": "recipes/08_surplus_deadweight_quota.json",
@@ -728,7 +728,7 @@
         },
         "zh": {
           "path": "recipes/golden/08_surplus_deadweight_quota_zh.scene.json",
-          "sha256": "bd924c8ef9ebc251b164749b4ad819d8f713e6f9e2293a98d127c3e0e463e278"
+          "sha256": "7e159aa46c9b51fd1b5d7a6f0d181cef5d1f1271c467f8db6294926b0a0dc551"
         }
       }
     },
@@ -738,11 +738,11 @@
       "topic": "Other",
       "title": {
         "en": "Negative externality in production: overproduction and deadweight loss.",
-        "zh": "生產的負外部效應：生產過多及無謂損失"
+        "zh": "生產的負界外效應：生產過多及效率損失"
       },
       "caption": {
         "en": "Negative externality in production: overproduction and deadweight loss",
-        "zh": "生產的負外部效應：生產過多及無謂損失"
+        "zh": "生產的負界外效應：生產過多及效率損失"
       },
       "use": "negative externality: overproduction and deadweight loss (MSC above MPC)",
       "shows": {
@@ -756,7 +756,7 @@
           "MSC 在 MPC 之上（外部成本）；D = MPB = MSB",
           "市場產量 Qm 在 D = MPC 處；有效率產量 Q* 在 D = MSC 處",
           "Qm > Q*（生產過多）",
-          "無謂損失：由 Q* 至 Qm 在 MSC 與 D 之間的三角形"
+          "效率損失：由 Q* 至 Qm 在 MSC 與 D 之間的三角形"
         ]
       },
       "labels": {
@@ -782,12 +782,12 @@
           "Qm",
           "P*",
           "Q*",
-          "無謂損失"
+          "效率損失"
         ]
       },
       "alt": {
         "en": "MSC lies above MPC by the external cost, and D = MPB = MSB. The market produces Qm at price Pm (D meets MPC), more than the efficient output Q* at P* (D meets MSC); the hatched triangle between MSC and D from Q* to Qm is the deadweight loss.",
-        "zh": "MSC 在 MPC 之上，兩者相差外部成本；D = MPB = MSB。市場產量為 Qm、價格為 Pm（D 與 MPC 相交），多於有效率產量 Q*、價格 P*（D 與 MSC 相交）；由 Q* 至 Qm 在 MSC 與 D 之間的斜線三角形為無謂損失。"
+        "zh": "MSC 在 MPC 之上，兩者相差外部成本；D = MPB = MSB。市場產量為 Qm、價格為 Pm（D 與 MPC 相交），多於有效率產量 Q*、價格 P*（D 與 MSC 相交）；由 Q* 至 Qm 在 MSC 與 D 之間的斜線三角形為效率損失。"
       },
       "png": {
         "en": "gallery/09_externality_overproduction_en.png",
@@ -795,17 +795,17 @@
       },
       "size": {
         "en": [
-          1161,
-          840
+          1162,
+          841
         ],
         "zh": [
-          1161,
-          842
+          1162,
+          848
         ]
       },
       "sha256": {
-        "en": "d409345bd64e2bc6ee550b5c8c726af0991a7df3de1a106761a0f56f44c1be35",
-        "zh": "6c2abcc28c71e93c9b4b2a5a6bfe83fcd0c4022fab510c0f32c71a0ca97d9ae6"
+        "en": "9d31ea547914f924026482ea3baf123a9cfd2143856b179e63c4f8dc985647cc",
+        "zh": "e24324a5ae06d23ebbf7aac36fc5c14e8570ac53b380ce4f3e8b1a5a39e3c713"
       },
       "recipe": {
         "path": "recipes/09_externality_overproduction.json",
@@ -818,7 +818,7 @@
         },
         "zh": {
           "path": "recipes/golden/09_externality_overproduction_zh.scene.json",
-          "sha256": "d9b1e87bcbfcec6d2c0ca20c5aa417cdabf7b1df1a2050b8dc63131d8e24904a"
+          "sha256": "56abdb259575c820ee8c5006c7506088f5dce548490c9b60d3aeefa98550e5fa"
         }
       }
     },
@@ -859,7 +859,7 @@
         ],
         "zh": [
           "消費品",
-          "資本品",
+          "資本物品",
           "PPC1",
           "PPC0",
           "A",
@@ -869,7 +869,7 @@
       },
       "alt": {
         "en": "A production possibilities curve PPC0 for capital goods and consumer goods, concave to the origin, and a dashed PPC1 further out with an arrow showing economic growth. Point A is inside PPC0 (unemployment), B is on it (efficient) and C is outside it (unattainable now).",
-        "zh": "資本品與消費品的生產可能曲線 PPC0，凹向原點；較外的虛線 PPC1 及箭頭表示經濟增長。A 點在 PPC0 以內（失業），B 點在曲線上（有效率），C 點在曲線以外（現時無法達到）。"
+        "zh": "資本物品與消費品的生產可能曲線 PPC0，凹向原點；較外的虛線 PPC1 及箭頭表示經濟增長。A 點在 PPC0 以內（失業），B 點在曲線上（有效率），C 點在曲線以外（現時無法達到）。"
       },
       "png": {
         "en": "gallery/10_ppc_en.png",
@@ -877,17 +877,17 @@
       },
       "size": {
         "en": [
-          1203,
-          843
+          1205,
+          844
         ],
         "zh": [
-          1033,
-          843
+          1034,
+          850
         ]
       },
       "sha256": {
-        "en": "bc9b168c5c221622bae86ba0cd3014e1c8d9a7145a5419f05231ccc05fc0f62e",
-        "zh": "a7632b664f971efc546a1be93214bcdbaae360212f6dc31e8bee9afe9e3bedda"
+        "en": "928ccb6d06f138c80590e0d293f1435c2ddebddbda972bca1ceebe71f7de9219",
+        "zh": "a828135783aad892e6c41a724d4f12f2ddb41e0074c93cd28a450c5f73c2c8fd"
       },
       "recipe": {
         "path": "recipes/10_ppc.json",
@@ -900,7 +900,7 @@
         },
         "zh": {
           "path": "recipes/golden/10_ppc_zh.scene.json",
-          "sha256": "11a5c35da64dca98e6bb7517a4faefcd925fa0ce559575bd463212d4964a4cf9"
+          "sha256": "14d48cff868e69063b00abec39642fb6621d62d9d91d444d41b1bce8d892fd70"
         }
       }
     },
@@ -1370,7 +1370,7 @@
           "local employment falls Q1 -> Q2, Q2 read off S (Local) at W2"
         ],
         "zh": [
-          "S（本地）及其右方的 S’（本地＋輸入），勞工需求 D",
+          "S（本地）及其右方的 S’（本地＋輸入），勞力需求 D",
           "工資率由 W1 下降至 W2",
           "本地就業由 Q1 減少至 Q2，Q2 為 W2 時 S（本地）上的數量"
         ]
@@ -1401,7 +1401,7 @@
       },
       "alt": {
         "en": "Labour demand D, the local labour supply S (Local) and, to its right, S’ (Local + imported). The wage rate falls from W1 to W2, and local employment, read off S (Local) at W2, falls from Q1 to Q2.",
-        "zh": "勞工需求 D、本地勞工供應 S（本地），其右方為 S’（本地＋輸入）。工資率由 W1 下降至 W2；在 W2 時 S（本地）上的本地就業由 Q1 減少至 Q2。"
+        "zh": "勞力需求 D、本地勞力供應 S（本地），其右方為 S’（本地＋輸入）。工資率由 W1 下降至 W2；在 W2 時 S（本地）上的本地就業由 Q1 減少至 Q2。"
       },
       "png": {
         "en": "gallery/16_labour_imported_workers_en.png",
@@ -1714,11 +1714,11 @@
       "topic": "Price fixed away from equilibrium",
       "title": {
         "en": "Wage fixed BELOW equilibrium; labour supply increases -> excess demand for labour shrinks.",
-        "zh": "工資固定於均衡工資以下而勞工供應增加：超額需求減少"
+        "zh": "工資固定於均衡工資以下而勞力供應增加：超額需求減少"
       },
       "caption": {
         "en": "Wage fixed below equilibrium and labour supply increases: excess demand shrinks",
-        "zh": "工資固定於均衡工資以下而勞工供應增加：超額需求減少"
+        "zh": "工資固定於均衡工資以下而勞力供應增加：超額需求減少"
       },
       "use": "a wage or price fixed below equilibrium when supply rises; the same layout works for any fixed price when D or S shifts (DSE2021 Q12(c), CE1991 Q4(c)(ii))",
       "shows": {
@@ -1729,7 +1729,7 @@
         ],
         "zh": [
           "固定工資 W0 低於均衡工資",
-          "勞工供應由 S0 向右移至 S1（箭頭）",
+          "勞力供應由 S0 向右移至 S1（箭頭）",
           "在 W0 的超額需求減少：超額需求0（Q0 至 Qd）→ 超額需求1（Q1 至 Qd）"
         ]
       },
@@ -1763,7 +1763,7 @@
       },
       "alt": {
         "en": "The wage is fixed at W0, below equilibrium, in a labour market with labour demand D0. Labour supply shifts right from S0 to S1 (arrow), so the excess demand for labour at W0 shrinks from ex dd0 (Q0 to Qd) to ex dd1 (Q1 to Qd).",
-        "zh": "勞工市場的工資固定於 W0，低於均衡工資，勞工需求為 D0。勞工供應由 S0 向右移至 S1（箭頭），在 W0 的勞工超額需求由超額需求0（Q0 至 Qd）減少至超額需求1（Q1 至 Qd）。"
+        "zh": "勞工市場的工資固定於 W0，低於均衡工資，勞力需求為 D0。勞力供應由 S0 向右移至 S1（箭頭），在 W0 的勞工超額需求由超額需求0（Q0 至 Qd）減少至超額需求1（Q1 至 Qd）。"
       },
       "png": {
         "en": "gallery/20_fixed_wage_supply_increase_en.png",
@@ -2066,11 +2066,11 @@
       "topic": "Price controls and efficiency",
       "title": {
         "en": "Price ceiling BELOW equilibrium -> shortage and deadweight loss.",
-        "zh": "低於均衡價格的價格上限：短缺及無謂損失"
+        "zh": "低於均衡價格的價格上限：短缺及效率損失"
       },
       "caption": {
         "en": "Price ceiling below equilibrium: shortage and deadweight loss",
-        "zh": "低於均衡價格的價格上限：短缺及無謂損失"
+        "zh": "低於均衡價格的價格上限：短缺及效率損失"
       },
       "use": "a price ceiling or controlled price below equilibrium when the question asks about efficiency / deadweight loss (DSEPP Q4(b)(ii), DSE2016 Q11(b), DSE2014)",
       "shows": {
@@ -2083,7 +2083,7 @@
         "zh": [
           "價格上限 Pc 低於均衡價格；D = MB，S = MC",
           "交易量 Qc 由 S 讀出（較少的一方），實線直至 D",
-          "無謂損失 DL：由 Qc 至 Qe 在 D 與 S 之間的三角形",
+          "效率損失 DL：由 Qc 至 Qe 在 D 與 S 之間的三角形",
           "在 Pc 的短缺（Qc 至 Qd）"
         ]
       },
@@ -2113,7 +2113,7 @@
       },
       "alt": {
         "en": "D = MB and S = MC, and the price ceiling Pc is below the equilibrium price. The quantity transacted Qc is read off S (solid line up to D), a brace from Qc to Qd at Pc marks the shortage, and the hatched triangle DL between D and S from Qc to the equilibrium is the deadweight loss.",
-        "zh": "D = MB，S = MC，價格上限 Pc 低於均衡價格。交易量 Qc 由 S 讀出（實線直至 D），在 Pc 由 Qc 至 Qd 的括號標示短缺，由 Qc 至均衡點在 D 與 S 之間的斜線三角形 DL 為無謂損失。"
+        "zh": "D = MB，S = MC，價格上限 Pc 低於均衡價格。交易量 Qc 由 S 讀出（實線直至 D），在 Pc 由 Qc 至 Qd 的括號標示短缺，由 Qc 至均衡點在 D 與 S 之間的斜線三角形 DL 為效率損失。"
       },
       "png": {
         "en": "gallery/24_price_ceiling_deadweight_loss_en.png",
@@ -2154,11 +2154,11 @@
       "topic": "Price controls and efficiency",
       "title": {
         "en": "Price (fare / price floor) set ABOVE equilibrium -> excess supply and deadweight loss.",
-        "zh": "高於均衡價格的價格下限：超額供應及無謂損失"
+        "zh": "高於均衡價格的價格下限：超額供應及效率損失"
       },
       "caption": {
         "en": "Price floor above equilibrium: excess supply and deadweight loss",
-        "zh": "高於均衡價格的價格下限：超額供應及無謂損失"
+        "zh": "高於均衡價格的價格下限：超額供應及效率損失"
       },
       "use": "a fixed fare or price floor above equilibrium when the question asks about deadweight loss; a minimum wage with DWL (DSE2018 Q10(c): relabel the axes Wage rate / Quantity of labour); a raised price floor (DSE2014 Q3) (DSE2019 Q11(b), DSE2014 Q3, DSE2018 Q10(c))",
       "shows": {
@@ -2171,7 +2171,7 @@
         "zh": [
           "價格 P 高於均衡價格",
           "交易量 Q 由 D 讀出（較少的一方），由 Q 至 P 的實線",
-          "無謂損失 DL：由 Q 至 Qe 在 D 與 S 之間的三角形",
+          "效率損失 DL：由 Q 至 Qe 在 D 與 S 之間的三角形",
           "在 P 的超額供應（Q 至 Qs）"
         ]
       },
@@ -2199,7 +2199,7 @@
       },
       "alt": {
         "en": "The price P is set above the equilibrium price. The quantity transacted Q is read off D (solid line up to P), a brace from Q to S at P marks the excess supply, and the cross-hatched triangle DL between D and S from Q to the equilibrium is the deadweight loss.",
-        "zh": "價格 P 定於均衡價格以上。交易量 Q 由 D 讀出（實線直至 P），在 P 由 Q 至 S 的括號標示超額供應，由 Q 至均衡點在 D 與 S 之間的交叉線三角形 DL 為無謂損失。"
+        "zh": "價格 P 定於均衡價格以上。交易量 Q 由 D 讀出（實線直至 P），在 P 由 Q 至 S 的括號標示超額供應，由 Q 至均衡點在 D 與 S 之間的交叉線三角形 DL 為效率損失。"
       },
       "png": {
         "en": "gallery/25_price_floor_deadweight_loss_en.png",
@@ -2328,11 +2328,11 @@
       "topic": "Price controls and efficiency",
       "title": {
         "en": "A price ceiling is lowered further below equilibrium -> deadweight loss increases.",
-        "zh": "價格上限進一步降低：無謂損失增加"
+        "zh": "價格上限進一步降低：效率損失增加"
       },
       "caption": {
         "en": "Price ceiling lowered further: deadweight loss increases",
-        "zh": "價格上限進一步降低：無謂損失增加"
+        "zh": "價格上限進一步降低：效率損失增加"
       },
       "use": "a price ceiling (or controlled price) lowered from Pc1 to Pc2, both below equilibrium, when the question asks for the change in deadweight loss (DSE2012 Q5(c))",
       "shows": {
@@ -2343,8 +2343,8 @@
         ],
         "zh": [
           "價格上限由 Pc1 降至 Pc2；交易量沿 S 由 Q1 減少至 Q2",
-          "原有無謂損失：由 Q1 至 Qe 在 D 與 S 之間的三角形（點狀）",
-          "無謂損失增加：由 Q2 至 Q1 在 D 與 S 之間的梯形（斜線）"
+          "原有效率損失：由 Q1 至 Qe 在 D 與 S 之間的三角形（點狀）",
+          "效率損失增加：由 Q2 至 Q1 在 D 與 S 之間的梯形（斜線）"
         ]
       },
       "labels": {
@@ -2371,13 +2371,13 @@
           "Q1",
           "Pc2",
           "Q2",
-          "原有無謂損失",
-          "無謂損失增加"
+          "原有效率損失",
+          "效率損失增加"
         ]
       },
       "alt": {
         "en": "The price ceiling is lowered from Pc1 to Pc2 (arrow), both below equilibrium, so the quantity transacted falls along S from Q1 to Q2. The dotted triangle from Q1 to Qe is the original deadweight loss and the hatched trapezoid between D and S from Q2 to Q1 is the increase in deadweight loss (key).",
-        "zh": "價格上限由 Pc1 降至 Pc2（箭頭），兩者均低於均衡價格，交易量沿 S 由 Q1 減少至 Q2。由 Q1 至 Qe 的點狀三角形為原有無謂損失，由 Q2 至 Q1 在 D 與 S 之間的斜線梯形為無謂損失增加（圖例）。"
+        "zh": "價格上限由 Pc1 降至 Pc2（箭頭），兩者均低於均衡價格，交易量沿 S 由 Q1 減少至 Q2。由 Q1 至 Qe 的點狀三角形為原有效率損失，由 Q2 至 Q1 在 D 與 S 之間的斜線梯形為效率損失增加（圖例）。"
       },
       "png": {
         "en": "gallery/27_price_ceiling_lowered_dwl_increase_en.png",
@@ -2385,17 +2385,17 @@
       },
       "size": {
         "en": [
-          1132,
+          1139,
           834
         ],
         "zh": [
-          1044,
+          1045,
           834
         ]
       },
       "sha256": {
-        "en": "a57b62e02acdefcfe5cb088ff571974c111396074c32882dd01fd0eae9085379",
-        "zh": "149da27c6a440bf8d0a016ad506992c571f792658d173995da8d32f65a090971"
+        "en": "b0d710e935a68a2a3d8cb7a5521bcd57cf6b5f7d73c4cbf47882d596a5001608",
+        "zh": "dd4248a1d11d90e98f09b08c1c01a349c2349875832d7abd1857c860d2a29a21"
       },
       "recipe": {
         "path": "recipes/27_price_ceiling_lowered_dwl_increase.json",
@@ -2408,7 +2408,7 @@
         },
         "zh": {
           "path": "recipes/golden/27_price_ceiling_lowered_dwl_increase_zh.scene.json",
-          "sha256": "3a77481c53eacd36705cc179962f50b5cffdebb06f463b950577b42abbf42672"
+          "sha256": "89c9187caf67ff090e0980d53f17cc6f82b60e9144d30f3176f9db9df39304c3"
         }
       }
     },
@@ -2522,11 +2522,11 @@
       "topic": "Tax, subsidy and quota",
       "title": {
         "en": "A quota is raised -> price falls, quantity rises, deadweight loss shrinks.",
-        "zh": "配額提高：價格下降，無謂損失減少"
+        "zh": "配額提高：價格下降，效率損失減少"
       },
       "caption": {
         "en": "Quota raised: price falls and deadweight loss shrinks",
-        "zh": "配額提高：價格下降，無謂損失減少"
+        "zh": "配額提高：價格下降，效率損失減少"
       },
       "use": "relaxing (raising) an effective quota and its effect on efficiency (DSE2015 Q3)",
       "shows": {
@@ -2538,7 +2538,7 @@
         "zh": [
           "S0（= MC）及 D（= MB）；配額由 S1 向右移至 S2（箭頭）",
           "P 由 P1 下降至 P2，Q 由 Q1 增加至 Q2（軸旁的箭頭）",
-          "W、X 在 D 上，Z、Y 在 S0 上；面積 WXYZ = 無謂損失減少（斜線，圖例）"
+          "W、X 在 D 上，Z、Y 在 S0 上；面積 WXYZ = 效率損失減少（斜線，圖例）"
         ]
       },
       "labels": {
@@ -2574,12 +2574,12 @@
           "P2",
           "Q1",
           "Q2",
-          "無謂損失減少"
+          "效率損失減少"
         ]
       },
       "alt": {
         "en": "D = MB and S0 = MC. The quota is raised from S1 to S2 (vertical lines, arrow), so the price falls from P1 to P2 and the quantity rises from Q1 to Q2; the hatched area WXYZ (W and X on D, Y and Z on S0) is the reduction in deadweight loss (key).",
-        "zh": "D = MB，S0 = MC。配額由 S1 提高至 S2（垂直線，箭頭），價格由 P1 下降至 P2，數量由 Q1 增加至 Q2；斜線區域 WXYZ（W、X 在 D 上；Y、Z 在 S0 上）為無謂損失減少（圖例）。"
+        "zh": "D = MB，S0 = MC。配額由 S1 提高至 S2（垂直線，箭頭），價格由 P1 下降至 P2，數量由 Q1 增加至 Q2；斜線區域 WXYZ（W、X 在 D 上；Y、Z 在 S0 上）為效率損失減少（圖例）。"
       },
       "png": {
         "en": "gallery/29_quota_increase_en.png",
@@ -2587,17 +2587,17 @@
       },
       "size": {
         "en": [
-          1146,
-          869
+          1150,
+          870
         ],
         "zh": [
           1044,
-          869
+          870
         ]
       },
       "sha256": {
-        "en": "b58ffb23bb57443ba2deaf3391f7102fea9b33dc2b6681631de8c437115ec6c2",
-        "zh": "23b1ca1018021d6ef8cd2abc1cc33a6d2e67b7b55b5bb2add7e7d7f5fcf5a4b1"
+        "en": "2e5c20710ba779c6c3eb6443807121a3b0f0552fbb7ea8d1fb25f434ce043e5c",
+        "zh": "00d402c8f804005902b1be152f17e2c65d2b406d699971285a4e84d4c74205bc"
       },
       "recipe": {
         "path": "recipes/29_quota_increase.json",
@@ -2610,7 +2610,7 @@
         },
         "zh": {
           "path": "recipes/golden/29_quota_increase_zh.scene.json",
-          "sha256": "c5af070dfd5817983300820bbc9c4572a46af1704576ddbb01a67adf4450462d"
+          "sha256": "61621d8d4ead9dce3c0fb9ebef1bac9414c1b06770e0191ba92f1ed1852ff803"
         }
       }
     },
@@ -2620,11 +2620,11 @@
       "topic": "Tax, subsidy and quota",
       "title": {
         "en": "Demand rises under a quota -> quantity stays at the quota, deadweight loss grows.",
-        "zh": "配額下需求增加：無謂損失增加"
+        "zh": "配額下需求增加：效率損失增加"
       },
       "caption": {
         "en": "Demand rises under a quota: deadweight loss increases",
-        "zh": "配額下需求增加：無謂損失增加"
+        "zh": "配額下需求增加：效率損失增加"
       },
       "use": "demand increases while a quota is in force; also an effective quota (P rises, Q falls to the quota), drawn with the same kinked S (DSE2024 Q3, CE1997 Q10(b))",
       "shows": {
@@ -2638,7 +2638,7 @@
           "拗折的 Squota：沿 S0（= MC）直至配額 Q0，之後垂直",
           "D0（= MB0）向右移至 D1（= MB1）；數量維持在 Q0",
           "有效率數量由 Q1 增加至 Q2（D 與 S0 相交處）",
-          "斜線區域：無謂損失增加（圖例）"
+          "斜線區域：效率損失增加（圖例）"
         ]
       },
       "labels": {
@@ -2664,12 +2664,12 @@
           "Q0",
           "Q1",
           "Q2",
-          "無謂損失增加"
+          "效率損失增加"
         ]
       },
       "alt": {
         "en": "The supply with a quota, Squota, follows S0 = MC up to the quota Q0 and is then vertical. Demand shifts right from D0 = MB0 to D1 = MB1 (arrow); the quantity stays at Q0 while the efficient quantity rises from Q1 to Q2, and the hatched area is the increase in deadweight loss (key).",
-        "zh": "有配額的供應 Squota 沿 S0 = MC 直至配額 Q0，之後垂直。需求由 D0 = MB0 向右移至 D1 = MB1（箭頭）；數量維持在 Q0，有效率數量則由 Q1 增加至 Q2，斜線區域為無謂損失增加（圖例）。"
+        "zh": "有配額的供應 Squota 沿 S0 = MC 直至配額 Q0，之後垂直。需求由 D0 = MB0 向右移至 D1 = MB1（箭頭）；數量維持在 Q0，有效率數量則由 Q1 增加至 Q2，斜線區域為效率損失增加（圖例）。"
       },
       "png": {
         "en": "gallery/30_quota_demand_increase_en.png",
@@ -2677,17 +2677,17 @@
       },
       "size": {
         "en": [
-          1112,
-          869
+          1118,
+          870
         ],
         "zh": [
           1044,
-          869
+          870
         ]
       },
       "sha256": {
-        "en": "f84f0a7d107e67e33901ffda2f157bcc494b1c56a4fcbcfa7dcfd76d52668ead",
-        "zh": "7a6a210e28b39b4e464bfb76fc956f7658305f71478e0ea07b33e3b5682b0040"
+        "en": "91048f29ad1e728f33f210142f53d4db2d72f53b50a05d31c911b84bc1d6dc01",
+        "zh": "e94280e67d0f455afacd1f58d86314c43afd515ebdf95e81439bba836fff4f69"
       },
       "recipe": {
         "path": "recipes/30_quota_demand_increase.json",
@@ -2700,7 +2700,7 @@
         },
         "zh": {
           "path": "recipes/golden/30_quota_demand_increase_zh.scene.json",
-          "sha256": "9847a6e5bc23d3e145800c4e3e8e30f07c8f722d88b376f330b55ddf6c731ede"
+          "sha256": "180a79e28dc80c2b80cbe285c22a146614d0ac21ee98aa2834c8807a40ef074c"
         }
       }
     },
@@ -2710,11 +2710,11 @@
       "topic": "Tax, subsidy and quota",
       "title": {
         "en": "Unit tax on a good with inelastic (steep) demand: buyers bear more, deadweight loss \"a\".",
-        "zh": "缺乏彈性需求下的從量稅：買家負擔較多，無謂損失 a"
+        "zh": "缺乏彈性需求下的從量稅：買家負擔較多，效率損失 a"
       },
       "caption": {
         "en": "Unit tax with inelastic demand: buyers bear more, deadweight loss a",
-        "zh": "缺乏彈性需求下的從量稅：買家負擔較多，無謂損失 a"
+        "zh": "缺乏彈性需求下的從量稅：買家負擔較多，效率損失 a"
       },
       "use": "who bears more of a unit tax (the less elastic side) and the deadweight loss; for tax-revenue shading see template 07 (DSE2014 Q9(b), DSE2016 Q10(c))",
       "shows": {
@@ -2728,7 +2728,7 @@
           "陡峭的 D；S0 因稅向上移至 S1（箭頭「稅」）",
           "買家支付 P1（原為 P0）；賣家收取 P2 = P1 − t；Q0 → Q1",
           "買家負擔 P0..P1 > 賣家負擔 P2..P0（括號）",
-          "無謂損失：由 Q1 至 Q0 在 D 與 S0 之間的三角形「a」"
+          "效率損失：由 Q1 至 Q0 在 D 與 S0 之間的三角形「a」"
         ]
       },
       "labels": {
@@ -2767,7 +2767,7 @@
       },
       "alt": {
         "en": "A steep demand curve D. Supply shifts up by the tax from S0 to S1 (arrow labelled tax): buyers pay P1 (was P0), sellers receive P2 and the quantity falls from Q0 to Q1. Braces show the buyers' burden (P0 to P1) larger than the sellers' burden (P2 to P0), and the hatched triangle a between D and S0 from Q1 to Q0 is the deadweight loss.",
-        "zh": "陡峭的需求曲線 D。供應因稅由 S0 向上移至 S1（標示「稅」的箭頭）：買家支付 P1（原為 P0），賣家收取 P2，數量由 Q0 減少至 Q1。括號顯示買家負擔（P0 至 P1）大於賣家負擔（P2 至 P0），由 Q1 至 Q0 在 D 與 S0 之間的斜線三角形 a 為無謂損失。"
+        "zh": "陡峭的需求曲線 D。供應因稅由 S0 向上移至 S1（標示「稅」的箭頭）：買家支付 P1（原為 P0），賣家收取 P2，數量由 Q0 減少至 Q1。括號顯示買家負擔（P0 至 P1）大於賣家負擔（P2 至 P0），由 Q1 至 Q0 在 D 與 S0 之間的斜線三角形 a 為效率損失。"
       },
       "png": {
         "en": "gallery/31_unit_tax_burden_dwl_en.png",
@@ -3436,11 +3436,11 @@
       "topic": "AD-AS",
       "title": {
         "en": "Deflationary gap narrows: AD increases -> real output rises towards Yf.",
-        "zh": "總需求增加：通縮缺口收窄"
+        "zh": "總需求增加：通縮差距收窄"
       },
       "caption": {
         "en": "Deflationary gap narrows as AD increases",
-        "zh": "總需求增加：通縮缺口收窄"
+        "zh": "總需求增加：通縮差距收窄"
       },
       "use": "showing a deflationary (output) gap and how a rise in AD (tax cut, more tourists, expansionary policy) narrows it; add the vertical LRAS yourself (DSE2019 Q10(b), DSE2021 Q11(a), DSE2023 Q7(a), DSE2023 Q7(b))",
       "shows": {
@@ -3452,7 +3452,7 @@
         "zh": [
           "垂直的 LRAS 在 Yf，位於 E0 右方（Y0 < Yf）：gap0 = Y0 至 Yf",
           "AD0 向右移至 AD1（箭頭）；E0 → E1，P0 → P1，Y0 → Y1",
-          "gap1 = Y1 至 Yf，比 gap0 窄；圖例：gap = 通縮缺口"
+          "gap1 = Y1 至 Yf，比 gap0 窄；圖例：gap = 通縮差距"
         ]
       },
       "labels": {
@@ -3490,12 +3490,12 @@
           "Yf",
           "gap1",
           "gap0",
-          "gap = 通縮缺口"
+          "gap = 通縮差距"
         ]
       },
       "alt": {
         "en": "SRAS, a vertical LRAS at Yf, and AD shifting right from AD0 to AD1 (arrow). The equilibrium moves from E0 to E1, the price level rises from P0 to P1 and real output from Y0 to Y1; braces show gap0 (Y0 to Yf) narrowing to gap1 (Y1 to Yf), with the key gap = deflationary gap.",
-        "zh": "SRAS、位於 Yf 的垂直 LRAS，以及由 AD0 向右移至 AD1 的總需求（箭頭）。均衡點由 E0 移至 E1，物價水平由 P0 上升至 P1，實質產出由 Y0 增加至 Y1；括號顯示 gap0（Y0 至 Yf）收窄至 gap1（Y1 至 Yf），圖例為 gap = 通縮缺口。"
+        "zh": "SRAS、位於 Yf 的垂直 LRAS，以及由 AD0 向右移至 AD1 的總需求（箭頭）。均衡點由 E0 移至 E1，物價水平由 P0 上升至 P1，實質產出由 Y0 增加至 Y1；括號顯示 gap0（Y0 至 Yf）收窄至 gap1（Y1 至 Yf），圖例為 gap = 通縮差距。"
       },
       "png": {
         "en": "gallery/39_deflationary_gap_en.png",
@@ -3503,21 +3503,21 @@
       },
       "size": {
         "en": [
-          1085,
-          839
+          1087,
+          840
         ],
         "zh": [
-          1058,
-          839
+          1059,
+          840
         ]
       },
       "sha256": {
-        "en": "1f67f8f2823522d6c30c05cec2e74b014b77274d17c852a181fa797782879805",
-        "zh": "fc58629b553c7f832aa085f4b8f48006567aa379b8c0b45f79b7928c82065e7b"
+        "en": "642c2331a40e47188f975f91c293d6204ca97ca2a1997f87e3ad0071ab975bb2",
+        "zh": "42fe6565fe9f78d81664a7afb2665ab22927feb79249230c5ec195db0c9e0320"
       },
       "recipe": {
         "path": "recipes/39_deflationary_gap.json",
-        "sha256": "065693a02d04eed69515955d88b12c89a8e743989dbc5dbaf91f133d1b1cec06"
+        "sha256": "d53dc51968b1384abd2703be1f0dcbf3f394b4cfd89c2aceecec6680081fb6a0"
       },
       "golden": {
         "en": {
@@ -3526,7 +3526,7 @@
         },
         "zh": {
           "path": "recipes/golden/39_deflationary_gap_zh.scene.json",
-          "sha256": "aaa9d39da7cfaf60186aa94fbe7cca69954d128a06b83d97e1a2c207211ef21c"
+          "sha256": "a032217ffb80ef1e540fd7e832218d7550332191ec8fe8e6f7b7bd476a30d7d8"
         }
       }
     },
@@ -3536,11 +3536,11 @@
       "topic": "AD-AS",
       "title": {
         "en": "Inflationary gap closed by a fall in AD -> real output falls back to Yf.",
-        "zh": "總需求減少：通脹缺口消除"
+        "zh": "總需求減少：通脹差距消除"
       },
       "caption": {
         "en": "Inflationary gap closed by a fall in AD",
-        "zh": "總需求減少：通脹缺口消除"
+        "zh": "總需求減少：通脹差距消除"
       },
       "use": "output above full employment (Y0 > Yf) and a fall in AD (fewer tourists, contractionary fiscal or monetary policy) that brings it back to Yf (DSE2015 Q12(b))",
       "shows": {
@@ -3550,7 +3550,7 @@
           "real output falls Y0 -> Yf, price level falls P0 -> P1"
         ],
         "zh": [
-          "E0 位於垂直 LRAS 右方：Y0 > Yf，通脹缺口由 Yf 至 Y0",
+          "E0 位於垂直 LRAS 右方：Y0 > Yf，通脹差距由 Yf 至 Y0",
           "AD0 向左移至 AD1（箭頭）；新的 E1 為 AD1 與 SRAS 在 LRAS 上相交之處",
           "實質產出由 Y0 減少至 Yf，物價水平由 P0 下降至 P1"
         ]
@@ -3586,12 +3586,12 @@
           "E1",
           "Yf",
           "gap",
-          "gap = 通脹缺口"
+          "gap = 通脹差距"
         ]
       },
       "alt": {
         "en": "The equilibrium E0 on SRAS is right of the vertical LRAS, so Y0 is above Yf and the brace gap (Yf to Y0) is the inflationary gap. AD shifts left from AD0 to AD1 (arrow) and meets SRAS on LRAS at E1: real output falls from Y0 to Yf and the price level from P0 to P1.",
-        "zh": "SRAS 上的均衡點 E0 位於垂直 LRAS 的右方，Y0 高於 Yf，括號 gap（Yf 至 Y0）為通脹缺口。總需求由 AD0 向左移至 AD1（箭頭），在 LRAS 上的 E1 與 SRAS 相交：實質產出由 Y0 減少至 Yf，物價水平由 P0 下降至 P1。"
+        "zh": "SRAS 上的均衡點 E0 位於垂直 LRAS 的右方，Y0 高於 Yf，括號 gap（Yf 至 Y0）為通脹差距。總需求由 AD0 向左移至 AD1（箭頭），在 LRAS 上的 E1 與 SRAS 相交：實質產出由 Y0 減少至 Yf，物價水平由 P0 下降至 P1。"
       },
       "png": {
         "en": "gallery/40_inflationary_gap_en.png",
@@ -3599,21 +3599,21 @@
       },
       "size": {
         "en": [
-          1085,
+          1087,
           804
         ],
         "zh": [
-          1058,
+          1059,
           804
         ]
       },
       "sha256": {
-        "en": "b0c9fc1603f15e24ce8d612d8746f3bf3f1954e2b4dabe43e60bcdd447eef5fc",
-        "zh": "0d5a06baa9fdd9a822d15b2f0e7c1e5239ca60c03446f8ed44dbc62fae27ac64"
+        "en": "f034be266f2f9d4d827c1d5be604fcb38256ee672d3a746e0b66f06f6f36174e",
+        "zh": "bcd2842bbd8b1865dcfbe42ea99cfae99fdca61756864157c70b963beb08d739"
       },
       "recipe": {
         "path": "recipes/40_inflationary_gap.json",
-        "sha256": "5b4e612c7f538fbc837978e85e2cd9a723169ad558a39b8e37292e6b60f14eda"
+        "sha256": "53f144b50ec06ec2f4cf278d5c01e66dcaf0cb0d1698119b787e36fc6a01ef67"
       },
       "golden": {
         "en": {
@@ -3622,7 +3622,7 @@
         },
         "zh": {
           "path": "recipes/golden/40_inflationary_gap_zh.scene.json",
-          "sha256": "eb3720f87c8584f465624a481ebbd622c8c29afa0f4883b2ca452a97381bc5a7"
+          "sha256": "7336567ca60adf458f5da75ccbf3efee82be405e11bfde39f1dace28af74a7f0"
         }
       }
     },
@@ -3632,11 +3632,11 @@
       "topic": "AD-AS",
       "title": {
         "en": "Deflationary gap closed by market forces: SRAS increases -> price level falls, output rises to Yf.",
-        "zh": "市場力量消除通縮缺口：短期總供應增加"
+        "zh": "市場力量消除通縮差距：短期總供應增加"
       },
       "caption": {
         "en": "Deflationary gap closed by market forces: SRAS increases",
-        "zh": "市場力量消除通縮缺口：短期總供應增加"
+        "zh": "市場力量消除通縮差距：短期總供應增加"
       },
       "use": "\"how do market forces restore full-employment output\" when Y < Yf: excess supply of labour -> wages and costs fall -> SRAS rises (DSEPP Q13(c), DSE2024 Q7(b))",
       "shows": {
@@ -3724,11 +3724,11 @@
       "topic": "AD-AS",
       "title": {
         "en": "Inflationary gap closed by market forces: SRAS decreases -> price level rises, output falls to Yf.",
-        "zh": "市場力量消除通脹缺口：短期總供應減少"
+        "zh": "市場力量消除通脹差距：短期總供應減少"
       },
       "caption": {
         "en": "Inflationary gap closed by market forces: SRAS decreases",
-        "zh": "市場力量消除通脹缺口：短期總供應減少"
+        "zh": "市場力量消除通脹差距：短期總供應減少"
       },
       "use": "\"how do market forces restore full-employment output\" when Y > Yf: excess demand for labour -> wages and costs rise -> SRAS falls (DSE2020 Q6)",
       "shows": {
@@ -4084,11 +4084,11 @@
       "topic": "Other",
       "title": {
         "en": "Positive externality in consumption: under-consumption and deadweight loss.",
-        "zh": "消費的正外部效應：消費不足及無謂損失"
+        "zh": "消費的正界外效應：消費不足及效率損失"
       },
       "caption": {
         "en": "Positive externality in consumption: under-consumption and deadweight loss",
-        "zh": "消費的正外部效應：消費不足及無謂損失"
+        "zh": "消費的正界外效應：消費不足及效率損失"
       },
       "use": "positive externality in consumption (education, vaccination, public transport ...): MSB above MPB, so the market consumes too little; no marking-scheme ID yet (chat-only variant, drawn from the syllabus)",
       "shows": {
@@ -4102,7 +4102,7 @@
           "MSB 在 MPB 之上（外部利益）；D = MPB；S = MPC = MSC",
           "市場數量 Qm 在 D = S 處；有效率數量 Q* 在 MSB = S 處",
           "Qm < Q*（消費不足）",
-          "無謂損失：由 Qm 至 Q* 在 MSB 與 S 之間的三角形"
+          "效率損失：由 Qm 至 Q* 在 MSB 與 S 之間的三角形"
         ]
       },
       "labels": {
@@ -4126,12 +4126,12 @@
           "Pm",
           "Qm",
           "Q*",
-          "無謂損失"
+          "效率損失"
         ]
       },
       "alt": {
         "en": "MSB lies above D = MPB by the external benefit, and S = MPC = MSC. The market consumes Qm at price Pm (D meets S), less than the efficient quantity Q* (MSB meets S); the hatched triangle between MSB and S from Qm to Q* is the deadweight loss.",
-        "zh": "MSB 在 D = MPB 之上，兩者相差外部利益；S = MPC = MSC。市場數量為 Qm、價格為 Pm（D 與 S 相交），少於有效率數量 Q*（MSB 與 S 相交）；由 Qm 至 Q* 在 MSB 與 S 之間的斜線三角形為無謂損失。"
+        "zh": "MSB 在 D = MPB 之上，兩者相差外部利益；S = MPC = MSC。市場數量為 Qm、價格為 Pm（D 與 S 相交），少於有效率數量 Q*（MSB 與 S 相交）；由 Qm 至 Q* 在 MSB 與 S 之間的斜線三角形為效率損失。"
       },
       "png": {
         "en": "gallery/chat/09b_positive_externality_en.png",
@@ -4149,7 +4149,7 @@
       },
       "sha256": {
         "en": "1160f265ce414e2f6891df32c12c1d089292e613c0c5cec126e3d8cb6b62bca7",
-        "zh": "cb384fb324b818d11a20a14d278d97e5b7de7fa08f5b11cb054b7237025decf9"
+        "zh": "7e287683272f14fabf819bb4b4c9dc28d9fe21cf2126b30edc6fe1c4cf7245a3"
       },
       "recipe": {
         "path": "recipes/09b_positive_externality.json",
@@ -4162,7 +4162,7 @@
         },
         "zh": {
           "path": "recipes/golden/09b_positive_externality_zh.scene.json",
-          "sha256": "9d2f28edd8b437982008f1abdb1e728c65ef80166de6ec2cf00ffc218b22c391"
+          "sha256": "d81adf2e9993365e0ea88e12ea3dae9ad3ca9236be09b4d94d17a44363b261ac"
         }
       }
     },
@@ -4198,14 +4198,14 @@
         ],
         "zh": [
           "消費品",
-          "資本品",
+          "資本物品",
           "PPC0",
           "PPC1"
         ]
       },
       "alt": {
         "en": "A production possibilities curve PPC0 for capital goods and consumer goods, concave to the origin, and a larger PPC1 further out, with an arrow from PPC0 to PPC1 showing economic growth.",
-        "zh": "資本品與消費品的生產可能曲線 PPC0，凹向原點；較外的 PPC1 及由 PPC0 指向 PPC1 的箭頭表示經濟增長。"
+        "zh": "資本物品與消費品的生產可能曲線 PPC0，凹向原點；較外的 PPC1 及由 PPC0 指向 PPC1 的箭頭表示經濟增長。"
       },
       "png": {
         "en": "gallery/chat/10b_ppc_growth_en.png",
@@ -4223,7 +4223,7 @@
       },
       "sha256": {
         "en": "a51b940f1eab0f23c3ef4fd104918856629ee5bec9e2d4038f597ab8f6cb7943",
-        "zh": "99b6122b8d9792a7835185c25529dbbcd302461d6b5844916a2613660e866521"
+        "zh": "46f366c0293db7492dc620c810654ababbe60b21b5f3e6883716dab526883483"
       },
       "recipe": {
         "path": "recipes/10b_ppc_growth.json",
@@ -4236,7 +4236,7 @@
         },
         "zh": {
           "path": "recipes/golden/10b_ppc_growth_zh.scene.json",
-          "sha256": "c1cd4463b6d066cb201ee343ad1d3b519a352b0120e1999027678f43043d9abf"
+          "sha256": "496a7cabce584525b7d8dcd7762876efc67375507381427015ae5de987e47dae"
         }
       }
     },
@@ -4277,7 +4277,7 @@
         ],
         "zh": [
           "消費品",
-          "資本品",
+          "資本物品",
           "PPC",
           "A",
           "B",
@@ -4289,7 +4289,7 @@
       },
       "alt": {
         "en": "One production possibilities curve PPC for capital goods and consumer goods, concave to the origin. Point A is inside the curve (unemployment / inefficiency), B is on it (efficient) and C is outside it (unattainable), as the legend says.",
-        "zh": "一條資本品與消費品的生產可能曲線 PPC，凹向原點。A 點在曲線以內（失業／沒有效率），B 點在曲線上（有效率），C 點在曲線以外（無法達到），如圖例所示。"
+        "zh": "一條資本物品與消費品的生產可能曲線 PPC，凹向原點。A 點在曲線以內（失業／沒有效率），B 點在曲線上（有效率），C 點在曲線以外（無法達到），如圖例所示。"
       },
       "png": {
         "en": "gallery/chat/10c_ppc_points_en.png",
@@ -4307,7 +4307,7 @@
       },
       "sha256": {
         "en": "97d0cc08f5a70e61d503a936109bb0b3921917e0abd8096e085be5b33057380d",
-        "zh": "226bf8d1666489a073f63212ea56bf7fa1d86b25cc9a84d4b03c37df4edbaa4f"
+        "zh": "4c3abfdf98da9851479ccf4c35ea3df96717f5ce2987b72be49106e49fb05e29"
       },
       "recipe": {
         "path": "recipes/10c_ppc_points.json",
@@ -4320,7 +4320,7 @@
         },
         "zh": {
           "path": "recipes/golden/10c_ppc_points_zh.scene.json",
-          "sha256": "433b4e1b6aad350e498d2105001a665bad8b9a87b956a705c03bbf2607a605ae"
+          "sha256": "9758fbd76872e1cf456b39c9f6f2ede424a26d9ece32099ec3b72f93c2637251"
         }
       }
     },

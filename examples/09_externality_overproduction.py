@@ -35,7 +35,7 @@ def diagram(lang="en"):
     guide(ax, (Qm, Pm), O, r"$P_m$", r"$Q_m$")
     guide(ax, (Qs, Ps), O, r"$P^*$", r"$Q^*$")
     cx, cy = (Qs + 2 * Qm) / 3, (Ps + MSC.y(Qm) + Pm) / 3     # centroid
-    leader(ax, (44, 84), (cx, cy + 1), T("Deadweight\nloss", "無謂損失"))
+    leader(ax, (44, 84), (cx, cy + 1), T("Deadweight\nloss", "效率損失"))
     return fig
 
 

@@ -5,6 +5,10 @@ its number, date and `en:` / `zh:` lines into `download/manifest.json`, and
 the website shows them as "What's new". Write them for teachers, in plain
 words.
 
+## 1.7.1 — 2026-11-04
+- en: Chinese diagram wording now follows the EDB supplement: 效率損失, 通脹／通縮差距, 勞力供應／需求, 資本物品, 界外效應. Nothing changes in how you use the skill.
+- zh: 圖中文字改依教育局補充資料：效率損失、通脹／通縮差距、勞力供應／需求、資本物品、界外效應。使用方法不變。
+
 ## 1.7.0 — 2026-10-28
 - en: Nothing changes in how you use the skill. Behind the scenes, every diagram now comes with a short drawing plan, so DSEconMentor's AI tutor can adjust these diagrams for a student's question.
 - zh: 使用方法不變。每幅圖現已附簡短的繪圖說明，讓 DSEconMentor 的 AI 導師可按學生的問題調整這些圖。

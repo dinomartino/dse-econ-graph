@@ -47,7 +47,7 @@
   },
   "capital_goods": {
    "en": "Capital goods",
-   "zh": "資本品"
+   "zh": "資本物品"
   },
   "rental": {
    "en": "Rental",
@@ -83,11 +83,11 @@
   },
   "deflationary_gap": {
    "en": "deflationary gap",
-   "zh": "通縮缺口"
+   "zh": "通縮差距"
   },
   "inflationary_gap": {
    "en": "inflationary gap",
-   "zh": "通脹缺口"
+   "zh": "通脹差距"
   },
   "full_employment": {
    "en": "full employment",
@@ -107,19 +107,19 @@
   },
   "dwl": {
    "en": "Deadweight loss",
-   "zh": "無謂損失"
+   "zh": "效率損失"
   },
   "original_dwl": {
    "en": "Original deadweight loss",
-   "zh": "原有無謂損失"
+   "zh": "原有效率損失"
   },
   "increase_in_dwl": {
    "en": "Increase in deadweight loss",
-   "zh": "無謂損失增加"
+   "zh": "效率損失增加"
   },
   "reduction_in_dwl": {
    "en": "Reduction in deadweight loss",
-   "zh": "無謂損失減少"
+   "zh": "效率損失減少"
   },
   "tax_revenue": {
    "en": "tax revenue",

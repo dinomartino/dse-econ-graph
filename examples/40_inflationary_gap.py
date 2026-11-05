@@ -40,7 +40,7 @@ def diagram(lang="en"):
     arrow(ax, (O[0] - 9, E0[1]), (O[0] - 9, E1[1]))       # price level falls
     arrow(ax, (E0[0], O[1] - 8), (L.vx, O[1] - 8))        # real output falls
     brace(ax, L.vx, E0[0], O[1] + 1.5, "gap", side="above")
-    label(ax, 68, 24, T("gap =\ninflationary gap", "gap =\n通脹缺口"), ha="left")
+    label(ax, 68, 24, T("gap =\ninflationary gap", "gap =\n通脹差距"), ha="left")
     return fig
 
 
