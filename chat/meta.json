@@ -351,10 +351,10 @@
     },
     "alt": {
       "en": "MSC lies above MPC by the external cost, and D = MPB = MSB. The market produces Qm at price Pm (D meets MPC), more than the efficient output Q* at P* (D meets MSC); the hatched triangle between MSC and D from Q* to Qm is the deadweight loss.",
-      "zh": "MSC 在 MPC 之上，兩者相差外部成本；D = MPB = MSB。市場產量為 Qm、價格為 Pm（D 與 MPC 相交），多於有效率產量 Q*、價格 P*（D 與 MSC 相交）；由 Q* 至 Qm 在 MSC 與 D 之間的斜線三角形為效率損失。"
+      "zh": "MSC 在 MPC 之上，兩者相差界外成本；D = MPB = MSB。市場產量為 Qm、價格為 Pm（D 與 MPC 相交），多於有效率產量 Q*、價格 P*（D 與 MSC 相交）；由 Q* 至 Qm 在 MSC 與 D 之間的斜線三角形為效率損失。"
     },
     "shows_zh": [
-      "MSC 在 MPC 之上（外部成本）；D = MPB = MSB",
+      "MSC 在 MPC 之上（界外成本）；D = MPB = MSB",
       "市場產量 Qm 在 D = MPC 處；有效率產量 Q* 在 D = MSC 處",
       "Qm > Q*（生產過多）",
       "效率損失：由 Q* 至 Qm 在 MSC 與 D 之間的三角形"
@@ -1414,7 +1414,7 @@
   "34_ad_increase": {
     "caption": {
       "en": "Aggregate demand increases: price level and real output rise",
-      "zh": "總需求增加：物價水平及實質產出上升"
+      "zh": "總需求增加：價格水平及實質產出上升"
     },
     "alt": {
       "en": "AD shifts right from AD0 to AD1 (arrow) while SRAS is unchanged. The equilibrium moves up along SRAS from E0 to E1: the price level rises from P0 to P1 and real output from Y0 to Y1.",
@@ -1457,7 +1457,7 @@
   "35_sras_decrease": {
     "caption": {
       "en": "Short-run aggregate supply decreases: price level rises, real output falls",
-      "zh": "短期總供應減少：物價水平上升，實質產出下降"
+      "zh": "短期總供應減少：價格水平上升，實質產出下降"
     },
     "alt": {
       "en": "SRAS shifts left from SRAS0 to SRAS1 (arrow) while AD is unchanged. The equilibrium moves up along AD from E0 to E1: the price level rises from P0 to P1 and real output falls from Y0 to Y1.",
@@ -1500,7 +1500,7 @@
   "36_ad_sras_both_decrease": {
     "caption": {
       "en": "AD and SRAS both decrease: real output falls, the price level may rise or fall",
-      "zh": "總需求及短期總供應同時減少：實質產出下降，物價水平可升可跌"
+      "zh": "總需求及短期總供應同時減少：實質產出下降，價格水平可升可跌"
     },
     "alt": {
       "en": "AD shifts left from AD0 to AD1 and SRAS from SRAS0 to SRAS1 (arrows). The equilibrium moves from E0 to E1 and real output falls from Y0 to Y1; the price level is not labelled because it may rise or fall.",
@@ -1541,7 +1541,7 @@
   "37_lras_ad_increase": {
     "caption": {
       "en": "Long run: AD increases on a vertical LRAS, only the price level rises",
-      "zh": "長期：垂直 LRAS 下總需求增加，只有物價水平上升"
+      "zh": "長期：垂直 LRAS 下總需求增加，只有價格水平上升"
     },
     "alt": {
       "en": "A vertical LRAS at full-employment output Yf, with no SRAS. AD shifts right from AD1 to AD2 (arrow): the equilibrium moves up LRAS from E1 to E2, the price level rises from P1 to P2 and real output stays at Yf.",
@@ -1950,10 +1950,10 @@
     },
     "alt": {
       "en": "MSB lies above D = MPB by the external benefit, and S = MPC = MSC. The market consumes Qm at price Pm (D meets S), less than the efficient quantity Q* (MSB meets S); the hatched triangle between MSB and S from Qm to Q* is the deadweight loss.",
-      "zh": "MSB 在 D = MPB 之上，兩者相差外部利益；S = MPC = MSC。市場數量為 Qm、價格為 Pm（D 與 S 相交），少於有效率數量 Q*（MSB 與 S 相交）；由 Qm 至 Q* 在 MSB 與 S 之間的斜線三角形為效率損失。"
+      "zh": "MSB 在 D = MPB 之上，兩者相差界外效益；S = MPC = MSC。市場數量為 Qm、價格為 Pm（D 與 S 相交），少於有效率數量 Q*（MSB 與 S 相交）；由 Qm 至 Q* 在 MSB 與 S 之間的斜線三角形為效率損失。"
     },
     "shows_zh": [
-      "MSB 在 MPB 之上（外部利益）；D = MPB；S = MPC = MSC",
+      "MSB 在 MPB 之上（界外效益）；D = MPB；S = MPC = MSC",
       "市場數量 Qm 在 D = S 處；有效率數量 Q* 在 MSB = S 處",
       "Qm < Q*（消費不足）",
       "效率損失：由 Qm 至 Q* 在 MSB 與 S 之間的三角形"
@@ -2176,7 +2176,7 @@
   "34b_ad_decrease": {
     "caption": {
       "en": "Aggregate demand decreases: price level and real output fall",
-      "zh": "總需求減少：物價水平及實質產出下降"
+      "zh": "總需求減少：價格水平及實質產出下降"
     },
     "alt": {
       "en": "AD shifts left from AD0 to AD1 (arrow) while SRAS is unchanged. The equilibrium moves down along SRAS from E0 to E1: the price level falls from P0 to P1 and real output from Y0 to Y1.",
@@ -2219,7 +2219,7 @@
   "35b_sras_increase": {
     "caption": {
       "en": "Short-run aggregate supply increases: price level falls, real output rises",
-      "zh": "短期總供應增加：物價水平下降，實質產出上升"
+      "zh": "短期總供應增加：價格水平下降，實質產出上升"
     },
     "alt": {
       "en": "SRAS shifts right from SRAS0 to SRAS1 (arrow) while AD is unchanged. The equilibrium moves down along AD from E0 to E1: the price level falls from P0 to P1 and real output rises from Y0 to Y1.",

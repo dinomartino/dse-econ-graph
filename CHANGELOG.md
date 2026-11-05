@@ -5,6 +5,10 @@ its number, date and `en:` / `zh:` lines into `download/manifest.json`, and
 the website shows them as "What's new". Write them for teachers, in plain
 words.
 
+## 1.7.2 — 2026-11-05
+- en: More Chinese wording follows the EDB supplement: 界外成本, 界外效益, and 價格水平 in diagram titles. Nothing changes in how you use the skill.
+- zh: 更多中文用詞依教育局補充資料：界外成本、界外效益，圖題用「價格水平」。使用方法不變。
+
 ## 1.7.1 — 2026-11-04
 - en: Chinese diagram wording now follows the EDB supplement: 效率損失, 通脹／通縮差距, 勞力供應／需求, 資本物品, 界外效應. Nothing changes in how you use the skill.
 - zh: 圖中文字改依教育局補充資料：效率損失、通脹／通縮差距、勞力供應／需求、資本物品、界外效應。使用方法不變。

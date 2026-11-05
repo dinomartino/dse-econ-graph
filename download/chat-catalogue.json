@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.7.1",
+  "version": "1.7.2",
   "recipes": {
     "schema": "recipes/schema.json",
     "glossary": "recipes/glossary.json",
@@ -753,7 +753,7 @@
           "deadweight loss: triangle between MSC and D from Q* to Qm"
         ],
         "zh": [
-          "MSC 在 MPC 之上（外部成本）；D = MPB = MSB",
+          "MSC 在 MPC 之上（界外成本）；D = MPB = MSB",
           "市場產量 Qm 在 D = MPC 處；有效率產量 Q* 在 D = MSC 處",
           "Qm > Q*（生產過多）",
           "效率損失：由 Q* 至 Qm 在 MSC 與 D 之間的三角形"
@@ -787,7 +787,7 @@
       },
       "alt": {
         "en": "MSC lies above MPC by the external cost, and D = MPB = MSB. The market produces Qm at price Pm (D meets MPC), more than the efficient output Q* at P* (D meets MSC); the hatched triangle between MSC and D from Q* to Qm is the deadweight loss.",
-        "zh": "MSC 在 MPC 之上，兩者相差外部成本；D = MPB = MSB。市場產量為 Qm、價格為 Pm（D 與 MPC 相交），多於有效率產量 Q*、價格 P*（D 與 MSC 相交）；由 Q* 至 Qm 在 MSC 與 D 之間的斜線三角形為效率損失。"
+        "zh": "MSC 在 MPC 之上，兩者相差界外成本；D = MPB = MSB。市場產量為 Qm、價格為 Pm（D 與 MPC 相交），多於有效率產量 Q*、價格 P*（D 與 MSC 相交）；由 Q* 至 Qm 在 MSC 與 D 之間的斜線三角形為效率損失。"
       },
       "png": {
         "en": "gallery/09_externality_overproduction_en.png",
@@ -2988,11 +2988,11 @@
       "topic": "AD-AS",
       "title": {
         "en": "Aggregate demand increases -> price level and real output both rise.",
-        "zh": "總需求增加：物價水平及實質產出上升"
+        "zh": "總需求增加：價格水平及實質產出上升"
       },
       "caption": {
         "en": "Aggregate demand increases: price level and real output rise",
-        "zh": "總需求增加：物價水平及實質產出上升"
+        "zh": "總需求增加：價格水平及實質產出上升"
       },
       "use": "a cash handout, more investment, more tourists, expansionary fiscal or monetary policy; for a fall in AD, swap AD0/AD1 and reverse the arrows (DSE2013 Q12(c), DSE2014 Q12(c), DSE2016 Q12(b), DSE2024 Q12(a), DSE2025 Q10(c), DSEPP Q13(b))",
       "shows": {
@@ -3078,11 +3078,11 @@
       "topic": "AD-AS",
       "title": {
         "en": "Short-run aggregate supply decreases -> price level rises, real output falls.",
-        "zh": "短期總供應減少：物價水平上升，實質產出下降"
+        "zh": "短期總供應減少：價格水平上升，實質產出下降"
       },
       "caption": {
         "en": "Short-run aggregate supply decreases: price level rises, real output falls",
-        "zh": "短期總供應減少：物價水平上升，實質產出下降"
+        "zh": "短期總供應減少：價格水平上升，實質產出下降"
       },
       "use": "production costs rise (wages, rents, oil or raw-material prices), a natural disaster or strike cuts production; for an SRAS increase, reverse the arrows (supply-shock MCQs, DSE2017 Q12)",
       "shows": {
@@ -3168,11 +3168,11 @@
       "topic": "AD-AS",
       "title": {
         "en": "AD and SRAS both decrease -> real output falls; the price level is indeterminate.",
-        "zh": "總需求及短期總供應同時減少：實質產出下降，物價水平可升可跌"
+        "zh": "總需求及短期總供應同時減少：實質產出下降，價格水平可升可跌"
       },
       "caption": {
         "en": "AD and SRAS both decrease: real output falls, the price level may rise or fall",
-        "zh": "總需求及短期總供應同時減少：實質產出下降，物價水平可升可跌"
+        "zh": "總需求及短期總供應同時減少：實質產出下降，價格水平可升可跌"
       },
       "use": "one event that raises costs AND cuts spending (Brexit visa costs + less investment, a disaster that shuts factories + pessimism); only Y is certain (DSE2017 Q12(b), DSE2021 Q11(b))",
       "shows": {
@@ -3256,11 +3256,11 @@
       "topic": "AD-AS",
       "title": {
         "en": "Long run: AD increases on a vertical LRAS -> price level rises, real output stays at Yf.",
-        "zh": "長期：垂直 LRAS 下總需求增加，只有物價水平上升"
+        "zh": "長期：垂直 LRAS 下總需求增加，只有價格水平上升"
       },
       "caption": {
         "en": "Long run: AD increases on a vertical LRAS, only the price level rises",
-        "zh": "長期：垂直 LRAS 下總需求增加，只有物價水平上升"
+        "zh": "長期：垂直 LRAS 下總需求增加，只有價格水平上升"
       },
       "use": "the LONG-RUN effect of a demand-side change (cash handout, more spending) when production capacity is unchanged (DSE2012 Q10(c))",
       "shows": {
@@ -4099,7 +4099,7 @@
           "deadweight loss: triangle between MSB and S from Qm to Q*"
         ],
         "zh": [
-          "MSB 在 MPB 之上（外部利益）；D = MPB；S = MPC = MSC",
+          "MSB 在 MPB 之上（界外效益）；D = MPB；S = MPC = MSC",
           "市場數量 Qm 在 D = S 處；有效率數量 Q* 在 MSB = S 處",
           "Qm < Q*（消費不足）",
           "效率損失：由 Qm 至 Q* 在 MSB 與 S 之間的三角形"
@@ -4131,7 +4131,7 @@
       },
       "alt": {
         "en": "MSB lies above D = MPB by the external benefit, and S = MPC = MSC. The market consumes Qm at price Pm (D meets S), less than the efficient quantity Q* (MSB meets S); the hatched triangle between MSB and S from Qm to Q* is the deadweight loss.",
-        "zh": "MSB 在 D = MPB 之上，兩者相差外部利益；S = MPC = MSC。市場數量為 Qm、價格為 Pm（D 與 S 相交），少於有效率數量 Q*（MSB 與 S 相交）；由 Qm 至 Q* 在 MSB 與 S 之間的斜線三角形為效率損失。"
+        "zh": "MSB 在 D = MPB 之上，兩者相差界外效益；S = MPC = MSC。市場數量為 Qm、價格為 Pm（D 與 S 相交），少於有效率數量 Q*（MSB 與 S 相交）；由 Qm 至 Q* 在 MSB 與 S 之間的斜線三角形為效率損失。"
       },
       "png": {
         "en": "gallery/chat/09b_positive_externality_en.png",
@@ -4594,11 +4594,11 @@
       "topic": "AD-AS",
       "title": {
         "en": "Aggregate demand decreases -> price level and real output both fall.",
-        "zh": "總需求減少：物價水平及實質產出下降"
+        "zh": "總需求減少：價格水平及實質產出下降"
       },
       "caption": {
         "en": "Aggregate demand decreases: price level and real output fall",
-        "zh": "總需求減少：物價水平及實質產出下降"
+        "zh": "總需求減少：價格水平及實質產出下降"
       },
       "use": "less investment, fewer tourists, a fall in exports, contractionary fiscal or monetary policy (chat-only variant: 34 with the shift reversed)",
       "shows": {
@@ -4684,11 +4684,11 @@
       "topic": "AD-AS",
       "title": {
         "en": "Short-run aggregate supply increases -> price level falls, real output rises.",
-        "zh": "短期總供應增加：物價水平下降，實質產出上升"
+        "zh": "短期總供應增加：價格水平下降，實質產出上升"
       },
       "caption": {
         "en": "Short-run aggregate supply increases: price level falls, real output rises",
-        "zh": "短期總供應增加：物價水平下降，實質產出上升"
+        "zh": "短期總供應增加：價格水平下降，實質產出上升"
       },
       "use": "production costs fall (wages, rents, oil or raw-material prices), better technology raises output per worker in the short run (chat-only variant: 35 with the shift reversed)",
       "shows": {

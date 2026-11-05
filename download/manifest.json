@@ -4,14 +4,14 @@
     "en": "Paste a DSE Economics question and its marking scheme into Grok, Claude or ChatGPT and get the diagram in the HKEAA marking-scheme style, in English or Chinese.",
     "zh": "把 DSE 經濟題目和評卷參考貼到 Grok、Claude 或 ChatGPT，即可得到 HKEAA 評卷參考風格的圖，中英文皆可。"
   },
-  "version": "1.7.1",
-  "released": "2026-11-04",
+  "version": "1.7.2",
+  "released": "2026-11-05",
   "whats_new": {
     "en": [
-      "Chinese diagram wording now follows the EDB supplement: 效率損失, 通脹／通縮差距, 勞力供應／需求, 資本物品, 界外效應. Nothing changes in how you use the skill."
+      "More Chinese wording follows the EDB supplement: 界外成本, 界外效益, and 價格水平 in diagram titles. Nothing changes in how you use the skill."
     ],
     "zh": [
-      "圖中文字改依教育局補充資料：效率損失、通脹／通縮差距、勞力供應／需求、資本物品、界外效應。使用方法不變。"
+      "更多中文用詞依教育局補充資料：界外成本、界外效益，圖題用「價格水平」。使用方法不變。"
     ]
   },
   "files": [
@@ -40,8 +40,8 @@
         "en": "The ChatGPT version: upload it with Plugins ▸ Upload plugin. Do not unzip it.",
         "zh": "ChatGPT 專用版本：在 Plugins ▸ Upload plugin 上載，不用解壓。"
       },
-      "bytes": 92733,
-      "sha256": "9a39bc52cf216767b511e7a898e5020501d02763c20898a8d23fdd59a6f4e981",
+      "bytes": 92734,
+      "sha256": "f18a88f6523b6148f38e5c9f641772715adca707bceb2a1605f45a924d436310",
       "url": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/download/dse-econ-graph-chatgpt.zip",
       "download_url": "https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph-chatgpt.zip"
     },
@@ -504,7 +504,7 @@
     {
       "id": "34_ad_increase",
       "title": "Aggregate demand increases -> price level and real output both rise.",
-      "title_zh": "總需求增加：物價水平及實質產出上升",
+      "title_zh": "總需求增加：價格水平及實質產出上升",
       "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/34_ad_increase_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/34_ad_increase_zh.png"
@@ -512,7 +512,7 @@
     {
       "id": "35_sras_decrease",
       "title": "Short-run aggregate supply decreases -> price level rises, real output falls.",
-      "title_zh": "短期總供應減少：物價水平上升，實質產出下降",
+      "title_zh": "短期總供應減少：價格水平上升，實質產出下降",
       "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/35_sras_decrease_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/35_sras_decrease_zh.png"
@@ -520,7 +520,7 @@
     {
       "id": "36_ad_sras_both_decrease",
       "title": "AD and SRAS both decrease -> real output falls; the price level is indeterminate.",
-      "title_zh": "總需求及短期總供應同時減少：實質產出下降，物價水平可升可跌",
+      "title_zh": "總需求及短期總供應同時減少：實質產出下降，價格水平可升可跌",
       "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/36_ad_sras_both_decrease_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/36_ad_sras_both_decrease_zh.png"
@@ -528,7 +528,7 @@
     {
       "id": "37_lras_ad_increase",
       "title": "Long run: AD increases on a vertical LRAS -> price level rises, real output stays at Yf.",
-      "title_zh": "長期：垂直 LRAS 下總需求增加，只有物價水平上升",
+      "title_zh": "長期：垂直 LRAS 下總需求增加，只有價格水平上升",
       "topic": "AD-AS",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/37_lras_ad_increase_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/37_lras_ad_increase_zh.png"

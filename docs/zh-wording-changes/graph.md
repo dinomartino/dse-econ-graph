@@ -113,3 +113,24 @@ Also regenerated from these (no hand edits): `recipes/golden/*_zh.scene.json` (1
 
 ## Mentor website must re-sync
 `npm run sync:econ-diagrams -- --ref <sha>` from the 1.7.1 commit: `download/chat-catalogue.json`, `recipes/glossary.json`, the two gap recipes, `recipes/golden/*` and the changed gallery PNGs (their sha256 changed).
+
+## 1.7.2 additions (2026-11-05)
+
+Decided by user: 外部成本→界外成本, 外部利益→界外效益 (EDB W5, p.18 私人代價／社會代價 and 界外效應 wording); 物價水平→價格水平 only where it is a diagram topic title (chat caption). Text inside diagrams and the glossary axis label keep 物價水平. No template or generated PNG/golden scene contained these terms, so none changed.
+
+| file:line (1.7.1) | old | new | EDB page | reason |
+|---|---|---|---|---|
+| chat/meta.json:354 | 外部成本 | 界外成本 | p.18 | W5 |
+| chat/meta.json:357 | 外部成本 | 界外成本 | p.18 | W5 |
+| chat/meta.json:1417 | 物價水平 | 價格水平 | p.18 | topic title (caption) |
+| chat/meta.json:1460 | 物價水平 | 價格水平 | p.18 | topic title (caption) |
+| chat/meta.json:1503 | 物價水平 | 價格水平 | p.18 | topic title (caption) |
+| chat/meta.json:1544 | 物價水平 | 價格水平 | p.18 | topic title (caption) |
+| chat/meta.json:1953 | 外部利益 | 界外效益 | p.18 | W5 |
+| chat/meta.json:1956 | 外部利益 | 界外效益 | p.18 | W5 |
+| chat/meta.json:2179 | 物價水平 | 價格水平 | p.18 | topic title (caption) |
+| chat/meta.json:2222 | 物價水平 | 價格水平 | p.18 | topic title (caption) |
+| recipes/glossary.json:206 | 外部成本 | 界外成本 | p.18 | W5 |
+| recipes/glossary.json:210 | 外部利益 | 界外效益 | p.18 | W5 |
+
+Also left unchanged by the user: 勞工超額供應／需求, 輸入勞工, 需求富彈性／缺乏彈性, 盈餘／過剩 handling, 物價水平 as axis text.
