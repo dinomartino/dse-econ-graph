@@ -41,7 +41,7 @@ def diagram(lang="en"):
     arrow(ax, (O[0] - 9, E0[1]), (O[0] - 9, E1[1]))       # price level rises
     brace(ax, E1[0], L.vx, O[1] + 1.5, r"$gap_1$", side="above")
     brace(ax, E0[0], L.vx, O[1] - 8, r"$gap_0$", side="below")
-    label(ax, 73, 44, T("gap =\ndeflationary gap", "gap =\n通縮缺口"), ha="left")
+    label(ax, 73, 44, T("gap =\ndeflationary gap", "gap =\n通縮差距"), ha="left")
     return fig
 
 

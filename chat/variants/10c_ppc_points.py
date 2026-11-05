@@ -20,7 +20,7 @@ def diagram(lang="en"):
     setup(lang)
     fig, ax = new(3.4, 2.6)
     O = (12, 12)
-    axes(ax, O, (90, 12), (12, 98), T("Consumer goods", "消費品"), T("Capital goods", "資本品"))
+    axes(ax, O, (90, 12), (12, 98), T("Consumer goods", "消費品"), T("Capital goods", "資本物品"))
 
     def pt(s, t):                      # point at angle t on the PPC scaled by s
         return (O[0] + s * 55 * math.cos(t), O[1] + s * 60 * math.sin(t))

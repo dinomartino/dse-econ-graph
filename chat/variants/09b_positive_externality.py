@@ -39,7 +39,7 @@ def diagram(lang="en"):
     guide(ax, (Qm, Pm), O, r"$P_m$", r"$Q_m$")
     guide(ax, (Qs, Ps), O, xlab=r"$Q^*$", to_y=False)
     cx, cy = (2 * Qm + Qs) / 3, (Pm + MSB.y(Qm) + Ps) / 3     # centroid
-    leader(ax, (44, 88), (cx, cy + 1), T("Deadweight\nloss", "無謂損失"))
+    leader(ax, (44, 88), (cx, cy + 1), T("Deadweight\nloss", "效率損失"))
     return fig
 
 

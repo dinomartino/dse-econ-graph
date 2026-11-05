@@ -6,7 +6,7 @@
   {"t":"arrow","a":[12,12],"b":[12,98],"head_length":0.45,"head_width":0.18,"mutation":10,"lw":0.8,"z":4},
   {"t":"arrow","a":[52.390873,55.926407],"b":[62.825902,67.582802],"head_length":0.405,"head_width":0.162,"mutation":10,"lw":0.8,"z":4},
   {"t":"text","s":"消費品","at":[91.5,12],"ha":"left","va":"center","size":10.5,"patch":false,"z":3,"ext_in":[2.928,0.235169,3.368,0.388831]},
-  {"t":"text","s":"資本品","at":[12,100],"ha":"center","va":"bottom","size":10.5,"patch":false,"z":3,"ext_in":[0.164,2.6,0.604,2.754651]},
+  {"t":"text","s":"資本物品","at":[12,100],"ha":"center","va":"bottom","size":10.5,"patch":false,"z":3,"ext_in":[0.090667,2.6,0.677333,2.754651]},
   {"t":"text","s":"0","at":[10.5,10.5],"ha":"right","va":"top","size":10.5,"patch":false,"z":3,"ext_in":[0.262667,0.140411,0.336,0.273]},
   {"t":"text","s":"PPC$_0$","at":[67.0,10.2],"ha":"center","va":"top","size":10.5,"patch":false,"z":6,"ext_in":[1.985667,0.132611,2.302333,0.2652]},
   {"t":"text","s":"PPC$_1$","at":[86.0,10.2],"ha":"center","va":"top","size":10.5,"patch":false,"z":6,"ext_in":[2.593667,0.132611,2.910333,0.2652]}

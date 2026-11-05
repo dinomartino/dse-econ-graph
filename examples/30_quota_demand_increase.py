@@ -41,7 +41,7 @@ def diagram(lang="en"):
     for q, n in ((Q0, r"$Q_0$"), (E1[0], r"$Q_1$"), (E2[0], r"$Q_2$")):
         label(ax, q, O[1] - 1.8, n, va="top")
     arrow(ax, (E1[0], 3), (E2[0], 3))          # efficient quantity rises
-    key(ax, 50, 92, T("Increase in deadweight loss", "無謂損失增加"))
+    key(ax, 50, 92, T("Increase in deadweight loss", "效率損失增加"))
     return fig
 
 

@@ -201,13 +201,13 @@ in plain words.
 | Unit tax | 從量稅 | Tax revenue | 政府稅收 |
 | Consumers' burden | 消費者負擔 | Producers' burden | 生產者負擔 |
 | Consumer surplus | 消費者盈餘 | Producer surplus | 生產者盈餘 |
-| Deadweight loss | 無謂損失 | Subsidy | 津貼 |
+| Deadweight loss | 效率損失 | Subsidy | 津貼 |
 | Marginal private cost | 邊際私人成本 | Marginal social cost | 邊際社會成本 |
 | Marginal private benefit | 邊際私人利益 | Marginal social benefit | 邊際社會利益 |
-| Production possibilities curve | 生產可能曲線 | Capital goods / Consumer goods | 資本品 / 消費品 |
+| Production possibilities curve | 生產可能曲線 | Capital goods / Consumer goods | 資本物品 / 消費品 |
 | Price level | 物價水平 | Real output | 實質產出 |
 | Aggregate demand (AD) | 總需求 | Aggregate supply (SRAS / LRAS) | 總供應 |
-| Deflationary gap | 通縮缺口 | Inflationary gap | 通脹缺口 |
+| Deflationary gap | 通縮差距 | Inflationary gap | 通脹差距 |
 | Full employment | 充分就業 | Total social surplus | 總社會盈餘 |
 | Buyers' burden | 買家負擔 | Sellers' burden | 賣家負擔 |
 | Consumer benefit | 消費者得益 | Producer benefit | 生產者得益 |
@@ -1245,7 +1245,7 @@ def diagram(lang="en"):
 
     key(ax, 60, 92, T("Consumer surplus", "消費者盈餘"), "....")
     key(ax, 60, 85.5, T("Producer surplus", "生產者盈餘"), "////")
-    key(ax, 60, 79, T("Deadweight loss", "無謂損失"), "xxxx")
+    key(ax, 60, 79, T("Deadweight loss", "效率損失"), "xxxx")
     return fig
 
 
@@ -1291,7 +1291,7 @@ def diagram(lang="en"):
     guide(ax, (Qm, Pm), O, r"$P_m$", r"$Q_m$")
     guide(ax, (Qs, Ps), O, r"$P^*$", r"$Q^*$")
     cx, cy = (Qs + 2 * Qm) / 3, (Ps + MSC.y(Qm) + Pm) / 3     # centroid
-    leader(ax, (44, 84), (cx, cy + 1), T("Deadweight\nloss", "無謂損失"))
+    leader(ax, (44, 84), (cx, cy + 1), T("Deadweight\nloss", "效率損失"))
     return fig
 
 
@@ -1321,7 +1321,7 @@ def diagram(lang="en"):
     setup(lang)
     fig, ax = new(3.2, 2.6)
     O = (12, 12)
-    axes(ax, O, (90, 12), (12, 98), T("Consumer goods", "消費品"), T("Capital goods", "資本品"))
+    axes(ax, O, (90, 12), (12, 98), T("Consumer goods", "消費品"), T("Capital goods", "資本物品"))
 
     def pt(s, t):                      # point at angle t on the PPC scaled by s
         return (O[0] + s * 55 * math.cos(t), O[1] + s * 60 * math.sin(t))
@@ -2175,8 +2175,8 @@ def diagram(lang="en"):
         label(ax, Q, O[1] - 1.8, f"$Q_{n}$", va="top")
     arrow(ax, (2, P1), (2, P2))                # ceiling lowered
     arrow(ax, (Q1, 3), (Q2, 3))                # Q falls
-    key(ax, 52, 92, T("Original deadweight loss", "原有無謂損失"), "....")
-    key(ax, 52, 85.5, T("Increase in deadweight loss", "無謂損失增加"))
+    key(ax, 52, 92, T("Original deadweight loss", "原有效率損失"), "....")
+    key(ax, 52, 85.5, T("Increase in deadweight loss", "效率損失增加"))
     return fig
 
 
@@ -2289,7 +2289,7 @@ def diagram(lang="en"):
     label(ax, Q2, O[1] - 1.8, r"$Q_2$", va="top")
     arrow(ax, (4, W[1]), (4, X[1]))             # price falls
     arrow(ax, (Q1, 3), (Q2, 3))                 # quantity rises
-    key(ax, 50, 91, T("Reduction in deadweight loss", "無謂損失減少"))
+    key(ax, 50, 91, T("Reduction in deadweight loss", "效率損失減少"))
     return fig
 
 
@@ -2341,7 +2341,7 @@ def diagram(lang="en"):
     for q, n in ((Q0, r"$Q_0$"), (E1[0], r"$Q_1$"), (E2[0], r"$Q_2$")):
         label(ax, q, O[1] - 1.8, n, va="top")
     arrow(ax, (E1[0], 3), (E2[0], 3))          # efficient quantity rises
-    key(ax, 50, 92, T("Increase in deadweight loss", "無謂損失增加"))
+    key(ax, 50, 92, T("Increase in deadweight loss", "效率損失增加"))
     return fig
 
 
@@ -2777,7 +2777,7 @@ def diagram(lang="en"):
     arrow(ax, (O[0] - 9, E0[1]), (O[0] - 9, E1[1]))       # price level rises
     brace(ax, E1[0], L.vx, O[1] + 1.5, r"$gap_1$", side="above")
     brace(ax, E0[0], L.vx, O[1] - 8, r"$gap_0$", side="below")
-    label(ax, 73, 44, T("gap =\ndeflationary gap", "gap =\n通縮缺口"), ha="left")
+    label(ax, 73, 44, T("gap =\ndeflationary gap", "gap =\n通縮差距"), ha="left")
     return fig
 
 
@@ -2828,7 +2828,7 @@ def diagram(lang="en"):
     arrow(ax, (O[0] - 9, E0[1]), (O[0] - 9, E1[1]))       # price level falls
     arrow(ax, (E0[0], O[1] - 8), (L.vx, O[1] - 8))        # real output falls
     brace(ax, L.vx, E0[0], O[1] + 1.5, "gap", side="above")
-    label(ax, 68, 24, T("gap =\ninflationary gap", "gap =\n通脹缺口"), ha="left")
+    label(ax, 68, 24, T("gap =\ninflationary gap", "gap =\n通脹差距"), ha="left")
     return fig
 
 

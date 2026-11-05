@@ -20,5 +20,5 @@
   {"t":"text","s":"$P_m$","at":[10.5,45.771429],"ha":"right","va":"center","size":10.5,"patch":false,"z":6,"ext_in":[0.190333,1.169534,0.357,1.302123]},
   {"t":"text","s":"$Q_m$","at":[46.971429,10.2],"ha":"center","va":"top","size":10.5,"patch":false,"z":6,"ext_in":[1.502029,0.142811,1.692029,0.2754]},
   {"t":"text","s":"$Q^*$","at":[61.219048,10.2],"ha":"center","va":"top","size":10.5,"patch":false,"z":6,"ext_in":[1.984781,0.12726,2.178114,0.2754]},
-  {"t":"leader","s":"無謂損失","at":[44,88],"ha":"center","va":"center","size":10.5,"patch":false,"z":6,"ext_in":[1.202667,2.299013,1.789333,2.452987],"target":[51.720635,57.87619],"head_length":0.36,"head_width":0.14,"mutation":10,"lw":0.7,"shrinkA":2}
+  {"t":"leader","s":"效率損失","at":[44,88],"ha":"center","va":"center","size":10.5,"patch":false,"z":6,"ext_in":[1.202667,2.298492,1.789333,2.453508],"target":[51.720635,57.87619],"head_length":0.36,"head_width":0.14,"mutation":10,"lw":0.7,"shrinkA":2}
  ]}
