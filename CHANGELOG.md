@@ -5,6 +5,10 @@ its number, date and `en:` / `zh:` lines into `download/manifest.json`, and
 the website shows them as "What's new". Write them for teachers, in plain
 words.
 
+## 1.7.3 — 2026-11-05
+- en: Chinese elasticity wording now follows the EDB glossary: 彈性需求, 低彈性需求 (and 高彈性 for a flat curve). Nothing changes in how you use the skill.
+- zh: 彈性用詞依教育局詞彙：彈性需求、低彈性需求（平坦的需求曲線稱高彈性）。使用方法不變。
+
 ## 1.7.2 — 2026-11-05
 - en: More Chinese wording follows the EDB supplement: 界外成本, 界外效益, and 價格水平 in diagram titles. Nothing changes in how you use the skill.
 - zh: 更多中文用詞依教育局補充資料：界外成本、界外效益，圖題用「價格水平」。使用方法不變。
