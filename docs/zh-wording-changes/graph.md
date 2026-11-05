@@ -134,3 +134,29 @@ Decided by user: 外部成本→界外成本, 外部利益→界外效益 (EDB W
 | recipes/glossary.json:210 | 外部利益 | 界外效益 | p.18 | W5 |
 
 Also left unchanged by the user: 勞工超額供應／需求, 輸入勞工, 需求富彈性／缺乏彈性, 盈餘／過剩 handling, 物價水平 as axis text.
+
+## 1.7.3 additions (2026-11-05, decision u-15vm)
+
+Elasticity follows the EDB glossary: 彈性需求 (elastic), 低彈性需求 (inelastic), 高彈性 for a flat (highly elastic) curve. Sentences rewritten, not blind-replaced. 完全無彈性 not present in the skill. No HKEAA past-paper text is quoted in the skill. No template/PNG/golden contained these terms. 優良貨幣的特質 (topic label): not in the skill.
+
+| file:line | old | new | EDB page | reason |
+|---|---|---|---|---|
+| chat/meta.json:163 | 富彈性需求下 | 彈性需求下 | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:167 | （富彈性） | （高彈性） | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:170 | （富彈性） | （高彈性） | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:203 | 缺乏彈性需求下 | 低彈性需求下 | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:207 | （缺乏彈性） | （低彈性） | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:210 | （缺乏彈性） | （低彈性） | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:721 | 缺乏彈性需求下 | 低彈性需求下 | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:725 | （缺乏彈性） | （低彈性） | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:728 | （缺乏彈性） | （低彈性） | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:761 | 富彈性需求下 | 彈性需求下 | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:765 | （富彈性） | （高彈性） | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:768 | （富彈性） | （高彈性） | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:1283 | 缺乏彈性需求下 | 低彈性需求下 | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:1909 | 富彈性需求下 | 彈性需求下 | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:1913 | （富彈性） | （高彈性） | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:1916 | （富彈性） | （高彈性） | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:2139 | 缺乏彈性需求下 | 低彈性需求下 | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:2143 | （缺乏彈性） | （低彈性） | EDB glossary (elastic / inelastic demand) | u-15vm |
+| chat/meta.json:2146 | （缺乏彈性） | （低彈性） | EDB glossary (elastic / inelastic demand) | u-15vm |

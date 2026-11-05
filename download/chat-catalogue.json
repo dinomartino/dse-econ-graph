@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.7.2",
+  "version": "1.7.3",
   "recipes": {
     "schema": "recipes/schema.json",
     "glossary": "recipes/glossary.json",
@@ -358,11 +358,11 @@
       "topic": "Total revenue and elasticity",
       "title": {
         "en": "Price falls on ELASTIC (flat) demand -> total revenue rises.",
-        "zh": "富彈性需求下價格下降：總收入增加"
+        "zh": "彈性需求下價格下降：總收入增加"
       },
       "caption": {
         "en": "Price falls on elastic demand: total revenue rises",
-        "zh": "富彈性需求下價格下降：總收入增加"
+        "zh": "彈性需求下價格下降：總收入增加"
       },
       "use": "a price fall along one ELASTIC demand curve raises total revenue / expenditure; for a price rise on inelastic demand use 18 (CE1993 Q1(a), CE2003 Q9(a))",
       "shows": {
@@ -373,7 +373,7 @@
           "gain > loss, so total revenue rises"
         ],
         "zh": [
-          "平坦（富彈性）的需求曲線 D",
+          "平坦（高彈性）的需求曲線 D",
           "價格由 P1 下降至 P2，需求量由 Q1 增加至 Q2",
           "收入損失（P2..P1 × 0..Q1）標示「−」，得益（Q1..Q2 × 0..P2）標示「+」",
           "得益 > 損失，所以總收入增加"
@@ -405,7 +405,7 @@
       },
       "alt": {
         "en": "A flat (elastic) demand curve D. The price falls from P1 to P2 and the quantity demanded rises from Q1 to Q2; the loss rectangle (P2 to P1, 0 to Q1) is marked − and the larger gain rectangle (Q1 to Q2, 0 to P2) is marked +.",
-        "zh": "平坦（富彈性）的需求曲線 D。價格由 P1 下降至 P2，需求量由 Q1 增加至 Q2；損失的長方形（P2 至 P1，0 至 Q1）標示「−」，較大的得益長方形（Q1 至 Q2，0 至 P2）標示「+」。"
+        "zh": "平坦（高彈性）的需求曲線 D。價格由 P1 下降至 P2，需求量由 Q1 增加至 Q2；損失的長方形（P2 至 P1，0 至 Q1）標示「−」，較大的得益長方形（Q1 至 Q2，0 至 P2）標示「+」。"
       },
       "png": {
         "en": "gallery/05_tr_price_change_elastic_en.png",
@@ -446,11 +446,11 @@
       "topic": "Total revenue and elasticity",
       "title": {
         "en": "Supply decreases on INELASTIC (steep) demand -> total revenue rises.",
-        "zh": "缺乏彈性需求下供應減少：總收入增加"
+        "zh": "低彈性需求下供應減少：總收入增加"
       },
       "caption": {
         "en": "Supply decreases on inelastic demand: total revenue rises",
-        "zh": "缺乏彈性需求下供應減少：總收入增加"
+        "zh": "低彈性需求下供應減少：總收入增加"
       },
       "use": "a supply shift (cost up, bad harvest; or reversed: subsidy, cost down) with inelastic or elastic demand changes total revenue (CE1994 Q11(b), CE1997 Q11(c), CE2009 Q9(b), DSEPP Q3, DSE2021 Q10(c), CE2000 Q11(b) wage bill)",
       "shows": {
@@ -462,7 +462,7 @@
           "gain > loss, so total revenue rises"
         ],
         "zh": [
-          "陡峭（缺乏彈性）的需求曲線 D",
+          "陡峭（低彈性）的需求曲線 D",
           "供應減少：S1 向左移至 S2（箭頭）",
           "價格由 P1 上升至 P2，數量由 Q1 減少至 Q2",
           "得益（P1..P2 × 0..Q2）標示「+」，損失（Q2..Q1 × 0..P1）標示「−」",
@@ -499,7 +499,7 @@
       },
       "alt": {
         "en": "A steep (inelastic) demand curve D. Supply shifts left from S1 to S2 (arrow), so the price rises from P1 to P2 and the quantity falls from Q1 to Q2; the gain rectangle (P1 to P2, 0 to Q2) is marked + and is larger than the loss rectangle (Q2 to Q1, 0 to P1) marked −.",
-        "zh": "陡峭（缺乏彈性）的需求曲線 D。供應由 S1 向左移至 S2（箭頭），價格由 P1 上升至 P2，數量由 Q1 減少至 Q2；標示「+」的得益長方形（P1 至 P2，0 至 Q2）大於標示「−」的損失長方形（Q2 至 Q1，0 至 P1）。"
+        "zh": "陡峭（低彈性）的需求曲線 D。供應由 S1 向左移至 S2（箭頭），價格由 P1 上升至 P2，數量由 Q1 減少至 Q2；標示「+」的得益長方形（P1 至 P2，0 至 Q2）大於標示「−」的損失長方形（Q2 至 Q1，0 至 P1）。"
       },
       "png": {
         "en": "gallery/06_tr_supply_decrease_inelastic_en.png",
@@ -1530,11 +1530,11 @@
       "topic": "Total revenue and elasticity",
       "title": {
         "en": "Price rises on INELASTIC (steep) demand -> total revenue rises.",
-        "zh": "缺乏彈性需求下價格上升：總收入增加"
+        "zh": "低彈性需求下價格上升：總收入增加"
       },
       "caption": {
         "en": "Price rises on inelastic demand: total revenue rises",
-        "zh": "缺乏彈性需求下價格上升：總收入增加"
+        "zh": "低彈性需求下價格上升：總收入增加"
       },
       "use": "a price rise along an inelastic demand curve raises total revenue / expenditure, e.g. the HK$ depreciates so the import price in HK$ rises and spending on the import rises; for a price fall on elastic demand use template 05 (DSE2013 Q9(a), CE2005 Q9(a), CE1993 Q1(a))",
       "shows": {
@@ -1545,7 +1545,7 @@
           "gain > loss, so total revenue rises"
         ],
         "zh": [
-          "陡峭（缺乏彈性）的需求曲線 D，不需畫供應曲線",
+          "陡峭（低彈性）的需求曲線 D，不需畫供應曲線",
           "價格由 P1 上升至 P2，需求量由 Q1 減少至 Q2",
           "得益（P1..P2 × 0..Q2）標示「+」，損失（Q2..Q1 × 0..P1）標示「−」",
           "得益 > 損失，所以總收入增加"
@@ -1577,7 +1577,7 @@
       },
       "alt": {
         "en": "A steep (inelastic) demand curve D. The price rises from P1 to P2 and the quantity demanded falls from Q1 to Q2; the gain rectangle (P1 to P2, 0 to Q2) is marked + and is larger than the loss rectangle (Q2 to Q1, 0 to P1) marked −.",
-        "zh": "陡峭（缺乏彈性）的需求曲線 D。價格由 P1 上升至 P2，需求量由 Q1 減少至 Q2；標示「+」的得益長方形（P1 至 P2，0 至 Q2）大於標示「−」的損失長方形（Q2 至 Q1，0 至 P1）。"
+        "zh": "陡峭（低彈性）的需求曲線 D。價格由 P1 上升至 P2，需求量由 Q1 減少至 Q2；標示「+」的得益長方形（P1 至 P2，0 至 Q2）大於標示「−」的損失長方形（Q2 至 Q1，0 至 P1）。"
       },
       "png": {
         "en": "gallery/18_tr_price_rise_inelastic_en.png",
@@ -1618,11 +1618,11 @@
       "topic": "Total revenue and elasticity",
       "title": {
         "en": "Fixed stock (vertical supply) increases on ELASTIC (flat) demand -> total value rises.",
-        "zh": "富彈性需求下的士牌照增加：牌照總值上升"
+        "zh": "彈性需求下的士牌照增加：牌照總值上升"
       },
       "caption": {
         "en": "More taxi licences on elastic demand: the total value of licences rises",
-        "zh": "富彈性需求下的士牌照增加：牌照總值上升"
+        "zh": "彈性需求下的士牌照增加：牌照總值上升"
       },
       "use": "more taxi licences (land, flats ...) are issued and demand is elastic, so the price falls but the total value of all licences rises (CE1992 Q1(d)(ii))",
       "shows": {
@@ -1633,7 +1633,7 @@
           "gain > loss, so the total value of licences rises"
         ],
         "zh": [
-          "垂直供應 S 向右移至 S’（箭頭），平坦（富彈性）的需求 D",
+          "垂直供應 S 向右移至 S’（箭頭），平坦（高彈性）的需求 D",
           "均衡點 E1、E2：價格由 P1 下降至 P2，數量由 Q1 增加至 Q2",
           "得益（Q1..Q2 × 0..P2）標示「+」，損失（P2..P1 × 0..Q1）標示「−」",
           "得益 > 損失，所以牌照總值上升"
@@ -1673,7 +1673,7 @@
       },
       "alt": {
         "en": "The vertical supply of taxi licences shifts right from S to S’ (arrow) along a flat (elastic) demand curve D. The equilibrium moves from E1 to E2: the price falls from P1 to P2 and the quantity rises from Q1 to Q2; the gain rectangle marked + (Q1 to Q2, 0 to P2) is larger than the loss rectangle marked − (P2 to P1, 0 to Q1).",
-        "zh": "的士牌照的垂直供應由 S 向右移至 S’（箭頭），需求曲線 D 平坦（富彈性）。均衡點由 E1 移至 E2：價格由 P1 下降至 P2，數量由 Q1 增加至 Q2；標示「+」的得益長方形（Q1 至 Q2，0 至 P2）大於標示「−」的損失長方形（P2 至 P1，0 至 Q1）。"
+        "zh": "的士牌照的垂直供應由 S 向右移至 S’（箭頭），需求曲線 D 平坦（高彈性）。均衡點由 E1 移至 E2：價格由 P1 下降至 P2，數量由 Q1 增加至 Q2；標示「+」的得益長方形（Q1 至 Q2，0 至 P2）大於標示「−」的損失長方形（P2 至 P1，0 至 Q1）。"
       },
       "png": {
         "en": "gallery/19_tr_vertical_supply_increase_en.png",
@@ -2710,11 +2710,11 @@
       "topic": "Tax, subsidy and quota",
       "title": {
         "en": "Unit tax on a good with inelastic (steep) demand: buyers bear more, deadweight loss \"a\".",
-        "zh": "缺乏彈性需求下的從量稅：買家負擔較多，效率損失 a"
+        "zh": "低彈性需求下的從量稅：買家負擔較多，效率損失 a"
       },
       "caption": {
         "en": "Unit tax with inelastic demand: buyers bear more, deadweight loss a",
-        "zh": "缺乏彈性需求下的從量稅：買家負擔較多，效率損失 a"
+        "zh": "低彈性需求下的從量稅：買家負擔較多，效率損失 a"
       },
       "use": "who bears more of a unit tax (the less elastic side) and the deadweight loss; for tax-revenue shading see template 07 (DSE2014 Q9(b), DSE2016 Q10(c))",
       "shows": {
@@ -3996,11 +3996,11 @@
       "topic": "Total revenue and elasticity",
       "title": {
         "en": "Price rises on ELASTIC (flat) demand -> total revenue falls.",
-        "zh": "富彈性需求下價格上升：總收入減少"
+        "zh": "彈性需求下價格上升：總收入減少"
       },
       "caption": {
         "en": "Price rises on elastic demand: total revenue falls",
-        "zh": "富彈性需求下價格上升：總收入減少"
+        "zh": "彈性需求下價格上升：總收入減少"
       },
       "use": "a price rise along one ELASTIC demand curve lowers total revenue / expenditure (chat-only variant: 05 with the price change reversed); for a price rise on inelastic demand use 18",
       "shows": {
@@ -4011,7 +4011,7 @@
           "loss > gain, so total revenue falls"
         ],
         "zh": [
-          "平坦（富彈性）的需求曲線 D",
+          "平坦（高彈性）的需求曲線 D",
           "價格由 P1 上升至 P2，需求量由 Q1 減少至 Q2",
           "收入得益（P1..P2 × 0..Q2）標示「+」，損失（Q2..Q1 × 0..P1）標示「−」",
           "損失 > 得益，所以總收入減少"
@@ -4043,7 +4043,7 @@
       },
       "alt": {
         "en": "A flat (elastic) demand curve D. The price rises from P1 to P2 and the quantity demanded falls from Q1 to Q2; the gain rectangle (P1 to P2, 0 to Q2) is marked + and is smaller than the loss rectangle (Q2 to Q1, 0 to P1) marked −.",
-        "zh": "平坦（富彈性）的需求曲線 D。價格由 P1 上升至 P2，需求量由 Q1 減少至 Q2；標示「+」的得益長方形（P1 至 P2，0 至 Q2）小於標示「−」的損失長方形（Q2 至 Q1，0 至 P1）。"
+        "zh": "平坦（高彈性）的需求曲線 D。價格由 P1 上升至 P2，需求量由 Q1 減少至 Q2；標示「+」的得益長方形（P1 至 P2，0 至 Q2）小於標示「−」的損失長方形（Q2 至 Q1，0 至 P1）。"
       },
       "png": {
         "en": "gallery/chat/05b_tr_price_rise_elastic_en.png",
@@ -4506,11 +4506,11 @@
       "topic": "Total revenue and elasticity",
       "title": {
         "en": "Price falls on INELASTIC (steep) demand -> total revenue falls.",
-        "zh": "缺乏彈性需求下價格下降：總收入減少"
+        "zh": "低彈性需求下價格下降：總收入減少"
       },
       "caption": {
         "en": "Price falls on inelastic demand: total revenue falls",
-        "zh": "缺乏彈性需求下價格下降：總收入減少"
+        "zh": "低彈性需求下價格下降：總收入減少"
       },
       "use": "a price fall along an inelastic demand curve lowers total revenue / expenditure, e.g. a bumper harvest lowers farmers' revenue (chat-only variant: 18 with the price change reversed); for a price fall on elastic demand use 05",
       "shows": {
@@ -4521,7 +4521,7 @@
           "loss > gain, so total revenue falls"
         ],
         "zh": [
-          "陡峭（缺乏彈性）的需求曲線 D，不需畫供應曲線",
+          "陡峭（低彈性）的需求曲線 D，不需畫供應曲線",
           "價格由 P1 下降至 P2，需求量由 Q1 增加至 Q2",
           "損失（P2..P1 × 0..Q1）標示「−」，得益（Q1..Q2 × 0..P2）標示「+」",
           "損失 > 得益，所以總收入減少"
@@ -4553,7 +4553,7 @@
       },
       "alt": {
         "en": "A steep (inelastic) demand curve D. The price falls from P1 to P2 and the quantity demanded rises from Q1 to Q2; the loss rectangle (P2 to P1, 0 to Q1) is marked − and is larger than the gain rectangle (Q1 to Q2, 0 to P2) marked +.",
-        "zh": "陡峭（缺乏彈性）的需求曲線 D。價格由 P1 下降至 P2，需求量由 Q1 增加至 Q2；標示「−」的損失長方形（P2 至 P1，0 至 Q1）大於標示「+」的得益長方形（Q1 至 Q2，0 至 P2）。"
+        "zh": "陡峭（低彈性）的需求曲線 D。價格由 P1 下降至 P2，需求量由 Q1 增加至 Q2；標示「−」的損失長方形（P2 至 P1，0 至 Q1）大於標示「+」的得益長方形（Q1 至 Q2，0 至 P2）。"
       },
       "png": {
         "en": "gallery/chat/18b_tr_price_fall_inelastic_en.png",

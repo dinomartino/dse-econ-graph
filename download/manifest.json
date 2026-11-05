@@ -4,14 +4,14 @@
     "en": "Paste a DSE Economics question and its marking scheme into Grok, Claude or ChatGPT and get the diagram in the HKEAA marking-scheme style, in English or Chinese.",
     "zh": "把 DSE 經濟題目和評卷參考貼到 Grok、Claude 或 ChatGPT，即可得到 HKEAA 評卷參考風格的圖，中英文皆可。"
   },
-  "version": "1.7.2",
+  "version": "1.7.3",
   "released": "2026-11-05",
   "whats_new": {
     "en": [
-      "More Chinese wording follows the EDB supplement: 界外成本, 界外效益, and 價格水平 in diagram titles. Nothing changes in how you use the skill."
+      "Chinese elasticity wording now follows the EDB glossary: 彈性需求, 低彈性需求 (and 高彈性 for a flat curve). Nothing changes in how you use the skill."
     ],
     "zh": [
-      "更多中文用詞依教育局補充資料：界外成本、界外效益，圖題用「價格水平」。使用方法不變。"
+      "彈性用詞依教育局詞彙：彈性需求、低彈性需求（平坦的需求曲線稱高彈性）。使用方法不變。"
     ]
   },
   "files": [
@@ -41,7 +41,7 @@
         "zh": "ChatGPT 專用版本：在 Plugins ▸ Upload plugin 上載，不用解壓。"
       },
       "bytes": 92734,
-      "sha256": "f18a88f6523b6148f38e5c9f641772715adca707bceb2a1605f45a924d436310",
+      "sha256": "46c4f8f0d703ac6cd452b40783ed5e0950afd17e807f9565eb3059917a7bd772",
       "url": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/download/dse-econ-graph-chatgpt.zip",
       "download_url": "https://github.com/dinomartino/dse-econ-graph/releases/latest/download/dse-econ-graph-chatgpt.zip"
     },
@@ -272,7 +272,7 @@
     {
       "id": "05_tr_price_change_elastic",
       "title": "Price falls on ELASTIC (flat) demand -> total revenue rises.",
-      "title_zh": "富彈性需求下價格下降：總收入增加",
+      "title_zh": "彈性需求下價格下降：總收入增加",
       "topic": "Total revenue and elasticity",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/05_tr_price_change_elastic_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/05_tr_price_change_elastic_zh.png"
@@ -280,7 +280,7 @@
     {
       "id": "06_tr_supply_decrease_inelastic",
       "title": "Supply decreases on INELASTIC (steep) demand -> total revenue rises.",
-      "title_zh": "缺乏彈性需求下供應減少：總收入增加",
+      "title_zh": "低彈性需求下供應減少：總收入增加",
       "topic": "Total revenue and elasticity",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/06_tr_supply_decrease_inelastic_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/06_tr_supply_decrease_inelastic_zh.png"
@@ -376,7 +376,7 @@
     {
       "id": "18_tr_price_rise_inelastic",
       "title": "Price rises on INELASTIC (steep) demand -> total revenue rises.",
-      "title_zh": "缺乏彈性需求下價格上升：總收入增加",
+      "title_zh": "低彈性需求下價格上升：總收入增加",
       "topic": "Total revenue and elasticity",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/18_tr_price_rise_inelastic_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/18_tr_price_rise_inelastic_zh.png"
@@ -384,7 +384,7 @@
     {
       "id": "19_tr_vertical_supply_increase",
       "title": "Fixed stock (vertical supply) increases on ELASTIC (flat) demand -> total value rises.",
-      "title_zh": "富彈性需求下的士牌照增加：牌照總值上升",
+      "title_zh": "彈性需求下的士牌照增加：牌照總值上升",
       "topic": "Total revenue and elasticity",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/19_tr_vertical_supply_increase_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/19_tr_vertical_supply_increase_zh.png"
@@ -480,7 +480,7 @@
     {
       "id": "31_unit_tax_burden_dwl",
       "title": "Unit tax on a good with inelastic (steep) demand: buyers bear more, deadweight loss \"a\".",
-      "title_zh": "缺乏彈性需求下的從量稅：買家負擔較多，效率損失 a",
+      "title_zh": "低彈性需求下的從量稅：買家負擔較多，效率損失 a",
       "topic": "Tax, subsidy and quota",
       "en": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/31_unit_tax_burden_dwl_en.png",
       "zh": "https://raw.githubusercontent.com/dinomartino/dse-econ-graph/main/gallery/31_unit_tax_burden_dwl_zh.png"
