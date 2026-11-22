@@ -3,3 +3,10 @@ __pycache__/
 dist/
 .DS_Store
 diagram_*.png
+
+# local Python environments, secrets and per-user Claude Code settings (requirements.txt is pip-installed)
+.venv/
+venv/
+.env
+.env.*
+.claude/settings.local.json
